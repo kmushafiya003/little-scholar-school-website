@@ -1,7 +1,7 @@
 
 import './App.css';
-import MessageOne from './components/common/MessageOne';
-import MessageTwo from './components/common/MessageTwo'
+import Message from './components/home/Message';
+import Welcome from './components/home/Welcome';
 
 
 
@@ -10,10 +10,8 @@ import MessageTwo from './components/common/MessageTwo'
 function App() {
   return (
     <div className="w-screen min-h-screen overflow-x-hidden bg-black">
-
-      <MessageOne />
-      <MessageTwo/>
- 
+<Welcome/>
+      <Message />
 
       
     </div>
