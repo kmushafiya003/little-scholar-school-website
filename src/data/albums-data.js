@@ -13,7 +13,14 @@ import educational_trip from '../../src/images/educational_trip.jpg'
 import pre_mothers_day from '../../src/images/pre_primary_mothers_day.jpg'
 import pre_primary_labours_day from '../../src/images/pre_primary_labours_day.jpg'
 import lsmun from '../../src/images/lsmun.jpg'
-import { Album } from 'css.gg'
+import student_1500 from '../../src/images/1500_student.jpg'
+import student_500 from '../../src/images/500_student.jpg'
+import success from '../../src/images/success _is_not_final.jpg'
+import littil from '../../src/images/littil.jpg'
+import littil_2 from '../../src/images/littil_2.jpg'
+import littil_3 from '../../src/images/littil_3.jpg'
+import littil_4 from '../../src/images/littil_4.jpg'
+import vad_vivad from '../../src/images/vad_vivad.jpg'
 // <-----------------------Photo Album------------------------>
 export const photo_album = [
     {
@@ -102,5 +109,44 @@ export const video_album = [
 ]
 // <----------------------Media Album---------------------------->
 export const media_album = [
-    {},
+    {
+        "id": 1,
+        "image": student_1500,
+        "title": "1500 students embarked on their NEET UG journey in Kashipur",
+    },
+    {
+        "id": 2,
+        "image": student_500,
+        "title": "500 students embarked on their NEET UG journey in Kashipur",
+    },
+    {
+        "id": 3,
+        "image": success,
+        "title": "Success is not final, failure is not fatal It is the courage to continue that counts.",
+    },
+    {
+        "id": 4,
+        "image": littil,
+        "title": "लिटिल स्कॉलर्स की छात्रा रही पल्लवी आज दिल्ली में गणतंत्र दिवस परेड में करेगी प्रतिभाग -कल पीएम रैली का हिस्सा भी बनेगी पल्लवी",
+    },
+    {
+        "id": 5,
+        "image": littil_2,
+        "titel": "लिटिल स्कॉलर्स की छात्रा रही पल्लवी आज दिल्ली में गणतंत्र दिवस परेड में करेगी प्रतिभाग -कल पीएम रैली का हिस्सा भी बनेगी पल्लवी"
+    },
+    {
+        "id": 6,
+        "image": littil_3,
+        "title": "लिटिल स्कॉलर्स की छात्रा रही पल्लवी आज दिल्ली में गणतंत्र दिवस परेड में करेगी प्रतिभाग -कल पीएम रैली का हिस्सा भी बनेगी पल्लवी"
+    },
+    {
+        "id": 7,
+        "image": littil_4,
+        "title": "लिटिल स्कॉलर्स विद्यालय में धूमधाम से मनाया गया 'सेल्यूट एंड स्प्रिट' खेल दिवस"
+    },
+    {
+        "id": 8,
+        "image": vad_vivad,
+        "title": "वाद-विवाद प्रतियोगिता में स्कॉलर्स स्कूल काशीपुर प्रथम"
+    }
 ]
