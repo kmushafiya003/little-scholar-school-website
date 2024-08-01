@@ -1,14 +1,16 @@
-import React from 'react'
-import { message1 } from '../../data/message-data'
+import React, { useState } from 'react'
 
-function Message() {
+function Message () {
+    const [state, setstate] = useState("Secondcard");
   return (
-    <section>
+    <section className='relative w-full text-white bg-transparent'>
       <div>
-        {
-          message1.map((data) => (
-            <h1>{data.message}</h1>
-          ))}
+        <div>
+        
+        </div>
+        <div>
+        
+        </div>
       </div>
     </section>
   )

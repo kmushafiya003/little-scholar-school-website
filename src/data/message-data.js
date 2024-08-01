@@ -1,5 +1,5 @@
-import principal_img from '../../src/images/principal_img.webp'
-import founder_img from '../../src/images/Founder_img.webp'
+import principal_img from '../../src/images/Principal_img.jpeg'
+import founder_img from '../../src/images/Founder_img.jpeg'
 export const message1 = [
     {
         "id": 1,
