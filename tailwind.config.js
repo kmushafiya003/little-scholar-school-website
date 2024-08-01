@@ -1,0 +1,77 @@
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+ 
+    colors: {
+      'custom-orange':"#FF553E",
+      white: "#fff",
+      black: "#000",
+      transparent: "#ffffff00",
+      red: "#F2184F",
+      "off-white-bg": "#f6f6f6",
+      "dark-blue": "#202C45",
+      "dark-grey" : "#666",
+      "bright-black" : "#1a1a1a",
+      "resp-black" : "#333",
+     
+
+    },
+    screens : {
+
+      'dxs' : '300px',
+      // => @media (min-width: 300px) { ... }
+
+      'xxs' : '400px',
+      // => @media (min-width: 400px) { ... }
+
+      'xsm' : '458px',
+      // => @media (min-width: 400px) { ... }
+
+      'xs' : '500px',
+      // => @media (min-width: 500px) { ... }
+
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'just': '641px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+      
+      'smd' : '800px',
+         // => @media (min-width: 860px) { ... }
+
+      'mmd': '860px',
+        // => @media (min-width: 860px) { ... }
+
+      'xmd' : '930px',
+        // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+
+       'xlg' : '1110px',
+           // => @media (min-width: 1110px) { ... }
+
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      'xxl': '1390px',
+      // => @media (min-width: 1280px) { ... }
+
+      
+    },
+  
+    
+    extend: {
+     
+    }
+  },
+  plugins: [],
+};
