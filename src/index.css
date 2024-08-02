@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-
-=======
-/* App.css or a dedicated CSS file */
 .swiper-slide {
   display: flex;
   justify-content: center;
@@ -42,5 +38,4 @@
 .swiper-slide-prev .custom-content {
   opacity: 0;
 }
-/* RevolutionSlider.css */
->>>>>>> 875fecc6210aa198df3a7d5c1c96114d7d984aba
+

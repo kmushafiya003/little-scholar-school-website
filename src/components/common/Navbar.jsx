@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowUp } from "react-icons/io";
-import { navData } from '../../data/navbar-links'; // Adjust path as needed
+import { navData } from '../../data/navbar-links'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu visibility
