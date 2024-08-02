@@ -70,6 +70,10 @@ module.exports = {
   
     
     extend: {
+      fontSize: {
+        'xxl': '4rem', // Custom size
+        '3xl': '3rem', // Example of another custom size
+      },
      
     }
   },
