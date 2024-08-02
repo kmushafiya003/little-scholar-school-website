@@ -16,6 +16,8 @@ module.exports = {
       "dark-grey" : "#666",
       "bright-black" : "#1a1a1a",
       "resp-black" : "#333",
+      "neutral-600": "  rgb(30 41 59)",
+      "light-black": "rgb(0,0,0,0.5)"
      
 
     },
@@ -70,6 +72,10 @@ module.exports = {
   
     
     extend: {
+      fontSize: {
+        'xxl': '4rem', // Custom size
+        '3xl': '3rem', // Example of another custom size
+      },
      
     }
   },

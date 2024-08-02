@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* App.css or a dedicated CSS file */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-slide img {
+  transition: transform 1s ease;
+}
+
+.swiper-slide-active .custom-slide img {
+  transform: scale(1.1); /* Example scale effect */
+}
+
+.custom-content {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  transition: opacity 1s ease;
+}
+
+.swiper-slide-active .custom-content {
+  opacity: 1;
+}
+
+.swiper-slide-next .custom-content,
+.swiper-slide-prev .custom-content {
+  opacity: 0;
+}
+/* RevolutionSlider.css */

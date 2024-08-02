@@ -4,7 +4,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css/effect-fade'; // Import effect styles
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import '../../App.css'; // Your custom styles
 
 import image1 from '../../images/hero_section_img_1.webp';
 import image2 from '../../images/hero_section_img_2.webp';
@@ -14,60 +16,80 @@ const images = [image1, image2, image3];
 
 const HeroSection = () => {
   return (
-    <section id="home" className="">
-      <div className="container-fluid p-0">
-        <div className="row">
-          <div className="col">
-            <Swiper
-              spaceBetween={50}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              modules={[Navigation, Pagination, Autoplay]}
-              className="rounded-lg overflow-hidden h-full"
-              loop={true}
-              autoplay={{ delay: 10000 }} // 10000ms = 10 seconds
-            >
-              {images.map((image, index) => (
-                <SwiperSlide key={index}>
-                  <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
-                  <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start p-10 bg-black bg-opacity-50 text-white">
-                    {index === 0 && (
-                      <>
-                        <h2 className="text-6xl font-bold uppercase mb-4">Education</h2>
-                        <p className="text-2xl mb-4">At Little Scholars, we inspire, we learn, we grow.</p>
-                        <p className="text-lg mb-4">Inspire. Learn. Grow.</p>
-                        <a href="https://onlineregistration.littlescholars-kashipur.com/OnlineRegistration/" className="btn btn-flat btn-theme-colored2 text-white">Get Enroll</a>
-                      </>
-                    )}
-                    {index === 1 && (
-                      <>
-                        <h2 className="text-6xl font-bold uppercase mb-4">Education</h2>
-                        <p className="text-2xl mb-4">Little Scholars: Where Bright Futures Begin.</p>
-                        <p className="text-lg mb-4">Bright Futures Begin Here.</p>
-                        <a href="https://onlineregistration.littlescholars-kashipur.com/OnlineRegistration/" className="btn btn-flat btn-theme-colored2 text-white">Get Enroll</a>
-                      </>
-                    )}
-                    {index === 2 && (
-                      <>
-                        <h2 className="text-6xl font-bold uppercase mb-4">Education</h2>
-                        <p className="text-2xl mb-4">Little Scholars: Unlocking Every Child's Potential.</p>
-                        <p className="text-lg mb-4">Unlock Potential.</p>
-                        <a href="https://onlineregistration.littlescholars-kashipur.com/OnlineRegistration/" className="btn btn-flat btn-theme-colored2 text-white">Get Enroll</a>
-                      </>
-                    )}
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
+    <section id="home" className="h-screen">
+      <div className="relative w-full h-full p-0">
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          className="h-full"
+          loop={true}
+          autoplay={{ delay: 10000 }} // 10000ms = 10 seconds
+          effect="fade" // Using the fade effect
+          speed={500} // Transition speed
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index} className="relative h-full">
+              <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+              <div
+                className={`absolute top-0 left-0 w-full h-full flex flex-col justify-center items-${
+                  index === 0 ? 'start' : index === 1 ? 'center' : 'end'
+                } p-10 bg-black bg-opacity-5 text-white`}
+              >
+                {index === 0 && (
+                  <>
+                    <h2 className="text-xxl md:text-9xl font-bold uppercase mb-4 text-right">Education</h2>
+                    <div className="bg-dark-blue text-center uppercase font-semibold text-lg md:text-xl text-white border-0 border-r-4 border-l-4 border-red rounded-full px-4 py-2 md:px-5 md:py-2 mt-4">
+                      Inspire. Learn. Grow.
+                    </div>
+                    <p className="text-base md:text-lg mb-4">At Little Scholars, we inspire, we learn, we grow.</p>
+                    <a
+                      href="https://onlineregistration.littlescholars-kashipur.com/OnlineRegistration/"
+                      className="bg-red hover:bg-bright-black text-white font-semibold text-base md:text-lg py-1 px-3 md:py-2 md:px-4 rounded-full"
+                    >
+                      Get Enroll
+                    </a>
+                  </>
+                )}
+                {index === 1 && (
+                  <>
+                    <h2 className="text-xxl md:text-9xl font-bold uppercase mb-4 text-right">Education</h2>
+                    <div className="bg-dark-blue text-center uppercase font-semibold text-xl md:text-2xl text-white border-0 border-r-6 border-l-6 border-red rounded-full px-4 py-2 md:px-6 md:py-3 mt-4">
+                      Bright Futures Begin Here
+                    </div>
+                    <p className="text-lg md:text-xl mb-4 text-center">Little Scholars: Where Bright Futures Begin.</p>
+                    <a
+                      href="https://onlineregistration.littlescholars-kashipur.com/OnlineRegistration/"
+                      className="bg-red hover:bg-bright-black text-white font-semibold text-lg md:text-xl py-2 px-4 md:py-3 md:px-6 rounded-full"
+                    >
+                      Get Enroll
+                    </a>
+                  </>
+                )}
+                {index === 2 && (
+                  <>
+                    <h2 className="text-xxl md:text-9xl font-bold uppercase mb-4 text-right">Education</h2>
+                    <div className="bg-dark-blue text-center uppercase font-semibold text-xl md:text-2xl text-white border-0 border-l-6 border-red rounded-full px-4 py-2 md:px-6 md:py-3 mt-4">
+                      Unlock Potential.
+                    </div>
+                    <p className="text-lg md:text-xl mb-4 text-right">Little Scholars: Unlocking Every Child's Potential.</p>
+                    <a
+                      href="https://onlineregistration.littlescholars-kashipur.com/OnlineRegistration/"
+                      className="bg-red hover:bg-bright-black text-white font-semibold text-lg md:text-lg py-2 px-4 md:py-3 sm:px-6"
+                    >
+                      Get Enroll
+                    </a>
+                  </>
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
 };
-
-
-
 
 export default HeroSection;
