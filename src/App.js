@@ -12,8 +12,7 @@ import Navbar from './components/common/Navbar.jsx';
 
 function App() {
   return (
-
-    <div className="w-screen min-h-screen overflow-x-hidden ">
+    <div className="w-screen min-h-screen overflow-x-hidden">
       <Navbar/>
 
       <Routes>
