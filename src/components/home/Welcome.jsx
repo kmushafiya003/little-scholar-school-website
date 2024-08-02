@@ -3,7 +3,13 @@ import { welcomeData } from '../../data/welcome-data'
 import { BiSolidBook } from "react-icons/bi";
 
 const Welcome = () => {
+
+
+
+
+
     return (
+   
         <section className='w-full bg-bg-light pt-24 pb-28'>
 
             {/* ------------------------- container ------------------------- */}
@@ -61,7 +67,6 @@ const Welcome = () => {
                                     <p className='leading-6 font-light tracking-wide'>{data.desc}</p>
 
                                 </div>
-
 
 
                             </div>
