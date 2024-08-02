@@ -82,7 +82,14 @@ module.exports = {
         'xxl': '4rem', // Custom size
         '3xl': '3rem', // Example of another custom size
       },
-     
+      fontFamily: {
+        'open-sans': ['Open Sans', 'sans-serif'],
+      },
+      fontWeight: {
+        'regular': 400,
+        'bold': 700,
+      },
+
     }
   },
   plugins: [],

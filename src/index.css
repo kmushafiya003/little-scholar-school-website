@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .swiper-slide {
   display: flex;
   justify-content: center;
