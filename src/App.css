@@ -1,0 +1,28 @@
+/* Base style for dropdown items */
+.dropdown-item {
+    position: relative;
+    padding-left: 10px; /* Ensure space for border effect */
+    overflow: hidden;
+    background-color: white; /* Ensure visibility against background */
+  }
+  
+  /* Pseudo-element for left border effect */
+  .dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%; /* Start from the middle */
+    height: 0; /* Initially, height is zero */
+    width: 4px; /* Default border width */
+    background: #4299e1; /* Tailwind's blue-500 color */
+    transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
+    transform: translateY(-50%); /* Center the border vertically */
+  }
+  
+  /* Expand the border when hovering over dropdown items */
+  .dropdown-item:hover::before {
+    height: 100%; /* Full height of the item */
+    top: 0; /* Stretch from top */
+    transform: translateY(0); /* Reset transform to ensure height expansion */
+  }
+  
