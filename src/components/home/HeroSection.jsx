@@ -17,7 +17,7 @@ const images = [image1, image2, image3];
 const HeroSection = () => {
   return (
     <section id="home" className="w-full xl:h-[700px] xlg:h-[650px] lg:h-[600px] xmd:h-[560px] smd:h-[510px] md:[480px] sm:h-[520px] xs:h-[480px] h-[420px]">
-      <div className="relative w-full h-full p-0">
+      <div className="relative w-full h-full p-0 ">
         <Swiper
           spaceBetween={0}
           slidesPerView={1}
@@ -33,10 +33,15 @@ const HeroSection = () => {
           {images.map((image, index) => (
             <SwiperSlide key={index} className="relative w-full h-full ">
               <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+
+              {/* --------------- text content  div ------------------ */}
+              <div className='w-full h-full absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center'>
+
+              
               <div
-                className={`smd:w-10/12 xs:w-[88%] w-11/12 absolute top-0 left-0 flex flex-col justify-center items-${
+                className={`smd:w-10/12  xs:w-[88%] w-11/12   flex flex-col justify-center items-${
                   index === 0 ? 'start text-left' : index === 1 ? 'center text-center' : 'end text-right'
-                } p-10 bg-black bg-opacity-5 text-white`}
+                } p-10 bg-transparent  text-white`}
               >
                 {index === 0 && (
                   <>
@@ -85,6 +90,7 @@ const HeroSection = () => {
   </>
 )}
 
+              </div>
               </div>
             </SwiperSlide>
           ))}
