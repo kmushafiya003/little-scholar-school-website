@@ -1,17 +1,29 @@
-import Message from './components/home/Message.jsx'
+
 import './App.css';
-import HeroSection from './components/home/HeroSection';
+
+import Home from './pages/Home';
+import { Routes , Route } from 'react-router-dom';
+
+import Navbar from './components/common/Navbar.jsx';
+
 
 
 
 
 function App() {
   return (
-    <div className="w-screen min-h-screen overflow-x-hidden bg-black">
-       <HeroSection />
 
+    <div className="w-screen min-h-screen overflow-x-hidden ">
+      <Navbar/>
+
+      <Routes>
+
+        <Route path='/'  element={<Home/>}/>
+      </Routes>
     
-      <Message />
+
+       
+
     </div>
 
  );
