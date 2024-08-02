@@ -10,7 +10,7 @@ const IconSection = () => {
     {/* ------------------------- container ------------------------- */}
 
     <div className='xl:w-10/12 xmd:w-11/12 xs:w-10/12   mx-auto flex flex-col gap-y-8'>
-      
+
 
       <div className='grid grid-cols-2 xmd:flex xmd:justify-center   '>
         {

@@ -39,3 +39,10 @@
   opacity: 0;
 }
 
+.bg-parallax {
+  background-image: url('./images/bg-parallax.webp');
+  background-attachment: fixed; /* or scroll */
+  background-position: center;
+  background-size: cover;
+  overflow: auto; /* Enable scrolling */
+}
