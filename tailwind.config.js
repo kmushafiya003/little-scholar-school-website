@@ -18,12 +18,12 @@ module.exports = {
       "resp-black" : "#333",
       "neutral-600": "  rgb(30 41 59)",
       "light-black": "rgb(0,0,0,0.5)",
-<<<<<<< HEAD
+
       "blue-l": "rgb(59 130 246)",
-      "gray-l": "rgb(107 114 128)"
-=======
+      "gray-l": "rgb(107 114 128)",
+
       "border-grey": "#dee2e6",
->>>>>>> aa52ecdbc3a6aa9a27b24e0b083d24275e887e6e
+
      
 
     },
