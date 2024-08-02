@@ -21,9 +21,11 @@ function MessageOne () {
             </div>
             <p className='max-w-60 md:max-w-none'>
               {data.message1.length > 650
-                ? data.message.substring(0, 650) + '...'
+                ? data.message1.substring(0, 650) + '...'
                 : data.message1}
-              <Link className='text-red' to='/button'>read more.</Link>
+              <Link className='text-red' to='/button'>
+                read more.
+              </Link>
             </p>
           </div>
         ))}
