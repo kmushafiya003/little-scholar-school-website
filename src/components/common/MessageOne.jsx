@@ -19,10 +19,8 @@ function MessageOne() {
               <p className='text-sm font-bold'>{data.position}</p>
             </div>
             <p className='max-w-60 md:max-w-none'>
-              {data.message1.length > 650
-                ? data.message1.substring(0, 650) + '...'
-                : data.message1}
-              <Link className='text-red' to='/button'>
+              {data.message1}
+              <Link className='text-red' to='#'>
                 read more.
               </Link>
             </p>
