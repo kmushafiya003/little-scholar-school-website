@@ -11,7 +11,7 @@ function Button() {
   };
 
   return (
-    <section className='relative w-full '>
+    <section className='relative w-full'>
       <div className='w-10/12 mx-auto'>
         <div className='flex border xxl:pr-1 xxl:pl-10 xl:pl-10 xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0 bg-light-black'>
           <div className='flex flex-col text-white xl:pt-8 space-normal dxs:pt-2'>

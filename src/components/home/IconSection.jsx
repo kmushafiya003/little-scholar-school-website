@@ -5,12 +5,12 @@ const IconSection = () => {
   
   return (
     
-    <section className='w-full bg-white  pb-12  '>
+    <section className='w-full bg-white  py-12  '>
 
     {/* ------------------------- container ------------------------- */}
 
     <div className='xl:w-10/12 xmd:w-11/12 xs:w-10/12   mx-auto flex flex-col gap-y-8'>
-      
+
 
       <div className='grid grid-cols-2 xmd:flex xmd:justify-center   '>
         {
