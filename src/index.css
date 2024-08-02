@@ -41,8 +41,8 @@
 
 .bg-parallax {
   background-image: url('./images/bg-parallax.webp');
-  background-attachment: fixed; /* or scroll */
+  background-attachment: fixed; 
   background-position: center;
   background-size: cover;
-  overflow: auto; /* Enable scrolling */
+  overflow: auto; 
 }
