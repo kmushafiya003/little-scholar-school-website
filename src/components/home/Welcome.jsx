@@ -10,11 +10,11 @@ const Welcome = () => {
 
     return (
    
-        <section className='w-full bg-bg-light pt-24 pb-28'>
+        <section className='w-full bg-bg-light pt-24 pb-28 '>
 
             {/* ------------------------- container ------------------------- */}
 
-            <div className='w-10/12  mx-auto  border border-red flex flex-col gap-y-8'>
+            <div className='smd:w-10/12 xs:w-[88%] w-11/12  mx-auto flex flex-col gap-y-8'>
 
                 {/* ------------------- heading part ----------------- */}
 
@@ -48,10 +48,10 @@ const Welcome = () => {
 
                 {/* ------------------- bottom  part -------------------- */}
 
-                <div className='grid grid-cols-2 gap-x-2 gap-y-10 pt-6 border border-dark-blue'>
+                <div className='grid mdxs:grid-cols-2 grid-cols-1  justify-between xmd:justify-start  xmd:gap-x-2 smd:gap-x-10 gap-x-6 xmd:gap-y-10 gap-y-12 pt-6 '>
                     {
                         welcomeData.map((data) => (
-                            <div key={data.id} className=' flex w-[70%] items-center gap-x-4 border border--red'>
+                            <div key={data.id} className=' flex xmd:flex-row flex-col gap-y-3  xl:w-[70%] xmd:w-[80%] items-center gap-x-4 '>
 
                                 {/* ---------- book icon ---------- */}
 
@@ -62,9 +62,9 @@ const Welcome = () => {
 
                                 {/* --------- text part ----------- */}
 
-                                <div className='flex flex-col text-resp-black gap-y-3'>
+                                <div className='flex flex-col items-center xmd:items-start text-resp-black xl:gap-y-3 gap-y-2'>
                                     <h2 className='text-[16px] uppercase font-medium tracking-wide'>{data.title}</h2>
-                                    <p className='leading-6 font-light tracking-wide'>{data.desc}</p>
+                                    <p className='leading-6 font-light tracking-wide xmd:text-left text-center'>{data.desc}</p>
 
                                 </div>
 

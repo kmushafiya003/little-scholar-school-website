@@ -12,11 +12,11 @@ import Welcome from './components/home/Welcome';
 
 function App() {
   return (
-    <div className="w-screen min-h-screen overflow-x-hidden bg-black">
+    <div className="w-screen min-h-screen overflow-x-hidden ">
 
       <Welcome />
-      <Message />
-      <HeroSection/>
+      {/* <Message />
+      <HeroSection/> */}
 
 
 

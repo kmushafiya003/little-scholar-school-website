@@ -33,6 +33,9 @@ module.exports = {
       'xs' : '500px',
       // => @media (min-width: 500px) { ... }
 
+      'mdxs': '580px',
+      // => @media (min-width: 640px) { ... }
+
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -63,6 +66,9 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
 
       'xxl': '1390px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1505px',
       // => @media (min-width: 1280px) { ... }
 
       
