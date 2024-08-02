@@ -1,0 +1,35 @@
+/* Dropdown Menu Animation */
+.dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .group-hover .dropdown {
+    max-height: 1000px; /* Set a high value to accommodate the dropdown content */
+  }
+  
+  /* Smooth Transition for Hover Effects */
+  .hover\\:text-red:hover {
+    color: red;
+    transition: color 0.3s;
+  }
+  
+  .hover\\:bg-red:hover {
+    background-color: red;
+    transition: background-color 0.3s;
+  }
+  
+  /* Mobile Dropdown Menu Animation */
+  .transition-max-height {
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .max-h-0 {
+    max-height: 0;
+  }
+  
+  .max-h-screen {
+    max-height: 1000px; /* Set a high value to accommodate the dropdown content */
+  }
+  
