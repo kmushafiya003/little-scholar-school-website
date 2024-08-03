@@ -48,21 +48,21 @@ const Welcome = () => {
 
                 {/* ------------------- bottom  part -------------------- */}
 
-                <div className='grid mdxs:grid-cols-2 grid-cols-1  justify-between xmd:justify-start  xmd:gap-x-2 smd:gap-x-10 gap-x-6 xmd:gap-y-10 gap-y-12 pt-6 '>
+                <div className='grid mdxs:grid-cols-2 grid-cols-1  justify-between xmd:justify-start  xmd:gap-x-2 smd:gap-x-10 gap-x-6 xmd:gap-y-10 gap-y-12 pt-6 border border-red'>
                     {
                         welcomeData.map((data) => (
-                            <div key={data.id} className=' flex xmd:flex-row flex-col gap-y-3  xl:w-[70%] xmd:w-[80%] items-center gap-x-4 '>
+                            <div key={data.id} className=' flex xmd:flex-row flex-col gap-y-3   xmd:w-[80%] items-center gap-x-4 border border-blue-l'>
 
                                 {/* ---------- book icon ---------- */}
 
-                                <div className='grid place-items-center w-[50px] h-[50px] aspect-square rounded-full bg-dark-blue text-white '>
+                                <div className='flex items-center justify-center w-[50px] h-[50px] rounded-full bg-dark-blue text-white border'>
                                     <BiSolidBook className='text-[28px]' />
                                 </div>
 
 
                                 {/* --------- text part ----------- */}
 
-                                <div className='flex flex-col items-center xmd:items-start text-resp-black xl:gap-y-3 gap-y-2'>
+                                <div className='flex flex-col items-center xmd:items-start text-resp-black xl:gap-y-3 gap-y-2 border border-red'>
                                     <h2 className='text-[16px] uppercase font-medium tracking-wide'>{data.title}</h2>
                                     <p className='leading-6 font-light tracking-wide xmd:text-left text-center'>{data.desc}</p>
 
