@@ -5,7 +5,7 @@ const IconSection = () => {
   
   return (
     
-    <section className='w-full bg-white  py-12  '>
+    <section className='w-full bg-white  py-12 font-open-sans '>
 
     {/* ------------------------- container ------------------------- */}
 

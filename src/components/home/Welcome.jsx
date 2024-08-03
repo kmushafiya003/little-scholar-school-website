@@ -10,7 +10,7 @@ const Welcome = () => {
 
     return (
    
-        <section className='w-full bg-bg-light pt-24 pb-28 '>
+        <section className='w-full bg-bg-light pt-24 pb-28 font-open-sans'>
 
             {/* ------------------------- container ------------------------- */}
 
