@@ -14,9 +14,9 @@ function Gallery() {
   }
 
   return (
-    <section className='relative w-full bg-off-white-bg py-24'>
+    <section className='relative w-full py-24 bg-off-white-bg'>
       <div className='w-10/12 mx-auto '>
-        <div className='flex-col  xxl:pr-1  xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0 '>
+        <div className='flex-col xxl:pr-1 xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0 '>
 
           {/* -------------- heading ----------------- */}
 
@@ -33,7 +33,7 @@ function Gallery() {
 
           {/* ------------- filter part --------------- */}
 
-          <div className=' flex items-center  mt-8 space-normal dxs:pt-8 mdxs:flex-row  dxs:flex-col  gap-x-6'>
+          <div className='flex items-center mt-8  space-normal dxs:pt-8 mdxs:flex-row dxs:flex-col gap-x-6'>
             <button
               className={`flex text-lg w-48  rounded-sm  h-14  items-center justify-center ${getButtonClass(
                 'PhotoAlbum'

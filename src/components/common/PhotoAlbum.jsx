@@ -10,7 +10,7 @@ const PhotoAlbum = () => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {photoalbum.map((data) => (
             <Link to='#'>
-            <div key={data.id} className="flex flex-col items-center">
+            <div key={data.id} className="flex flex-col items-center transition duration-500 cursor-pointer hover:scale-105">
                 <img src={data.image} alt="" className="object-cover h-48 w-80" />
                 <h3 className="mt-2 text-sm text-center">
                     {data.title.length > 50 ? data.title.substring(0, 50) + "..." : data.title}

@@ -1,20 +1,18 @@
 
 import './App.css';
-import Navbar from './components/common/Navbar.jsx';
-import { Routes , Route } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-
+import Gallery from './components/home/Gallery.jsx'
+import Message from './components/home/Message.jsx';
+import IconSection from './components/home/IconSection.jsx';
+import Footer from './components/home/Footer.jsx';
 
 function App() {
   return (
 
-    <div className="w-screen min-h-screen overflow-x-hidden ">
-      <Navbar />
-
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-      </Routes>
-
+    <div className="w-screen min-h-screen overflow-x-hidden bg-black">
+      <Gallery />
+      <Message />
+      <IconSection />
+      <Footer />
     </div>
 
   );
