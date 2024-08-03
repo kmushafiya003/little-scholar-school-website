@@ -38,12 +38,12 @@ const Navbar = () => {
   return (
     <header className='bg-white'>
       <div className='w-10/12 mx-auto'>
-        <nav className=" text-black text-lg font-open-sans">
-          <div className=" mx-auto px-4 py-2 flex items-center justify-between rounded-full">
+        <nav className=" text-black text-lg ">
+          <div className=" mx-auto px-4 py-4 flex items-center justify-between rounded-full">
             {/* Logo Section */}
             <div>
               <NavLink to="/">
-                <img src={logo} alt="Logo" className="h-20" />
+                <img src={logo} alt="Logo" className="w-[110px]" />
               </NavLink>
             </div>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                     {/* Main Navigation Link */}
                     <NavLink
                       to={navItem.path}
-                      className={`flex items-center rounded-full px-4 py-1 transition duration-300 text-black font-bold
+                      className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold
                       ${navItem.dropdown && activeDropdown === navItem.id ? 'bg-[rgb(32,44,69)] text-white' : 'hover:bg-[rgb(32,44,69)] hover:text-white'}`}
                     >
                       {navItem.title}
@@ -69,7 +69,7 @@ const Navbar = () => {
                     
                     {/* Dropdown Menu */}
                     {navItem.dropdown && (
-                      <ul className={`absolute left-0 mt-4 w-60 border-l border-r border-b border-gray-300 border-t-4 border-t-gray-500 text-black bg-white transition-all duration-300 ease-in-out overflow-hidden transform ${activeDropdown === navItem.id ? 'max-h-screen opacity-100 translate-y-2' : 'max-h-0 opacity-0'}`}>
+                      <ul className={`absolute left-0 mt-4 z-50 w-60 border-l border-r border-b border-gray-300 border-t-4 border-t-gray-500 text-black bg-white transition-all duration-300 ease-in-out overflow-hidden transform ${activeDropdown === navItem.id ? 'max-h-screen opacity-100 translate-y-2' : 'max-h-0 opacity-0'}`}>
                         {navItem.dropdown.map((submenuItem) => (
                           <li key={submenuItem.id} className="relative">
                             {/* Submenu Link */}
@@ -83,7 +83,7 @@ const Navbar = () => {
                             
                             {/* Sub-dropdown Menu */}
                             {submenuItem.dropdown && (
-                              <ul className={`absolute whitespace-normal left-full top-0 mt-2 w-64 bg-gray-800 text-white border-l border-r border-b border-gray-300 border-t-4 border-t-gray-500 transition-all duration-300 ease-in-out overflow-hidden transform ${activeDropdown === submenuItem.id ? 'max-h-screen opacity-100 translate-y-0' : 'max-h-0 opacity-0'}`}>
+                              <ul className={`absolute  whitespace-normal left-full top-0 mt-2 w-64 bg-gray-800 text-white border-l border-r border-b border-gray-300 border-t-4 border-t-gray-500 transition-all duration-300 ease-in-out overflow-hidden transform ${activeDropdown === submenuItem.id ? 'max-h-screen opacity-100 translate-y-0' : 'max-h-0 opacity-0'}`}>
                                 {submenuItem.dropdown.map((subSubmenuItem) => (
                                   <li key={subSubmenuItem.id} className="relative">
                                     {/* Sub-submenu Link */}

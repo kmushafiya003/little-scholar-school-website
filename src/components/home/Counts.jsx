@@ -33,7 +33,7 @@ const Counts = () => {
   }, [inView, targetNumber]);
 
   return (
-    <section className="w-full   text-white bg-parallax relative font-open-sans">
+    <section className="w-full   text-white bg-parallax relative ">
 
       {/* ---------------- black overlay screen ----------------- */}
       <div className='absolute top-0 right-0 left-0 bottom-0 bg-black opacity-50 z-1'></div>

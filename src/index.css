@@ -39,3 +39,11 @@
 .swiper-slide-prev .custom-content {
   opacity: 0;
 }
+
+.bg-parallax {
+  background-image: url('./images/bg-parallax.webp');
+  background-attachment: fixed; 
+  background-position: center;
+  background-size: cover;
+  overflow: auto; 
+}

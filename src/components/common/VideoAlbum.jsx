@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const VideoAlbum = () => {
   return (
-    <section className="relative w-full">
+    <section className="relative w-full mt-10">
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {videoalbum.map((data) => (

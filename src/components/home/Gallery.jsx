@@ -4,7 +4,7 @@ import PhotoAlbum from '../common/PhotoAlbum'
 import MediaAlbum from '../common/MediaAlbum'
 import { photoalbum, videoalbum, mediaalbum } from '../../data/albums-data'
 
-function Gallery () {
+function Gallery() {
   const [activeAlbum, setActiveAlbum] = useState('PhotoAlbum')
 
   const getButtonClass = albumType => {
@@ -14,10 +14,26 @@ function Gallery () {
   }
 
   return (
-    <section className='relative w-full'>
-      <div className='w-11/12 mx-auto'>
-        <div className='flex-col xxl:pr-1 xxl:pl-10 xl:pl-10 xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0 '>
-          <div className='flex items-center text-white mdxs:pt-8 space-normal dxs:pt-8 mdxs:flex-row dxs:flex-col mdxs:pl-[4rem] '>
+    <section className='relative w-full bg-off-white-bg py-24'>
+      <div className='w-10/12 mx-auto border'>
+        <div className='flex-col border border-red  xxl:pr-1  xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0 '>
+
+          {/* -------------- heading ----------------- */}
+
+          <div className='flex flex-col gap-y-4 text-resp-black '>
+
+            <h1 className='uppercase text-[32px] font-semibold '>Our Gallery</h1>
+           
+
+            {/* ----------- small underline ----------- */}
+            <div className='w-[70px] h-1 bg-black'></div>
+
+
+          </div>
+
+          {/* ------------- filter part --------------- */}
+
+          <div className=' flex items-center  mt-8 space-normal dxs:pt-8 mdxs:flex-row  dxs:flex-col  border border-red gap-x-6'>
             <button
               className={`flex text-lg w-48  rounded-sm  h-14  items-center justify-center ${getButtonClass(
                 'PhotoAlbum'
@@ -43,7 +59,10 @@ function Gallery () {
               MediaAlbum
             </button>
           </div>
-          <div className='w-full p-4'>
+
+              {/* ---------- image / video section part ------------ */}
+
+          <div className='w-full py-4 border border-red'>
             {activeAlbum === 'PhotoAlbum' && (
               <PhotoAlbum data={photoalbum} cardIndex={1} />
             )}
