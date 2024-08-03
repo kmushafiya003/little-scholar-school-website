@@ -1,5 +1,8 @@
 // footerData.js
 import logo from '../../src/assets/logo.webp' // Adjust the path to your logo image
+import { FaYoutube } from "react-icons/fa";
+import { LuInstagram } from "react-icons/lu";
+import { FaFacebook } from "react-icons/fa";
 
 export const footerData = {
     logo: logo,
@@ -9,18 +12,19 @@ export const footerData = {
         {
             id: 1,
             name: 'Facebook',
-            icon: 'fab fa-facebook-f',
+            icon: <FaFacebook/>,
             url: '#'
         },
         {
-            id: 2, name:
-                'Instagram',
-            icon: 'fab fa-instagram', url: '#'
+            id: 2,
+            name: 'Instagram',
+            icon: <LuInstagram/>,
+            url: '#'
         },
         {
             id: 3,
             name: 'YouTube',
-            icon: 'fab fa-youtube',
+            icon: <FaYoutube/>,
             url: '#'
         }
     ],
