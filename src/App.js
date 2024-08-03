@@ -3,6 +3,7 @@ import './App.css';
 import Gallery from './components/home/Gallery.jsx'
 import Message from './components/home/Message.jsx';
 import IconSection from './components/home/IconSection.jsx';
+import Footer from './components/home/Footer.jsx';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Gallery />
       <Message />
       <IconSection />
-      
+      <Footer />
     </div>
 
   );
