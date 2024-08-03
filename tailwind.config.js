@@ -17,7 +17,8 @@ module.exports = {
       "light-black": "rgb(0,0,0,0.5)",
       "blue-l": "rgb(59 130 246)",
       "gray-l": "rgb(107 114 128)",
-      "border-grey": "#dee2e6",
+      "border-1": "#dee2e6",
+      "border-2": "#bbb",
       "dark-light-black": "rgb(187, 187, 182, 255)",
     },
     screens: {
