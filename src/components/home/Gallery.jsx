@@ -10,11 +10,11 @@ function Gallery() {
   const getButtonClass = albumType => {
     return activeAlbum === albumType
       ? 'bg-dark-blue text-white'
-      : 'bg-white text-black'
+      : 'bg-off-white-bg text-black'
   }
 
   return (
-    <section className='relative w-full py-24 bg-white'>
+    <section className='relative w-full py-24 bg-off-white-bg'>
       <div className='w-10/12 mx-auto '>
         <div className='flex-col xxl:pr-1 xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0 '>
 
@@ -33,30 +33,30 @@ function Gallery() {
 
           {/* ------------- filter part --------------- */}
 
-          <div className='flex items-center mt-8 space-normal dxs:pt-8 mdxs:flex-row dxs:flex-col gap-x-6'>
+          <div className='flex items-center mt-8 space-normal dxs:pt-8 mdxs:flex-row dxs:flex-col gap-x-6 '>
             <button
               className={`flex text-lg w-48  rounded-sm  h-14  items-center justify-center ${getButtonClass(
                 'PhotoAlbum'
               )}`}
               onClick={() => setActiveAlbum('PhotoAlbum')}
             >
-              PhotoAlbum
+              Photo Album
             </button>
             <button
-              className={`flex text-lg w-48  rounded-sm  h-14 items-center justify-center ${getButtonClass(
+              className={`flex text-lg w-48  rounded-sm  h-14 items-center justify-center  ${getButtonClass(
                 'VideoAlbum'
               )}`}
               onClick={() => setActiveAlbum('VideoAlbum')}
             >
-              VideoAlbum
+              Video Album
             </button>
             <button
-              className={`flex text-lg w-48  rounded-sm h-14 items-center justify-center ${getButtonClass(
+              className={`flex text-lg w-48  rounded-sm h-14 items-center justify-center  ${getButtonClass(
                 'MediaAlbum'
               )}`}
               onClick={() => setActiveAlbum('MediaAlbum')}
             >
-              MediaAlbum
+              Media Album
             </button>
           </div>
 
