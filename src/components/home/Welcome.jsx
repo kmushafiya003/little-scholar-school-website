@@ -18,7 +18,7 @@ const Welcome = () => {
 
                 {/* ------------------- heading part ----------------- */}
 
-                <div className='flex flex-col gap-y-4 text-resp-black'>
+                <div className='flex flex-col gap-y-4 text-resp-black '>
 
                     <h1 className='uppercase text-[26px] font-extrabold '>Welcome to Little Scholars</h1>
                     <p className='uppercase text-[15px] font-medium tracking-wide'>Service Before Self</p>
@@ -34,7 +34,7 @@ const Welcome = () => {
                 <div className='flex flex-col gap-y-9 text-[16px] font-light text-black '>
 
                     {/* ------------ para 1----------- */}
-                    <p className='leading-7 tracking-wide'>
+                    <p className='leading-7 tracking-wide font-[300]'>
                         The Little Scholars school is co-educational CBSE affiliated institution and was established in 1983 at Bhalla Farm in Kashipur, U.S.Nagar. At the school, we consider our curriculum from philosophical and eclectic perspective, with a view to develop each individual’s potential to the optimum.
 
                     </p>

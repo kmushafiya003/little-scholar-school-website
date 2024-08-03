@@ -31,7 +31,7 @@ const HeroSection = () => {
           speed={500} // Transition speed
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="relative w-full h-full ">
+            <SwiperSlide key={index} className="relative w-full h-full z-10">
               <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
 
               {/* --------------- text content  div ------------------ */}

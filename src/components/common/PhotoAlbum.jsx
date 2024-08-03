@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const PhotoAlbum = () => {
   return (
-    <section className="relative w-full">
-      <div className="w-11/12 mx-auto">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <section className="relative w-full mt-10">
+      <div className="w-11/12 mx-auto ">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {photoalbum.map((data) => (
             <Link to='#'>
             <div key={data.id} className="flex flex-col items-center">
