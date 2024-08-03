@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .swiper-slide {
   display: flex;
   justify-content: center;
@@ -46,4 +47,61 @@
 .swiper-slide img {
   width: 100%; /* Ensures the image takes the full width of the slide */
   object-fit: cover; /* Ensures the image covers the slide area */
+}
+/* In your main CSS file */
+/* In your main CSS file */
+
+
+.owl-next,
+.owl-prev {
+ background-color: rgb(165, 165, 170);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(12, 5, 5);
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.owl-next {
+  right: 10px; /* Adjust position as needed */
+}
+
+.owl-prev {
+  left: 10px; /* Adjust position as needed */
+}
+
+.owl-next i,
+.owl-prev i {
+  font-size: 20px; /* Adjust icon size as needed */
+  color: white;
+}
+
+/* Hover animations */
+.owl-next:hover,
+.owl-prev:hover {
+  animation: hover-animation 0.5s ease infinite;
+}
+
+/* Apply the animation to the sibling when one is hovered */
+.owl-next:hover ~ .owl-prev,
+.owl-prev:hover ~ .owl-next {
+  animation: hover-animation 0.5s ease infinite;
+}
+
+/* Keyframe animation for both left and right */
+@keyframes hover-animation {
+  0%, 100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  50% {
+    transform: translateX(-40%) translateY(-50%);
+  }
 }
