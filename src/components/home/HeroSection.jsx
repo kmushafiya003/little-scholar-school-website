@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade'; // Import effect styles
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
-import '../../App.css'; // Your custom styles
+import '../../index.css'; // Your custom styles
 
 import image1 from '../../images/hero_section_img_1.webp';
 import image2 from '../../images/hero_section_img_2.webp';

@@ -1,35 +1,102 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import infrastructureImages from '../../../src/data/infrastructureData';
-import facultyImages from '../../../src/data/facultyData';
+import '../../index.css'; // Your custom styles
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, showDesignation = false, spaceBetween = 20, rounded = false }) => {
+  useEffect(() => {
+    const nextButton = document.querySelector('.owl-next');
+    const prevButton = document.querySelector('.owl-prev');
+
+    const handleClick = (event) => {
+      event.target.classList.add('clicked');
+      setTimeout(() => {
+        event.target.classList.remove('clicked');
+      }, 500); // Duration should match the CSS animation duration
+    };
+
+    nextButton.addEventListener('click', handleClick);
+    prevButton.addEventListener('click', handleClick);
+
+    return () => {
+      nextButton.removeEventListener('click', handleClick);
+      prevButton.removeEventListener('click', handleClick);
+    };
+  }, []);
+
   return (
-    <section id="home" className="w-full xl:h-[700px] xlg:h-[650px] lg:h-[600px] xmd:h-[560px] smd:h-[510px] md:[480px] sm:h-[520px] xs:h-[480px] h-[420px]">
-      <div className="relative w-full h-full p-0 ">
+    <section
+      id="home"
+      className="w-full bg-white flex justify-center items-center"
+      style={{ backgroundColor }}
+    >
+      <div className="relative w-full max-w-screen-xl">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          navigation
+          navigation={{
+            nextEl: '.owl-next',
+            prevEl: '.owl-prev',
+          }}
           pagination={{ clickable: true }}
-          spaceBetween={10}
-          slidesPerView={1}
+          spaceBetween={spaceBetween} // Use the prop value
+          slidesPerView={5} // Default slides per view
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+          }}
           className="h-full"
           loop={true}
           autoplay={{ delay: 7000 }}
-          effect="fade"
           speed={500}
-          style={{ backgroundColor: 'white' }} // Change background color here
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="flex justify-center">
-              <img src={image.image} alt={image.title} className="w-full h-auto" />
+            <SwiperSlide key={index} className="flex flex-col items-center">
+              <img 
+                src={image.image} 
+                alt={image.name} 
+                className={`w-full h-auto max-w-[500px] ${rounded ? 'rounded-md' : ''}`} // Conditional rounded corners
+              /> 
+              {showNames && (
+                <div className="mt-2 text-center">
+                  <div className="text-white bg-black bg-opacity-50 px-2 py-1 rounded font-bold">
+                    {image.name}
+                  </div>
+                  {showDesignation && image.designation && (
+                    <div className="text-white bg-black bg-opacity-50 px-2 py-1 mt-1 rounded font-bold">
+                      {image.designation}
+                    </div>
+                  )}
+                </div>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
+        {/* Custom Navigation Buttons */}
+        <button className="owl-next"><FaAngleRight className='text-2xl'/></button>
+        <button className="owl-prev"><FaAngleLeft className='text-2xl'/></button>
       </div>
     </section>
   );
