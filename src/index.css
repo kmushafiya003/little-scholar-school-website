@@ -47,3 +47,6 @@
   background-size: cover;
   overflow: auto; 
 }
+.marquee-container:hover .animate-marquee {
+  animation-play-state: paused;
+}
