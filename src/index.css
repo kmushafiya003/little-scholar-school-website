@@ -38,3 +38,12 @@
 .swiper-slide-prev .custom-content {
   opacity: 0;
 }
+/* Add this to your App.css or a relevant CSS file */
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-slide img {
+  width: 100%; /* Ensures the image takes the full width of the slide */
+  object-fit: cover; /* Ensures the image covers the slide area */
+}
