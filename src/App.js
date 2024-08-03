@@ -1,4 +1,3 @@
-
 import './App.css';
 
 import { Routes,Route } from 'react-router-dom';
@@ -17,10 +16,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
       </Routes>
         
-    
-    </div>
-
-  );
+  </div>
+  )
 }
 
 export default App;

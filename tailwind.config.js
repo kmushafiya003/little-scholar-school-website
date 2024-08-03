@@ -1,10 +1,7 @@
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
- 
     colors: {
       white: "#fff",
       black: "#000",
@@ -13,9 +10,9 @@ module.exports = {
       "off-white-bg": "#f6f6f6",
       "bg-light": "#f8f9fa",
       "dark-blue": "#202C45",
-      "dark-grey" : "#666",
-      "bright-black" : "#1a1a1a",
-      "resp-black" : "#333",
+      "dark-grey": "#666",
+      "bright-black": "#1a1a1a",
+      "resp-black": "#333",
       "neutral-600": "  rgb(30 41 59)",
       "light-black": "rgb(0,0,0,0.5)",
       "blue-l": "rgb(59 130 246)",
@@ -24,76 +21,79 @@ module.exports = {
       "border-2": "#bbb",
       "dark-light-black": "rgb(187, 187, 182, 255)",
     },
-    screens : {
-
-      'dxs' : '300px',
+    screens: {
+      dxs: "300px",
       // => @media (min-width: 300px) { ... }
 
-      'xxs' : '400px',
+      xxs: "400px",
       // => @media (min-width: 400px) { ... }
 
-      'xsm' : '458px',
+      xsm: "458px",
       // => @media (min-width: 400px) { ... }
 
-      'xs' : '500px',
+      xs: "500px",
       // => @media (min-width: 500px) { ... }
 
-      'mdxs': '580px',
+      mdxs: "580px",
       // => @media (min-width: 640px) { ... }
 
-      'sm': '640px',
+      sm: "640px",
       // => @media (min-width: 640px) { ... }
 
-      'just': '641px',
+      just: "641px",
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      md: "768px",
       // => @media (min-width: 768px) { ... }
-      
-      'smd' : '800px',
-         // => @media (min-width: 860px) { ... }
 
-      'mmd': '860px',
-        // => @media (min-width: 860px) { ... }
+      smd: "800px",
+      // => @media (min-width: 860px) { ... }
 
-      'xmd' : '930px',
-        // => @media (min-width: 768px) { ... }
+      mmd: "860px",
+      // => @media (min-width: 860px) { ... }
 
-      'lg': '1024px',
+      xmd: "930px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
+      xlg: "1110px",
+      // => @media (min-width: 1110px) { ... }
 
-       'xlg' : '1110px',
-           // => @media (min-width: 1110px) { ... }
-
-
-      'xl': '1280px',
+      xl: "1280px",
       // => @media (min-width: 1280px) { ... }
 
-      'xxl': '1390px',
+      xxl: "1390px",
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1505px',
+      "2xl": "1505px",
       // => @media (min-width: 1280px) { ... }
-
-      
     },
-  
-    
+
     extend: {
       fontSize: {
-        'xxl': '4rem', // Custom size
-        '3xl': '3rem', // Example of another custom size
+        xxl: "4rem", // Custom size
+        "3xl": "3rem", // Example of another custom size
       },
       fontFamily: {
-        'open-sans': ['Open Sans', 'sans-serif'],
+        "open-sans": ["Open Sans", "sans-serif"],
       },
       fontWeight: {
-        'regular': 400,
-        'bold': 700,
+        regular: 400,
+        bold: 700,
       },
-
-    }
+      animation: {
+        marquee: "marquee 20s linear infinite",
+        "pause-marquee": "none",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+    },
   },
   plugins: [],
 };
