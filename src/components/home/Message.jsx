@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import MessageOne from '../common/MessageOne';
-import MessageTwo from '../common/MessageTwo';
 import { message1, message2 } from '../../data/message-data';
+import MessageTemplate from '../common/MessageTemplate';
 
 function Message() {
   const [state, setState] = useState("Firstcard");
@@ -45,8 +44,8 @@ function Message() {
               Principal
             </button>
           </div>
-          {state === "Firstcard" && <MessageOne data={message1} cardIndex={1} />}
-          {state === "Secondcard" && <MessageTwo data={message2} cardIndex={2} />}
+          {state === "Firstcard" && <MessageTemplate data={message1} cardIndex={1} />}
+          {state === "Secondcard" && <MessageTemplate data={message2} cardIndex={2} />}
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import React from 'react'
 import { message1 } from '../../../src/data/message-data.js'
 import { Link } from 'react-router-dom'
 
+
 function MessageOne() {
   return (
     <section className='relative w-full text-white bg-transparent '>
