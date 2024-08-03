@@ -11,11 +11,11 @@ function Gallery() {
   const getButtonClass = albumType => {
     return activeAlbum === albumType
       ? 'bg-dark-blue text-white'
-      : 'bg-white text-black'
+      : 'bg-off-white-bg text-black'
   }
 
   return (
-    <section className='relative w-full py-24 bg-white'>
+    <section className='relative w-full py-24 bg-off-white-bg'>
       <div className='w-10/12 mx-auto '>
         <div className='flex-col xxl:pr-1 xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0 '>
           {/* -------------- heading ----------------- */}
@@ -38,7 +38,7 @@ function Gallery() {
               )}`}
               onClick={() => setActiveAlbum('PhotoAlbum')}
             >
-              PhotoAlbum
+              Photo Album
             </button>
             <button
               className={`flex text-lg w-48 rounded-sm h-14 items-center justify-center ${getButtonClass(
@@ -46,7 +46,7 @@ function Gallery() {
               )}`}
               onClick={() => setActiveAlbum('VideoAlbum')}
             >
-              VideoAlbum
+              Video Album
             </button>
             <button
               className={`flex text-lg w-48 rounded-sm h-14 items-center justify-center ${getButtonClass(
@@ -54,7 +54,7 @@ function Gallery() {
               )}`}
               onClick={() => setActiveAlbum('MediaAlbum')}
             >
-              MediaAlbum
+              Media Album
             </button>
             <button
               className={`flex text-lg w-48 rounded-sm h-14 items-center justify-center ${getButtonClass(
