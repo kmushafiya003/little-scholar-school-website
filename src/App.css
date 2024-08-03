@@ -1,0 +1,63 @@
+/* Dropdown Menu Animation */
+.dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.group-hover .dropdown {
+  max-height: 1000px; /* Set a high value to accommodate the dropdown content */
+}
+
+/* Smooth Transition for Hover Effects */
+.hover\\:text-red:hover {
+  color: red;
+  transition: color 0.3s;
+}
+
+.hover\\:bg-red:hover {
+  background-color: red;
+  transition: background-color 0.3s;
+}
+
+/* Mobile Dropdown Menu Animation */
+.transition-max-height {
+  transition: max-height 0.3s ease-in-out;
+}
+
+.max-h-0 {
+  max-height: 0;
+}
+
+.max-h-screen {
+  max-height: 1000px; /* Set a high value to accommodate the dropdown content */
+}
+
+/* Base style for dropdown items */
+.dropdown-item {
+    position: relative;
+    padding-left: 10px; /* Ensure space for border effect */
+    overflow: hidden;
+    background-color: white; /* Ensure visibility against background */
+  }
+  
+  /* Pseudo-element for left border effect */
+  .dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%; /* Start from the middle */
+    height: 0; /* Initially, height is zero */
+    width: 4px; /* Default border width */
+    background: #4299e1; /* Tailwind's blue-500 color */
+    transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
+    transform: translateY(-50%); /* Center the border vertically */
+  }
+  
+  /* Expand the border when hovering over dropdown items */
+  .dropdown-item:hover::before {
+    height: 100%; /* Full height of the item */
+    top: 0; /* Stretch from top */
+    transform: translateY(0); /* Reset transform to ensure height expansion */
+  }
+  
