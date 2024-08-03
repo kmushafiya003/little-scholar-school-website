@@ -71,8 +71,6 @@ export const photoalbum = [
         "title": "Principal of Little Scholars Recognized by Bharat Gyan Samagam award",
     }
 ]
-// \End(Photo Album)
-
 // <-----------------------------Video Album------------------------>
 export const videoalbum = [
     {

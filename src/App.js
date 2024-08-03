@@ -4,7 +4,6 @@ import { Routes,Route } from 'react-router-dom';
 import Navbar from './components/common/Navbar.jsx';
 import Home from './pages/Home.jsx';
 
-
 function App() {
   return (
 
@@ -15,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
       </Routes>
-        
+           
   </div>
   )
 }
