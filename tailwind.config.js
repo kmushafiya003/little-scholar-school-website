@@ -93,6 +93,9 @@ module.exports = {
         'regular': 400,
         'bold': 700,
       },
+      borderWidth: {
+        '0.2': '0.2px', // Custom border width
+      },
 
     }
   },

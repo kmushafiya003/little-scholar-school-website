@@ -1,3 +1,5 @@
+
+
 /* Dropdown Menu Animation */
 .dropdown {
   max-height: 0;
@@ -6,7 +8,8 @@
 }
 
 .group-hover .dropdown {
-  max-height: 1000px; /* Set a high value to accommodate the dropdown content */
+  max-height: 1000px; 
+  
 }
 
 /* Smooth Transition for Hover Effects */
@@ -61,3 +64,8 @@
     transform: translateY(0); /* Reset transform to ensure height expansion */
   }
   
+ 
+
+
+
+

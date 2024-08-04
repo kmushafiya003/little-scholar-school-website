@@ -9,7 +9,7 @@ function App() {
   return (
 
     <div className="w-screen min-h-screen overflow-x-hidden ">
-      <Navbar />
+    
 
       <Routes>
         <Route path='/' element={<Home/>}/>
