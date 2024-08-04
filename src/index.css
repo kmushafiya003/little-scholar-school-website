@@ -83,7 +83,9 @@
 .owl-prev {
   left: 10px; /* Adjust position as needed */
 }
-
+.transparent-bg {
+  background-color: transparent !important;
+}
 
 
 /* Hover animations */
@@ -136,4 +138,29 @@
   100% {
     transform: rotateY(360deg);
   }
+}
+/* Custom pagination bullet styles */
+/* Custom pagination bullet styles */
+.custom-bullet {
+  background-color: #444141; /* Active bullet color */
+  width: 15px; /* Size of the bullet */
+  height: 15px; /* Size of the bullet */
+  
+  border-radius: 2px; /* Rounded corners */
+  
+}
+
+.swiper-pagination-bullet-active.custom-bullet {
+  background-color: #1ba0e2; /* Active bullet color */
+  width: 12px; /* Size of the bullet */
+  height: 12px; /* Size of the bullet */
+  
+  border-radius: 4px; /* Rounded corners */
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 1px; /* Adjust as needed */
+  text-align: center;
+  
 }

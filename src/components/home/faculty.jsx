@@ -34,13 +34,15 @@ const Faculty = () => {
             </div>
           </div>
           <div className="w-full"> {/* Container for slider */}
-            <ImageSlider 
+            {<ImageSlider 
               images={faculty} 
-              backgroundColor="black" 
+              backgroundColor="transparent"
               showNames={true} 
               spaceBetween={35} // Adjust spaceBetween for smaller screens if needed
+              showDesignation={true}
               rounded={true} // Apply rounded corners
-            />
+              pagination={true}
+            /> }
           </div>
         </div>
       </div>

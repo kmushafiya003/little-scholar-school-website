@@ -11,7 +11,7 @@ import Faculty from '../components/home/faculty'
 const Home = () => {
   return (
     <div>
-        <Navbar/>
+      
         <HeroSection/>
         <Welcome/>
         <Message/>

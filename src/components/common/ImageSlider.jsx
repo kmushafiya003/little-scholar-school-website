@@ -7,7 +7,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import '../../index.css'; // Your custom styles
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, showDesignation = false, spaceBetween = 20, rounded = false }) => {
+const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, showDesignation = false, spaceBetween = 20, rounded = false}) => {
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
@@ -30,14 +30,10 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
     };
   }, []);
 
-  console.log('images:', images);
-  console.log('showNames:', showNames);
-  console.log('showDesignation:', showDesignation);
-
   return (
     <section
       id="home"
-      className="w-full bg-white flex justify-center items-center"
+      className={`w-full flex justify-center items-center ${backgroundColor === 'transparent' ? 'transparent-bg' : ''}`}
       style={{ backgroundColor }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -49,9 +45,15 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
             nextEl: '.owl-next',
             prevEl: '.owl-prev',
           }}
-          pagination={{ clickable: true }}
-          spaceBetween={spaceBetween} // Use the prop value
-          slidesPerView={5} // Default slides per view
+          pagination={{
+            clickable: true,
+            bulletElement: '.swiper-pagination',
+            renderBullet: function (_index, className) {
+              return `<span class="${className} custom-bullet"></span>`;
+            },
+          }}
+          spaceBetween={spaceBetween}
+          slidesPerView={5}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -84,15 +86,15 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
               <img 
                 src={image.image} 
                 alt={image.name} 
-                className={`w-full h-auto max-w-[500px] ${rounded ? 'rounded-md' : ''}`} // Conditional rounded corners
-              /> 
+                className={`w-full h-auto max-w-[500px] ${rounded ? 'rounded-md' : ''}`}
+              />
               {showNames && (
                 <div className="mt-2 text-center">
-                  <div className="text-white bg-black bg-opacity-50 px-2 py-1 rounded font-bold">
+                  <div className="text-white bg-opacity-50 px-2 py-1 rounded font-bold">
                     {image.name}
                   </div>
-                  {showDesignation && (
-                    <div className="text-white bg-black bg-opacity-50 px-2 py-1 mt-1 rounded font-bold">
+                  {showDesignation && image.designation && (
+                    <div className="text-white bg-opacity-50 px-1 py-1 mt-1 rounded font-bold">
                       {image.designation}
                     </div>
                   )}
@@ -104,6 +106,7 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
         {/* Custom Navigation Buttons */}
         <button className={`owl-next ${hovered ? 'arrow-animate' : ''}`}><FaAngleRight className='text-2xl'/></button>
         <button className={`owl-prev ${hovered ? 'arrow-animate' : ''}`}><FaAngleLeft className='text-2xl'/></button>
+        <div className="swiper-pagination"></div>
       </div>
     </section>
   );
