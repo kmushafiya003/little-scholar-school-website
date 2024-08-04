@@ -90,9 +90,9 @@ const Navbar = () => {
 
   return (
 
-    <header className={`transition-transform duration-300 ${isFixed ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[200px]' : 'top-0'}`}>
+    <header className={`transition-transform duration-300 ${isFixed ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px]' : 'top-0'}`}>
       <div className='w-full mx-auto bg-white'>
-        <nav className="navbar text-black text-lg">
+        <nav className="navbar text-black text-lg shadow-lg">
           <div className="mx-auto px-4 py-4 flex items-center justify-between rounded-full">
 
             {/* Logo Section */}
@@ -194,7 +194,6 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              
 
               className="text-2xl xl:hidden"
 
