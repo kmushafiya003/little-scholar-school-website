@@ -1,22 +1,28 @@
-
+import React from 'react';
+import Message from './components/home/Message.jsx';
+// import ImageSlider from './components/home/ImageSlider.jsx';
+import HeroSection from './components/home/HeroSection.jsx';
+import Welcome from './components/home/Welcome.jsx';
+import Infrastructure from './components/home/infrastructure.jsx';
+import Faculty from './components/home/faculty.jsx';
+import Navbar from'./components/common/Navbar.jsx'
 import './App.css';
-import Navbar from './components/common/Navbar.jsx';
-import { Routes , Route } from 'react-router-dom';
-import Home from './pages/Home.jsx';
 
-
-function App() {
+const App = () => {
   return (
 
-    <div className="w-screen min-h-screen overflow-x-hidden ">
-    
 
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-      </Routes>
+   
+
+    <div className="w-screen min-h-screen overflow-x-hidden bg-black">
+      <Navbar/>
+      <HeroSection />
+      <Welcome />
+      <Message />
+      <Infrastructure />
+      <Faculty />
 
     </div>
-
   );
 }
 

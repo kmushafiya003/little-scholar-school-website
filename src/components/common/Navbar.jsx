@@ -59,9 +59,7 @@ const Navbar = () => {
     setActiveSubDropdown(activeSubDropdown === id ? null : id);
   };
 
-  const toggleSubSubDropdown = (id) => {
-    setActiveSubSubDropdown(activeSubSubDropdown === id ? null : id);
-  };
+  
 
   const closeAllMenus = () => {
     setIsOpen(false);

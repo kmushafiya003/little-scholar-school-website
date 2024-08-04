@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade'; // Import effect styles
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
-import '../../App.css'; // Your custom styles
+import '../../index.css'; // Your custom styles
 
 import image1 from '../../images/hero_section_img_1.webp';
 import image2 from '../../images/hero_section_img_2.webp';
@@ -45,7 +45,7 @@ const HeroSection = () => {
               >
                 {index === 0 && (
                   <>
-                    <h2 className="text-xxl md:text-9xl font-bold uppercase mb-4 mt-20">Education</h2>
+                    <h2 className="text-xxl md:text-9xl font-bold uppercase mb-6 mt-10">Education</h2>
                     <div className="bg-dark-blue w-max text-center uppercase font-semibold text-lg md:text-3xl text-white border-l-4 border-red px-4 py-2 md:px-5 md:py-4 mt-4">
                       Inspire. Learn. Grow.
                     </div>
@@ -60,7 +60,7 @@ const HeroSection = () => {
                 )}
                 {index === 1 && (
   <>
-    <h2 className="text-xxl md:text-9xl font-bold uppercase mb-4 mt-20 text-center">Education</h2>
+    <h2 className="text-xxl md:text-9xl font-bold uppercase mb-6 mt-10 text-center">Education</h2>
     <div className="w-max bg-dark-blue text-center uppercase font-semibold text-xl md:text-2xl text-white border-0 border-r-6 border-l-6 border-red rounded-full px-4 py-2 md:px-6 md:py-3 mt-4 mx-auto">
       Bright Futures Begin Here
     </div>
@@ -83,7 +83,7 @@ const HeroSection = () => {
     <p className="text-lg md:text-xl mb-4 text-right ml-auto">Little Scholars: Unlocking Every Child's Potential.</p>
     <a
       href="https://onlineregistration.littlescholars-kashipur.com/OnlineRegistration/"
-      className="w-max bg-red hover:bg-bright-black text-white font-semibold text-lg md:text-lg py-2 px-4 md:py-3 sm:px-6 ml-auto"
+      className="w-max bg-red hover:bg-bright-black text-white font-semibold text-lg md:text-lg py-2 px-4 md:py-3 sm:px-12 ml-auto"
     >
       Get Enroll
     </a>

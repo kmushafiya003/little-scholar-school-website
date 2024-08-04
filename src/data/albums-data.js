@@ -1,3 +1,4 @@
+// --------------------Photo Album---------------------
 import activity from '../../src/images/activity.jpg'
 import cultrual_day from '../../src/images/cultural_day.jpeg'
 import harel_celebration from '../../src/images/harel_celebration.jpeg'
@@ -6,6 +7,8 @@ import safety_week from '../../src/images/safety_week.jpg'
 import safety_week_2 from '../../src/images/safety_week_2.jpg'
 import yoga_day from '../../src/images/yoga_day.jpeg'
 import topper from '../../src/images/topper.jpg'
+
+// --------------------Video Album---------------------
 import cbse from '../../src/images/cbse.png'
 import investiture_cermony from '../../src/images/investiture_cermony.jpg'
 import mothers_day from '../../src/images/mothers_day.jpg'
@@ -13,6 +16,8 @@ import educational_trip from '../../src/images/educational_trip.jpg'
 import pre_mothers_day from '../../src/images/pre_primary_mothers_day.jpg'
 import pre_primary_labours_day from '../../src/images/pre_primary_labours_day.jpg'
 import lsmun from '../../src/images/lsmun.jpg'
+
+// --------------------Media Album---------------------
 import student_1500 from '../../src/images/1500_student.jpg'
 import student_500 from '../../src/images/500_student.jpg'
 import success from '../../src/images/success _is_not_final.jpg'
@@ -21,6 +26,8 @@ import littil_2 from '../../src/images/littil_2.jpg'
 import littil_3 from '../../src/images/littil_3.jpg'
 import littil_4 from '../../src/images/littil_4.jpg'
 import vad_vivad from '../../src/images/vad_vivad.jpg'
+
+
 // <-----------------------Photo Album------------------------>
 export const photoalbum = [
     {
@@ -107,6 +114,8 @@ export const videoalbum = [
         "title": "LSMUN - 2024",
     }
 ]
+// \End(Video Album)
+
 // <----------------------Media Album---------------------------->
 export const mediaalbum = [
     {
@@ -150,3 +159,4 @@ export const mediaalbum = [
         "title": "वाद-विवाद प्रतियोगिता में स्कॉलर्स स्कूल काशीपुर प्रथम"
     }
 ]
+// \End(Media Album)
