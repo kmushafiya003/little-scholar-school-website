@@ -1,139 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.bg-parallax {
-  background-image: url('./images/bg-parallax.webp');
-  background-attachment: fixed; 
-  background-position: center;
-  background-size: cover;
-  overflow: auto; 
-}
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.custom-slide {
+/* Base style for dropdown items */
+.dropdown-item {
   position: relative;
+  padding-left: 10px; 
   overflow: hidden;
+  background-color: white; 
 }
 
-.custom-slide img {
-  transition: transform 1s ease;
-}
 
-.swiper-slide-active .custom-slide img {
-  transform: scale(1.1); /* Example scale effect */
-}
-
-.custom-content {
+.dropdown-item::before {
+  content: '';
   position: absolute;
-  bottom: 10%;
-  left: 10%;
-  right: 10%;
-  text-align: center;
-  transition: opacity 1s ease;
-}
-
-.swiper-slide-active .custom-content {
-  opacity: 1;
-}
-
-.swiper-slide-next .custom-content,
-.swiper-slide-prev .custom-content {
-  opacity: 0;
-}
-/* Add this to your App.css or a relevant CSS file */
-.swiper-container {
-  width: 100%;
-}
-
-.swiper-slide img {
-  width: 100%; /* Ensures the image takes the full width of the slide */
-  object-fit: cover; /* Ensures the image covers the slide area */
-}
-/* In your main CSS file */
-/* In your main CSS file */
-
-
-.owl-next,
-.owl-prev {
- background-color: rgb(165, 165, 170);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(12, 5, 5);
-  cursor: pointer;
-  z-index: 10;
-  position: absolute;
-  top: 50%;
+  left: 0;
+  top: 50%; 
+  height: 0; 
+  width: 4px; 
+  background: #4299e1; 
+  transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
   transform: translateY(-50%);
-  transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
 }
 
-.owl-next {
-  right: 10px; /* Adjust position as needed */
-}
-
-.owl-prev {
-  left: 10px; /* Adjust position as needed */
-}
-
-
-
-/* Hover animations */
-
-
-/* Apply the animation to the sibling when one is hovered */
-
-@keyframes arrow-hover {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-}
-
-.arrow-animate {
-  animation: arrow-hover 0.6s infinite;
-}
-
-
-/* Keyframe animation for both left and right */
-@keyframes hover-animation {
-  0%, 100% {
-    transform: translateX(-50%) translateY(-50%);
-  }
-  50% {
-    transform: translateX(-40%) translateY(-50%);
-  }
-}
-@keyframes flip-hover {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes flip-click {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
+/* Expand the border when hovering over dropdown items */
+.dropdown-item:hover::before {
+  height: 100%; 
+  top: 0; 
+  transform: translateY(0);
 }
