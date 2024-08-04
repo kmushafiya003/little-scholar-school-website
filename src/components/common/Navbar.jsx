@@ -92,8 +92,8 @@ const Navbar = () => {
 
     <header className={`transition-transform duration-300 ${isFixed ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px]' : 'top-0'}`}>
       <div className='w-full mx-auto bg-white'>
-        <nav className="navbar text-black text-lg shadow-lg">
-          <div className="mx-auto px-4 py-4 flex items-center justify-between rounded-full">
+        <nav className="text-lg text-black shadow-lg navbar">
+          <div className="flex items-center justify-between px-4 py-4 mx-auto rounded-full">
 
             {/* Logo Section */}
             <div>
@@ -149,7 +149,7 @@ const Navbar = () => {
                                 {submenuItem.dropdown.map((subSubmenuItem) => (
                                   <li
                                     key={subSubmenuItem.id}
-                                    className="relative transition ease-in-out duration-200 transform"
+                                    className="relative transition duration-200 ease-in-out transform"
                                     onMouseEnter={() => handleMouseEnter(subSubmenuItem.id, 'subSubDropdown')}
                                     onMouseLeave={() => handleMouseLeave('subSubDropdown')}
                                   >

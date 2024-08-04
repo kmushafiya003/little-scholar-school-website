@@ -15,14 +15,17 @@ const Home = () => {
 
 
     <div >
-      <HeaderSection/>
-    <Navbar/>
-<HeroSection/>
-<Welcome/>
-<Message/>
-
-<Gallery/>
-<Counts/>
+      <HeaderSection />
+      <Navbar />
+      <HeroSection />
+      <Welcome />
+      <Message />
+      <Infrastructure />
+      <Faculty />
+      <Gallery />
+      <Counts />
+      <IconSection />
+      <Footer />
     </div>
   )
 }
