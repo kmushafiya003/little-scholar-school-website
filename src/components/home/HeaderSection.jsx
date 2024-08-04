@@ -8,7 +8,7 @@ const HeaderSection = () => {
     const repeatedHeaderData = [...headerData, ...headerData, ...headerData, ...headerData, ...headerData];
 
     return (
-        <header className='relative w-full bg-red'>
+        <header className='relative z-[300] w-full bg-red'>
             <div className="p-2 mx-auto overflow-hidden whitespace-nowrap">
                 <div className="marquee-container">
                     <div className="inline-block animate-marquee hover:pause-marquee">

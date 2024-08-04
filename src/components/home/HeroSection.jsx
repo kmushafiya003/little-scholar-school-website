@@ -17,7 +17,7 @@ const images = [image1, image2, image3];
 const HeroSection = () => {
   return (
     <section id="home" className="w-full xl:h-[700px] xlg:h-[650px] lg:h-[600px] xmd:h-[560px] smd:h-[510px] md:[480px] sm:h-[520px] xs:h-[480px] h-[420px]">
-      <div className="relative w-full h-full p-0 ">
+      <div className="relative  w-full h-full p-0 ">
         <Swiper
           spaceBetween={0}
           slidesPerView={1}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Message from './components/home/Message.jsx';
+import HeaderSection from './components/home/HeaderSection.jsx'
 // import ImageSlider from './components/home/ImageSlider.jsx';
 import HeroSection from './components/home/HeroSection.jsx';
 import Welcome from './components/home/Welcome.jsx';
@@ -15,8 +16,9 @@ const App = () => {
    
 
     <div className="w-screen min-h-screen overflow-x-hidden bg-black">
+      <HeaderSection/>
       <Navbar/>
-      <HeroSection />
+     <HeroSection/>
       <Welcome />
       <Message />
       <Infrastructure />
