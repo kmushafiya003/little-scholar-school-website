@@ -11,7 +11,7 @@ const App = () => {
 
    
 
-    <div className="w-screen min-h-screen overflow-x-hidden bg-black">
+    <div className="w-screen min-h-screen overflow-x-hidden">
       <Home />
       
      

@@ -5,8 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import '../../index.css'; // Your custom styles
-import { FaAngleLeft } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, showDesignation = false, spaceBetween = 20, rounded = false }) => {
   const [hovered, setHovered] = useState(false);
@@ -31,6 +30,10 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
     };
   }, []);
 
+  console.log('images:', images);
+  console.log('showNames:', showNames);
+  console.log('showDesignation:', showDesignation);
+
   return (
     <section
       id="home"
@@ -39,7 +42,7 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative w-full mx-auto py-10">
+      <div className="relative w-full mx-auto py-20">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation={{
@@ -88,7 +91,7 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
                   <div className="text-white bg-black bg-opacity-50 px-2 py-1 rounded font-bold">
                     {image.name}
                   </div>
-                  {showDesignation && image.designation && (
+                  {showDesignation && (
                     <div className="text-white bg-black bg-opacity-50 px-2 py-1 mt-1 rounded font-bold">
                       {image.designation}
                     </div>
