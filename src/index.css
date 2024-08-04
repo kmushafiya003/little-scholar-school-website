@@ -104,12 +104,12 @@
 
 @keyframes moveRight {
   0% { transform: translateX(0); }
-  100% { transform: translateX(10px); }
+  100% { transform: translateX(2px); }
 }
 
 @keyframes moveLeft {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-10px); }
+  100% { transform: translateX(-2px); }
 }
 .owl-next.arrow-reverse {
   animation: moveRight 0.5s reverse;
