@@ -69,10 +69,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className='bg-white'>
+    <header className='bg-white '>
       <div className='w-11/12 mx-auto'>
-        <nav className="navbar text-black text-lg">
-          <div className="mx-auto px-4 py-4 flex items-center justify-between rounded-full">
+        <nav className="text-lg text-black navbar">
+          <div className="flex items-center justify-between px-4 py-4 mx-auto rounded-full">
             {/* Logo Section */}
             <div>
               <NavLink to="/">
@@ -81,7 +81,7 @@ const Navbar = () => {
             </div>
 
             {/* Main Navigation for large screens */}
-            <div className="hidden xl:flex space-x-4">
+            <div className="hidden space-x-4 xl:flex">
               <ul className="flex space-x-1">
                 {navData.map((navItem) => (
                   <li
@@ -114,7 +114,7 @@ const Navbar = () => {
                             {/* Submenu Link */}
                             <NavLink
                               to={submenuItem.path}
-                              className="px-4 py-2 text-black transition duration-300 hover:bg-gray-200 flex justify-between items-center dropdown-item"
+                              className="flex items-center justify-between px-4 py-2 text-black transition duration-300 hover:bg-gray-200 dropdown-item"
                             >
                               {submenuItem.title}
                               {submenuItem.dropdown && <IoIosArrowForward className="ml-2" />}
@@ -172,7 +172,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="xl:hidden  text-2xl"
+              className="text-2xl xl:hidden"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <IoMdClose /> : <IoMdMenu />}
@@ -185,7 +185,7 @@ const Navbar = () => {
             {isOpen && (
               <button
                 onClick={closeAllMenus}
-                className="absolute top-4 right-4 text-2xl"
+                className="absolute text-2xl top-4 right-4"
               >
                
               </button>
@@ -200,7 +200,7 @@ const Navbar = () => {
                     {/* Mobile Navigation Link */}
                     <NavLink
                       to={navItem.path}
-                      className="block text-white w-full px-4 py-2 text-left transition duration-300 font-bold"
+                      className="block w-full px-4 py-2 font-bold text-left text-white transition duration-300"
                       onClick={(e) => {
                         e.stopPropagation();
                         closeAllMenus();
@@ -229,7 +229,7 @@ const Navbar = () => {
                       {navItem.dropdown.map((submenuItem) => (
                         <li key={submenuItem.id} className="relative">
                           <div 
-                            className="flex justify-between items-center group border-2"
+                            className="flex items-center justify-between border-2 group"
                             onClick={() => toggleSubDropdown(submenuItem.id)}
                           >
                             {/* Mobile Submenu Link */}
