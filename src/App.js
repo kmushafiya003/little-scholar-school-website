@@ -4,6 +4,7 @@ import Home from './pages/Home';
 
 
 import './App.css';
+import Navbar from './components/common/Navbar';
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
 
    
 
-    <div className="w-screen min-h-screen overflow-x-hidden bg-black">
+    <div className="w-screen min-h-screen overflow-x-hidden ">
+      <Navbar />
       <Home />
       
      
