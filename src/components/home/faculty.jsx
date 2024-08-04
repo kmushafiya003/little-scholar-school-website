@@ -38,10 +38,10 @@ const Faculty = () => {
               images={faculty} 
               backgroundColor="transparent"
               showNames={true} 
-              spaceBetween={35} // Adjust spaceBetween for smaller screens if needed
+              spaceBetween={40} // Adjust spaceBetween for smaller screens if needed
               showDesignation={true}
               rounded={true} // Apply rounded corners
-              pagination={true}
+             
             /> }
           </div>
         </div>
