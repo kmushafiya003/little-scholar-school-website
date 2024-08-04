@@ -7,6 +7,10 @@ import './App.css';
 
 const App = () => {
   return (
+
+
+   
+
     <div className="w-screen min-h-screen overflow-x-hidden bg-black">
       <Home />
       

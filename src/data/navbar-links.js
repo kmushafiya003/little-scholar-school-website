@@ -1,11 +1,11 @@
 // navData.js
 export const navData = [
-    {
-      id: 1,
+    // {
+    //   id: 1,
       
-      path: '/',
+    //   path: '/',
      
-    },
+    // },
     {
       id: 2,
       title: 'About us',
@@ -27,7 +27,7 @@ export const navData = [
       title: 'Admissions',
       path: '/admissions',
       dropdown: [
-        { id: 21, title: 'Admission Helpdesk/School Visit', path: '/admissions/submenu1' },
+        { id: 21, title: 'Admission Helpdesk/School Visit', path: '/admissions/helpdesk' },
         { id: 22, title: 'Admission Procedure', path: '/admissions/admissionprocedure' },
         { id: 23, title: 'Resistration', path: '/admissions/resistration' },
         { id: 24, title: 'Fee Structure', path: '/admissions/feestructure' },
@@ -49,8 +49,8 @@ export const navData = [
         { id: 46, title: 'Social-Cultural Development', path: '/studentlife/cultural' },
         { id: 47, title: 'Counselling', path: '/studentlife/counselling' },
         { id: 48, title: 'Council Guidelines', path: '/studentlife/council-guidelines', dropdown: [
-            { id: 481, title: 'Parent Form', path: '/studentlife/council-guidelines/parent-form' },
-            { id: 482, title: 'Student Form', path: '/studentlife/council-guidelines/student-form' },
+            { id: 8888, title: 'Parent Form', path: '/studentlife/council-guidelines/parent-form' },
+            { id: 9999, title: 'Student Form', path: '/studentlife/council-guidelines/student-form' },
           ]
         },
         { id: 49, title: 'Achievements', path: '/studentlife/achievements' },
@@ -92,6 +92,18 @@ export const navData = [
         
       ],
     },
+    {
+      id: 8,
+      title: 'Notice',
+      path: '/notice',
+      dropdown: [
+        { id: 91, title: 'Notice 1', path: '/notice/notice1' },
+        { id: 92, title: 'Notice 2', path: '/notice/notice 2' },
+        { id: 93, title: 'Notice 3', path: '/notice/notice 3' },
+        
+      ],
+    },
+    
   ];
   
  
