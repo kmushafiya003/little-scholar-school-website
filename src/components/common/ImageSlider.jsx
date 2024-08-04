@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import '../../index.css'; // Your custom styles
-import { FaAngleLeft } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, showDesignation = false, spaceBetween = 20, rounded = false }) => {
+  const [hovered, setHovered] = useState(false);
+
   useEffect(() => {
     const nextButton = document.querySelector('.owl-next');
     const prevButton = document.querySelector('.owl-prev');
@@ -29,22 +29,35 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
     };
   }, []);
 
+  const handleMouseEnter = () => {
+    setHovered(true);
+    document.querySelector('.owl-next').classList.add('arrow-animate-next');
+    document.querySelector('.owl-prev').classList.add('arrow-animate-prev');
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+    document.querySelector('.owl-next').classList.remove('arrow-animate-next');
+    document.querySelector('.owl-prev').classList.remove('arrow-animate-prev');
+  };
+
   return (
     <section
       id="home"
-      className="w-full bg-white flex justify-center items-center"
+      className={`w-full flex justify-center items-center ${backgroundColor === 'transparent' ? 'transparent-bg' : ''}`}
       style={{ backgroundColor }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className="relative w-full max-w-screen-xl">
+      <div className="relative w-full mx-auto py-20">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Autoplay]}
           navigation={{
             nextEl: '.owl-next',
             prevEl: '.owl-prev',
           }}
-          pagination={{ clickable: true }}
-          spaceBetween={spaceBetween} // Use the prop value
-          slidesPerView={5} // Default slides per view
+          spaceBetween={spaceBetween}
+          slidesPerView={5}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -72,31 +85,33 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
           autoplay={{ delay: 7000 }}
           speed={500}
         >
-          {images.map((image, index) => (
-            <SwiperSlide key={index} className="flex flex-col items-center">
-              <img 
-                src={image.image} 
-                alt={image.name} 
-                className={`w-full h-auto max-w-[500px] ${rounded ? 'rounded-md' : ''}`} // Conditional rounded corners
-              /> 
-              {showNames && (
-                <div className="mt-2 text-center">
-                  <div className="text-white bg-black bg-opacity-50 px-2 py-1 rounded font-bold">
-                    {image.name}
-                  </div>
-                  {showDesignation && image.designation && (
-                    <div className="text-white bg-black bg-opacity-50 px-2 py-1 mt-1 rounded font-bold">
-                      {image.designation}
+          <div className="swiper-wrapper">
+            {images.map((image, index) => (
+              <SwiperSlide key={index} className="flex flex-col items-center swiper-slide">
+                <img 
+                  src={image.image} 
+                  alt={image.name} 
+                  className={`w-full h-auto max-w-[500px] ${rounded ? 'rounded-md' : ''}`}
+                />
+                {showNames && (
+                  <div className="mt-0 text-center">
+                    <div className="text-white bg-opacity-50 px-2 py-1 rounded font-bold single-line-text">
+                      {image.name}
                     </div>
-                  )}
-                </div>
-              )}
-            </SwiperSlide>
-          ))}
+                    {showDesignation && image.designation && (
+                      <div className="text-white bg-opacity-50 px-1 py-1 mt-1 rounded font-bold">
+                        {image.designation}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </SwiperSlide>
+            ))}
+          </div>
         </Swiper>
         {/* Custom Navigation Buttons */}
-        <button className="owl-next"><FaAngleRight className='text-2xl'/></button>
-        <button className="owl-prev"><FaAngleLeft className='text-2xl'/></button>
+        <button className={`owl-next ${hovered ? 'arrow-animate-next' : ''}`}><FaAngleRight className='text-2xl icon'/></button>
+        <button className={`owl-prev ${hovered ? 'arrow-animate-prev' : ''}`}><FaAngleLeft className='text-2xl icon'/></button>
       </div>
     </section>
   );

@@ -57,6 +57,9 @@ module.exports = {
       animation: {
         marquee: "marquee 20s linear infinite",
         "pause-marquee": "none",
+        'arrow-hover': 'arrow-hover 0.6s infinite',
+        'flip-hover': 'flip-hover 0.6s forwards',
+        'flip-back-hover': 'flip-back-hover 0.6s forwards',
       },
       keyframes: {
         marquee: {
@@ -65,6 +68,8 @@ module.exports = {
         },
       },
     },
+    
   },
+ 
   plugins: [],
 };
