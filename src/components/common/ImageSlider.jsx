@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,6 +9,8 @@ import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 
 const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, showDesignation = false, spaceBetween = 20, rounded = false }) => {
+  const [hovered, setHovered] = useState(false);
+
   useEffect(() => {
     const nextButton = document.querySelector('.owl-next');
     const prevButton = document.querySelector('.owl-prev');
@@ -34,8 +36,10 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
       id="home"
       className="w-full bg-white flex justify-center items-center"
       style={{ backgroundColor }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative w-full max-w-screen-xl">
+      <div className="relative w-full mx-auto py-10">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation={{
@@ -95,8 +99,8 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
           ))}
         </Swiper>
         {/* Custom Navigation Buttons */}
-        <button className="owl-next"><FaAngleRight className='text-2xl'/></button>
-        <button className="owl-prev"><FaAngleLeft className='text-2xl'/></button>
+        <button className={`owl-next ${hovered ? 'arrow-animate' : ''}`}><FaAngleRight className='text-2xl'/></button>
+        <button className={`owl-prev ${hovered ? 'arrow-animate' : ''}`}><FaAngleLeft className='text-2xl'/></button>
       </div>
     </section>
   );
