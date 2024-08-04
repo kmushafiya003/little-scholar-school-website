@@ -9,6 +9,28 @@
   background-size: cover;
   overflow: auto; 
 }
+/* Custom styles for the navigation buttons */
+.swiper-next, .swiper-prev {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  height: auto;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-next {
+  right: 10px;
+}
+
+.swiper-prev {
+  left: 10px;
+}
+
 .swiper-slide {
   display: flex;
   justify-content: center;
@@ -40,11 +62,12 @@
 .swiper-slide-active .custom-content {
   opacity: 1;
 }
-
-.swiper-slide-next .custom-content,
-.swiper-slide-prev .custom-content {
-  opacity: 0;
+.swiper-button-next, .swiper-button-prev {
+  display: none;
 }
+
+
+
 /* Add this to your App.css or a relevant CSS file */
 .swiper-container {
   width: 100%;
@@ -68,8 +91,8 @@
   background-color: rgba(0, 0, 0, 0.2); /* Faint color */
   
   border-radius: 50%; /* Make the button circular */
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
   display: flex;
   align-items: center;
   justify-content: center;
