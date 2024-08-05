@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa'; 
 import '../../index.css'; 
 
+
 import image1 from '../../images/hero_section_img_1.webp';
 import image2 from '../../images/hero_section_img_2.webp';
 import image3 from '../../images/hero_section_img_3.webp';

@@ -185,7 +185,6 @@
     transform: rotateY(360deg);
   }
 }
-
 .single-line-text {
   white-space: nowrap;  
   overflow: hidden;     
