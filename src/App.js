@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 
 
 const App = () => {
@@ -8,7 +9,9 @@ const App = () => {
 
 
     <div className="min-h-screen overflow-x-hidden ">
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
 
 
 

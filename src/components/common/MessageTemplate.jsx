@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 const MessageTemplate = ({ data, cardIndex }) => {
 
 
-  const message = data[0].message
-  console.log(message);
+ 
   return (
     <section className='relative w-full text-white bg-transparent '>
       <div className='w-11/12 mx-auto'>
