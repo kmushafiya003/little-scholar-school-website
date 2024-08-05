@@ -20,12 +20,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsFixed(true);
-        setIsHidden(window.scrollY > lastScrollY.current);
-      } else {
-        setIsFixed(false);
-        setIsHidden(false);
+      if (!isOpen) {
+        if (window.scrollY > 40) {
+          setIsFixed(true);
+          setIsHidden(window.scrollY > lastScrollY.current);
+        } else {
+          setIsFixed(false);
+          setIsHidden(false);
+        }
       }
       lastScrollY.current = window.scrollY;
     };
@@ -35,7 +37,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isOpen]);
 
   const handleMouseEnter = (id, level) => {
     clearTimeout(dropdownTimeout.current);
@@ -89,14 +91,12 @@ const Navbar = () => {
   };
 
   return (
-
-    <header className={`transition-transform duration-300 ${isFixed ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px]' : 'top-0'}`}>
+    <header className={`transition-all duration-300 ${isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px] opacity-0' : 'top-0'}`}>
       <div className='w-full mx-auto bg-white'>
         <nav className="text-[16px] text-black shadow-lg navbar">
           <div className="flex items-center justify-between px-4 py-4 mx-auto rounded-full">
-
             {/* Logo Section */}
-            <div>
+            <div className='flex items-center'>
               <NavLink to="/">
                 <img src={logo} alt="Logo" className="w-[110px]" />
               </NavLink>
@@ -108,7 +108,7 @@ const Navbar = () => {
                 {navData.map((navItem) => (
                   <li
                     key={navItem.id}
-                    className="relative group "
+                    className="relative group"
                     onMouseEnter={() => handleMouseEnter(navItem.id, 'dropdown')}
                     onMouseLeave={() => handleMouseLeave('dropdown')}
                   >
@@ -125,7 +125,7 @@ const Navbar = () => {
                     {/* Dropdown Menu */}
                     {navItem.dropdown && (
                       <ul className={`absolute left-0 mt-6 z-10 w-60 border-[rgb(6,4,4)] border-t-4 text-black bg-white 
-                        ${activeDropdown === navItem.id ? 'block opacity-100 hover:transition-all duration-200 ease-in-out delay-100 ' : 'hidden opacity-0'}`}>
+                        ${activeDropdown === navItem.id ? 'block opacity-100' : 'hidden opacity-0'}`}>
                         {navItem.dropdown.map((submenuItem) => (
                           <li
                             key={submenuItem.id}
@@ -136,14 +136,12 @@ const Navbar = () => {
                             {/* Submenu Link */}
                             <NavLink
                               to={submenuItem.path}
-                              className="flex items-center  px-4 text-resp-black-2 transition duration-300 dropdown-item  hover:bg-light-grey hover:text-dark-blue "
+                              className="flex items-center px-4 text-resp-black-2 transition duration-300 dropdown-item hover:bg-light-grey hover:text-dark-blue"
                             >
-                              <p className='hover:translate-x-1 transition-transform duration-200  py-2 flex items-center'>
+                              <p className='hover:translate-x-1 transition-transform duration-200 py-2 flex items-center'>
                                 {submenuItem.title}
                                 {submenuItem.dropdown && <IoIosArrowForward className="ml-4" />}
-
                               </p>
-
                             </NavLink>
 
                             {/* Sub-dropdown Menu */}
@@ -160,16 +158,12 @@ const Navbar = () => {
                                     {/* Sub-submenu Link */}
                                     <NavLink
                                       to={subSubmenuItem.path}
-                                      className="border-b-0.2 border-[rgb(143,140,140)] px-4  transition duration-300 w-[150px]  text-resp-black-2 flex  items-center dropdown-item hover:bg-light-grey hover:text-dark-blue"
+                                      className="border-b-0.2 border-[rgb(143,140,140)] px-4 transition duration-300 w-[150px] text-resp-black-2 flex items-center dropdown-item hover:bg-light-grey hover:text-dark-blue"
                                     >
-
-                                      <p className='hover:translate-x-1 transition-transform duration-200  py-1 flex items-center'>
-
+                                      <p className='hover:translate-x-1 transition-transform duration-200 py-1 flex items-center'>
                                         {subSubmenuItem.title}
                                         {subSubmenuItem.dropdown && <IoIosArrowForward className="ml-4" />}
-
                                       </p>
-
                                     </NavLink>
 
                                     {/* Sub-sub-dropdown Menu */}
@@ -204,9 +198,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-
               className="text-2xl xl:hidden"
-
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <IoMdClose /> : <IoMdMenu />}
@@ -214,17 +206,18 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Navigation Menu */}
-          <div className={`xl:hidden ${isOpen ? 'block' : 'hidden'} bg-white text-black text-sm`}>
+          <div className={`xl:hidden fixed inset-0 bg-white text-black text-sm transition-all duration-300 ${isOpen ? 'block z-[80] mt-10 h-[40%]' : 'hidden'}`}>
             {/* Close Button for Mobile Menu */}
             {isOpen && (
               <button
                 onClick={closeAllMenus}
-                className="absolute text-2xl top-4 right-4"
+                className="absolute top-4 right-4 text-2xl"
               >
-
+                <IoMdClose />
               </button>
             )}
-            <ul>
+
+            <ul className="pt-16">
               {navData.map((navItem) => (
                 <li key={navItem.id} className="relative">
                   <div
@@ -250,7 +243,7 @@ const Navbar = () => {
                           e.stopPropagation();
                           toggleDropdown(navItem.id);
                         }}
-                        className="px-4 py-2 text-left transition duration-300"
+                        className="px-4 py-2 text-left transition duration-300 scroll-auto"
                       >
                         {activeDropdown === navItem.id ? <IoIosArrowUp className='text-white' /> : <IoIosArrowDown className='text-white' />}
                       </button>
