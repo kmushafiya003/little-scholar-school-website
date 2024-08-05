@@ -9,6 +9,28 @@
   background-size: cover;
   overflow: auto; 
 }
+
+.swiper-next, .swiper-prev {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  height: auto;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-next {
+  right: 10px;
+}
+
+.swiper-prev {
+  left: 10px;
+}
+
 .swiper-slide {
   display: flex;
   justify-content: center;
@@ -25,7 +47,7 @@
 }
 
 .swiper-slide-active .custom-slide img {
-  transform: scale(1.1); /* Example scale effect */
+  transform: scale(1.1);
 }
 
 .custom-content {
@@ -40,48 +62,44 @@
 .swiper-slide-active .custom-content {
   opacity: 1;
 }
-
-.swiper-slide-next .custom-content,
-.swiper-slide-prev .custom-content {
-  opacity: 0;
+.swiper-button-next, .swiper-button-prev {
+  display: none;
 }
-/* Add this to your App.css or a relevant CSS file */
+
+
+
+
 .swiper-container {
   width: 100%;
 }
 
 .swiper-slide img {
-  width: 100%; /* Ensures the image takes the full width of the slide */
-  object-fit: cover; /* Ensures the image covers the slide area */
+  width: 100%; 
+  object-fit: cover; 
 }
-/* In your main CSS file */
-/* In your main CSS file */
 
-
-/* Initial button styles */
 .owl-prev, .owl-next {
   z-index: 10;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
-  background-color: rgba(0, 0, 0, 0.2); /* Faint color */
+  transition: transform 0.3s, background-color 0.3s; 
+  background-color: rgba(0, 0, 0, 0.2); 
   
-  border-radius: 50%; /* Make the button circular */
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  border-radius: 50%; 
+  width: 60px; 
+  height: 60px; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Dark color when pointer is over the slider */
+
 .owl-prev:hover,
 .owl-next:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Dark color */
+  background-color: rgba(0, 0, 0, 0.8); 
 }
 
-/* Position adjustments for buttons */
 .owl-prev {
   left: 10px;
 }
@@ -118,16 +136,16 @@
 .owl-prev.arrow-reverse {
   animation: moveLeft 0.5s reverse;
 }
-/* Apply the animation to the buttons */
-.arrow-animate-next {
-  animation: moveRight 0.5s forwards;
-}
 
-.arrow-animate-prev {
+.arrow-animate-next {
   animation: moveLeft 0.5s forwards;
 }
 
-/* Remove the animation when the slider is not hovered */
+.arrow-animate-prev {
+  animation: moveRight 0.5s forwards;
+}
+
+
 .owl-next,
 .owl-prev {
   transition: transform 0.5s;
@@ -141,13 +159,13 @@
   transform: translateX(0);
 }
 .owl-prev .icon, .owl-next .icon {
-  color: rgba(255, 255, 255, 0.5); /* Faint white color */
+  color: rgba(255, 255, 255, 0.5); 
 }
 
-/* Hover styles */
+
 .owl-prev.arrow-animate-prev .icon,
 .owl-next.arrow-animate-next .icon {
-  color: #ffffff; /* White color on hover */
+  color: #ffffff; 
 }
 
 @keyframes flip-hover {
@@ -167,12 +185,10 @@
     transform: rotateY(360deg);
   }
 }
-/* Custom pagination bullet styles */
-/* Custom pagination bullet styles */
 .single-line-text {
-  white-space: nowrap;  /* Prevents text from wrapping to the next line */
-  overflow: hidden;     /* Hides any overflowed text */
-  text-overflow: ellipsis; /* Adds ellipsis (...) when text overflows */
+  white-space: nowrap;  
+  overflow: hidden;     
+  text-overflow: ellipsis; 
 }
 
 

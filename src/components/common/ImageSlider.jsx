@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper/modules';
-import '../../index.css'; // Your custom styles
+import '../../index.css'; 
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, showDesignation = false, spaceBetween = 20, rounded = false }) => {
@@ -17,7 +17,7 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
       event.target.classList.add('clicked');
       setTimeout(() => {
         event.target.classList.remove('clicked');
-      }, 500); // Duration should match the CSS animation duration
+      }, 500); 
     };
 
     nextButton.addEventListener('click', handleClick);
@@ -109,7 +109,7 @@ const ImageSlider = ({ images, backgroundColor = 'white', showNames = false, sho
             ))}
           </div>
         </Swiper>
-        {/* Custom Navigation Buttons */}
+      
         <button className={`owl-next ${hovered ? 'arrow-animate-next' : ''}`}><FaAngleRight className='text-2xl icon'/></button>
         <button className={`owl-prev ${hovered ? 'arrow-animate-prev' : ''}`}><FaAngleLeft className='text-2xl icon'/></button>
       </div>

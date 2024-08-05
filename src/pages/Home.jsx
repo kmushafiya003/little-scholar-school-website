@@ -10,23 +10,24 @@ import IconSection from '../components/home/IconSection'
 import Footer from '../components/common/Footer'
 import Infrastructure from '../components/home/infrastructure'
 import Faculty from '../components/home/faculty'
+
 const Home = () => {
   return (
 
 
     <div >
-      <HeaderSection />
-      <Navbar />
-      <HeroSection />
-      <Welcome />
-      <Message />
-      <Infrastructure />
-      <Faculty />
-      <Gallery />
-      <Counts />
-      <IconSection />
-      <Footer />
-    </div>
+      <HeaderSection/>
+        <Navbar/>
+          <HeroSection/>
+          <Welcome/>
+           <Message/>
+            <Infrastructure/>
+            <Faculty />
+             <Gallery/>
+              <Counts/>
+              <IconSection/>
+                 <Footer/>
+               </div>
   )
 }
 

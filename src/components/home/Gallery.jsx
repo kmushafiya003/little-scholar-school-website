@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import VideoAlbum from '../common/VideoAlbum'
-import PhotoAlbum from '../common/PhotoAlbum'
-import MediaAlbum from '../common/MediaAlbum'
-import PhotoAlbum2 from '../common/PhotoAlbum'
+import AlbumTemplate from '../common/AlbumTemplate'
 import { photoalbum, videoalbum, mediaalbum } from '../../data/albums-data'
 
 function Gallery() {
@@ -78,19 +75,19 @@ function Gallery() {
 
           <div className='w-full py-4 '>
             {activeAlbum === 'PhotoAlbum' && (
-              <PhotoAlbum data={photoalbum} cardIndex={1} />
+              <AlbumTemplate data={photoalbum} cardIndex={1} />
             )}
             {activeAlbum === 'VideoAlbum' && (
-              <VideoAlbum data={videoalbum} cardIndex={2} />
+              <AlbumTemplate data={videoalbum} cardIndex={2} />
             )}
             {activeAlbum === 'MediaAlbum' && (
-              <MediaAlbum data={mediaalbum} cardIndex={3} />
+              <AlbumTemplate data={mediaalbum} cardIndex={3} />
             )}
             {activeAlbum === 'PhotoAlbum2' && (
-              <PhotoAlbum2 data={photoalbum} cardIndex={3} />
+              <AlbumTemplate data={photoalbum} cardIndex={4} />
             )}
             {activeAlbum === 'VideoAlbum2' && (
-              <VideoAlbum data={videoalbum} cardIndex={3} />
+              <AlbumTemplate data={videoalbum} cardIndex={5} />
             )}
           </div>
         </div>

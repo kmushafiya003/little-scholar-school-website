@@ -1,13 +1,13 @@
 import React from 'react';
-import ImageSlider from '../common/ImageSlider'; // Adjust the path based on your structure
-import { infrastructure } from '../../data/slider-data'; // Adjust the path based on your structure
-import '../../index.css'; // Your custom styles
+import ImageSlider from '../common/ImageSlider'; 
+import { infrastructure } from '../../data/slider-data'; 
+import '../../index.css'; 
 
 const Infrastructure = () => {
   return (
     <section
       id="Infrastructure"
-      className="w-full bg-white py-2 px-4 sm:px-6 lg:px-8" // Added padding for smaller screens
+      className="w-full bg-white py-2 px-4 sm:px-6 lg:px-8" 
     >
       <div className="relative w-10/12 mx-auto  py-30">
      <div className="flex flex-col lg:mb-14 sm:mb-12 mb-8 gap-y-2">
@@ -15,12 +15,12 @@ const Infrastructure = () => {
           INFRASTRUCTURE
         </h2>
         <div className='w-[70px] h-1 bg-black'></div>
-        <div className="w-full "> {/* Container for slider */}
+        <div className="w-full "> 
           <ImageSlider 
             images={infrastructure} 
             backgroundColor="white" 
             showNames={false} 
-            spaceBetween={20} // Adjust spaceBetween for smaller screens if needed
+            spaceBetween={20} 
           />
         </div>
       </div>
