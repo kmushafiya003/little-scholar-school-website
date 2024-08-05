@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.bg-parallax {
+  background-image: url('./images/bg-parallax.webp');
+  background-attachment: fixed; 
+  background-position: center;
+  background-size: cover;
+  overflow: auto; 
+}
 .swiper-slide {
   display: flex;
   justify-content: center;
@@ -39,14 +45,137 @@
 .swiper-slide-prev .custom-content {
   opacity: 0;
 }
+/* Add this to your App.css or a relevant CSS file */
+.swiper-container {
+  width: 100%;
+}
 
-.bg-parallax {
-  background-image: url('./images/bg-parallax.webp');
-  background-attachment: fixed; 
-  /* background-position: center; */
-  background-size: cover;
-  overflow: auto; 
+.swiper-slide img {
+  width: 100%; /* Ensures the image takes the full width of the slide */
+  object-fit: cover; /* Ensures the image covers the slide area */
 }
-.marquee-container:hover .animate-marquee {
-  animation-play-state: paused;
+/* In your main CSS file */
+/* In your main CSS file */
+
+
+/* Initial button styles */
+.owl-prev, .owl-next {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+  background-color: rgba(0, 0, 0, 0.2); /* Faint color */
+  
+  border-radius: 50%; /* Make the button circular */
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Dark color when pointer is over the slider */
+.owl-prev:hover,
+.owl-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark color */
+}
+
+/* Position adjustments for buttons */
+.owl-prev {
+  left: 10px;
+}
+
+.owl-next {
+  right: 10px;
+}
+
+
+
+.transparent-bg {
+  background-color: transparent !important;
+}
+
+
+/* Hover animations */
+
+
+/* Apply the animation to the sibling when one is hovered */
+
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(2px); }
+}
+
+@keyframes moveLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-2px); }
+}
+.owl-next.arrow-reverse {
+  animation: moveRight 0.5s reverse;
+}
+
+.owl-prev.arrow-reverse {
+  animation: moveLeft 0.5s reverse;
+}
+/* Apply the animation to the buttons */
+.arrow-animate-next {
+  animation: moveRight 0.5s forwards;
+}
+
+.arrow-animate-prev {
+  animation: moveLeft 0.5s forwards;
+}
+
+/* Remove the animation when the slider is not hovered */
+.owl-next,
+.owl-prev {
+  transition: transform 0.5s;
+}
+
+.owl-next {
+  transform: translateX(0);
+}
+
+.owl-prev {
+  transform: translateX(0);
+}
+.owl-prev .icon, .owl-next .icon {
+  color: rgba(255, 255, 255, 0.5); /* Faint white color */
+}
+
+/* Hover styles */
+.owl-prev.arrow-animate-prev .icon,
+.owl-next.arrow-animate-next .icon {
+  color: #ffffff; /* White color on hover */
+}
+
+@keyframes flip-hover {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes flip-click {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+/* Custom pagination bullet styles */
+/* Custom pagination bullet styles */
+.single-line-text {
+  white-space: nowrap;  /* Prevents text from wrapping to the next line */
+  overflow: hidden;     /* Hides any overflowed text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) when text overflows */
+}
+
+
+
+
+
