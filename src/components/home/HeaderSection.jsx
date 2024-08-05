@@ -1,24 +1,27 @@
 import React from 'react';
-import { headerData } from '../../data/header-text';
-import PropTypes from 'prop-types';
+
 import { FaBook } from 'react-icons/fa'; // Import a book icon from react-icons
 
 const HeaderSection = () => {
-    // Repeat the header data multiple times for a continuous effect
-    const repeatedHeaderData = [...headerData, ...headerData, ...headerData, ...headerData, ...headerData];
+   
+
+    const repeatCount = 5;
+    const text = "RESITRATION OPEN FOR SESSION 2024-2025"
 
     return (
         <header className='relative z-[300] w-full bg-red'>
             <div className="p-2 mx-auto overflow-hidden whitespace-nowrap">
                 <div className="marquee-container">
                     <div className="inline-block animate-marquee hover:pause-marquee">
-                        {repeatedHeaderData.map((item, index) => (
+
+                        {Array.from({ length: repeatCount }).map((_, index) => (
                             <span key={index} className="inline-block mx-4 text-lg font-semibold text-white hover:underline">
-                                <FaBook className="inline mr-2" /> {/* Book icon at the start */}
-                                {item.title}
-                                <FaBook className="inline ml-2" /> {/* Book icon at the end */}
+                                <FaBook className="inline mr-2" />
+                                {text}
+                                <FaBook className="inline ml-2" />
                             </span>
                         ))}
+
                     </div>
                 </div>
             </div>
@@ -26,12 +29,6 @@ const HeaderSection = () => {
     );
 };
 
-HeaderSection.propTypes = {
-    headerData: PropTypes.arrayOf(
-        PropTypes.shape({
-            title: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-};
+
 
 export default HeaderSection;
