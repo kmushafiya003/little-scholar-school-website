@@ -91,9 +91,9 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`transition-all duration-300 ${isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px] opacity-0' : 'top-0'}`}>
-      <div className='w-full mx-auto bg-white'>
-        <nav className="text-[16px] text-black shadow-lg navbar">
+    <header className={`transition-all duration-500 bg-white  shadow-lg ${isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px] opacity-0' : 'top-0'}`}>
+      <div className='xxxl:w-10/12 xl:w-[95%] xsm:w-10/12 xs:mx-auto xsm:mr-auto w-full  '>
+        <nav className="text-[16px] text-black navbar">
           <div className="flex items-center justify-between px-4 py-4 mx-auto rounded-full">
             {/* Logo Section */}
             <div className='flex items-center'>

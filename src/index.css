@@ -63,9 +63,23 @@
   opacity: 1;
 }
 .swiper-button-next, .swiper-button-prev {
+ 
   display: none;
 }
 
+.swiper-prev,
+.swiper-next{
+  transition: background-color 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.swiper-prev:hover,
+.swiper-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: var(--hover-image);
+}
 
 
 
