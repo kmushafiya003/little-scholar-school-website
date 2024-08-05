@@ -4,11 +4,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import 'swiper/css/effect-fade'; // Import effect styles
+import 'swiper/css/effect-fade'; 
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import { FaAngleRight, FaAngleLeft } from 'react-icons/fa'; // Import icons
-import '../../index.css'; // Your custom styles
+import { FaAngleRight, FaAngleLeft } from 'react-icons/fa'; 
+import '../../index.css'; 
 
 import image1 from '../../images/hero_section_img_1.webp';
 import image2 from '../../images/hero_section_img_2.webp';
@@ -31,16 +31,16 @@ const HeroSection = () => {
           modules={[Navigation, Pagination, Autoplay, EffectFade]}
           className="h-full"
           loop={true}
-          autoplay={{ delay: 7000 }} // 7000ms = 7 seconds
-          effect="fade" // Using the fade effect
-          speed={500} // Transition speed
+          autoplay={{ delay: 7000 }} 
+          effect="fade" 
+          speed={500} 
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className="relative z-10 w-full h-full">
               <img
                 src={image}
                 alt={`Slide ${index}`}
-                className="object-cover w-full h-full" // Ensure image covers the background
+                className="object-cover w-full h-full" 
               />
               {/* --------------- text content div ------------------ */}
               <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center w-full h-full">
@@ -99,7 +99,7 @@ const HeroSection = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* Custom navigation buttons */}
+       
         <div className="swiper-next  owl-next">
           <FaAngleRight className="text-white  className='text-3xl icon hover:text-gray-400" />
         </div>
