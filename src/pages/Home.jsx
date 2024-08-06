@@ -16,18 +16,18 @@ const Home = () => {
 
 
     <div >
-      <HeaderSection/>
-        <Navbar/>
-          <HeroSection/>
-          <Welcome/>
-           <Message/>
-            <Infrastructure/>
-            <Faculty />
-             <Gallery/>
-              <Counts/>
-              <IconSection/>
-                 <Footer/>
-               </div>
+      <HeaderSection />
+      <Navbar />
+      <HeroSection />
+      <Welcome />
+      <Message />
+      <Infrastructure />
+      <Faculty />
+      <Gallery />
+      <Counts />
+      <IconSection />
+      <Footer />
+    </div>
   )
 }
 

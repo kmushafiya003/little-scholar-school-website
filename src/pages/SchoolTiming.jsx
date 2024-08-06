@@ -17,18 +17,18 @@ const SchoolTiming = () => {
     ]
 
     return (
-        <div className='container w-full p-4'>
-            <div className='w-full mx-auto lg:w-10/12'>
-                <div className='flex flex-col justify-center gap-10 mb-4 smd:flex-row dxs:flex-col'>
-                    <div className='p-6 font-bold text-white transition duration-300 bg-black rounded-md hover:bg-red-600 hover:scale-105'>
+        <section className='relative w-full '>
+            <div className='w-10/12 mx-auto'>
+                <div className='flex flex-col justify-center gap-10 mt-20 mb-4 smd:flex-row dxs:flex-col'>
+                    <div className='p-5 font-bold text-white transition duration-300 bg-black rounded-md hover:bg-red-600 hover:scale-105'>
                         Summer Timing:- {summerTimings}
                     </div>
-                    <div className='p-6 font-bold text-white transition duration-300 bg-black rounded-md hover:bg-red-600 hover:scale-105'>
+                    <div className='p-5 font-bold text-white transition duration-300 bg-black rounded-md hover:bg-red-600 hover:scale-105'>
                         Winter Timing:- {winterTimings}
                     </div>
                 </div>
                 <div className='content-center overflow-x-auto'>
-                    <table className='w-full mx-auto border border-collapse border-gray-400 table-auto lg:w-8/12'>
+                    <table className='w-9/12 mx-auto border border-collapse border-gray-400 table-auto '>
                         <thead>
                             <tr>
                                 <th className='p-2 border border-gray-400'>Lesson</th>
@@ -52,7 +52,7 @@ const SchoolTiming = () => {
                     <div className='p-2 border border-gray-400 hover:bg-gray-100 hover:text-black'>Wednesday to Friday - Activity lesson / Class wise Assembly/Special Assembly</div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

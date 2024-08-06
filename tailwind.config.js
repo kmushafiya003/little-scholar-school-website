@@ -27,6 +27,7 @@ module.exports = {
       "gray-200": "rgb(229 231 235)",
       "gray-300": "rgb(209 213 219)",
       "gray-400": "rgb(156 163 175)",
+      "blue-600": "rgb(37 99 235)"
     },
     screens: {
       dxs: "300px",
