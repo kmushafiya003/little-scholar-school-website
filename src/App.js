@@ -1,10 +1,8 @@
 import React from 'react';
-
-
-
 import Home from './pages/Home';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import SchoolTiming from './pages/SchoolTiming';
 <Home />
 
 const App = () => {
