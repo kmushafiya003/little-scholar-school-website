@@ -1,9 +1,7 @@
 import React from 'react';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import './App.css';
-import AdmissionProcedure from './pages/AdmissionProcedure';
 import { Route, Routes } from 'react-router-dom';
-
 
 
 const App = () => {
@@ -11,17 +9,10 @@ const App = () => {
 
 
     <div className="min-h-screen overflow-x-hidden ">
-
-      <AdmissionProcedure/>
-
-      {/* <Routes>
+       <Routes>
         <Route path='/' element={<Home />} />
-      </Routes> */}
-     
-   
-
-
-
+      </Routes> 
+  
     </div>
   );
 }

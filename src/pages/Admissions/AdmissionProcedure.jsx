@@ -23,9 +23,9 @@ const AdmissionProcedure = () => {
                 {/* ----------- small underline ----------- */}
                 <div className="w-[70px] h-1 bg-black mb-10"></div>
 
-                <ul className="flex flex-col gap-y-3 font-light text-gray-1">
+                <ul className="flex flex-col font-light gap-y-3 text-gray-1">
                     {admissionProcedure.steps.map((step, index) => (
-                        <li key={index} className=" flex gap-x-2">
+                        <li key={index} className="flex gap-x-2">
                        
                           <span className='mt-[10px]'> <VscPassFilled  className='text-dark-blue'/></span> 
                         

@@ -1,5 +1,5 @@
 import React from "react";
-import { managingcommitee } from "../data/managing-commitee-data";
+import { managingcommitee } from "../../data/managing-commitee-data";
 
 const ManagingCommittee = () => {
   const { heading, title1, title2, title3, description, members } = managingcommitee;
