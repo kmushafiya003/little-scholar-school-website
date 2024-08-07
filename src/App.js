@@ -3,6 +3,7 @@ import Home from './pages/Home/Home';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import AdmissionEnquiry from './components/adimission/AdmissionEnquiry';
+import SchoolManagement from './components/about/SchoolManagement';
 
 
 const App = () => {
@@ -10,9 +11,10 @@ const App = () => {
 
 
     <div className="min-h-screen overflow-x-hidden ">
-       <Routes>
+       {/* <Routes>
         <Route path='/' element={<Home />} />
-      </Routes> 
+      </Routes>  */}
+      <SchoolManagement/>
   {/* <AdmissionEnquiry/> */}
     </div>
   );

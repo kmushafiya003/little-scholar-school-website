@@ -205,7 +205,20 @@
   text-overflow: ellipsis; 
 }
 
+.arrow-container {
+  perspective: 1000px; /* Adds perspective for 3D effect */
+}
 
+.arrow-icon {
+ 
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  display: inline-block;
+}
+
+.arrow-container:hover .arrow-icon {
+  transform: rotateX(180deg); /* Flips the arrow */
+}
 
 
 
