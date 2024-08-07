@@ -1,5 +1,5 @@
 // footerData.js
-import logo from '../../src/assets/logo.webp' // Adjust the path to your logo image
+import logo from '../../assets/logo.webp' // Adjust the path to your logo image
 import { FaYoutube } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
 import { FaFacebook } from "react-icons/fa";

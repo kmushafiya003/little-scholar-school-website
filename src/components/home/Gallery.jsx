@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AlbumTemplate from '../common/AlbumTemplate'
-import { photoalbum, videoalbum, mediaalbum } from '../../data/albums-data'
+import { photoalbum, videoalbum, mediaalbum } from '../../data/Home/albums-data'
 
 function Gallery() {
   const [activeAlbum, setActiveAlbum] = useState('PhotoAlbum')

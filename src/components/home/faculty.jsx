@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ImageSlider from "../common/ImageSlider"; 
-import { faculty } from "../../data/slider-data"; 
+import { faculty } from "../../data/Home/slider-data"; 
 import "../../index.css"; 
 import { FaCircleRight } from "react-icons/fa6";
 

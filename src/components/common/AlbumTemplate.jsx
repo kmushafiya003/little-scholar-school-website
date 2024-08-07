@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { photoalbum } from "../../data/albums-data.js";
 import { Link } from "react-router-dom";
 
 
 const AlbumTemplate = ({data}) => {
   return (
-    <section className="relative w-full mt-8 py-4  ">
+    <section className="relative w-full py-4 mt-8 ">
 
       <div className="w-full mx-auto ">
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
