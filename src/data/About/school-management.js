@@ -1,16 +1,17 @@
-import principal from '../images/school-management/principal.webp';
-import vicePrincipal from '../images/school-management/vice-prinicipal.webp';
-import academicHead from '../images/school-management/academic-head.webp';
-import curricularHead from '../images/school-management/curricular-head.webp';
-import ictHead from '../images/school-management/ict-head.webp';
-import hrHead from '../images/school-management/hr-head.webp';
-import sportHead from '../images/school-management/sport-head.webp';
+import principal from '../../images/About/school-management/principal.webp';
+import vicePrincipal from '../../images/About/school-management/vice-prinicipal.webp';
+import academicHead from '../../images/About/school-management/academic-head.webp';
+import curricularHead from '../../images/About/school-management/curricular-head.webp';
+import ictHead from '../../images/About/school-management/ict-head.webp';
+import hrHead from '../../images/About/school-management/hr-head.webp';
+import sportHead from '../../images/About/school-management/sport-head.webp';
 
 export const managementData = [
     {
         id: 1,
         image: principal,
         name: "Ms. Shikha Gautam",
+        section:"principal",
         position: "Principal",
         about: [
             "M. Sc. Chemistry, MA English, M. Ed.",
@@ -26,6 +27,7 @@ export const managementData = [
         id: 2,
         image: vicePrincipal,
         name: "Ms. Ruma Agarwal",
+        section: "principal",
         position: "Vice Principal",
         about: [
             "Mrs. Ruma Agarwal, Vice Principal, M. Com., B. Ed. & MA Education. Serving since July 1996. Dexterous, Devoted and Deligent.",
@@ -36,6 +38,7 @@ export const managementData = [
         id: 3,
         image: academicHead,
         name: "Mr. Subhash Sharma",
+        section: "head",
         position: "Academic Head",
         about: [
             "DOAC, Post Graduate in Mathematics, Bachelor of Education, MA Education, Qualified CTET & UTET He is presently serving as PGT Maths with an enriching and multi-faceted exposure of about 18 years. Soft spoken, result oriented and dextrous. As Dean of Academics, he always tries to maintain a balance between academics and other avenues of school life, both for the scholars and their mentors. We, at Little Scholars, try to attain the all round development of all stakeholders through experiential learning. We equip and mould our students in a conducive environment so that they become affluent and law abiding citizens."
@@ -45,6 +48,7 @@ export const managementData = [
         id: 4,
         image: curricularHead,
         name: "Ms. Kamna Chhabra",
+        section: "head",
         position: "Co-curricular Head",
         about: [
             "With a rich teaching experience of 24 years behind her, Mrs Kamna Chhabra (PGT English) is the Co-scholastic Head in LS since 2016. From making the yearly planner of activities to ensuring these take place smoothly and with maximum participation, she is always in the thick of things. It follows that her domain of work entails coordination, bordering on the perfect, among the teachers of the school to provide ample opportunities to children to showcase their abilities, talents and skills. Under her proven guidance, the school children are a regular feature in programmes like the IIMUN. Her 'behind the scene' efforts have led to the children winning many laurels for the school. Her immaculate planning and flawless execution make her a person the school can ever depend on. Bringing co-scholastic centre stage in academic, she has successfully contributed to school's switch from conventional to experiential and collaborative learning. "
@@ -53,7 +57,8 @@ export const managementData = [
     {
         id: 5,
         image:ictHead,
-        name: "Ms. Manish Chandra Sharma",
+        name: "MR. Manish Chandra Sharma",
+        section: "head",
         position: "ICT Head",
         about: [
             "Mr. Manish Chandra Sharma, ICT Head & Post Graduate Faculty in Computer Science Done his Bachelor's Degree in Science with Masters in Computer Applications. He has been an asset to the institution since April 2019. His expertise in Computer Science extends to 22 years. Jovial, lighthearted, devoted and keen to assist not only students but compatriots as well. His inspiring presence is most sought after during any event.",
@@ -74,6 +79,7 @@ export const managementData = [
         id: 6,
         image: hrHead,
         name: "Mr. Kapil Kumar Vishnoi",
+        section: "head",
         position: "Hr Head",
         about: [
             "He is PGT (Maths) working in the school since July 2014. Children enjoy his way of teaching and do not suffer from Math phobia, as is generally the case with this subject. The teacher is also actively involved in school camps, adventure clubs and photography. "
@@ -83,6 +89,7 @@ export const managementData = [
         id: 7,
         image: sportHead,
         name: "Mr. Gopal Singh Bisht",
+        section: "head",
         position: "Sport Head",
         about: [
             "He is PGT (Ph. Ed.) with twenty years of experience. He is HOD Ph. Ed. He always encourages children to lead an active life and take up any game as a hobby to remain fit and agile. He is also In-charge of the school’s Football and Basketball teams. He is PGT (Ph. Ed.) with twenty years of experience. He is HOD Ph. Ed. He always encourages children to lead an active life and take up any game as a hobby to remain fit and agile. He is also In-charge of the school’s Football and Basketball teams."
