@@ -9,7 +9,7 @@ export const navData = [
     {
       id: 2,
       title: 'About us',
-      path: '/about us',
+      path: '#',
       dropdown: [
         { id: 11, title: `Founders's Desk`, path: '/Founder_Desk' },
         { id: 12, title: `Principal's Desk`, path: '/Principal_Desk' },
@@ -25,7 +25,7 @@ export const navData = [
     {
       id: 3,
       title: 'Admissions',
-      path: '/admissions',
+      path: '#',
       dropdown: [
         { id: 21, title: 'Admission Helpdesk/School Visit', path: '/admissions/helpdesk' },
         { id: 22, title: 'Admission Procedure', path: '/admissions/admissionprocedure' },
@@ -39,7 +39,7 @@ export const navData = [
     {
       id: 4,
       title: 'Student Life',
-      path: '/studentlife',
+      path: '#',
       dropdown: [
         { id: 41, title: 'Academics', path: '/studentlife/academics' },
         { id: 42, title: 'Sports', path: '/studentlife/sports' },
@@ -63,7 +63,7 @@ export const navData = [
     {
       id: 5,
       title: 'News & Calendar',
-      path: '/news&calendar',
+      path: '#',
       dropdown: [
         { id: 61, title: 'Student Hand Book', path: '/news&calendar/handbook' },
         { id: 62, title: 'Newsletter/Scholars Times', path: '/news&calendar/newsletter' },
@@ -73,7 +73,7 @@ export const navData = [
     {
       id: 6,
       title: 'Mandatory Disclosures',
-      path: '/mandatory-disclosures',
+      path: '#',
       dropdown: [
         { id: 71, title: 'Booklist', path: '/mandatory-disclosures/booklist' },
         { id: 72, title: 'Safety Certificates & Affiliations', path: '/mandatory-disclosures/safety-cert&aff' },
@@ -84,7 +84,7 @@ export const navData = [
     {
       id: 7,
       title: 'Contact Us',
-      path: '/contact-us',
+      path: '#',
       dropdown: [
         { id: 81, title: 'Reach Us', path: '/contact-us/reach-us' },
         { id: 82, title: 'Career', path: '/contact-us/career' },
@@ -95,7 +95,7 @@ export const navData = [
     {
       id: 8,
       title: 'Notice',
-      path: '/notice',
+      path: '#',
       dropdown: [
         { id: 91, title: 'Notice 1', path: '/notice/notice1' },
         { id: 92, title: 'Notice 2', path: '/notice/notice 2' },

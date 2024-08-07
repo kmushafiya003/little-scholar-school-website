@@ -10,13 +10,14 @@ import IconSection from '../components/home/IconSection'
 import Footer from '../components/common/Footer'
 import Infrastructure from '../components/home/infrastructure'
 import Faculty from '../components/home/faculty'
+import Principles from '../components/home/Principles'
 
 const Home = () => {
   return (
 
 
     <div >
-      <HeaderSection/>
+      {/* <HeaderSection/>
         <Navbar/>
           <HeroSection/>
           <Welcome/>
@@ -26,7 +27,10 @@ const Home = () => {
              <Gallery/>
               <Counts/>
               <IconSection/>
-                 <Footer/>
+                 <Footer/> */}
+                 <HeaderSection/>
+                 <Navbar/>
+                 <Principles/>
                </div>
   )
 }
