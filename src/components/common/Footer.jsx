@@ -1,5 +1,5 @@
 import React from 'react';
-import { footerData } from '../../data/footer-data';
+import { footerData } from '../../data/Home/footer-data';
 import { Link } from 'react-router-dom';
 import { FaChevronRight } from 'react-icons/fa';
 
