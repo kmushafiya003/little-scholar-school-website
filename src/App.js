@@ -3,7 +3,7 @@ import Home from './pages/Home/Home';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import AdmissionEnquiry from './components/adimission/AdmissionEnquiry';
-import SchoolManagement from './components/about/SchoolManagement';
+
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
        {/* <Routes>
         <Route path='/' element={<Home />} />
       </Routes>  */}
-      <SchoolManagement/>
+    
   {/* <AdmissionEnquiry/> */}
     </div>
   );
