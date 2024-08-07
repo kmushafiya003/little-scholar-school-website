@@ -1,61 +1,61 @@
 // --------------------Infrastructure---------------------
-import school from "../../images/Home/Slider/school.webp";
+import school from "../../images/Common/school.webp";
 // ----------------------SChool Bulding Images ------------------------
-import schoolp1 from "../../images/Home/Slider/in1.webp"; 
-import schoolp2 from "../../images/Home/Slider/in2.webp";
-import schoolp3 from "../../images/Home/Slider/in3.webp";
-import schoolp4 from "../../images/Home/Slider/in4.webp";
-import schoolp5 from "../../images/Home/Slider/in5.webp";
-import schoolp6 from "../../images/Home/Slider/in6.webp";
+import schoolp1 from "../../images/Common/in1.webp"; 
+import schoolp2 from "../../images/Common/in2.webp";
+import schoolp3 from "../../images/Common/in3.webp";
+import schoolp4 from "../../images/Common/in4.webp";
+import schoolp5 from "../../images/Common/in5.webp";
+import schoolp6 from "../../images/Common/in6.webp";
 // ----------------Physics Lab ------------------------
-import physics from "../../images/Home/Slider/physics.webp";
-import physicsp1 from "../../images/Home/Slider/physics1.webp";
-import physicsp2 from "../../images/Home/Slider/physics2.webp";
-import physicsp3 from "../../images/Home/Slider/physics3.webp";
-import physicsp4 from "../../images/Home/Slider/physics4.webp";
+import physics from "../../images/Common/physics.webp";
+import physicsp1 from "../../images/Common/physics1.webp";
+import physicsp2 from "../../images/Common/physics2.webp";
+import physicsp3 from "../../images/Common/physics3.webp";
+import physicsp4 from "../../images/Common/physics4.webp";
 // -----------------Chemistry Lab-------------------------
-import chemistry from "../../images/Home/Slider/chemistry.webp";
-import chemistryp1 from "../../images/Home/Slider/chemistry1.webp";
-import chemistryp2 from "../../images/Home/Slider/chemistry2.webp";
-import chemistryp3 from "../../images/Home/Slider/chemistry3.webp";
+import chemistry from "../../images/Common/chemistry.webp";
+import chemistryp1 from "../../images/Common/chemistry1.webp";
+import chemistryp2 from "../../images/Common/chemistry2.webp";
+import chemistryp3 from "../../images/Common/chemistry3.webp";
 // --------------------Computer Lab-------------------------
-import computer from "../../images/Home/Slider/computer.webp";
-import computerp1 from "../../images/Home/Slider/comp1.webp";
-import computerp2 from "../../images/Home/Slider/comp2.webp";
-import computerp3 from "../../images/Home/Slider/comp3.webp";
+import computer from "../../images/Common/computer.webp";
+import computerp1 from "../../images/Common/comp1.webp";
+import computerp2 from "../../images/Common/comp2.webp";
+import computerp3 from "../../images/Common/comp3.webp";
 // ----------------------Bio Lab-------------------------
-import bio from "../../images/Home/Slider/bio.webp";
-import biop1 from "../../images/Home/Slider/bio1.webp";
-import bio2 from "../../images/Home/Slider/bio2.webp";
-import bio3 from "../../images/Home/Slider/bio2.webp";
+import bio from "../../images/Common/bio.webp";
+import biop1 from "../../images/Common/bio1.webp";
+import bio2 from "../../images/Common/bio2.webp";
+import bio3 from "../../images/Common/bio2.webp";
 // -------------------Auduttorium---------------------------
-import auditorium from "../../images/Home/Slider/auditorium.webp";
-import auditoriump1 from "../../images/Home/Slider/aud1.webp";
-import auditoriump2 from "../../images/Home/Slider/aud2.webp";
-import auditoriump3 from "../../images/Home/Slider/aud3.webp";
-import auditoriump4 from "../../images/Home/Slider/aud4.webp";
+import auditorium from "../../images/Common/auditorium.webp";
+import auditoriump1 from "../../images/Common/aud1.webp";
+import auditoriump2 from "../../images/Common/aud2.webp";
+import auditoriump3 from "../../images/Common/aud3.webp";
+import auditoriump4 from "../../images/Common/aud4.webp";
 // --------------------Goround------------------------------
-import groundp1 from "../../images/Home/Slider/sports1.webp";
-import groundp2 from "../../images/Home/Slider/sports2.webp";
-import groundp3 from "../../images/Home/Slider/sports3.webp";
-import groundp4 from "../../images/Home/Slider/sports4.webp";
-import groundp5 from "../../images/Home/Slider/sports5.webp";
+import groundp1 from "../../images/Common/sports1.webp";
+import groundp2 from "../../images/Common/sports2.webp";
+import groundp3 from "../../images/Common/sports3.webp";
+import groundp4 from "../../images/Common/sports4.webp";
+import groundp5 from "../../images/Common/sports5.webp";
 // -----------------------Library------------------------------
-import libraryp1 from "../../images/Home/Slider/lib1.webp";
-import libraryp2 from "../../images/Home/Slider/lib2.webp";
-import libraryp3 from "../../images/Home/Slider/lib3.webp";
-import libraryp4 from "../../images/Home/Slider/lib4.webp";
+import libraryp1 from "../../images/Common/lib1.webp";
+import libraryp2 from "../../images/Common/lib2.webp";
+import libraryp3 from "../../images/Common/lib3.webp";
+import libraryp4 from "../../images/Common/lib4.webp";
 // --------------------Faculty---------------------
-import asha from "../../images/Home/Slider/asha-negi.webp";
-import shivani from "../../images/Home/Slider/shivani-agarwal.webp";
-import pooja from "../../images/Home/Slider/pooja_arora.webp";
-import priyam from "../../images/Home/Slider/priyam.webp";
-import parul from "../../images/Home/Slider/parul.webp";
-import neeshu from "../../images/Home/Slider/neeshu_malik.webp";
-import rajnandani from "../../images/Home/Slider/rajnandhani.webp";
-import anju from "../../images/Home/Slider/anju-pant.webp";
-import anuradha from "../../images/Home/Slider/anuradha.webp";
-import sandeep from "../../images/Home/Slider/Sandeep_rawat.webp";
+import asha from "../../images/Common/asha-negi.webp";
+import shivani from "../../images/Common/shivani-agarwal.webp";
+import pooja from "../../images/Common/pooja_arora.webp";
+import priyam from "../../images/Common/priyam.webp";
+import parul from "../../images/Common/parul.webp";
+import neeshu from "../../images/Common/neeshu_malik.webp";
+import rajnandani from "../../images/Common/rajnandhani.webp";
+import anju from "../../images/Common/anju-pant.webp";
+import anuradha from "../../images/Common/anuradha.webp";
+import sandeep from "../../images/Common/Sandeep_rawat.webp";
 
 // \start(Infrastructure)
 export const infrastructure = [

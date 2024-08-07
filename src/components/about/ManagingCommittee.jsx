@@ -1,11 +1,12 @@
 import React from "react";
-import { managingcommitee } from "../../data/About/managing-commitee-data.js";
+import { managingcommitee } from "../../data/About/managing-commitee-data";
 
 const ManagingCommittee = () => {
   const { heading, title1, title2, title3, description, members } = managingcommitee;
 
   return (
     <section className="relative w-full">
+      
       <div className="w-10/12 mx-auto">
         <h1 className="mb-4 text-[2.2rem] font-semibold mt-20 text-black">{heading}</h1>
         <div className="w-[70px] h-1 bg-black mb-10"></div>
