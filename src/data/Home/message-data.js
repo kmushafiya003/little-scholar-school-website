@@ -1,8 +1,8 @@
 // --------------------Founder---------------------
-import principal_img from "../../images/Principal_img.jpeg";
+import principal_img from "../../images/Home/Message/Principal_img.jpeg";
 
 // --------------------Principal---------------------
-import founder_img from "../../images/Founder_img.jpeg";
+import founder_img from "../../images/Home/Message/Founder_img.jpeg";
 
 // \start(Founder)
 export const message1 = [
