@@ -11,16 +11,16 @@ export const navData = [
     title: 'About us',
     path: '#',
     dropdown: [
-      { id: 11, title: `Founders's Desk`, path: '/about/founder-desk' },
-      { id: 12, title: `Principal's Desk`, path: '/about/principal-desk' },
-      { id: 13, title: 'School Management', path: '/about/school-management' },
-      { id: 14, title: 'Managing Committee', path: '/about/managing-committee' },
+      { id: 11, title: `Founders's Desk`, path: '/about-us/founder-desk' },
+      { id: 12, title: `Principal's Desk`, path: '/about-us/principal-desk' },
+      { id: 13, title: 'School Management', path: '/about-us/school-management' },
+      { id: 14, title: 'Managing Committee', path: '/about-us/managing-committee' },
       {
         id: 15,
         title: 'principal-policies',
         path: '/about/founder'
       },
-      { id: 16, title: 'Infrastructure', path: '/about/infrastructure' },
+      { id: 16, title: 'Infrastructure', path: '/about-us/infrastructure' },
       { id: 17, title: 'Photo Gallery', path: '/Photo Gallery' },
       { id: 18, title: 'Video Gallery', path: '/Video Gallery' },
       { id: 19, title: 'Media Gallery', path: '/Media Gallery' }
