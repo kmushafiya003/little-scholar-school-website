@@ -9,18 +9,18 @@ export const navData = [
   {
     id: 2,
     title: 'About us',
-    path: '/about us',
+    path: '#',
     dropdown: [
-      { id: 11, title: `Founders's Desk`, path: '/Founder_Desk' },
-      { id: 12, title: `Principal's Desk`, path: '/Principal_Desk' },
-      { id: 13, title: 'School Management', path: '/School-Mangement' },
-      { id: 14, title: 'Managing Committee', path: '/Managing-Committee' },
+      { id: 11, title: `Founders's Desk`, path: '/about-us/founder-desk' },
+      { id: 12, title: `Principal's Desk`, path: '/about-us/principal-desk' },
+      { id: 13, title: 'School Management', path: '/about-us/school-management' },
+      { id: 14, title: 'Managing Committee', path: '/about-us/managing-committee' },
       {
         id: 15,
-        title: 'Principles & Policies',
-        path: '/Principles & Policies'
+        title: 'principal-policies',
+        path: '/about/founder'
       },
-      { id: 16, title: 'Infrastructure', path: '/Infrastructure' },
+      { id: 16, title: 'Infrastructure', path: '/about-us/infrastructure' },
       { id: 17, title: 'Photo Gallery', path: '/Photo Gallery' },
       { id: 18, title: 'Video Gallery', path: '/Video Gallery' },
       { id: 19, title: 'Media Gallery', path: '/Media Gallery' }
