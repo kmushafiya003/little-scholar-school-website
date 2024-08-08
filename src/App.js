@@ -1,7 +1,6 @@
 import React from 'react';
 // import Home from './pages/Home/Home';
 import './App.css';
-// import FQA from './components/adimission/FQA';
 
 
 
@@ -15,8 +14,7 @@ const App = () => {
        {/* <Routes>
         <Route path='/' element={<Home />} />
       </Routes>  */}
-      {/* <FQA/> */}
-      
+  
     </div>
   );
 }
