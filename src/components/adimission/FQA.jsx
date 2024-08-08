@@ -19,12 +19,12 @@ function FQA() {
   return (
     <section className="relative w-full">
       <div className="flex justify-center w-10/12 mx-auto">
-        <div className="flex flex-col justify-center gap-2 mt-20 xxl:w-9/12 lg:w-full lg:gap-0 dxs:w-full dxs:gap-0 ">
+        <div className="flex flex-col justify-center gap-2 mt-20 xxl:w-9/12 lg:w-full lg:gap-0 smd:w-fulldxs:w-full dxs:gap-0">
           {fqa.map((data, index) => (
             <div key={data.id} className="relative inline-block w-full ">
-              <div className="flex">
+              <div className="flex pt-[5px]">
                 <button
-                  className={`px-3 py-2 gap-32 inline-flex font-semibold justify-between w-full text-[1.2rem] text-gray-1 shadow-sm ring-1 ring-inset ring-gray-300 ${
+                  className={`px-3 py-2  inline-flex font-semibold justify-between w-full lg:text-[1.2rem] dxs:text-[1rem] shadow-sm ring-1 ring-inset ring-black ${
                     openQuestion === data.id
                       ? "bg-desaturated-blue text-white"
                       : "bg-white"
@@ -38,12 +38,12 @@ function FQA() {
                   onClick={() => toggleQuestion(data.id)}
                 >
                   {data.question}
-                  <ChevronDownIcon
+                  <span className='text-[1.5rem]'><ChevronDownIcon
                     aria-hidden="true"
                     className={`font-medium translate-x-3 h-7 w-9 transition-transform duration-400 ${
                       openQuestion === data.id ? "rotate-180" : "rotate-0"
                     }`}
-                  />
+                  /> </span>
                 </button>
               </div>
               <AnimatePresence initial={false}>
