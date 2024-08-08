@@ -1,8 +1,9 @@
 // --------------------Founder---------------------
-import principal_img from "../../images/Home/Message/Principal_img.jpeg";
 
-// --------------------Principal---------------------
 import founder_img from "../../images/Home/Message/Founder_img.jpeg";
+// --------------------Principal---------------------
+import principal_img from "../../images/Home/Message/Principal_img.jpeg";
+import principal_img2 from "../../images/home/Message/Principal_img2.webp";
 
 // \start(Founder)
 export const message1 = [
@@ -26,6 +27,7 @@ export const message2 = [
   {
     id: 2,
     image: principal_img,
+    image2: principal_img2,
     name: "Ms. Shikha Gautum",
     position: "(Principal)",
     slogan:
