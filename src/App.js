@@ -3,6 +3,10 @@ import Home from './pages/Home/Home';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import AdmissionEnquiry from './components/adimission/AdmissionEnquiry';
+import Desk from './components/common/Desk.jsx';
+import Message from './components/home/Message.jsx';
+import MessageTemplate from './components/common/MessageTemplate.jsx';
+import { message1, message2 } from './data/common/message-data.js';
 
 
 const App = () => {
@@ -10,10 +14,15 @@ const App = () => {
 
 
     <div className="min-h-screen overflow-x-hidden ">
-       <Routes>
+        {/* <Routes>
         <Route path='/' element={<Home />} />
-      </Routes> 
-  {/* <AdmissionEnquiry/> */}
+      </Routes>  */}
+  {/*<AdmissionEnquiry/> */}
+
+   {/* <MessageTemplate data={message1} cardIndex={1}/> */}
+   <Desk data = {message2}/>
+    
+
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const MessageTemplate = ({ data, cardIndex }) => {
 
 
  
-  return (
-    <section className='relative w-full text-white bg-transparent '>
+  return (                      //EDITED BY ME FOR THE LEARNIGN PURPOSE--Pankaj
+    <section className='relative w-full text-black bg-transparent '>
       <div className='w-11/12 mx-auto'>
 
         <div
