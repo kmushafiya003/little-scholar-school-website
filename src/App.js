@@ -1,7 +1,8 @@
 import React from 'react';
-import Home from './pages/Home/Home';
+// import Home from './pages/Home/Home';
 import './App.css';
-import FQA from './components/adimission/FQA';
+// import FQA from './components/adimission/FQA';
+
 
 
 
@@ -10,11 +11,12 @@ const App = () => {
   return (
 
 
-    <div className="min-h-screen overflow-x-hidden ">
+    <div className="min-h-screen overflow-x-hidden font-open-sans">
        {/* <Routes>
         <Route path='/' element={<Home />} />
       </Routes>  */}
-      <FQA/>
+      {/* <FQA/> */}
+      
     </div>
   );
 }
