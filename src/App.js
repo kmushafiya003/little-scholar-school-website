@@ -2,7 +2,7 @@ import React from 'react';
 // import Home from './pages/Home/Home';
 // import { Routes , Route } from 'react-router-dom';
 import './App.css';
-import Registration from './components/adimission/Registration';
+
 
 
 
@@ -17,7 +17,7 @@ const App = () => {
        {/* <Routes>
         <Route path='/' element={<Home />} />
       </Routes>  */}
- <Registration/>
+
     </div>
   );
 }
