@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      "open-sans": ["Open Sans", "sans-serif"],
+    },
     colors: {
       white: "#fff",
       black: "#000",
@@ -54,9 +57,7 @@ module.exports = {
         xxl: "4rem",
         "3xl": "3rem",
       },
-      fontFamily: {
-        "open-sans": ["Open Sans", "sans-serif"],
-      },
+     
       fontWeight: {
         regular: 400,
         bold: 700,
