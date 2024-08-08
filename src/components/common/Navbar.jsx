@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp, IoMdClose, IoMdMenu } from "react-icons/io";
-import { navData } from '../../data/Home/navbar-links';
+import { navData } from '../../data/common/navbar-links';
 import logo from '../../assets/logo.webp';
 import '../../App.css'; // Ensure this file imports your CSS
 

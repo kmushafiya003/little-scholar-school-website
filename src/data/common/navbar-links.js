@@ -21,15 +21,13 @@ export const navData = [
         path: '/about/founder'
       },
       { id: 16, title: 'Infrastructure', path: '/about-us/infrastructure' },
-      { id: 17, title: 'Photo Gallery', path: '/Photo Gallery' },
-      { id: 18, title: 'Video Gallery', path: '/Video Gallery' },
-      { id: 19, title: 'Media Gallery', path: '/Media Gallery' }
+
     ]
   },
   {
     id: 3,
     title: 'Admissions',
-    path: '/admissions',
+    path: '#',
     dropdown: [
       {
         id: 21,
@@ -41,17 +39,16 @@ export const navData = [
         title: 'Admission Procedure',
         path: '/admissions/admissionprocedure'
       },
-      { id: 23, title: 'Resistration', path: '/admissions/resistration' },
-      { id: 24, title: 'Fee Structure', path: '/admissions/feestructure' },
-      { id: 25, title: 'Scholorship', path: '/admissions/scholorship' },
-      { id: 26, title: 'School Timings', path: '/admissions/schooltimings' },
-      { id: 27, title: `FAQ's`, path: '/admissions/FAQ' }
+      { id: 23, title: 'Registration', path: '/admissions/registration' },
+      { id: 24, title: 'Fee Structure', path: '/admissions/fee-structure' },
+      { id: 26, title: 'School Timings', path: '/admissions/school-timings' },
+      { id: 27, title: `FAQ's`, path: '/admissions/faq' }
     ]
   },
   {
     id: 4,
     title: 'Student Life',
-    path: '/studentlife',
+    path: '#',
     dropdown: [
       { id: 41, title: 'Academics', path: '/studentlife/academics' },
       { id: 42, title: 'Sports', path: '/studentlife/sports' },
@@ -103,7 +100,7 @@ export const navData = [
   {
     id: 5,
     title: 'News & Calendar',
-    path: '/news&calendar',
+    path: '#',
     dropdown: [
       { id: 61, title: 'Student Hand Book', path: '/news&calendar/handbook' },
       {
@@ -139,7 +136,7 @@ export const navData = [
   {
     id: 7,
     title: 'Contact Us',
-    path: '/contact-us',
+    path: '#',
     dropdown: [
       { id: 81, title: 'Reach Us', path: '/contact-us/reach-us' },
       { id: 82, title: 'Career', path: '/contact-us/career' },
@@ -149,7 +146,7 @@ export const navData = [
   {
     id: 8,
     title: 'Notice',
-    path: '/notice',
+    path: '#',
     dropdown: [
       { id: 91, title: 'Notice 1', path: '/notice/notice1' },
       { id: 92, title: 'Notice 2', path: '/notice/notice 2' },

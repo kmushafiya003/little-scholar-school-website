@@ -3,7 +3,7 @@
 import founder_img from "../../images/Home/Message/Founder_img.jpeg";
 // --------------------Principal---------------------
 import principal_img from "../../images/Home/Message/Principal_img.jpeg";
-import principal_img2 from "../../images/home/Message/Principal_img2.webp";
+import principal_img2 from "../../images/Home/Message/Principal_img2.webp";
 
 // \start(Founder)
 export const message1 = [
