@@ -12,7 +12,7 @@ const ManagingCommittee = () => {
           {heading}
         </h1>
         <div className="w-[70px] h-1 bg-black mb-10"></div>
-        <p className="mb-4">{description}</p>
+        <p className="mb-4 text-justify">{description}</p>
         <div className="overflow-x-auto">
           <table className="w-full mx-auto mt-10 border border-collapse border-gray-400 table-auto">
             <thead>

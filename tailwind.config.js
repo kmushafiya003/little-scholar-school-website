@@ -33,6 +33,7 @@ module.exports = {
       "blue-600": "rgb(37 99 235)",
       "desaturated-blue" : "rgb(32, 44, 69, 255)",
       "border-black": "rgb(51, 51, 51)",
+      "purple-950": " rgb(59, 7, 100)"
       
     },
     screens: {
@@ -55,6 +56,9 @@ module.exports = {
       "2xl": "1505px",
     },
     extend: {
+      listStyleType: {
+        'upper-roman': 'upper-roman',
+      },
       fontSize: {
         xxl: "4rem",
         "3xl": "3rem",
