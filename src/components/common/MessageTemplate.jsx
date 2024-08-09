@@ -7,7 +7,7 @@ const MessageTemplate = ({ data, cardIndex }) => {
 
  
   return (                      //EDITED BY ME FOR THE LEARNIGN PURPOSE--Pankaj
-    <section className='relative w-full text-black bg-transparent '>
+    <section className='relative w-full text-justify text-white bg-transparent '>
       <div className='w-11/12 mx-auto'>
 
         <div
@@ -15,13 +15,13 @@ const MessageTemplate = ({ data, cardIndex }) => {
           className='flex flex-col items-center justify-center p-5 my-5 border md:flex-row md:items-start rounded-xl '>
           <div className='flex flex-col mb-5 text-center md:text-left md:mr-5 md:mb-0'>
             <div
-              className='h-56 bg-center bg-cover w-80 md:w-64 md:h-48 lg:w-72 lg:h-56 dxs:w-52 dxs:h-32 xsm:h-48 xsm:w-64'
+              className='h-56 bg-center bg-cover w-80 md:w-64 md:h-48 lg:w-72 lg:h-56 dxs:w-44 dxs:h-32 xxs:h-48 xxs:w-64'
               style={{ backgroundImage: `url(${data[0].image})` }}
             ></div>
             <p className='pt-5 mt-2 font-bold'>{data[0].name}</p>
             <p className='text-sm font-bold'>{data[0].position}</p>
           </div>
-          <div className='max-w-60 md:max-w-none'>
+          <div className='md:max-w-[35rem] dxs:max-w-[40rem]'>
             {
               cardIndex === 1 ? (
                 <div>

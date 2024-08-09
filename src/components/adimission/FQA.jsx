@@ -21,7 +21,7 @@ function FQA() {
       <div className="flex justify-center w-10/12 mx-auto">
         <div className="flex flex-col justify-center gap-2 mt-20 xxl:w-9/12 lg:w-full lg:gap-0 smd:w-fulldxs:w-full dxs:gap-0">
           {fqa.map((data, index) => (
-            <div key={data.id} className="relative inline-block w-full ">
+            <div key={data.id} className="relative inline-block w-full text-justify">
               <div className="flex pt-[5px]">
                 <button
                   className={`px-3 py-2  inline-flex font-semibold justify-between w-full lg:text-[1.2rem] dxs:text-[1rem] shadow-sm ring-1 ring-inset ring-black ${
