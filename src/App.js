@@ -5,10 +5,6 @@ import './App.css';
 import Registration from './components/adimission/Registration';
 
 
-
-
-
-
 const App = () => {
   return (
 
@@ -17,7 +13,7 @@ const App = () => {
        {/* <Routes>
         <Route path='/' element={<Home />} />
       </Routes>  */}
- <Registration/>
+      <Registration/>
     </div>
   );
 }
