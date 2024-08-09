@@ -69,7 +69,7 @@ module.exports = {
         '0.2': '0.2px',
       },
       animation: {
-        marquee: "marquee 20s linear infinite",
+        marquee: "marquee 50s linear infinite",
         "pause-marquee": "none",
         'arrow-hover': 'arrow-hover 0.6s infinite',
         'flip-hover': 'flip-hover 0.6s forwards',
