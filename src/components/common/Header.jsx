@@ -8,12 +8,13 @@ const Header = ({ page }) => {
 
   //get the current location 
   const location = useLocation();
-  const pathName = location.pathname;
+  const path = location.pathname.split("/");
+  const pathName = path[2];
+
 
   //Process to make path name formatted
 
   const formattedPath = pathName
-    .substring(1)   //remove leading slash
     .split('-')   //splt by hyphen
     .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
     .join(' ')  //join words with spaces
@@ -35,11 +36,11 @@ const Header = ({ page }) => {
         <h1 className='xs:text-4xl text-[28px] font-semibold tracking-wider '>{formattedPath}</h1>
 
         {/* ------------ link -------- */}
-        <p className='flex gap-x-1 xs:text-lg'>
+        <div className='flex gap-x-1 xs:text-lg'>
           <Link to="/" className='font-semibold flex items-center gap-x-1 '>Home <span><FaAngleRight/></span></Link>
           <p className='font-semibold flex items-center gap-x-1'>{page} <span><FaAngleRight/></span></p>
           <span className='font-light'>{formattedPath}</span>
-        </p>
+        </div>
 
       </div>
 
