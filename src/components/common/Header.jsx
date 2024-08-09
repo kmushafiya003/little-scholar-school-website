@@ -28,7 +28,7 @@ const Header = ({ page }) => {
 
       {/* ------------ container -------------- */}
 
-      <div className=' sm:w-[80%] w-[95%] border border-red flex flex-col items-center xs:gap-y-6 gap-y-2 relative z-2'>
+      <div className=' sm:w-[80%] w-[95%]  flex flex-col items-center xs:gap-y-6 gap-y-2 relative z-2'>
 
         {/* ------------  heading ----------- */}
 
