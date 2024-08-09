@@ -1,19 +1,22 @@
 import React from 'react';
-// import Home from './pages/Home/Home';
-// import { Routes , Route } from 'react-router-dom';
 import './App.css';
-import Registration from './components/adimission/Registration';
+
+
+// import { Route, Routes } from 'react-router-dom';
+// import Home from './pages/Home';
 
 
 const App = () => {
   return (
 
 
-    <div className="min-h-screen overflow-x-hidden font-open-sans">
+    <div className="min-h-screen overflow-x-hidden ">
        {/* <Routes>
         <Route path='/' element={<Home />} />
+        
+
       </Routes>  */}
-      <Registration/>
+
     </div>
   );
 }

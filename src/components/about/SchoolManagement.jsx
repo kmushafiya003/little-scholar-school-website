@@ -4,6 +4,8 @@ import { FaCircleRight } from "react-icons/fa6";
 import AboutModal from './AboutModal';
 import { useState, useEffect } from 'react';
 
+
+
 const SchoolManagement = () => {
 
     const [modalData, setModalData] = useState(null)
@@ -39,6 +41,8 @@ const SchoolManagement = () => {
 
 
     return (
+       
+        
         <section className=' bg-bg-light pt-28 pb-32 font-open-sans '>
 
             {/* ------------------------- container ------------------------- */}
@@ -179,6 +183,7 @@ const SchoolManagement = () => {
             }
 
         </section>
+      
     )
 }
 

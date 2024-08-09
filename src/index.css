@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 .bg-parallax {
-  background-image: url('./images/Common/bg-parallax.webp');
-  background-attachment: fixed; 
+  background-image: url("./images/Common/bg-parallax.webp");
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  overflow: auto; 
+  overflow: auto;
 }
 
-.swiper-next, .swiper-prev {
+.swiper-next,
+.swiper-prev {
   position: absolute;
   top: 50%;
   width: auto;
@@ -62,18 +63,19 @@
 .swiper-slide-active .custom-content {
   opacity: 1;
 }
-.swiper-button-next, .swiper-button-prev {
- 
+
+.swiper-button-next,
+.swiper-button-prev {
   display: none;
 }
 
 .swiper-prev,
-.swiper-next{
-  transition: background-color 0.3s ease-in-out, background-image 0.3s ease-in-out;
+.swiper-next {
+  transition: background-color 0.3s ease-in-out,
+    background-image 0.3s ease-in-out;
   background-size: cover;
   background-position: center;
 }
-
 
 .swiper-prev:hover,
 .swiper-next:hover {
@@ -81,37 +83,35 @@
   background-image: var(--hover-image);
 }
 
-
-
 .swiper-container {
   width: 100%;
 }
 
 .swiper-slide img {
-  width: 100%; 
-  object-fit: cover; 
+  width: 100%;
+  object-fit: cover;
 }
 
-.owl-prev, .owl-next {
+.owl-prev,
+.owl-next {
   z-index: 10;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: transform 0.3s, background-color 0.3s; 
-  background-color: rgba(0, 0, 0, 0.2); 
-  
-  border-radius: 50%; 
-  width: 60px; 
-  height: 60px; 
+  transition: transform 0.3s, background-color 0.3s;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .owl-prev:hover,
 .owl-next:hover {
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .owl-prev {
@@ -122,27 +122,34 @@
   right: 10px;
 }
 
-
-
 .transparent-bg {
   background-color: transparent !important;
 }
 
-
 /* Hover animations */
-
 
 /* Apply the animation to the sibling when one is hovered */
 
 @keyframes moveRight {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(2px); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(2px);
+  }
 }
 
 @keyframes moveLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-2px); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-2px);
+  }
 }
+
 .owl-next.arrow-reverse {
   animation: moveRight 0.5s reverse;
 }
@@ -159,7 +166,6 @@
   animation: moveRight 0.5s forwards;
 }
 
-
 .owl-next,
 .owl-prev {
   transition: transform 0.5s;
@@ -172,20 +178,22 @@
 .owl-prev {
   transform: translateX(0);
 }
-.owl-prev .icon, .owl-next .icon {
-  color: rgba(255, 255, 255, 0.5); 
-}
 
+.owl-prev .icon,
+.owl-next .icon {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 .owl-prev.arrow-animate-prev .icon,
 .owl-next.arrow-animate-next .icon {
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 @keyframes flip-hover {
   0% {
     transform: rotateY(0deg);
   }
+
   100% {
     transform: rotateY(360deg);
   }
@@ -195,31 +203,176 @@
   0% {
     transform: rotateY(0deg);
   }
+
   100% {
     transform: rotateY(360deg);
   }
 }
+
 .single-line-text {
-  white-space: nowrap;  
-  overflow: hidden;     
-  text-overflow: ellipsis; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .arrow-container {
-  perspective: 1000px; /* Adds perspective for 3D effect */
+  perspective: 1000px;
+  /* Adds perspective for 3D effect */
 }
 
 .arrow-icon {
- 
   transition: transform 0.6s;
   transform-style: preserve-3d;
   display: inline-block;
 }
 
 .arrow-container:hover .arrow-icon {
-  transform: rotateX(180deg); /* Flips the arrow */
+  transform: rotateX(180deg);
+  /* Flips the arrow */
 }
 
+.header-bg {
+  background-image: url("./images/Common/Header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
+/* ---------Fee structure--------- */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
+.cd__main {
+  background: linear-gradient(to right, #3f2b96, #a8c0ff) !important;
+}
 
+.color-white {
+  color: #fff;
+}
+
+.box-container {
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 1380px) {
+  .box-container {
+    flex-direction: column;
+  }
+}
+/* @media (max-width: 400px) and (min-width: 300px) {
+  .box-container{
+    object-fit: scale-down;
+  }
+} */
+
+.box-item {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  width: 25rem;
+  height: 10rem;
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+
+.flip-box {
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.flip-box-front,
+.flip-box-back {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  min-height: 6.5rem;
+  -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background: linear-gradient(to top, #475990, #112b54);
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-front {
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box-back {
+  background: linear-gradient(to top, #475990, #112b54);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-back {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 40%;
+}
+
+.flip-box-header {
+  padding-top: 1rem;
+  font-size: 18px;
+}
+
+.flip-box-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}

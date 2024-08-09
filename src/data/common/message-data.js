@@ -10,6 +10,7 @@ export const message1 = [
   {
     id: 1,
     image: founder_img,
+    image2: founder_img,
     name: "Ms. Ritu Bhalla",
     position: "(Founder)",
     slogan:
