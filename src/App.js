@@ -8,7 +8,6 @@ import ManagingCommittee from './components/about/ManagingCommittee';
 //import StudentForm from './components/adimission/Helpdesk';
 
 
-;
 const App = () => {
   return (
 
@@ -20,8 +19,7 @@ const App = () => {
         
 
       </Routes>  */}
-      <Registration/>
-     
+    
       
 
     </div>
