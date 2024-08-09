@@ -1,11 +1,12 @@
-// Button.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ label, onClick, isActive, className }) => {
   const baseClass = 'flex text-base w-32 rounded-sm h-8 items-center justify-center transition duration-300';
   const activeClass = isActive ? 'bg-dark-blue text-white' : 'bg-off-white-bg text-black';
-  const hoverClass = 'hover:bg-blue-700 hover:text-black';
+  
+  // This will apply hover styles only if the button is not active
+  const hoverClass = !isActive ? 'hover:text-red' : '';
 
   return (
     <button
