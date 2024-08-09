@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      "open-sans": ["Open Sans", "sans-serif"],
+    },
     colors: {
       white: "#fff",
       black: "#000",
@@ -27,7 +30,10 @@ module.exports = {
       "gray-200": "rgb(229 231 235)",
       "gray-300": "rgb(209 213 219)",
       "gray-400": "rgb(156 163 175)",
-      "blue-600": "rgb(37 99 235)"
+      "blue-600": "rgb(37 99 235)",
+      "desaturated-blue" : "rgb(32, 44, 69, 255)",
+      "border-black": "rgb(51, 51, 51)",
+      
     },
     screens: {
       dxs: "300px",
@@ -53,9 +59,7 @@ module.exports = {
         xxl: "4rem",
         "3xl": "3rem",
       },
-      fontFamily: {
-        "open-sans": ["Open Sans", "sans-serif"],
-      },
+     
       fontWeight: {
         regular: 400,
         semibold: 600,

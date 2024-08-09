@@ -21,7 +21,7 @@ export const fqa = [
   },
   {
     id: 4,
-    questions: 'Whom should I contact for admissions?',
+    question: 'Whom should I contact for admissions?',
     answer:
       'Admission in charge, Little Scholars School, Kashipur - (Off) +91-9105666371 & Email @ littlescholars.kasipur@gmail.com '
   },
@@ -33,13 +33,13 @@ export const fqa = [
   },
   {
     id: 6,
-    questions: 'What are the timings for enquiry?',
+    question: 'What are the timings for enquiry?',
     answer:
       ' Please call at the School Admission Office between 9 am - 3 pm from Monday to Saturday. After working hours by sending SMS/Whatsapp on + 91 9105666371. The concerned personnel will get back to you in next 24 hours. '
   },
   {
     id: 7,
-    questions: 'Where can I locate the General Entrance form?',
+    question: 'Where can I locate the General Entrance form?',
     answer:
       'Registration Form can be downloaded here or could be collected it in person from the School Office on all working days between 9 am to 3 pm.'
   },
@@ -47,7 +47,7 @@ export const fqa = [
     id: 8,
     question:
       'What do I need in order to prepare for the Aptitude Assessments?',
-    answerr:
+    answer:
       'Syllabus for the Aptitude Assessment in English, Mathematics and Hindi shall be made available on filling the Registration Form.'
   }
 ]
