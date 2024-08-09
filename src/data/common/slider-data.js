@@ -1,7 +1,7 @@
 // --------------------Infrastructure---------------------
 import school from "../../images/Common/school.webp";
 // ----------------------SChool Bulding Images ------------------------
-import schoolp1 from "../../images/Common/in1.webp"; 
+import schoolp1 from "../../images/Common/in1.webp";
 import schoolp2 from "../../images/Common/in2.webp";
 import schoolp3 from "../../images/Common/in3.webp";
 import schoolp4 from "../../images/Common/in4.webp";
@@ -9,10 +9,10 @@ import schoolp5 from "../../images/Common/in5.webp";
 import schoolp6 from "../../images/Common/in6.webp";
 // ----------------Physics Lab ------------------------
 import physics from "../../images/Common/physics.webp";
-import physicsp1 from "../../images/Common/physics1.webp";
-import physicsp2 from "../../images/Common/physics2.webp";
-import physicsp3 from "../../images/Common/physics3.webp";
-import physicsp4 from "../../images/Common/physics4.webp";
+import physics1 from "../../images/Common/physics1.webp";
+import physics2 from "../../images/Common/physics2.webp";
+import physics3 from "../../images/Common/physics3.webp";
+import physics4 from "../../images/Common/physics4.webp";
 // -----------------Chemistry Lab-------------------------
 import chemistry from "../../images/Common/chemistry.webp";
 import chemistryp1 from "../../images/Common/chemistry1.webp";
@@ -25,9 +25,10 @@ import computerp2 from "../../images/Common/comp2.webp";
 import computerp3 from "../../images/Common/comp3.webp";
 // ----------------------Bio Lab-------------------------
 import bio from "../../images/Common/bio.webp";
-import biop1 from "../../images/Common/bio1.webp";
+import bio1 from "../../images/Common/bio1.webp";
 import bio2 from "../../images/Common/bio2.webp";
-import bio3 from "../../images/Common/bio2.webp";
+import bio3 from "../../images/Common/bio3.webp";
+import bio4 from "../../images/Common/bio4.webp";
 // -------------------Auduttorium---------------------------
 import auditorium from "../../images/Common/auditorium.webp";
 import auditoriump1 from "../../images/Common/aud1.webp";
@@ -92,73 +93,66 @@ export const infrastructure = [
     },
     {
         id: 2,
-        name: "Physics Lab",
-        image: physics,
+        name: " Sports Ground",
         images: [
             {
-                id: 15,
-                picture: physicsp1
+                id:15,
+                picture: groundp1
             },
             {
                 id: 16,
-                picture: physicsp2
+                picture:groundp2
             },
             {
                 id: 17,
-                picture: physicsp3
+                picture: groundp3
             },
             {
                 id: 18,
-                picture: physicsp4
+                picture: groundp4
+            },
+            {
+                id: 19,
+                picture: groundp5
             }
         ]
     },
     {
         id: 3,
-        name: "Chemistry Lab",
-        image: chemistry,
+        name: "Auditorium",
+        image: auditorium,
         images: [
-            {
-                id: 19,
-                picture: chemistryp1
-            },
             {
                 id: 20,
-                picture: chemistryp2
+                picture: auditoriump1
             },
             {
                 id: 21,
-                picture: chemistryp3
-            }
-        ]
-    },
-    {
-        id: 4,
-        name: "Computer Lab",
-        image: computer,
-        images: [
+                picture: auditoriump2
+            },
             {
-                id: 21,
-                picture: computerp1
+                id: 22,
+                picture: auditoriump3
             },
             {
                 id: 23,
-                picture: computerp2
+                picture: auditoriump4
             },
             {
                 id: 24,
-                picture: computerp3
+                picture: auditoriump2
             }
         ]
+        
     },
     {
-        id: 5,
+        id: 4,
         name: "Biological Lab",
         image: bio,
         images: [
             {
                 id: 25,
-                picture: biop1
+                picture: bio1
             },
             {
                 id: 26,
@@ -167,80 +161,130 @@ export const infrastructure = [
             {
                 id: 27,
                 picture: bio3
+            },
+            {
+                id: 28,
+                picture: bio4
+            },
+            {
+                id: 25,
+                picture: bio1
+            }
+            
+            
+            
+        ]
+    },
+   
+    {
+        id: 5,
+        name: "Chemistry Lab",
+        image: chemistry,
+        images: [
+            {
+                id: 30,
+                picture: chemistryp1
+            },
+            {
+                id: 31,
+                picture: chemistryp2
+            },
+            {
+                id: 32,
+                picture: chemistryp3
+            },{
+                id: 30,
+                picture: chemistryp1
+            },
+            {
+                id: 31,
+                picture: chemistryp2
             }
         ]
     },
     {
         id: 6,
-        name: "Auditorium",
-        image: auditorium,
+        name: "Computer Lab",
+        image: computer,
         images: [
             {
-                id: 28,
-                picture: auditoriump1
+                id: 33,
+                picture: computerp1
             },
             {
-                id: 29,
-                picture: auditoriump2
+                id: 34,
+                picture: computerp2
             },
             {
-                id: 30,
-                picture: auditoriump3
+                id: 35,
+                picture: computerp3
             },
             {
-                id: 31,
-                picture: auditoriump4
-            }
+                id: 33,
+                picture: computerp1
+            },
+            {
+                id: 34,
+                picture: computerp2
+            },
         ]
     },
+  
+    
     {
         id:7,
         name: "Library",
         images: [
             {
-                id: 32,
+                id: 36,
                 picture: libraryp1
             },
             {
-                id: 33,
+                id: 37,
                 picture: libraryp2
             },
             {
-                id: 34,
+                id: 38,
                 picture: libraryp3
             },
             {
-                id: 35,
+                id: 39,
                 picture: libraryp4
+            },
+            {
+                id: 36,
+                picture: libraryp1
             }
         ]
     },
     {
         id: 8,
-        name: "Ground",
+        name: "Physics Lab",
+        image: physics,
         images: [
             {
-                id: 36,
-                picture: groundp1
+                id: 40,
+                picture: physics1
             },
             {
-                id: 37,
-                picture:groundp2
+                id: 41,
+                picture: physics2
             },
             {
-                id: 38,
-                picture: groundp3
+                id: 42,
+                picture: physics3
             },
             {
-                id: 39,
-                picture: groundp4
+                id: 43,
+                picture: physics4
             },
             {
                 id: 40,
-                picture: groundp5
+                picture: physics1
             }
         ]
-    }
+    },
+    
 ];
 // \end{Infrastructure}
 

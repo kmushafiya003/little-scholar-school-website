@@ -226,6 +226,22 @@
   background-position: center;
 }
 
+@keyframes borderDragFromTopToBottom {
+  0% {
+    border-top-width: 0;
+  }
+  100% {
+    border-top-width: 5px; 
+  }
+}
 
+
+.swiper-border-drag-top {
+  border-top: 5px solid rgba(0, 0, 0, 0.7); 
+  animation: borderDragFromTopToBottom 3600s ease-in-out; 
+}
+.swiper-pagination-bullets {
+  display: none;
+}
 
 
