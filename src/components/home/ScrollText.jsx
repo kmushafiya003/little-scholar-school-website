@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FaBook } from 'react-icons/fa'; // Import a book icon from react-icons
 
-const HeaderSection = () => {
+const ScrollText = () => {
    
 
     const repeatCount = 5;
@@ -31,4 +31,4 @@ const HeaderSection = () => {
 
 
 
-export default HeaderSection;
+export default ScrollText;
