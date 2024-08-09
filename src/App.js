@@ -1,9 +1,15 @@
 import React from 'react';
-// import Home from './pages/Home/Home';
-// import { Routes , Route } from 'react-router-dom';
+
+
 import './App.css';
+<<<<<<< HEAD
 import { Route, Routes } from 'react-router-dom';
 // import AdmissionEnquiry from './components/adimission/AdmissionEnquiry';
+
+// import { Route, Routes } from 'react-router-dom';
+// import Home from './pages/Home';
+
+>>>>>>> a2b3c93583afb5c6bf511f14572cfe505d7071de
 
 
 
@@ -16,9 +22,16 @@ const App = () => {
     <div className="min-h-screen overflow-x-hidden ">
        {/* <Routes>
         <Route path='/' element={<Home />} />
+        
+
       </Routes>  */}
 
+<<<<<<< HEAD
   {/* <AdmissionEnquiry/> */}
+=======
+
+
+>>>>>>> a2b3c93583afb5c6bf511f14572cfe505d7071de
     
     </div>
   );
