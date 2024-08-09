@@ -14,6 +14,7 @@ const App = () => {
     <div className="min-h-screen overflow-x-hidden ">
        {/* <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/founder-desk' element={<FounderDesk />} />
         
 
       </Routes>  */}
