@@ -37,7 +37,7 @@ const AdmissionProcedure = () => {
                             {
                                 index === 0 ? (<p className='leading-7'>
                                    <span>{step}</span>
-                                   <Link className='text-black font-semibold hover:text-red-600 transition-colors duration-300'  to="/"> littlescholars-kashipur.com</Link>
+                                   <Link className='font-semibold text-black transition-colors duration-300 hover:text-red-600 hover:underline'  to="/"> littlescholars-kashipur.com</Link>
                                 </p>) : (<p className='leading-7'>{step}</p>)
                             }
 
