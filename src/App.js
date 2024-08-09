@@ -18,13 +18,10 @@ const App = () => {
        {/* <Routes>
         <Route path='/' element={<Home />} />
       </Routes>  */}
-<<<<<<< HEAD
+
   {/* <AdmissionEnquiry/> */}
     {/* <Desk data = {message1}/> */}
     
-=======
-
->>>>>>> b3dfae7496c0b2106cc48ece1be1d255b4bb3d1a
     </div>
   );
 }
