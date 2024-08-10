@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      "open-sans": ["Open Sans", "sans-serif"],
+    },
     colors: {
       white: "#fff",
       black: "#000",
@@ -27,7 +30,11 @@ module.exports = {
       "gray-200": "rgb(229 231 235)",
       "gray-300": "rgb(209 213 219)",
       "gray-400": "rgb(156 163 175)",
-      "blue-600": "rgb(37 99 235)"
+      "blue-600": "rgb(37 99 235)",
+      "desaturated-blue" : "rgb(32, 44, 69, 255)",
+      "border-black": "rgb(51, 51, 51)",
+      "purple-950": " rgb(59, 7, 100)"
+      
     },
     screens: {
       dxs: "300px",
@@ -49,6 +56,9 @@ module.exports = {
       "2xl": "1505px",
     },
     extend: {
+      listStyleType: {
+        'upper-roman': 'upper-roman',
+      },
       fontSize: {
         xxl: "4rem",
         "3xl": "3rem",
@@ -57,15 +67,17 @@ module.exports = {
         "open-sans": ["Open Sans", "sans-serif"],
         
       },
+     
       fontWeight: {
         regular: 400,
+        semibold: 600,
         bold: 700,
       },
       borderWidth: {
         '0.2': '0.2px',
       },
       animation: {
-        marquee: "marquee 20s linear infinite",
+        marquee: "marquee 50s linear infinite",
         "pause-marquee": "none",
         'arrow-hover': 'arrow-hover 0.6s infinite',
         'flip-hover': 'flip-hover 0.6s forwards',

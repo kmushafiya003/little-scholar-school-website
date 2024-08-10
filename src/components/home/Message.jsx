@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { message1, message2 } from "../../data/Home/message-data";
+import { message1, message2 } from "../../data/common/message-data";
 import MessageTemplate from "../common/MessageTemplate";
 
 function Message() {
