@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollText from '../components/home/ScrollText'
+import HeaderSection from '../components/common/Header'
 import Navbar from '../components/common/Navbar'
 import HeroSection from '../components/home/HeroSection'
 import Welcome from '../components/home/Welcome'
@@ -10,24 +10,25 @@ import IconSection from '../components/home/IconSection'
 import Footer from '../components/common/Footer'
 import Infrastructure from '../components/home/infrastructure'
 import Faculty from '../components/home/faculty'
-
+import Principles from '../components/About/Principles'
 const Home = () => {
   return (
 
 
     <div >
-      <ScrollText />
-      <Navbar />
-      <HeroSection />
-      <Welcome />
-      <Message />
-      <Infrastructure />
-      <Faculty />
-      <Gallery />
-      <Counts />
-      <IconSection />
-      <Footer />
-    </div>
+      {/* <HeaderSection/>
+        <Navbar/>
+          <HeroSection/>
+          <Welcome/>
+           <Message/>
+            <Infrastructure/>
+            <Faculty />
+             <Gallery/>
+              <Counts/>
+              <IconSection/>
+                 <Footer/> */}
+                 
+               </div>
   )
 }
 

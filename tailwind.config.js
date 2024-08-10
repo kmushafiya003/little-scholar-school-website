@@ -63,6 +63,10 @@ module.exports = {
         xxl: "4rem",
         "3xl": "3rem",
       },
+      fontFamily: {
+        "open-sans": ["Open Sans", "sans-serif"],
+        
+      },
      
       fontWeight: {
         regular: 400,
@@ -85,9 +89,30 @@ module.exports = {
           "100%": { transform: "translateX(-100%)" },
         },
       },
+      scrollBehavior: {
+        smooth: 'smooth',
+      },
+      scrollbar: {
+        none: 'scrollbar-width: none; -ms-overflow-style: none;', // Firefox & IE/Edge
+      },
     },
     
   },
  
-  plugins: [],
+  plugins: [
+    function ({ addBase, addComponents, addUtilities }) {
+      addUtilities({
+        '.scrollbar-none': {
+          /* For Firefox */
+          'scrollbar-width': 'none',
+          /* For Chrome, Safari, and Edge */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          /* For IE and Edge */
+          '-ms-overflow-style': 'none',
+        },
+      });
+    },
+  ],
 };

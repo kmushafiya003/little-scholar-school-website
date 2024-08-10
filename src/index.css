@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .bg-parallax {
   background-image: url("./images/Common/bg-parallax.webp");
   background-attachment: fixed;
