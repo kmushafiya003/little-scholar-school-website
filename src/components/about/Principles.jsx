@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GoCheckCircleFill } from "react-icons/go";
 import { BiArrowFromBottom } from 'react-icons/bi';
 import { principlesData } from '../../data/About/principles-data';
-import HouseTallyChart from '../../components/About/Principles/HouseTallychart';
+import HouseTallyChart from './Principles/HouseTallychart';
 
 
 // Data for different years
@@ -86,7 +86,7 @@ const Principles = () => {
         </div>
 
         {/* Main content area */}
-        <div className="md:mx-auto w-full 2xl:w-full overflow-y-scroll h-screen scroll-smooth scrollbar-none">
+        <div className="md:mx-auto w-full 2xl:w-full scroll-smooth  scrollbar-none">
           {principlesData.map((section, index) => (
             <div key={index} id={`section-${index}`} className="w-full p-4 last:border-b-0">
               <SectionCard section={section} />
@@ -130,7 +130,7 @@ const SectionCard = ({ section }) => {
   const uniformData = section.details ? section.details[season][gender] : {};
 
   return (
-    <div className="rounded-lg mb-8">
+    <div className="rounded-lg  pb-10">
       <h2 className="text-[1.8rem] border-b-0.2 p-4 border-[rgb(173,172,172)] font-semibold mb-2">
         {section.section}
       </h2>

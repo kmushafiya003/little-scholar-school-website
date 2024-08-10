@@ -63,10 +63,7 @@ module.exports = {
         xxl: "4rem",
         "3xl": "3rem",
       },
-      fontFamily: {
-        "open-sans": ["Open Sans", "sans-serif"],
-        
-      },
+   
      
       fontWeight: {
         regular: 400,
@@ -77,7 +74,7 @@ module.exports = {
         '0.2': '0.2px',
       },
       animation: {
-        marquee: "marquee 50s linear infinite",
+        marquee: "marquee 40s linear infinite",
         "pause-marquee": "none",
         'arrow-hover': 'arrow-hover 0.6s infinite',
         'flip-hover': 'flip-hover 0.6s forwards',

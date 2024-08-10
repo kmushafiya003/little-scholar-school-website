@@ -17,8 +17,8 @@ export const navData = [
       { id: 14, title: 'Managing Committee', path: '/about-us/managing-committee' },
       {
         id: 15,
-        title: 'principal-policies',
-        path: '/about/founder'
+        title: 'Principles & Policies',
+        path: '/about-us/principles-policies'
       },
       { id: 16, title: 'Infrastructure', path: '/about-us/infrastructure' },
 
