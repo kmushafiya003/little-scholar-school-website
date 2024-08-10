@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-
-
-
+// import { Route, Routes } from 'react-router-dom';
+// import Home from './pages/Home';
+import Helpdesk from './components/adimission/Helpdesk'
 const App = () => {
   return (
 
@@ -16,10 +14,10 @@ const App = () => {
         
 
       </Routes>   */}
-=
-    
-      
+        <Helpdesk/>
+ 
 
+    
     </div>
   );
 }
