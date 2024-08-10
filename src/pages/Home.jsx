@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-import HeaderSection from '../components/home/HeaderSection'
-=======
-import ScrollText from '../components/home/ScrollText'
->>>>>>> 971eaaa85780cd9f94c9c6059d1d311c34277282
+import HeaderSection from '../components/common/Header'
 import Navbar from '../components/common/Navbar'
 import HeroSection from '../components/home/HeroSection'
 import Welcome from '../components/home/Welcome'
@@ -14,7 +10,7 @@ import IconSection from '../components/home/IconSection'
 import Footer from '../components/common/Footer'
 import Infrastructure from '../components/home/infrastructure'
 import Faculty from '../components/home/faculty'
-
+import Principles from '../components/About/Principles'
 const Home = () => {
   return (
 

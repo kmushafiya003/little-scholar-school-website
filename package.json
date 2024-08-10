@@ -18,11 +18,8 @@
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.26.0",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "recharts": "^2.12.7",
-=======
     "react-toastify": "^10.0.5",
->>>>>>> 971eaaa85780cd9f94c9c6059d1d311c34277282
     "swiper": "^11.1.9",
     "web-vitals": "^2.1.4"
   },

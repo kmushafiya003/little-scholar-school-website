@@ -3,7 +3,7 @@ import { GoCheckCircleFill } from "react-icons/go";
 import { BiArrowFromBottom } from 'react-icons/bi';
 import { principlesData } from '../../data/About/principles-data';
 import HouseTallyChart from '../../components/About/Principles/HouseTallychart';
-import YearSelector from '../../components/About/Principles/YearSelector';
+
 
 // Data for different years
 const data2017 = [
@@ -28,13 +28,13 @@ const data2022 = [
 ];
 
 const Principles = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
-      setIsVisible(false);
+      setIsVisible(true);
     }
   };
 
@@ -63,10 +63,10 @@ const Principles = () => {
   };
 
   return (
-    <div className="App w-11/12 mx-auto bg-white min-h-screen">
-      <div className="md:flex flex-wrap rounded-lg overflow-hidden overscroll-y-contain 2xl:flex text-left flex-nowrap">
+    <div className="App w-11/12 mx-auto bg-white ">
+      <div className="md:flex flex-wrap rounded-lg overflow-hidden overscroll-y-contain 2xl:flex text-left 2xl:flex-nowrap">
         {/* Sidebar for section links */}
-        <div className="md:w-8/12 text-center md:overflow-y-hidden scroll-mx-0 2xl:w-1/4 mt-5 lg:text-left mx-auto overflow-y-auto">
+        <div className="md:w-8/12 text-center md:overflow-hidden scroll-mx-0 2xl:w-1/4 mt-5 lg:text-left mx-auto overflow-y-auto">
           <ul className="list-none border-0.2 border-[rgb(211,203,203)] rounded-lg">
             {principlesData.map((section, index) => (
               <li
@@ -102,7 +102,7 @@ const Principles = () => {
           onClick={scrollToTop}
           className="bg-red  items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2"
         >
-          <BiArrowFromBottom className="h-100"  />
+          <BiArrowFromBottom className="h-full"  />
         </button>
       </div>
     </div>
@@ -203,49 +203,52 @@ const FacultySection = ({ facultySections }) => {
   const currentSection = facultySections[selectedSection] || {};
 
   return (
-    <div className="mt-4 font-open-sans">
-      <h3 className="text-[1.5rem] font-semibold mb-4">TEACHERS & STAFF</h3>
-
-      <div className="flex mb-4">
+    <div className="mt-4 font-open-sans p-4 ">
+    <div className="tabs relative flex border-b-0.2 border-gray-300 bg-white">
         <button
           onClick={() => handleSectionChange('primaryFoundation')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${selectedSection === 'primaryFoundation' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:rounded-tl-lg hover:rounded-tr-lg hover:border hover:border-b-0 hover:border-gray-300 ${selectedSection === 'primaryFoundation' ? 'bg-white text-blue-600 font-semibold border-blue-500 -mb-px rounded-tl-lg rounded-tr-lg border-t border-l border-r' : 'bg-white text-gray-500 hover:border-gray-300'}`}
         >
           Primary Foundation
         </button>
         <button
           onClick={() => handleSectionChange('juniorPreparatory')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${selectedSection === 'juniorPreparatory' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:rounded-tl-lg hover:rounded-tr-lg hover:border hover:border-b-0 hover:border-gray-300 ${selectedSection === 'juniorPreparatory' ? 'bg-white text-blue-600 font-semibold border-blue-500 -mb-px rounded-tl-lg rounded-tr-lg border-t border-l border-r' : 'bg-white text-gray-500 hover:border-gray-300'}`}
         >
           Junior Preparatory
         </button>
         <button
           onClick={() => handleSectionChange('middleStage')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${selectedSection === 'middleStage' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:rounded-tl-lg hover:rounded-tr-lg hover:border hover:border-b-0 hover:border-gray-300 ${selectedSection === 'middleStage' ? 'bg-white text-blue-600 font-semibold border-blue-500 -mb-px rounded-tl-lg rounded-tr-lg border-t border-l border-r' : 'bg-white text-gray-500 hover:border-gray-300'}`}
         >
           Middle Stage
         </button>
         <button
           onClick={() => handleSectionChange('seniorSecondary')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${selectedSection === 'seniorSecondary' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:rounded-tl-lg hover:rounded-tr-lg hover:border hover:border-b-0 hover:border-gray-300 ${selectedSection === 'seniorSecondary' ? 'bg-white text-blue-600 font-semibold border-blue-500 -mb-px rounded-tl-lg rounded-tr-lg border-t border-l border-r' : 'bg-white text-gray-500 hover:border-gray-300'}`}
         >
           Senior Secondary
         </button>
       </div>
+<div className='border-gray-300 border-l-0.2 border-b-0.2 border-r-0.2'>
+
 
       {currentSection.image && <img src={currentSection.image} alt={currentSection.title} className="mb-4 w-full shadow-lg p-4 rounded-lg" />}
 
-      <p className="text-lg font-[300] mb-4">{currentSection.paragraph}</p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <p className="text-lg font-[300] mb-4 ">{currentSection.paragraph}</p>
+      <p className="text-lg font-[300] mb-4 p-4">{currentSection.para}</p>
+      <h3 className="text-[1.5rem] font-semibold mb-4 border-b-0.2 p-4">TEACHERS & STAFF</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10">
         {currentSection.staff && currentSection.staff.map((staff, index) => (
-          <div key={index} className="p-4 border rounded-lg">
-            <img src={staff.image} alt={staff.name} className="mb-2 w-full h-32 object-cover rounded-lg" />
-            <h4 className="text-xl font-semibold mb-2">{staff.name}</h4>
-            <p className="text-sm text-gray-600">{staff.position}</p>
+          <div key={index} className="p-4  rounded-lg">
+            <img src={staff.image} alt={staff.name} className="h-auto w-full object-contain rounded-lg mb-2 shadow-xl" />
+            <h4 className="text-lg text-wrap font-semibold text-center">{staff.name}</h4>
+            <p className="text-sm  text-gray-600">{staff.position}</p>
           </div>
         ))}
       </div>
+</div>
+      
     </div>
   );
 };
@@ -254,51 +257,69 @@ const SchoolUniform = ({ data }) => {
   const [season, setSeason] = useState('winter');
   const [gender, setGender] = useState('boys');
 
-  const uniformData = data.uniforms ? data.uniforms[season][gender] : {};
+  const uniformData = data.details[season][gender] 
 
   return (
     <div className="mt-4 font-open-sans">
-      <h3 className="text-[1.5rem] font-semibold mb-4">School Uniform</h3>
+      
 
-      <div className="tabs flex border-b-0.2 border-gray-300 bg-white mb-4">
+      <div className="tabs flex  border-b-0.2 border-gray-300 bg-white ">
         <button
           onClick={() => setSeason('winter')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${season === 'winter' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:rounded-tl-lg hover:rounded-tr-lg hover:border hover:border-b-0 hover:border-gray-300 ${season === 'winter' ? 'bg-white text-blue-600 font-semibold border-blue-500 -mb-px rounded-tl-lg rounded-tr-lg border-t border-l border-r' : 'bg-white text-gray-500 hover:border-gray-300'}`}
         >
           Winter
         </button>
         <button
           onClick={() => setSeason('summer')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${season === 'summer' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:rounded-tl-lg hover:rounded-tr-lg hover:border hover:border-b-0 hover:border-gray-300 ${season === 'summer' ? 'bg-white text-blue-600 font-semibold border-blue-500 -mb-px rounded-tl-lg rounded-tr-lg border-t border-l border-r' : 'bg-white text-gray-500 hover:border-gray-300'}`}
         >
           Summer
         </button>
       </div>
 
-      <div className="tabs flex border-b-0.2 border-gray-300 bg-white mb-4">
+      
+
+      <div className="border-gray-300 border-l border-b border-r p-4">
+      <div className="  border-gray-300 mb-4">
         <button
           onClick={() => setGender('boys')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${gender === 'boys' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${gender === 'boys' ? 'bg-dark-blue rounded-lg text-white font-semibold' : 'text-gray-700 hover:text-[rgb(210,73,169)]'}`}
         >
           Boys
         </button>
         <button
           onClick={() => setGender('girls')}
-          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${gender === 'girls' ? 'bg-blue-600 text-white font-semibold' : 'text-gray-700'}`}
+          className={`px-4 py-2 border-gray-300 hover:border-gray-300 ${gender === 'girls' ? 'bg-dark-blue rounded-lg text-white font-semibold' : 'text-gray-700 hover:text-[rgb(210,73,169)]'}`}
         >
           Girls
         </button>
       </div>
+        {/* Uniform Content */}
+        <div className=" sm:flex  sm:items-center sm:flex-row  2xl:flex flex-col gap-14 p-4 items-center">
+  {uniformData.image && (
+    <img 
+      src={uniformData.image} 
+      alt={`${season} uniform for ${gender}`} 
+      className="mb-4 rounded-md" 
+    />
+  )}
+  
+  {uniformData.additionalDetails && (
+    <ul className=' pl-5 '>
+      {uniformData.paragraph && (
+    <p className=" font-open-sans text-lg font-semibold mb-4">{uniformData.paragraph}</p>
+  )}
+      {uniformData.additionalDetails.map((item, index) => (
+        <div className='flex '>
+          <span className='mt-1'><GoCheckCircleFill/></span>
+          <li key={index} className="mb-2 ml-2 text-dark-grey">{item}</li>
+        </div>
+      ))}
+    </ul>
+  )}
+</div>
 
-      <div className="border-gray-300 border-l border-b border-r p-4">
-        {uniformData.image && <img src={uniformData.image} alt={uniformData.title} className="mb-4 w-full shadow-lg p-4 rounded-lg" />}
-        {uniformData.details && (
-          <ul className="list-disc list-inside text-gray-700">
-            {uniformData.details.map((item, index) => (
-              <li key={index} className="mb-2">{item}</li>
-            ))}
-          </ul>
-        )}
       </div>
     </div>
   );
