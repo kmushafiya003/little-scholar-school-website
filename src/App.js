@@ -1,24 +1,19 @@
 import React from 'react';
-
-
-
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
+import Navbar from './components/common/Navbar';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-<Home />
+import Principles from './pages/About/Principles';
 
 const App = () => {
   return (
 
 
     <div className="min-h-screen overflow-x-hidden ">
-      
-      <Routes>
+       {/* <Routes>
         <Route path='/' element={<Home />} />
-      </Routes>
-
-
-
+      </Routes>  */}
+ <Principles/>
     </div>
   );
 }

@@ -9,9 +9,9 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import '../../index.css';
-import image1 from '../../images/hero_section_img_1.webp';
-import image2 from '../../images/hero_section_img_2.webp';
-import image3 from '../../images/hero_section_img_3.webp';
+import image1 from '../../images/Home/HeroSection/hero_section_img_1.webp';
+import image2 from '../../images/Home/HeroSection/hero_section_img_2.webp';
+import image3 from '../../images/Home/HeroSection/hero_section_img_3.webp';
 import { useRef } from 'react';
 
 const images = [image1, image2, image3];
@@ -73,7 +73,7 @@ const HeroSection = () => {
                       <div className="px-4 py-2 mt-4 text-lg font-semibold text-center text-white uppercase border-l-4 bg-dark-blue w-max sm:text-2xl md:text-3xl border-red md:px-5 md:py-4">
                         Inspire. Learn. Grow.
                       </div>
-                      <p className="mb-4 mt-6 text-sm sm:text-base md:text-lg">At Little Scholars, we inspire, we learn, we grow.</p>
+                      <p className="mt-6 mb-4 text-sm sm:text-base md:text-lg">At Little Scholars, we inspire, we learn, we grow.</p>
                       <Link
                         to="/OnlineRegistration"
                         className="px-3 py-1 text-sm font-semibold text-white sm:text-base bg-red w-max hover:bg-red md:text-lg md:py-2 sm:px-12"
@@ -85,10 +85,10 @@ const HeroSection = () => {
                   {index === 1 && (
                     <>
                       <h2 className="mt-10 mb-6 text-xl font-bold text-center uppercase dxs:text-4xl sm:text-7xl md:text-7xl">Education</h2>
-                      <div className="px-4 py-2 mx-auto mt-4 text-lg font-semibold text-center text-white uppercase border-l-4 border-r-4 bg-dark-blue  rounded-full w-max sm:text-2xl md:text-2xl border-r-6 border-l-6 border-red md:px-6 md:py-3">
+                      <div className="px-4 py-2 mx-auto mt-4 text-lg font-semibold text-center text-white uppercase border-l-4 border-r-4 rounded-full bg-dark-blue w-max sm:text-2xl md:text-2xl border-r-6 border-l-6 border-red md:px-6 md:py-3">
                         Bright Futures Begin Here
                       </div>
-                      <p className="mx-auto mb-4 mt-6 text-sm text-center sm:text-base w-max md:text-xl">Little Scholars: Where Bright Futures Begin.</p>
+                      <p className="mx-auto mt-6 mb-4 text-sm text-center sm:text-base w-max md:text-xl">Little Scholars: Where Bright Futures Begin.</p>
                       <Link
                         to="/OnlineRegistration"
                         className="px-4 py-2 mx-auto text-sm font-semibold text-white sm:text-base bg-red hover:bg-red md:text-lg md:py-3 sm:px-12"
@@ -103,7 +103,7 @@ const HeroSection = () => {
                       <div className="px-4 py-2 mt-4 ml-auto text-lg font-semibold text-center text-white uppercase border-r-4 bg-dark-blue w-max sm:text-2xl md:text-2xl border-r-6 border-red md:px-6 md:py-3">
                         Unlock Potential.
                       </div>
-                      <p className="mb-4 mt-6 ml-auto text-sm text-right sm:text-base md:text-xl">Little Scholars: Unlocking Every Child's Potential.</p>
+                      <p className="mt-6 mb-4 ml-auto text-sm text-right sm:text-base md:text-xl">Little Scholars: Unlocking Every Child's Potential.</p>
                       <Link
                         to="/OnlineRegistration"
                         className="px-4 py-2 ml-auto text-sm font-semibold text-white sm:text-base w-max bg-red hover:bg-red md:text-lg md:py-3 sm:px-12"
@@ -118,11 +118,11 @@ const HeroSection = () => {
           ))}
         </Swiper>
 
-       <div ref={nextButtonRef} className="owl-next swiper-next  ">
-          <FaChevronRight className="text-white text-2xl icon hover:text-gray-400" />
+       <div ref={nextButtonRef} className="owl-next swiper-next ">
+          <FaChevronRight className="text-2xl text-white icon hover:text-gray-400" />
         </div>
-        <div ref={prevButtonRef}  className=" owl-prev swiper-prev ">
-          <FaChevronLeft className="text-white text-2xl icon  hover:text-gray-400" />
+        <div ref={prevButtonRef}  className=" owl-prev swiper-prev">
+          <FaChevronLeft className="text-2xl text-white icon hover:text-gray-400" />
         </div>
       </div>
     </section>

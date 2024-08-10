@@ -7,6 +7,7 @@ module.exports = {
       black: "#000",
       transparent: "#ffffff00",
       red: "#F2184F",
+      "red-600": "rgb(239 68 68)",
       "off-white-bg": "#f6f6f6",
       "bg-light": "#f8f9fa",
       "dark-blue": "#202C45",
@@ -22,6 +23,11 @@ module.exports = {
       "border-1": "#dee2e6",
       "border-2": "#bbb",
       "dark-light-black": "rgba(187, 187, 182, 1)",
+      "gray-100" : "rgb(243 244 246)",
+      "gray-200": "rgb(229 231 235)",
+      "gray-300": "rgb(209 213 219)",
+      "gray-400": "rgb(156 163 175)",
+      "blue-600": "rgb(37 99 235)"
     },
     screens: {
       dxs: "300px",
@@ -49,6 +55,7 @@ module.exports = {
       },
       fontFamily: {
         "open-sans": ["Open Sans", "sans-serif"],
+        
       },
       fontWeight: {
         regular: 400,
@@ -70,9 +77,30 @@ module.exports = {
           "100%": { transform: "translateX(-100%)" },
         },
       },
+      scrollBehavior: {
+        smooth: 'smooth',
+      },
+      scrollbar: {
+        none: 'scrollbar-width: none; -ms-overflow-style: none;', // Firefox & IE/Edge
+      },
     },
     
   },
  
-  plugins: [],
+  plugins: [
+    function ({ addBase, addComponents, addUtilities }) {
+      addUtilities({
+        '.scrollbar-none': {
+          /* For Firefox */
+          'scrollbar-width': 'none',
+          /* For Chrome, Safari, and Edge */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          /* For IE and Edge */
+          '-ms-overflow-style': 'none',
+        },
+      });
+    },
+  ],
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import { welcomeData } from '../../data/welcome-data'
+import { welcomeData } from '../../data/Home/welcome-data'
 import { BiSolidBook } from "react-icons/bi";
 
 const Welcome = () => {

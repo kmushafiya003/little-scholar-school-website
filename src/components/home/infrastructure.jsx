@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageSlider from '../common/ImageSlider'; 
-import { infrastructure } from '../../data/slider-data'; 
+import { infrastructure } from '../../data/Home/slider-data'; 
 import '../../index.css'; 
 
 const Infrastructure = () => {

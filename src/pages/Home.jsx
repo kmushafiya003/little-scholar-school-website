@@ -28,9 +28,7 @@ const Home = () => {
               <Counts/>
               <IconSection/>
                  <Footer/> */}
-                 <HeaderSection/>
-                 <Navbar/>
-                 <Principles/>
+                 
                </div>
   )
 }
