@@ -53,7 +53,7 @@ function Infragallery() {
     return images.map((image) => (
       <SwiperSlide key={image.id} className="flex flex-col items-center animate-dragFromTop">
         <img src={image.picture} alt={`Slide ${image.id}`} className="w-full h-auto" />
-        <div className="mt-2 text-center text-lg font-medium">{image.name}</div>
+        <div className="mt-2 text-lg font-medium text-center">{image.name}</div>
       </SwiperSlide>
     ));
   };
@@ -68,7 +68,7 @@ function Infragallery() {
       <div className='w-10/12 mx-auto'>
         <div className='flex-col xxl:pr-1 xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0'>
           {/* -------------- heading ----------------- */}
-          <div className='flex flex-col gap-y-4 mb-20 text-resp-black'>
+          <div className='flex flex-col mb-20 gap-y-4 text-resp-black'>
             <h1 className='uppercase text-[32px] font-semibold'>
               INFRASTRUCTURE
             </h1>
@@ -83,6 +83,7 @@ function Infragallery() {
                 label={album.name}
                 onClick={() => handleAlbumClick(album.name)}
                 isActive={activeAlbum === album.name}
+                className='items-center justify-center h-12 text-lg transition duration-300 rounded-sm w-36'
               />
             ))}
           </div>
