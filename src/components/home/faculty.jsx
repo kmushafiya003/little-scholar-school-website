@@ -13,7 +13,7 @@ const Faculty = () => {
   return (
     <section
       id="faculty"
-      className="relative w-full px-4 py-2 bg-parallax sm:px-6 lg:px-8" 
+      className="relative w-full px-4 py-2 bg-parallax sm:px-6 lg:px-8"
     >
       <div className="absolute top-0 bottom-0 left-0 right-0 z-10 bg-black opacity-40"></div>
       <div className="relative z-20 w-10/12 py-10 mx-auto ">
