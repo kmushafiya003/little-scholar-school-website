@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import onlineapp from '../../images/Adimission/registration/onlinAPP.png'
 import onlinetext from '../../images/Adimission/registration/onlinetexttt.gif'
 import { Link } from 'react-router-dom'
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
 const Registration = () => {
   const {
@@ -13,6 +14,12 @@ const Registration = () => {
     reset,
     formState: { errors }
   } = useForm()
+
+  const [showPassword, setShowPassword] = useState(false)
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(prevState => !prevState)
+  }
 
   const onSubmit = data => {
     console.log(data)
@@ -82,9 +89,8 @@ const Registration = () => {
                         'Username must include letters, special characters, and numbers'
                     }
                   })}
-                  className={`w-full px-3 py-2 bg-gray-100 border rounded-md text-black focus:outline-none focus:border-blue-500 ${
-                    errors.username ? 'border-red-500' : ''
-                  }`}
+                  className={`w-full px-3 py-2 bg-gray-100 border rounded-md text-black focus:outline-none focus:border-blue-500 ${errors.username ? 'border-red-500' : ''
+                    }`}
                 />
                 {errors.username && (
                   <p className='mt-1 text-sm text-red-600'>
@@ -93,20 +99,29 @@ const Registration = () => {
                 )}
               </div>
 
-              <div className='mb-4'>
+              <div className='relative mb-4'>
                 <label className='block mb-2 text-gray-300' htmlFor='password'>
                   Password:
                 </label>
                 <input
-                  type='password'
+                  type={showPassword ? 'text' : 'password'}
                   id='password'
                   {...register('password', {
                     required: 'Password is required'
                   })}
-                  className={`w-full px-3 py-2 bg-gray-100 border rounded-md text-black focus:outline-none focus:border-blue-500 ${
-                    errors.password ? 'border-red-500' : ''
-                  }`}
+                  className={`w-full px-3 py-2 bg-gray-100 border rounded-md text-black focus:outline-none focus:border-blue-500 ${errors.password ? 'border-red-500' : ''
+                    }`}
                 />
+                <div
+                  className='absolute inset-y-0 right-0 flex items-center pt-8 pr-3 cursor-pointer'
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? (
+                    <AiFillEyeInvisible className='text-gray-1' />
+                  ) : (
+                    <AiFillEye className='text-gray-1' />
+                  )}
+                </div>
                 {errors.password && (
                   <p className='mt-1 text-sm text-red-600'>
                     {errors.password.message}
@@ -139,7 +154,7 @@ const Registration = () => {
             <ul className='mb-4'>
               {registrationData.instructions.map((instruction, index) => (
                 <li key={index} className='mb-2 list-[upper-roman] text-justify'>
-                   {instruction}
+                  {instruction}
                 </li>
               ))}
             </ul>
