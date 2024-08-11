@@ -3,7 +3,7 @@ import deskbackground from '../../images/Common/desk-background.png'
 
 function Desk({ data }) {
   return (
-    <section className='relative w-full ' style={{ backgroundImage: `url(${deskbackground})` }}>
+    <section className='relative w-full' style={{ backgroundImage: `url(${deskbackground})` }}>
       <div className="w-10/12 mx-auto flex flex-col-reverse xmd:pt-14 pt-24 pb-24  xmd:flex-row flex-wrap  xmd:flex-nowrap items-center xmd:gap-6 gap-y-14 ">
         {/* Left Section */}
         <div className="flex flex-col md-gap-x-4   md:items-start  ">

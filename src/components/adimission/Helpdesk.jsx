@@ -54,7 +54,8 @@ function StudentForm() {
   };
 
   return (
-    <div className="max-w-full p-5 mx-auto text-justify bg-white border-4 rounded-lg shadow-lg black md:max-w-xl md:p-10">
+   <section className='relative w-full pt-10 pb-10'>
+     <div className="max-w-full p-5 mx-auto text-justify bg-white border-4 rounded-lg shadow-lg black md:max-w-xl md:p-10 ">
       <h2 className="mb-2 text-xl font-semibold text-left md:text-2xl">
         Join Little Scholars: Your Path to Learning and Adventure!
       </h2>
@@ -213,6 +214,7 @@ function StudentForm() {
 
       <ToastContainer />
     </div>
+   </section>
   );
 }
 

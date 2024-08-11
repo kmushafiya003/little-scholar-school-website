@@ -3,7 +3,7 @@ import React from 'react';
 import { FaBook } from 'react-icons/fa'; // Import a book icon from react-icons
 
 const ScrollText = () => {
-   
+
 
     const repeatCount = 5;
     const text = "REGISTRATION OPEN FOR SESSION 2024-2025"

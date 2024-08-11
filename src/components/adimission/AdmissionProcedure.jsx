@@ -19,8 +19,8 @@ const admissionProcedure = {
 const AdmissionProcedure = () => {
     return (
         <section className='relative w-full'>
-            <div className='w-10/12 mx-auto'>
-                <h2 className='mb-4 text-[2.2rem] font-semibold mt-20'>
+            <div className='w-10/12 pt-20 pb-20 mx-auto'>
+                <h2 className='mb-4 text-[2.2rem] font-semibold '>
                     {admissionProcedure.title}
                 </h2>
                 {/* ----------- small underline ----------- */}
