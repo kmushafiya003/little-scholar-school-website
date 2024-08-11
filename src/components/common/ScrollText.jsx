@@ -6,7 +6,7 @@ const ScrollText = () => {
 
 
     const repeatCount = 5;
-    const text = "RESITRATION OPEN FOR SESSION 2024-2025"
+    const text = "REGISTRATION OPEN FOR SESSION 2024-2025"
 
     return (
         <header className='relative z-[300] w-full bg-red'>

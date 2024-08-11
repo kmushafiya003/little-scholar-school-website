@@ -63,6 +63,7 @@ module.exports = {
         xxl: "4rem",
         "3xl": "3rem",
       },
+   
      
       fontWeight: {
         regular: 400,
@@ -73,7 +74,7 @@ module.exports = {
         '0.2': '0.2px',
       },
       animation: {
-        marquee: "marquee 50s linear infinite",
+        marquee: "marquee 40s linear infinite",
         "pause-marquee": "none",
         'arrow-hover': 'arrow-hover 0.6s infinite',
         'flip-hover': 'flip-hover 0.6s forwards',
@@ -85,9 +86,30 @@ module.exports = {
           "100%": { transform: "translateX(-100%)" },
         },
       },
+      scrollBehavior: {
+        smooth: 'smooth',
+      },
+      scrollbar: {
+        none: 'scrollbar-width: none; -ms-overflow-style: none;', // Firefox & IE/Edge
+      },
     },
     
   },
  
-  plugins: [],
+  plugins: [
+    function ({ addBase, addComponents, addUtilities }) {
+      addUtilities({
+        '.scrollbar-none': {
+          /* For Firefox */
+          'scrollbar-width': 'none',
+          /* For Chrome, Safari, and Edge */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          /* For IE and Edge */
+          '-ms-overflow-style': 'none',
+        },
+      });
+    },
+  ],
 };
