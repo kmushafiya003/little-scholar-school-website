@@ -8,12 +8,12 @@ import Footer from './components/common/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import ScrollText from './components/common/ScrollText';
-import FounderDesk from './components/About/FounderDesk';
-import PrincipalDesk from './components/About/PrincipalDesk';
-import SchoolManagement from './components/About/SchoolManagement';
-import ManagingCommittee from './components/About/ManagingCommittee';
-import Principles from './components/About/Principles';
-import Infragallery from './components/About/Infragallery';
+import FounderDesk from './components/about/FounderDesk';
+import PrincipalDesk from './components/about/PrincipalDesk';
+import SchoolManagement from './components/about/SchoolManagement';
+import ManagingCommittee from './components/about/ManagingCommittee';
+import Principles from './components/about/Principles';
+import Infragallery from './components/about/Infragallery';
 
 import Admission from './pages/Admission';
 import Helpdesk from './components/adimission/Helpdesk'

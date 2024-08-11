@@ -7,7 +7,7 @@ const ManagingCommittee = () => {
 
   return (
     <section className="relative w-full">
-      <div className="w-10/12 mx-auto">
+      <div className="w-10/12 pb-20 mx-auto">
         <h1 className="mb-4 text-[2.2rem] font-semibold mt-20 text-black">
           {heading}
         </h1>

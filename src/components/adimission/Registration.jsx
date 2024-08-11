@@ -37,7 +37,7 @@ const Registration = () => {
 
   return (
     <section className='relative w-full bg-gray-100'>
-      <div className='w-10/12 pt-20 mx-auto'>
+      <div className='w-10/12 pt-20 mx-auto pb-14'>
         <div className='flex flex-col '>
           <h1 className='mb-6 text-[2rem] font-semibold '>
             {registrationData.title}
