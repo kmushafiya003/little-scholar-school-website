@@ -22,6 +22,7 @@ import Registration from './components/adimission/Registration';
 import FeeStructure from './components/adimission/FeeStructure';
 import SchoolTiming from './components/adimission/SchoolTiming';
 import FQA from './components/adimission/FQA';
+import Loading from './components/common/Loading';
 
 
 
@@ -32,14 +33,14 @@ const App = () => {
   return (
 
 
-    <div className="min-h-screen overflow-x-hidden ">
+    <div className="min-h-screen overflow-x-hidden">
 
       <ScrollText />
       <Navbar />
     
 
       <Routes>
-
+        
         <Route path='/' element={<Home />} />
         <Route path = '/about-us' element={<About />}>
           <Route path='founder-desk' element={<FounderDesk />} />
