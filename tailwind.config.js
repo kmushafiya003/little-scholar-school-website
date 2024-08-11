@@ -90,7 +90,7 @@ module.exports = {
         smooth: 'smooth',
       },
       scrollbar: {
-        none: 'scrollbar-width: none; -ms-overflow-style: none;', // Firefox & IE/Edge
+        none: 'scrollbar-width: none; -ms-overflow-style: none;', 
       },
     },
     

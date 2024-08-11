@@ -46,7 +46,7 @@ const FeeStructure = () => {
                   <div className='flex items-center justify-center h-full inner color-white'>
                     <h3 className='flex items-center space-x-2 flip-box-header'>
                       <FaArrowCircleDown className='text-red' />
-                      <Link to={year.url} className='font-bold'>
+                      <Link to={year.url} className='font-bold text-white'>
                         {year.DownloadAttachment}
                       </Link>
                     </h3>

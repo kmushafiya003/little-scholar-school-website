@@ -9,25 +9,32 @@ export const navData = [
   {
     id: 2,
     title: 'About us',
-    path: '#',
+    // path: '#',
     dropdown: [
       { id: 11, title: `Founders's Desk`, path: '/about-us/founder-desk' },
       { id: 12, title: `Principal's Desk`, path: '/about-us/principal-desk' },
-      { id: 13, title: 'School Management', path: '/about-us/school-management' },
-      { id: 14, title: 'Managing Committee', path: '/about-us/managing-committee' },
+      {
+        id: 13,
+        title: 'School Management',
+        path: '/about-us/school-management'
+      },
+      {
+        id: 14,
+        title: 'Managing Committee',
+        path: '/about-us/managing-committee'
+      },
       {
         id: 15,
         title: 'Principles & Policies',
         path: '/about-us/principles-policies'
       },
-      { id: 16, title: 'Infrastructure', path: '/about-us/infrastructure' },
-
+      { id: 16, title: 'Infrastructure', path: '/about-us/infrastructure' }
     ]
   },
   {
     id: 3,
     title: 'Admissions',
-    path: '#',
+    // path: '#',
     dropdown: [
       {
         id: 21,
@@ -48,7 +55,7 @@ export const navData = [
   {
     id: 4,
     title: 'Student Life',
-    path: '#',
+    // path: '#',
     dropdown: [
       { id: 41, title: 'Academics', path: '/studentlife/academics' },
       { id: 42, title: 'Sports', path: '/studentlife/sports' },
@@ -100,7 +107,7 @@ export const navData = [
   {
     id: 5,
     title: 'News & Calendar',
-    path: '#',
+    // path: '#',
     dropdown: [
       { id: 61, title: 'Student Hand Book', path: '/news&calendar/handbook' },
       {
@@ -136,7 +143,7 @@ export const navData = [
   {
     id: 7,
     title: 'Contact Us',
-    path: '#',
+    // path: '#',
     dropdown: [
       { id: 81, title: 'Reach Us', path: '/contact-us/reach-us' },
       { id: 82, title: 'Career', path: '/contact-us/career' },
@@ -146,7 +153,7 @@ export const navData = [
   {
     id: 8,
     title: 'Notice',
-    path: '#',
+    // path: '#',
     dropdown: [
       { id: 91, title: 'Notice 1', path: '/notice/notice1' },
       { id: 92, title: 'Notice 2', path: '/notice/notice 2' },
