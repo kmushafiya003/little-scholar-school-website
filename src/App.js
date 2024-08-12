@@ -51,12 +51,16 @@ const App = () => {
             <Route path='/admissions/fee-structure' element={<FeeStructure />} />
             <Route path='/admissions/school-timings' element={<SchoolTiming />} />
             <Route path='/admissions/faq' element={<FAQ />} />
+           
+            
           </Route>
+          
         </Routes>
       </Suspense>
 
       <ScrollTop/>
       <Footer />
+      
     </div>
   );
 }
