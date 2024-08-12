@@ -406,3 +406,22 @@
   padding: 15px 20px;
   text-transform: uppercase;
 }
+
+/* Disable flipping for the scale card */
+.scale-card .flip-box:hover {
+  transform: scale(1.1); /* Adjust the scale value as needed */
+}
+.scale-card .flip-box-back {
+  transform: none;
+}
+
+.scale-card .flip-box:hover .flip-box-back {
+  transform: none;
+}
+
+.scale-card .flip-box:hover .flip-box-front {
+  transform: none;
+}
+.scale-card .flip-box {
+  transition: transform 0.10s ease-in-out;
+}

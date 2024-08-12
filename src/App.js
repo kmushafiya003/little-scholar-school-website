@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
@@ -8,6 +8,7 @@ import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
+import Dynamic3dButton from './components/common/Dynamic3dButton';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -27,9 +28,23 @@ const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 
 const App = () => {
+
   return (
     <div className="min-h-screen overflow-x-hidden">
       <ScrollText />
+      {/* <Dynamic3dButton /> */}
+      
+            <Dynamic3dButton 
+                text1="Front Text - Flip" 
+                text2="Back Text - Flip" 
+                className="flip-card" 
+            />
+            
+            {/* Card that scales on hover */}
+            <Dynamic3dButton 
+                text1="Front Text - Scale" 
+                className="scale-card" 
+            />
       <Navbar />
 
       <Suspense fallback={<div> <Loading/> </div>}>

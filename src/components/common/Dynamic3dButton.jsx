@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTyoes from 'prop-types'
-import { Link } from 'react-router-dom'
-import { FaArrowCircleDown } from 'react-icons/fa'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+// import { FaArrowCircleDown } from 'react-icons/fa';
 
-const  Dynamic3dButton = ({text1, text2, className}) => {
+const Dynamic3dButton = ({ text1, text2, className }) => {
     return (
-        <div className='md:p-5 box-container md:w-1/3 sm:w-full dxs:w-full dxs:-inset-1'>
+        <div className={`md:p-5 box-container md:w-1/3 sm:w-full dxs:w-full dxs:-inset-1 ${className}`}>
             <div className='box-item'>
                 <div className='flip-box'>
                     <div className='text-center flip-box-front'>
@@ -18,8 +18,8 @@ const  Dynamic3dButton = ({text1, text2, className}) => {
                     <div className='flex text-center flip-box-back'>
                         <div className='flex items-center justify-center h-full inner color-white'>
                             <h3 className='flex items-center space-x-2 flip-box-header'>
-                                <FaArrowCircleDown className='text-red' />
-                                <Link to= '#' className='font-bold text-white'>
+                            
+                                <Link to='#' className='font-bold text-white'>
                                     {text2}
                                 </Link>
                             </h3>
@@ -28,17 +28,17 @@ const  Dynamic3dButton = ({text1, text2, className}) => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 Dynamic3dButton.propTypes = {
-    text1: PropTyoes.string.isRequired,
-    text2: PropTyoes.string.isRequired,
-    className: PropTyoes.string
+    text1: PropTypes.string.isRequired,
+    text2: PropTypes.string.isRequired,
+    className: PropTypes.string
 }
 
 Dynamic3dButton.defaultProps = {
     className: ''
 }
 
-export default Dynamic3dButton
+export default Dynamic3dButton;
