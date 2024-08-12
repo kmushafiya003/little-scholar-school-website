@@ -113,14 +113,14 @@ const Navbar = () => {
                     onMouseLeave={() => handleMouseLeave('dropdown')}
                   >
                     {/* Main Navigation Link */}
-                    <NavLink
-                      to={navItem.path}
-                      className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold 
+                    <p
+                     
+                      className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
                       ${navItem.dropdown && activeDropdown === navItem.id ? 'bg-[rgb(32,44,69)] text-white' : 'hover:bg-[rgb(32,44,69)] hover:text-white'}`}
                     >
                       {navItem.title}
                       {navItem.dropdown && <span className='mt-2 ml-1'><IoIosArrowDown /></span>}
-                    </NavLink>
+                    </p>
 
                     {/* Dropdown Menu */}
                     {navItem.dropdown && (
