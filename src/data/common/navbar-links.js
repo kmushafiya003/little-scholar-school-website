@@ -39,12 +39,12 @@ export const navData = [
       {
         id: 21,
         title: 'Admission Helpdesk/School Visit',
-        path: '/admissions/helpdesk'
+        path: '/admissions/admission-enquiry'
       },
       {
         id: 22,
         title: 'Admission Procedure',
-        path: '/admissions/admissionprocedure'
+        path: '/admissions/admission-procedure'
       },
       { id: 23, title: 'Registration', path: '/admissions/registration' },
       { id: 24, title: 'Fee Structure', path: '/admissions/fee-structure' },

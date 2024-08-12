@@ -34,7 +34,7 @@ const Principles = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
-      setIsVisible(true);
+      setIsVisible(false);
     }
   };
 
@@ -64,7 +64,7 @@ const Principles = () => {
 
   return (
     <div className="App w-11/12 mx-auto bg-white ">
-      <div className="md:flex flex-wrap rounded-lg overflow-hidden overscroll-y-contain 2xl:flex text-left 2xl:flex-nowrap">
+      <div className="md:flex flex-wrap rounded-lg overflow-hidden overscroll-y-contain 2xl:flex text-left 2xl:flex-nowrap py-20">
         {/* Sidebar for section links */}
         <div className="md:w-8/12 text-center md:overflow-hidden scroll-mx-0 2xl:w-1/4 mt-5 lg:text-left mx-auto overflow-y-auto">
           <ul className="list-none border-0.2 border-[rgb(211,203,203)] rounded-lg">
@@ -95,16 +95,6 @@ const Principles = () => {
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
-      <div className={`fixed bottom-10 right-10 ${isVisible ? 'opacity-100' : 'opacity-0'} z-50`}>
-        <button
-          type="button"
-          onClick={scrollToTop}
-          className="bg-red  items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2"
-        >
-          <BiArrowFromBottom className="h-full"  />
-        </button>
-      </div>
     </div>
   );
 };

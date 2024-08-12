@@ -83,7 +83,7 @@ function Infragallery() {
                 label={album.name}
                 onClick={() => handleAlbumClick(album.name)}
                 isActive={activeAlbum === album.name}
-                className='items-center justify-center h-12 text-lg transition duration-300 rounded-sm w-36'
+                className='items-center justify-center  transition duration-300  w-36'
               />
             ))}
           </div>

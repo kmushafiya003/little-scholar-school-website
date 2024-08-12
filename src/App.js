@@ -7,6 +7,7 @@ import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
+import ScrollTop from './components/common/ScrollTop';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -34,26 +35,27 @@ const App = () => {
       <Suspense fallback={<div> <Loading/> </div>}>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/about-us' element={<About />}>
-            <Route path='founder-desk' element={<FounderDesk />} />
-            <Route path='principal-desk' element={<PrincipalDesk />} />
-            <Route path='school-management' element={<SchoolManagement />} />
-            <Route path='managing-committee' element={<ManagingCommittee />} />
-            <Route path='principles-policies' element={<Principles />} />
-            <Route path='infrastructure' element={<Infragallery />} />
+          <Route  element={<About />}>
+            <Route path='/about-us/founder-desk' element={<FounderDesk />} />
+            <Route path='/about-us/principal-desk' element={<PrincipalDesk />} />
+            <Route path='/about-us/school-management' element={<SchoolManagement />} />
+            <Route path='/about-us/managing-committee' element={<ManagingCommittee />} />
+            <Route path='/about-us/principles-policies' element={<Principles />} />
+            <Route path='/about-us/infrastructure' element={<Infragallery />} />
           </Route>
 
-          <Route path='/admissions' element={<Admission />}>
-            <Route path='helpdesk' element={<Helpdesk />} />
-            <Route path='admissionprocedure' element={<AdmissionProcedure />} />
-            <Route path='registration' element={<Registration />} />
-            <Route path='fee-structure' element={<FeeStructure />} />
-            <Route path='school-timings' element={<SchoolTiming />} />
-            <Route path='faq' element={<FAQ />} />
+          <Route  element={<Admission />}>
+            <Route path='/admissions/admission-enquiry' element={<Helpdesk />} />
+            <Route path='/admissions/admission-procedure' element={<AdmissionProcedure />} />
+            <Route path='/admissions/registration' element={<Registration />} />
+            <Route path='/admissions/fee-structure' element={<FeeStructure />} />
+            <Route path='/admissions/school-timings' element={<SchoolTiming />} />
+            <Route path='/admissions/faq' element={<FAQ />} />
           </Route>
         </Routes>
       </Suspense>
 
+      <ScrollTop/>
       <Footer />
     </div>
   );

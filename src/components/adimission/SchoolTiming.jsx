@@ -18,7 +18,7 @@ const SchoolTiming = () => {
 
     return (
         <section className='relative w-full '>
-            <div className='w-10/12 mx-auto'>
+            <div className='w-10/12 mx-auto pt-10 pb-20'>
                 <div className='flex flex-col justify-center gap-10 mt-20 mb-4 smd:flex-row dxs:flex-col'>
                     <div className='p-5 font-bold text-white transition duration-300 bg-black rounded-md hover:bg-red-600 hover:scale-105'>
                         Summer Timing:- {summerTimings}
@@ -37,7 +37,7 @@ const SchoolTiming = () => {
                         </thead>
                         <tbody>
                             {lessons.map((lesson, index) => (
-                                <tr key={index} className='text-gray-400 hover:bg-gray-100 hover:text-black'>
+                                <tr key={index} className='text-black font-light hover:bg-gray-100 hover:text-black'>
                                     <td className='p-2 border border-gray-400'>{lesson.lesson}</td>
                                     <td className='p-2 border border-gray-400'>{lesson.duration}</td>
                                 </tr>
@@ -45,7 +45,7 @@ const SchoolTiming = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className='w-full mx-auto mt-4 text-gray-400 lg:w-8/12'>
+                <div className='w-full mx-auto mt-8 text-black font-light lg:w-8/12'>
                     <div className='p-2 text-center border border-gray-400 hover:bg-gray-100 hover:text-black'>4th Saturday will be a half day.</div>
                     <div className='p-2 font-bold text-center border border-gray-400 hover:bg-gray-100 hover:text-black'>Zero lesson plan</div>
                     <div className='p-2 border border-gray-400 hover:bg-gray-100 hover:text-black'>Monday - General Assembly & Unit Test</div>

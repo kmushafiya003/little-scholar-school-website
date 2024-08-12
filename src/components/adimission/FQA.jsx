@@ -18,8 +18,8 @@ function FQA() {
 
   return (
     <section className="relative w-full">
-      <div className="flex justify-center w-10/12 mx-auto">
-        <div className="flex flex-col justify-center gap-2 mt-20 xxl:w-9/12 lg:w-full lg:gap-0 smd:w-fulldxs:w-full dxs:gap-0">
+      <div className="flex justify-center w-10/12 mx-auto py-24">
+        <div className="flex flex-col justify-center gap-2  xxl:w-9/12 lg:w-full lg:gap-0 smd:w-fulldxs:w-full dxs:gap-0">
           {fqa.map((data, index) => (
             <div key={data.id} className="relative inline-block w-full text-justify">
               <div className="flex pt-[5px]">
@@ -38,7 +38,7 @@ function FQA() {
                   onClick={() => toggleQuestion(data.id)}
                 >
                   {data.question}
-                  <span className='text-[1.5rem]'><ChevronDownIcon
+                  <span className='text-[1.5rem] '><ChevronDownIcon
                     aria-hidden="true"
                     className={`font-medium translate-x-3 h-7 w-9 transition-transform duration-400 ${
                       openQuestion === data.id ? "rotate-180" : "rotate-0"
@@ -58,7 +58,7 @@ function FQA() {
                     className="overflow-hidden bg-white shadow-lg ring-1 ring-black ring-opacity-5"
                   >
                     <div className="py-1">
-                      <span className="block px-5 py-5 text-sm">
+                      <span className="block px-5 py-5 font-light">
                         {data.answer}
                       </span>
                     </div>

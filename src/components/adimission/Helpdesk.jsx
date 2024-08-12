@@ -21,8 +21,8 @@ function StudentForm() {
   };
 
   return (
-    <section className='relative w-full pt-10 pb-10'>
-      <div className="max-w-full p-5 mx-auto text-justify bg-white border-4 rounded-lg shadow-lg black md:max-w-xl md:p-10 ">
+    <section className='relative w-full pt-24 pb-10'>
+      <div className=" p-5 mx-auto text-justify bg-white border-4 rounded-lg shadow-lg black xmd:w-[640px] xs:w-[80%] w-[90%] md:p-10 ">
         <h2 className="mb-2 text-xl font-semibold text-left md:text-2xl">
           Join Little Scholars: Your Path to Learning and Adventure!
         </h2>
@@ -30,8 +30,8 @@ function StudentForm() {
           The School invites aspiring applicants for admission. If you are a keen learner with kindling curiosity and a sense of adventure, then Little Scholars is the place to be.
         </p>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 ">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <div>
               <select
                 name="class"
@@ -73,7 +73,7 @@ function StudentForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <div>
               <input
                 type="date"
@@ -96,7 +96,7 @@ function StudentForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <div>
               <input
                 type="text"
