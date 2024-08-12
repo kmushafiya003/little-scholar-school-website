@@ -1,4 +1,4 @@
-import React, { Suspense, lazy} from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
@@ -34,7 +34,7 @@ const App = () => {
     
       <Navbar />
 
-      <Suspense fallback={<div> <Loading/> </div>}>
+      <Suspense fallback={<div> <Loading /> </div>}>
         <Routes>
 
           {/* ------------ Home Page --------------- */}
@@ -69,13 +69,13 @@ const App = () => {
           <Route>
 
           </Route>
-          
+
         </Routes>
       </Suspense>
 
-      <ScrollTop/>
+      <ScrollTop />
       <Footer />
-      
+
     </div>
   );
 }
