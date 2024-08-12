@@ -1,4 +1,4 @@
-import React, { Suspense, lazy} from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
@@ -32,25 +32,29 @@ const App = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <ScrollText />
-      {/* <Dynamic3dButton /> */}
       
-            <Dynamic3dButton 
-                text1="Front Text - Flip" 
-                text2="Back Text - Flip" 
-                className="flip-card" 
-            />
-            
-            {/* Card that scales on hover */}
-            <Dynamic3dButton 
-                text1="Front Text - Scale" 
-                className="scale-card" 
-            />
+      {/* <Dynamic3dButton /> */}
+{/*  --------this code used to flip the card and show front-text, back-text and icon----------
+      <Dynamic3dButton
+        text1="Front Text - Flip"
+        text2="Back Text - Flip"
+        className="flip-card"
+        showIcon={true} // Icon is shown
+      />
+---------------this code is used to scale the code and disable the flip and icon
+     
+      <Dynamic3dButton
+        text1="Front Text - Scale"
+        className="scale-card"
+        showIcon={false} // Icon is hidden
+      />
+       */}
       <Navbar />
 
-      <Suspense fallback={<div> <Loading/> </div>}>
+      <Suspense fallback={<div> <Loading /> </div>}>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route  element={<About />}>
+          <Route element={<About />}>
             <Route path='/about-us/founder-desk' element={<FounderDesk />} />
             <Route path='/about-us/principal-desk' element={<PrincipalDesk />} />
             <Route path='/about-us/school-management' element={<SchoolManagement />} />
@@ -59,23 +63,23 @@ const App = () => {
             <Route path='/about-us/infrastructure' element={<Infragallery />} />
           </Route>
 
-          <Route  element={<Admission />}>
+          <Route element={<Admission />}>
             <Route path='/admissions/admission-enquiry' element={<Helpdesk />} />
             <Route path='/admissions/admission-procedure' element={<AdmissionProcedure />} />
             <Route path='/admissions/registration' element={<Registration />} />
             <Route path='/admissions/fee-structure' element={<FeeStructure />} />
             <Route path='/admissions/school-timings' element={<SchoolTiming />} />
             <Route path='/admissions/faq' element={<FAQ />} />
-           
-            
+
+
           </Route>
-          
+
         </Routes>
       </Suspense>
 
-      <ScrollTop/>
+      <ScrollTop />
       <Footer />
-      
+
     </div>
   );
 }
