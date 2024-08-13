@@ -56,7 +56,7 @@ export const navData = [
       {
         id: 34,
         title: 'Social-Cultural Development',
-        path: '/student-life/socio-cultural&development'
+        path: '/student-life/social-cultural&development'
       },
       { id: 35, title: 'Counselling', path: '/student-life/counselling' },
   

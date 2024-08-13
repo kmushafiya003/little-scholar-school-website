@@ -20,7 +20,7 @@ const Dynamic3dButton = ({ text1, text2, className, showIcon }) => {
                             <h3 className='flex items-center space-x-2 flip-box-header'>
                                 {showIcon && <FaArrowCircleDown className='text-red' />}
                                 <Link to='#' className='font-bold text-white'>
-                                    {text2}
+                                {  text2}
                                 </Link>
                             </h3>
                         </div>

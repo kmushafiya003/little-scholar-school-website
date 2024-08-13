@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { GoCheckCircleFill } from "react-icons/go";
-import { BiArrowFromBottom } from 'react-icons/bi';
+
 import { principlesData } from '../../data/About/principles-data';
 import HouseTallyChart from './Principles/HouseTallychart';
 
@@ -28,30 +28,12 @@ const data2022 = [
 ];
 
 const Principles = () => {
-  const [isVisible, setIsVisible] = useState(true);
+ 
 
-  const toggleVisibility = () => {
-    if (window.scrollY > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
 
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
 
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
+
 
   const handleScroll = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
@@ -117,7 +99,7 @@ const SectionCard = ({ section }) => {
     }
   };
 
-  const uniformData = section.details ? section.details[season][gender] : {};
+  // const uniformData = section.details ? section.details[season][gender] : {};
 
   return (
     <div className="rounded-lg  pb-10">
@@ -301,7 +283,7 @@ const SchoolUniform = ({ data }) => {
     <p className=" font-open-sans text-lg font-semibold mb-4">{uniformData.paragraph}</p>
   )}
       {uniformData.additionalDetails.map((item, index) => (
-        <div className='flex '>
+        <div className='flex '  key={index}>
           <span className='mt-1'><GoCheckCircleFill/></span>
           <li key={index} className="mb-2 ml-2 text-dark-grey">{item}</li>
         </div>

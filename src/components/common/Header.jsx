@@ -12,12 +12,23 @@ const Header = ({ page }) => {
   const pathName = path[2];
 
 
+
   //Process to make path name formatted
 
-  const formattedPath = pathName
+  let formattedPath;
+
+  if(pathName.includes("&")){
+    formattedPath =  pathName
+    .split('&')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(` & `);
+
+  }else{
+    formattedPath = pathName
     .split('-')   //splt by hyphen
     .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
     .join(' ')  //join words with spaces
+  }
 
 
 
