@@ -24,7 +24,7 @@ import img18 from '../../images/StudentLife/Achievements/18.webp'
 
 
 
-export const Achievements = [
+export const AchievementsData = [
     {
         id: 1,
         img: img1,

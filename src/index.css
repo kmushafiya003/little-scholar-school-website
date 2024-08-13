@@ -425,3 +425,6 @@
 .scale-card .flip-box {
   transition: transform 0.4s ease-in-out;
 }
+.shadow1:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
