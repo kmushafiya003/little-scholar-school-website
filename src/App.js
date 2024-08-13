@@ -11,6 +11,7 @@ import ScrollTop from './components/common/ScrollTop';
 import Dynamic3dButton from './components/common/Dynamic3dButton';
 
 const Home = lazy(() => import('./pages/Home'));
+
 const About = lazy(() => import('./pages/About'));
 const FounderDesk = lazy(() => import('./components/about/FounderDesk'));
 const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk'));
@@ -18,6 +19,8 @@ const SchoolManagement = lazy(() => import('./components/about/SchoolManagement'
 const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee'));
 const Principles = lazy(() => import('./components/about/Principles'));
 const Infragallery = lazy(() => import('./components/about/Infragallery'));
+
+
 const Admission = lazy(() => import('./pages/Admission'));
 const Helpdesk = lazy(() => import('./components/adimission/Helpdesk'));
 const AdmissionProcedure = lazy(() => import('./components/adimission/AdmissionProcedure'));
@@ -25,6 +28,10 @@ const Registration = lazy(() => import('./components/adimission/Registration'));
 const FeeStructure = lazy(() => import('./components/adimission/FeeStructure'));
 const SchoolTiming = lazy(() => import('./components/adimission/SchoolTiming'));
 const FAQ = lazy(() => import('./components/adimission/FQA'));
+
+
+const StudentLife = lazy(() => import('./pages/StudentLIfe'));
+const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'))
 
 
 const App = () => {
@@ -35,20 +42,20 @@ const App = () => {
 
       {/* ------ Dynamic button with flip animation --------- */}
 
-      <Dynamic3dButton
+      {/* <Dynamic3dButton
         text1="Front Text - Flip"
         text2="Back Text - Flip"
         className="flip-card"
         showIcon={true} //Show Icon
-      />
+      /> */}
 
       {/* ------ Dynamic button with scale animation --------- */}
 
-      <Dynamic3dButton
+      {/* <Dynamic3dButton
         text1="Front Text - Scale"
         className="scale-card"
         showIcon={false} //Hide Icon
-      />
+      /> */}
 
       <Navbar />
 
@@ -84,8 +91,8 @@ const App = () => {
 
           {/* -------------- Student Life ------------------ */}
 
-          <Route>
-
+          <Route element={<StudentLife/>}>
+          <Route path='/student-life/achievements' element={<Achievements />} />
           </Route>
 
         </Routes>
