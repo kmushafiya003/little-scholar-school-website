@@ -44,11 +44,11 @@ const App = () => {
 
       {/* ------ Dynamic button with scale animation --------- */}
 
-      {/* <Dynamic3dButton
+      <Dynamic3dButton
         text1="Front Text - Scale"
         className="scale-card"
         showIcon={false} //Hide Icon
-      /> */}
+      />
 
       <Navbar />
 
