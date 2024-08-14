@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './App.css';
 import './index.css';
 
@@ -35,6 +37,17 @@ const Achievements = lazy(() => import('./components/student-life/achievement/Ac
 
 
 const App = () => {
+
+  const location = useLocation();
+
+  useEffect(()=> {
+    console.log("Yaha Ayya")
+    window.scrollTo({
+      top: 10,
+    
+  });
+
+  }, [location.pathname])
 
   return (
     <div className="min-h-screen overflow-x-hidden">
