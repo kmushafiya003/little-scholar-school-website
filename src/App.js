@@ -34,7 +34,7 @@ const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'))
-
+const Topper =lazy(() => import('./components/student-life/toppers/Topper'))
 
 const App = () => {
 
@@ -105,6 +105,7 @@ const App = () => {
 
           <Route element={<StudentLife/>}>
           <Route path='/student-life/achievements' element={<Achievements />} />
+          <Route path='/student-life/toppers' element={<Topper />} />
           </Route>
 
         </Routes>
