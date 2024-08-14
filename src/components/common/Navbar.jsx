@@ -4,8 +4,10 @@ import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp, IoMdClose, IoMdMenu } 
 import { navData } from '../../data/common/navbar-links';
 import logo from '../../assets/logo.webp';
 import '../../App.css'; // Ensure this file imports your CSS
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const location = useLocation();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [activeSubSubDropdown, setActiveSubSubDropdown] = useState(null);
@@ -17,6 +19,14 @@ const Navbar = () => {
   const subDropdownTimeout = useRef(null);
   const subSubDropdownTimeout = useRef(null);
   const lastScrollY = useRef(0);
+
+  // for closing the dropdown when we going to other page
+  useEffect(()=>{
+    setActiveDropdown(null);
+    setActiveSubDropdown(null);
+    setActiveSubSubDropdown(null);
+
+  }, [location.pathname])
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,14 +1,14 @@
 import React from 'react'
 import { FaCircleRight } from "react-icons/fa6";
 
-const AchievementCard = ({ data, key, setViewAchievement }) => {
+const AchievementCard = ({ data, setViewAchievement }) => {
 
     const viewAchievementSec = () => {
         setViewAchievement(data);
 
 
         window.scrollTo({
-            top: 0,
+            top: 180,
             behavior: 'smooth',
         });
 
@@ -17,7 +17,7 @@ const AchievementCard = ({ data, key, setViewAchievement }) => {
 
 
     return (
-        <div key={key} className='flex flex-col gap-y-1 items-center text-black py-8  rounded-2xl transition-all duration-700 hover:scale-110  shadow1' onClick={viewAchievementSec}>
+        <div  className='flex flex-col gap-y-1 items-center text-black py-8  rounded-2xl transition-all duration-500 hover:scale-110  shadow1' onClick={viewAchievementSec}>
 
             {/* ----------- img ---------- */}
             <div className='w-[60%] '>

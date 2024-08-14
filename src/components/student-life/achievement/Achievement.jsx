@@ -11,7 +11,10 @@ const Achievement = () => {
   return (
     <section className='bg-bg-light pt-28 pb-32 '>
 
-        <div className='w-10/12 mx-auto border border-red'>
+
+         {/* ----------- container ---------------- */}
+
+        <div className='w-10/12 mx-auto  flex flex-col gap-y-24'>
 
        
 
