@@ -4,16 +4,18 @@ import React from 'react';
 
 const tabData = [
   {
+    std: "X",
     name: "Class 'X'",
   },
   {
+    std: "XII",
     name: "Class 'XII'",
   },
 ];
 
 const Tabs = ({ activeTab, setActiveTab }) => {
-  const handleTabClick = (tabName) => {
-    setActiveTab(tabName);
+  const handleTabClick = (std) => {
+    setActiveTab(std);
   };
 
   return (
@@ -25,7 +27,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
           className={`px-4 py-2 rounded-t-lg focus:outline-none ${
             activeTab === tab.name ? 'border border-b-0 border-gray-200 bg-white text-gray-900' : 'text-gray-500'
           }`}
-          onClick={() => handleTabClick(tab.name)}
+          onClick={() => handleTabClick(tab.std)}
         >
           {tab.name}
         </button>
