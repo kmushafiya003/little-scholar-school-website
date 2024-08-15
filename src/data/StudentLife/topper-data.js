@@ -73,7 +73,8 @@ export const year = [
 export const session_23_24 = [
     {
         id: 1,
-        cls: "Class 'X'",
+        std: 'X',
+        title: "10th Standard",
         class: [
             {
                 id: 1,
@@ -319,12 +320,13 @@ export const session_23_24 = [
     },
     {
         id: 2,
+        std: 'XII',
         title: "12th Standard",
         class: [
             {
                 id: 1,
                 image: aarna,
-                title: "AARNA",
+                title: "Aparna",
                 year: "2023 - 24",
                 desc: "10th Standard",
                 percentage: "98.2%",
