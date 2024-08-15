@@ -17,13 +17,12 @@ import React from 'react';
 
 const TopperAlbumTamplate = ({ activeTab, session  }) => {
 
-  console.log("Session: " , session)
+  
   // const activeClass = tabData.find(tab => tab.name === activeTab)?.className;
 
   const filterData = session
   .filter(data => data.std === activeTab );
 
-  console.log("filterDarta: " , filterData )
 
   
 
