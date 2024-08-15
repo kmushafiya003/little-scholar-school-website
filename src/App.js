@@ -10,17 +10,17 @@ import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
-import Dynamic3dButton from './components/common/Dynamic3dButton';
+// import Dynamic3dButton from './components/common/Dynamic3dButton';
 
 const Home = lazy(() => import('./pages/Home'));
 
 const About = lazy(() => import('./pages/About'));
-const FounderDesk = lazy(() => import('./components/about/FounderDesk'));
-const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk'));
-const SchoolManagement = lazy(() => import('./components/about/SchoolManagement'));
-const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee'));
-const Principles = lazy(() => import('./components/about/Principles'));
-const Infragallery = lazy(() => import('./components/about/Infragallery'));
+const FounderDesk = lazy(() => import('./components/about/FounderDesk.jsx'));
+const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk.jsx'));
+const SchoolManagement = lazy(() => import('./components/about/SchoolManagement.jsx'));
+const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee.jsx'));
+const Principles = lazy(() => import('./components/about/Principles.jsx'));
+const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'));
 
 
 const Admission = lazy(() => import('./pages/Admission'));
@@ -34,7 +34,7 @@ const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'))
-
+const Topper =lazy(() => import('./components/student-life/toppers/Topper'))
 
 const App = () => {
 
@@ -90,7 +90,6 @@ const App = () => {
             <Route path='/about-us/infrastructure' element={<Infragallery />} />
           </Route>
 
-
           {/* -------------- Admission Page ------------------ */}
 
           <Route element={<Admission />}>
@@ -106,6 +105,7 @@ const App = () => {
 
           <Route element={<StudentLife/>}>
           <Route path='/student-life/achievements' element={<Achievements />} />
+          <Route path='/student-life/toppers' element={<Topper />} />
           </Route>
 
         </Routes>
