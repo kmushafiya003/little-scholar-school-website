@@ -61,7 +61,7 @@ export const navData = [
       { id: 35, title: 'Counselling', path: '/student-life/counselling' },
   
       { id: 36, title: 'Achievements', path: '/student-life/achievements' },
-      { id: 37, title: 'Events Calendar', path: '/student-life/events-calendar' },
+      { id: 37, title: 'Events Calendar', path: '/student-life/events' },
       { id: 38, title: 'Toppers', path: '/student-life/toppers' },
       { id: 39, title: 'Cabinet', path: '/student-life/cabinet' },
       {

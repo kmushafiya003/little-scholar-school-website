@@ -1,41 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { eventcalander } from '../../../data/StudentLife/events'
+import EventMonths from './EventMonths'
+import FlipCard from './FlipCard'
 
-function EventsCalendar() {
-    return (
-        <section className='relative w-full'>
-      <div className='flex flex-wrap justify-center w-10/12 pt-10 mx-auto'>
-        {feestructuredata.year.map((year, index) => (
-          <div
-            key={index}
-            className='md:p-5 box-container md:w-1/3 sm:w-full dxs:w-full dxs:-inset-1'
-          >
-            <div className='box-item'>
-              <div className='flip-box'>
-                <div className='text-center flip-box-front'>
-                  <div className='inner color-white'>
-                    <h3 className='font-bold text-white flip-box-header'>
-                      {year.session}
-                    </h3>
-                  </div>
-                </div>
-                <div className='flex text-center flip-box-back'>
-                  <div className='flex items-center justify-center h-full inner color-white'>
-                    <h3 className='flex items-center space-x-2 flip-box-header'>
-                     
-                      <Link to={year.url} className='font-bold text-white'>
-                        {year.DownloadAttachment}
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
+function EventsCalendar () {
+  const [eventyear, setEventYear] = useState('')
+  return (
+    <section className='relative w-full'>
+      <div className=''>
+        {/* -------------year button--------------- */}
+        {eventyear === '' && (
+          <div className='grid w-10/12 grid-cols-1 gap-2 pt-20 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            {eventcalander.map((data, index) => (
+              
+                <FlipCard 
+                handlar={() => setEventYear(data.year)} 
+                key={data.id} 
+                className={'w-full'} 
+                text1={data.year} 
+                text2={data.title}
+                // useBgImage={true}
+                // frontImage={data.frontImage}
+                // backImage={data.backImage}
+                 />
+             
+            ))}
           </div>
-        ))}
+        )}
+        {/* --------------year wise months------------------------ */}
+        {eventyear && <EventMonths eventyear={eventyear} />}
       </div>
     </section>
-    )
+  )
 }
 
 export default EventsCalendar
