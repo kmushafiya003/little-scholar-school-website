@@ -10,7 +10,6 @@ import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
-// import Dynamic3dButton from './components/common/Dynamic3dButton';
 
 const Home = lazy(() => import('./pages/Home'));
 
@@ -52,7 +51,6 @@ const App = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <ScrollText />
-
       {/* ------ Dynamic button with flip animation --------- */}
 
       {/* <Dynamic3dButton
