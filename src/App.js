@@ -10,7 +10,6 @@ import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
-import TopperSection from './components/student-life/toppers/TopperSection.jsx';
 
 const Home = lazy(() => import('./pages/Home'));
 

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Tabs from './Tabs';
 import TopperAlbumTamplate from './TopperAlbumTamplate';
-import { session_23_24 } from '../../../data/StudentLife/topper-data'; // Adjust the path to your data file
+import { session_23_24,  } from '../../../data/StudentLife/topper-data'; // Adjust the path to your data file
 
 const TopperSection = () => {
   const [activeTab, setActiveTab] = useState("Class 'X'");
