@@ -41,7 +41,7 @@ const App = () => {
   const location = useLocation();
 
   useEffect(()=> {
-    console.log("Yaha Ayya")
+    
     window.scrollTo({
       top: 10,
     
