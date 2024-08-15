@@ -1,7 +1,7 @@
 import React from 'react'
 import { session_23_24 } from '../../../data/StudentLife/topper-data'
 
-function TopperAlbumTamplate() {
+function TopperAlbumTamplate({topperYear}) {
   return (
     <section className="relative w-full">
       <div className="grid w-10/12 grid-cols-1 pt-20 mx-auto gap-y-6 gap-x-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">

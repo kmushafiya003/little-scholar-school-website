@@ -36,11 +36,46 @@ import siddhi from '../../images//StudentLife/Topper/X-Student/SIDDHI CHAUDHARY.
 // -------------------12th Student import images -------------------------------------------
 
 
+
+
+export const year = [
+    {
+        id : 1,
+        year: "2023 - 24"
+    },
+    {
+        id : 2,
+        year: "2022 - 23"
+    },
+    {
+        id : 3,
+        year: "2021 - 22"
+    },
+    {
+        id : 4,
+        year: "2020 - 21"
+    },
+    {
+        id : 5,
+        year: "2019 - 20"
+    },
+    {
+        id : 6,
+        year: "2018 - 19"
+    },
+    {
+        id : 7,
+        year: "2017 - 18"
+    },
+]
+
+
 export const session_23_24 = [
     {
         id: 1,
         image: aarna,
         title: "AARNA",
+        year: "2023 - 24",
         desc: "10th Standard",
         percentage: "98.2%",
     },
@@ -275,4 +310,4 @@ export const session_23_24 = [
         desc: "10th Standard",
         percentage: "90%",
     }
-]
+];

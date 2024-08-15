@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaArrowCircleDown } from 'react-icons/fa';
 
-const Dynamic3dButton = ({ text1, text2, className, showIcon, hasLink, link }) => {
+const Dynamic3dButton = ({ text1, text2, className, showIcon, hasLink, link , handler}) => {
   return (
-    <div className={`box-container w-full ${className}`}>
+    <div className={`box-container w-full ${className}`} onClick={handler}>
       <div className='p-2 box-item'>
         <div className='flip-box'>
           <div className='text-center flip-box-front'>
