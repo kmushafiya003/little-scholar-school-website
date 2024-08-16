@@ -4,7 +4,7 @@ import { IoIosArrowUp } from "react-icons/io";
 
 const ScrollTop = () => {
 
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
 
@@ -24,7 +24,7 @@ const ScrollTop = () => {
 
 
     useEffect(()=>{
-
+      
         window.addEventListener("scroll" , toggleVisibility);
 
         return(()=> window.removeEventListener("scroll" , toggleVisibility));

@@ -4,8 +4,10 @@ import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp, IoMdClose, IoMdMenu } 
 import { navData } from '../../data/common/navbar-links';
 import logo from '../../assets/logo.webp';
 import '../../App.css'; // Ensure this file imports your CSS
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const location = useLocation();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [activeSubSubDropdown, setActiveSubSubDropdown] = useState(null);
@@ -17,6 +19,14 @@ const Navbar = () => {
   const subDropdownTimeout = useRef(null);
   const subSubDropdownTimeout = useRef(null);
   const lastScrollY = useRef(0);
+
+  // for closing the dropdown when we going to other page
+  useEffect(()=>{
+    setActiveDropdown(null);
+    setActiveSubDropdown(null);
+    setActiveSubSubDropdown(null);
+
+  }, [location.pathname])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,14 +123,14 @@ const Navbar = () => {
                     onMouseLeave={() => handleMouseLeave('dropdown')}
                   >
                     {/* Main Navigation Link */}
-                    <NavLink
-                      to={navItem.path}
-                      className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold 
+                    <p
+                     
+                      className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
                       ${navItem.dropdown && activeDropdown === navItem.id ? 'bg-[rgb(32,44,69)] text-white' : 'hover:bg-[rgb(32,44,69)] hover:text-white'}`}
                     >
                       {navItem.title}
                       {navItem.dropdown && <span className='mt-2 ml-1'><IoIosArrowDown /></span>}
-                    </NavLink>
+                    </p>
 
                     {/* Dropdown Menu */}
                     {navItem.dropdown && (

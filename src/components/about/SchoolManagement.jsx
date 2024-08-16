@@ -43,7 +43,7 @@ const SchoolManagement = () => {
     return (
        
         
-        <section className=' bg-bg-light pt-28 pb-32 font-open-sans '>
+        <section className=' bg-bg-light pt-28 pb-32  '>
 
             {/* ------------------------- container ------------------------- */}
 

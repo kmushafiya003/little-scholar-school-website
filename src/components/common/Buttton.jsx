@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ label, onClick, isActive, className }) => {
+const Button = ({ label, handler, isActive, className }) => {
+
   const baseClass = 'flex text-base w-32 rounded-md py-3 font-semibold items-center justify-center transition duration-300';
   const activeClass = isActive ? 'bg-dark-blue text-white' : 'bg-off-white-bg text-black';
   
@@ -11,7 +12,7 @@ const Button = ({ label, onClick, isActive, className }) => {
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={handler}
       className={`${baseClass} ${activeClass} ${hoverClass} ${className}`}
     >
       {label}

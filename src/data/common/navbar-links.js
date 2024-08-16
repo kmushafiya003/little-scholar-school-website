@@ -1,15 +1,9 @@
 // navData.js
 export const navData = [
-  // {
-  //   id: 1,
 
-  //   path: '/',
-
-  // },
   {
-    id: 2,
+    id: 1,
     title: 'About us',
-    // path: '#',
     dropdown: [
       { id: 11, title: `Founders's Desk`, path: '/about-us/founder-desk' },
       { id: 12, title: `Principal's Desk`, path: '/about-us/principal-desk' },
@@ -26,15 +20,14 @@ export const navData = [
       {
         id: 15,
         title: 'Principles & Policies',
-        path: '/about-us/principles-policies'
+        path: '/about-us/principles&policies'
       },
       { id: 16, title: 'Infrastructure', path: '/about-us/infrastructure' }
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: 'Admissions',
-    // path: '#',
     dropdown: [
       {
         id: 21,
@@ -53,111 +46,81 @@ export const navData = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     title: 'Student Life',
-    // path: '#',
     dropdown: [
-      { id: 41, title: 'Academics', path: '/studentlife/academics' },
-      { id: 42, title: 'Sports', path: '/studentlife/sports' },
+      { id: 31, title: 'Academics', path: '/student-life/academics' },
+      { id: 32, title: 'Sports', path: '/student-life/sports' },
+
+      { id: 33, title: 'Co-curricular', path: '/student-life/co-curricular' },
       {
-        id: 43,
-        title: 'Swimming Pool Form',
-        path: '/studentlife/swimmingpool'
-      },
-      {
-        id: 44,
-        title: 'Blood Donation Form',
-        path: '/studentlife/blood-donation'
-      },
-      { id: 45, title: 'Co-curricular', path: '/studentlife/curricular' },
-      {
-        id: 46,
+        id: 34,
         title: 'Social-Cultural Development',
-        path: '/studentlife/cultural'
+        path: '/student-life/social-cultural&development'
       },
-      { id: 47, title: 'Counselling', path: '/studentlife/counselling' },
+      { id: 35, title: 'Counselling', path: '/student-life/counselling' },
+  
+      { id: 36, title: 'Achievements', path: '/student-life/achievements' },
+      { id: 37, title: 'Events Calendar', path: '/student-life/events' },
+      { id: 38, title: 'Toppers', path: '/student-life/toppers' },
+      { id: 39, title: 'Cabinet', path: '/student-life/cabinet' },
       {
-        id: 48,
-        title: 'Council Guidelines',
-        path: '/studentlife/council-guidelines',
-        dropdown: [
-          {
-            id: 8888,
-            title: 'Parent Form',
-            path: '/studentlife/council-guidelines/parent-form'
-          },
-          {
-            id: 9999,
-            title: 'Student Form',
-            path: '/studentlife/council-guidelines/student-form'
-          }
-        ]
-      },
-      { id: 49, title: 'Achievements', path: '/studentlife/achievements' },
-      { id: 50, title: 'Events Calendar', path: '/studentlife/event-calendar' },
-      { id: 51, title: 'Toppers', path: '/studentlife/toppers' },
-      { id: 52, title: 'Cabinet', path: '/studentlife/cabinet' },
-      {
-        id: 53,
+        id: 40,
         title: 'Transfer Certificate',
-        path: '/studentlife/transfer-cert'
+        path: '/studentlife/transfer-certificate'
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: 'News & Calendar',
+    dropdown: [
+      { id: 41, title: 'Student Hand Book', path: '/news&calendar/student-handbook' },
+      {
+        id: 42,
+        title: 'Newsletter/Scholars Times',
+        path: '/news&calendar/scholars-times'
       }
     ]
   },
   {
     id: 5,
-    title: 'News & Calendar',
-    // path: '#',
+    title: 'Mandatory Disclosures',
     dropdown: [
-      { id: 61, title: 'Student Hand Book', path: '/news&calendar/handbook' },
+      { id: 51, title: 'Booklist', path: '/mandatory-disclosures/booklist' },
       {
-        id: 62,
-        title: 'Newsletter/Scholars Times',
-        path: '/news&calendar/newsletter'
+        id: 52,
+        title: 'Safety Certificates & Affiliations',
+        path: '/mandatory-disclosures/safety-certificate&affiliations'
+      },
+      {
+        id: 53,
+        title: 'CBSE-OASIS',
+        path: '#'
+      },
+      {
+        id: 54,
+        title: 'Mandatory Public Disclosures',
+        path: '#'
       }
     ]
   },
   {
     id: 6,
-    title: 'Mandatory Disclosures',
-    path: '/mandatory-disclosures',
+    title: 'Contact Us',
     dropdown: [
-      { id: 71, title: 'Booklist', path: '/mandatory-disclosures/booklist' },
-      {
-        id: 72,
-        title: 'Safety Certificates & Affiliations',
-        path: '/mandatory-disclosures/safety-cert&aff'
-      },
-      {
-        id: 73,
-        title: 'CBSE-OASIS',
-        path: '/mandatory-disclosures/CBSE-OASIS'
-      },
-      {
-        id: 74,
-        title: 'Mandatory Public Disclosures',
-        path: '/mandatory-disclosures/public-discolusers'
-      }
+      { id: 61, title: 'Reach Us', path: '/contact-us/reach-us' },
+      { id: 62, title: 'Career', path: '/contact-us/career' },
+      { id: 63, title: 'Guest Book', path: '/contact-us/guest-book' }
     ]
   },
   {
     id: 7,
-    title: 'Contact Us',
-    // path: '#',
-    dropdown: [
-      { id: 81, title: 'Reach Us', path: '/contact-us/reach-us' },
-      { id: 82, title: 'Career', path: '/contact-us/career' },
-      { id: 83, title: 'Guest Book', path: '/contact-us/guest-book' }
-    ]
-  },
-  {
-    id: 8,
     title: 'Notice',
-    // path: '#',
     dropdown: [
-      { id: 91, title: 'Notice 1', path: '/notice/notice1' },
-      { id: 92, title: 'Notice 2', path: '/notice/notice 2' },
-      { id: 93, title: 'Notice 3', path: '/notice/notice 3' }
+      { id: 71, title: 'Notice 1', path: '/notice/notice1' },
+      { id: 72, title: 'Notice 2', path: '/notice/notice 2' },
+      { id: 73, title: 'Notice 3', path: '/notice/notice 3' }
     ]
   }
 ]
