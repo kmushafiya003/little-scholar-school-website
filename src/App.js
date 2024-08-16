@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './App.css';
 import './index.css';
-import BookList from './components/MandatoryDisclosure/BookList';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
@@ -36,6 +35,10 @@ const StudentLife = lazy(() => import('./pages/StudentLIfe'));
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
 const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
+
+
+const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
+const BookList  = lazy(() => import('./components/MandatoryDisclosure/BookList.jsx'))
 
 
 const App = () => {
@@ -110,6 +113,15 @@ const App = () => {
           <Route path='/student-life/events' element={<EventCalendar />} />
         
           </Route>
+
+
+           {/* -------------- Mandatory Disclosure ------------------ */}
+
+           <Route element={<MandatoryDisclosure/>}>
+          <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
+        
+          </Route>
+
 
         </Routes>
       </Suspense>
