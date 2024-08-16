@@ -15,12 +15,12 @@ import Dynamic3dButton from './components/common/Dynamic3dButton';
 const Home = lazy(() => import('./pages/Home'));
 
 const About = lazy(() => import('./pages/About'));
-const FounderDesk = lazy(() => import('./components/about/FounderDesk'));
-const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk'));
-const SchoolManagement = lazy(() => import('./components/about/SchoolManagement'));
-const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee'));
-const Principles = lazy(() => import('./components/about/Principles'));
-const Infragallery = lazy(() => import('./components/about/Infragallery'));
+const FounderDesk = lazy(() => import('./components/About/FounderDesk'));
+const PrincipalDesk = lazy(() => import('./components/About/PrincipalDesk'));
+const SchoolManagement = lazy(() => import('./components/About/SchoolManagement'));
+const ManagingCommittee = lazy(() => import('./components/About/ManagingCommittee'));
+const Principles = lazy(() => import('./components/About/Principles'));
+const Infragallery = lazy(() => import('./components/About/Infragallery'));
 
 
 const Admission = lazy(() => import('./pages/Admission'));
@@ -33,6 +33,7 @@ const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
+const Academics =lazy(()=>('./components/student-life/academics'))
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'))
 
 
