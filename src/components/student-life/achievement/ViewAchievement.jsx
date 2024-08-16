@@ -5,12 +5,12 @@ const ViewAchievement = ({ viewAchievement, setViewAchievement }) => {
 
 
   return (
-    <div className=' flex flex-col gap-y-14 min-h-[550px] border border-dark-light-black rounded-xl pt-4 pb-16 px-4'>
+    <div className=' flex flex-col gap-y-14 xmd:min-h-[550px] min-h-[450px] border border-dark-light-black rounded-xl pt-4 pb-16 px-4'>
 
       {/* ----------- heading ----------- */}
       <div className='flex flex-col gap-y-4  '>
 
-        <h1 className='uppercase text-[32px] font-semibold text-resp-black  '>{viewAchievement.title}</h1>
+        <h1 className='uppercase text-[24px] sm:text-[32px] font-semibold text-resp-black  '>{viewAchievement.title}</h1>
 
 
         {/* ----------- small underline ----------- */}
@@ -21,16 +21,16 @@ const ViewAchievement = ({ viewAchievement, setViewAchievement }) => {
 
       {/* ---------- achievemment detail --------------- */}
 
-      <div className='flex gap-x-16 pl-12 justify-between'>
+      <div className='flex flex-col  gap-y-6  items-center sm:items-start sm:flex-row md:gap-x-16 gap-x-10 xmd:pl-12 sm:pl-4 sm:justify-between '>
 
         {/* ------------- img ------------- */}
-        <div className='w-[350px] '>
+        <div className='xs:w-[350px] w-[280px]'>
           <img src={viewAchievement.img} alt="Achievement" className='w-full  object-cover' />
         </div>
 
         {/* ----------- content detail ----------- */}
 
-        <div className='flex flex-col gap-y-6 w-[65%]'>
+        <div className='flex flex-col items-center sm:items-start gap-y-6 sm:w-[65%]'>
 
           {/* ------------ event and venue --------------- */}
 
@@ -50,8 +50,8 @@ const ViewAchievement = ({ viewAchievement, setViewAchievement }) => {
           <div className='flex flex-col gap-y-6'>
             {/* --------- description --------- */}
             <div className='flex flex-col gap-y-2'>
-              <p className='font-bold' >Description</p>
-              <p className='font-light'>{viewAchievement.desc}</p>
+              <p className='font-bold sm:text-left text-center' >Description</p>
+              <p className='font-light sm:text-justify text-center'>{viewAchievement.desc}</p>
 
             </div>
 

@@ -1,0 +1,567 @@
+// --------------------10th Student import images --------------------
+import aarna from '../../images/StudentLife/Topper/X-Student/AARNA.webp'
+import ansh from '../../images/StudentLife/Topper/X-Student/ANSH AGARWAL.webp'
+import pranjali from '../../images/StudentLife/Topper/X-Student/PRANJALI JOSHI.webp'
+import aditi from '../../images/StudentLife/Topper/X-Student/ADITI SUYAL.webp'
+import parneet from '../../images/StudentLife/Topper/X-Student/PARNEET KAUR.webp'
+import sonakashi from '../../images/StudentLife/Topper/X-Student/SONAKSHI JOSHI.webp'
+import isha from '../../images/StudentLife/Topper/X-Student/ISHA.webp'
+import sandhya from '../../images/StudentLife/Topper/X-Student/SANDHYA RAWAT.webp'
+import adityaS from '../../images/StudentLife/Topper/X-Student/ADITYA SINGH.webp'
+import saksham from '../../images/StudentLife/Topper/X-Student/SAKSHAM AGARWAL.webp'
+import tazeem from '../../images/StudentLife/Topper/X-Student/TAZEEM KHAN.webp'
+import adityaY from '../../images/StudentLife/Topper/X-Student/ADITYA YADAV.webp'
+import kanishk from '../../images/StudentLife/Topper/X-Student/KANISHK UPADHYAY.webp'
+import jashndeep from '../../images/StudentLife/Topper/X-Student/JASHANDEEP SINGH.webp'
+import manvi from '../../images/StudentLife/Topper/X-Student/MANVI AGARWAL.webp'
+import shubh from '../../images/StudentLife/Topper/X-Student/SHUBH GOYAL.webp'
+import nivedita from '../../images/StudentLife/Topper/X-Student/NIVEDITA CHAUHAN.webp'
+import pragya from '../../images/StudentLife/Topper/X-Student/PRAGYA GAHLOT.webp'
+import daksh from '../../images/StudentLife/Topper/X-Student/DAKSH GAHLOT.webp'
+import nikhil from '../../images/StudentLife/Topper/X-Student/NIKHIL TIWARI.webp'
+import somya from '../../images/StudentLife/Topper/X-Student/SOMYA RAWAT.webp'
+import diksha from '../../images/StudentLife/Topper/X-Student/DIKSHA NEGI.webp'
+import prachi from '../../images/StudentLife/Topper/X-Student/PRACHI TRIPATHI.webp'
+import prabhu from '../../images/StudentLife/Topper/X-Student/PRABHU SANIDHYA.webp'
+import abhivyakti from '../../images/StudentLife/Topper/X-Student/ABHIVYAKTI.webp'
+import atulya from '../../images/StudentLife/Topper/X-Student/ATULYA AGARWAL.webp'
+import ritika from '../../images/StudentLife/Topper/X-Student/RITIKA RAJWAR.webp'
+import aakriti from '../../images/StudentLife/Topper/X-Student/AAKRITI AGARWAL.webp'
+import karan from '../../images/StudentLife/Topper/X-Student/KARAN KUMAR.webp'
+import gurman from '../../images/StudentLife/Topper/X-Student/GURMAN SINGH ANAND.webp'
+import nandini from '../../images/StudentLife/Topper/X-Student/NANDINI SINGH.webp'
+import parth from '../../images/StudentLife/Topper/X-Student/PARTH CHAUHAN.webp'
+import shrusti from '../../images/StudentLife/Topper/X-Student/SHRUSTI AGARWAL.webp'
+import siddhi from '../../images//StudentLife/Topper/X-Student/SIDDHI CHAUDHARY.webp'
+// -------------------12th Student import images -------------------------------------------
+
+
+
+
+export const year = [
+    {
+        id : 1,
+        year: "2023 - 24"
+    },
+    {
+        id : 2,
+        year: "2022 - 23"
+    },
+    {
+        id : 3,
+        year: "2021 - 22"
+    },
+    {
+        id : 4,
+        year: "2020 - 21"
+    },
+    {
+        id : 5,
+        year: "2019 - 20"
+    },
+    {
+        id : 6,
+        year: "2018 - 19"
+    },
+    {
+        id : 7,
+        year: "2017 - 18"
+    },
+]
+
+
+export const session_23_24 = [
+    {
+        id: 1,
+        std: 'X',
+        title: "10th Standard",
+        class: [
+            {
+                id: 1,
+                image: aarna,
+                title: "AARNA",
+                year: "2023 - 24",
+                desc: "10th Standard",
+                percentage: "98.2%",
+            },
+            {
+                id: 2,
+                image: ansh,
+                title: "ANSH AGARWAL",
+                desc: "10th Standard",
+                percentage: "98.2%",
+            },
+            {
+                id: 3,
+                image: pranjali,
+                title: "PRANJALI JOSHI",
+                desc: "10th Standard",
+                percentage: "97.6%",
+            },
+            {
+                id: 4,
+                image: aditi,
+                title: "ADITI SUYAL",
+                desc: "10th Standard",
+                percentage: "96.6%",
+            },
+            {
+                id: 5,
+                image: parneet,
+                title: "PARNEET KAUR",
+                desc: "10th Standard",
+                percentage: "96.4%",
+            },
+            {
+                id: 6,
+                image: sonakashi,
+                title: "SONAKASHI JOSHI",
+                desc: "10th Standard",
+                percentage: "96.2%",
+            },
+            {
+                id: 7,
+                image: isha,
+                title: "ISHA",
+                desc: "10th Standard",
+                percentage: "95.6%",
+            },
+            {
+                id: 8,
+                image: sandhya,
+                title: "SANDHYA RAWAT",
+                desc: "10th Standard",
+                percentage: "95.6%",
+            },
+            {
+                id: 9,
+                image: adityaS,
+                title: "ADITYA SINGH",
+                desc: "10th Standard",
+                percentage: "95.4%",
+            },
+            {
+                id: 10,
+                image: saksham,
+                title: "SAKSHAM AGARWAL",
+                desc: "10th Standard",
+                percentage: "95.4%",
+            },
+            {
+                id: 11,
+                image: tazeem,
+                title: "TAZEEM KHAN",
+                desc: "10th Standard",
+                percentage: "95.4%",
+            },
+            {
+                id: 12,
+                image: adityaY,
+                title: "ADITYA YADAV",
+                desc: "10th Standard",
+                percentage: "95%",
+            },
+            {
+                id: 13,
+                image: kanishk,
+                title: "KANISHK UPADHYAY",
+                desc: "10th Standard",
+                percentage: "94.8%",
+            },
+            {
+                id: 14,
+                image: jashndeep,
+                title: "JASHNDEEP SINGH",
+                desc: "10th Standard",
+                percentage: "94.6%",
+            },
+            {
+                id: 15,
+                image: manvi,
+                title: "MANVI AGARWAL",
+                desc: "10th Standard",
+                percentage: "94.6%",
+            },
+            {
+                id: 16,
+                image: shubh,
+                title: "SHUBH GOYAL",
+                desc: "10th Standard",
+                percentage: "94%",
+            },
+            {
+                id: 17,
+                image: nivedita,
+                title: "NIVEDITA CHAUHAN",
+                desc: "10th Standard",
+                percentage: "93.8%",
+            },
+            {
+                id: 18,
+                image: pragya,
+                title: "PRAGYA GAHLOT",
+                desc: "10th Standard",
+                percentage: "93.4%",
+            },
+            {
+                id: 19,
+                image: daksh,
+                title: "DAKSH GAGLOT",
+                desc: "10th Standard",
+                percentage: "93%",
+            },
+            {
+                id: 20,
+                image: nikhil,
+                title: "NIKHIL TIWARI",
+                desc: "10th Standard",
+                percentage: "92.6%",
+            },
+            {
+                id: 21,
+                image: somya,
+                title: "SOMYA RAWAT",
+                desc: "10th Standard",
+                percentage: "92.4%",
+            },
+            {
+                id: 22,
+                image: diksha,
+                title: "DIKSHA NEGI",
+                desc: "10th Standard",
+                percentage: "92.2%",
+            },
+            {
+                id: 23,
+                image: prachi,
+                title: "PRACHI TRIPATHI",
+                desc: "10th Standard",
+                percentage: "90.8%",
+            },
+            {
+                id: 24,
+                image: prabhu,
+                title: "PRABHU SANIDHYA",
+                desc: "10th Standard",
+                percentage: "90.6%",
+            },
+            {
+                id: 25,
+                image: abhivyakti,
+                title: "ABHIVYAKTI",
+                desc: "10th Standard",
+                percentage: "90.4%",
+            },
+            {
+                id: 26,
+                image: atulya,
+                title: "ATULYA AGARWAL",
+                desc: "10th Standard",
+                percentage: "90.4%",
+            },
+            {
+                id: 27,
+                image: ritika,
+                title: "RITIKA RAJWAR",
+                desc: "10th Standard",
+                percentage: "90.4%",
+            },
+            {
+                id: 28,
+                image: aakriti,
+                title: "AAKRITI AGARWAL",
+                desc: "10th Standard",
+                percentage: "90.2%",
+            },
+            {
+                id: 29,
+                image: karan,
+                title: "KARAN KUMAR",
+                desc: "10th Standard",
+                percentage: "90.2%",
+            },
+            {
+                id: 30,
+                image: gurman,
+                title: "GURMAN SINGH ANAND",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 31,
+                image: nandini,
+                title: "NANDINI SINGH",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 32,
+                image: parth,
+                title: "PARTH CHAUHAN",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 33,
+                image: shrusti,
+                title: "SHURSTI AGARWAL",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 34,
+                image: siddhi,
+                title: "SIDDHI CHAUDHARY",
+                desc: "10th Standard",
+                percentage: "90%",
+            }
+        ]
+        
+    },
+    {
+        id: 2,
+        std: 'XII',
+        title: "12th Standard",
+        class: [
+            {
+                id: 1,
+                image: aarna,
+                title: "Aparna",
+                year: "2023 - 24",
+                desc: "10th Standard",
+                percentage: "98.2%",
+            },
+            {
+                id: 2,
+                image: ansh,
+                title: "ANSH AGARWAL",
+                desc: "10th Standard",
+                percentage: "98.2%",
+            },
+            {
+                id: 3,
+                image: pranjali,
+                title: "PRANJALI JOSHI",
+                desc: "10th Standard",
+                percentage: "97.6%",
+            },
+            {
+                id: 4,
+                image: aditi,
+                title: "ADITI SUYAL",
+                desc: "10th Standard",
+                percentage: "96.6%",
+            },
+            {
+                id: 5,
+                image: parneet,
+                title: "PARNEET KAUR",
+                desc: "10th Standard",
+                percentage: "96.4%",
+            },
+            {
+                id: 6,
+                image: sonakashi,
+                title: "SONAKASHI JOSHI",
+                desc: "10th Standard",
+                percentage: "96.2%",
+            },
+            {
+                id: 7,
+                image: isha,
+                title: "ISHA",
+                desc: "10th Standard",
+                percentage: "95.6%",
+            },
+            {
+                id: 8,
+                image: sandhya,
+                title: "SANDHYA RAWAT",
+                desc: "10th Standard",
+                percentage: "95.6%",
+            },
+            {
+                id: 9,
+                image: adityaS,
+                title: "ADITYA SINGH",
+                desc: "10th Standard",
+                percentage: "95.4%",
+            },
+            {
+                id: 10,
+                image: saksham,
+                title: "SAKSHAM AGARWAL",
+                desc: "10th Standard",
+                percentage: "95.4%",
+            },
+            {
+                id: 11,
+                image: tazeem,
+                title: "TAZEEM KHAN",
+                desc: "10th Standard",
+                percentage: "95.4%",
+            },
+            {
+                id: 12,
+                image: adityaY,
+                title: "ADITYA YADAV",
+                desc: "10th Standard",
+                percentage: "95%",
+            },
+            {
+                id: 13,
+                image: kanishk,
+                title: "KANISHK UPADHYAY",
+                desc: "10th Standard",
+                percentage: "94.8%",
+            },
+            {
+                id: 14,
+                image: jashndeep,
+                title: "JASHNDEEP SINGH",
+                desc: "10th Standard",
+                percentage: "94.6%",
+            },
+            {
+                id: 15,
+                image: manvi,
+                title: "MANVI AGARWAL",
+                desc: "10th Standard",
+                percentage: "94.6%",
+            },
+            {
+                id: 16,
+                image: shubh,
+                title: "SHUBH GOYAL",
+                desc: "10th Standard",
+                percentage: "94%",
+            },
+            {
+                id: 17,
+                image: nivedita,
+                title: "NIVEDITA CHAUHAN",
+                desc: "10th Standard",
+                percentage: "93.8%",
+            },
+            {
+                id: 18,
+                image: pragya,
+                title: "PRAGYA GAHLOT",
+                desc: "10th Standard",
+                percentage: "93.4%",
+            },
+            {
+                id: 19,
+                image: daksh,
+                title: "DAKSH GAGLOT",
+                desc: "10th Standard",
+                percentage: "93%",
+            },
+            {
+                id: 20,
+                image: nikhil,
+                title: "NIKHIL TIWARI",
+                desc: "10th Standard",
+                percentage: "92.6%",
+            },
+            {
+                id: 21,
+                image: somya,
+                title: "SOMYA RAWAT",
+                desc: "10th Standard",
+                percentage: "92.4%",
+            },
+            {
+                id: 22,
+                image: diksha,
+                title: "DIKSHA NEGI",
+                desc: "10th Standard",
+                percentage: "92.2%",
+            },
+            {
+                id: 23,
+                image: prachi,
+                title: "PRACHI TRIPATHI",
+                desc: "10th Standard",
+                percentage: "90.8%",
+            },
+            {
+                id: 24,
+                image: prabhu,
+                title: "PRABHU SANIDHYA",
+                desc: "10th Standard",
+                percentage: "90.6%",
+            },
+            {
+                id: 25,
+                image: abhivyakti,
+                title: "ABHIVYAKTI",
+                desc: "10th Standard",
+                percentage: "90.4%",
+            },
+            {
+                id: 26,
+                image: atulya,
+                title: "ATULYA AGARWAL",
+                desc: "10th Standard",
+                percentage: "90.4%",
+            },
+            {
+                id: 27,
+                image: ritika,
+                title: "RITIKA RAJWAR",
+                desc: "10th Standard",
+                percentage: "90.4%",
+            },
+            {
+                id: 28,
+                image: aakriti,
+                title: "AAKRITI AGARWAL",
+                desc: "10th Standard",
+                percentage: "90.2%",
+            },
+            {
+                id: 29,
+                image: karan,
+                title: "KARAN KUMAR",
+                desc: "10th Standard",
+                percentage: "90.2%",
+            },
+            {
+                id: 30,
+                image: gurman,
+                title: "GURMAN SINGH ANAND",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 31,
+                image: nandini,
+                title: "NANDINI SINGH",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 32,
+                image: parth,
+                title: "PARTH CHAUHAN",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 33,
+                image: shrusti,
+                title: "SHURSTI AGARWAL",
+                desc: "10th Standard",
+                percentage: "90%",
+            },
+            {
+                id: 34,
+                image: siddhi,
+                title: "SIDDHI CHAUDHARY",
+                desc: "10th Standard",
+                percentage: "90%",
+            }
+        ]
+    }
+]

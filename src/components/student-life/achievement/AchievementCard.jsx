@@ -17,7 +17,7 @@ const AchievementCard = ({ data, setViewAchievement }) => {
 
 
     return (
-        <div  className='flex flex-col gap-y-1 items-center text-black py-8  rounded-2xl transition-all duration-500 hover:scale-110  shadow1' onClick={viewAchievementSec}>
+        <div  className='flex flex-col gap-y-1 shadow-xl mdxs:shadow-none items-center text-black py-8 px-4 rounded-2xl transition-all duration-500 mdxs:hover:scale-110 hover:scale-105 mdxs:w-full xsm:w-[80%] w-[90%] shadow1' onClick={viewAchievementSec}>
 
             {/* ----------- img ---------- */}
             <div className='w-[60%] '>
@@ -25,9 +25,9 @@ const AchievementCard = ({ data, setViewAchievement }) => {
             </div>
 
             {/* ----------- title ----------- */}
-            <h2 className='text-resp-black'>
+            <h2 className='text-resp-black xlg:text-[15px] xxl:text-[16px] text-center'>
                 {
-                    data.title.length > 32 ? data.title.substring(0, 32) + "..." : data.title
+                    data.title.length > 30 ? data.title.substring(0, 30) + "..." : data.title
                 }
             </h2>
 

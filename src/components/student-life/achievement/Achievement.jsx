@@ -14,7 +14,7 @@ const Achievement = () => {
 
          {/* ----------- container ---------------- */}
 
-        <div className='w-10/12 mx-auto  flex flex-col gap-y-24'>
+        <div className='xl:w-10/12 mdxs:w-11/12 w-10/12 mx-auto  flex flex-col gap-y-24'>
 
        
 
@@ -46,7 +46,7 @@ const Achievement = () => {
                     </div>
 
                     {/* -------------all achievement card --------------- */}
-                    <div className='  grid grid-cols-4 gap-y-8 gap-x-1'>
+                    <div className=' grid xlg:grid-cols-4 smd:grid-cols-3 mdxs:grid-cols-2 grid-cols-1 gap-y-8 gap-x-1 justify-items-center'>
 
                         {
                             AchievementsData.map((data) => (

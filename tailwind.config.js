@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       "open-sans": ["Open Sans", "sans-serif"],
     },
+   
     colors: {
       white: "#fff",
       black: "#000",
@@ -25,6 +26,7 @@ module.exports = {
       "gray-l": "rgb(107 114 128)",
       "border-1": "#dee2e6",
       "border-2": "#bbb",
+      "silver-white":"#f6f6f6",
       "dark-light-black": "rgba(187, 187, 182, 1)",
       "gray-100" : "rgb(243 244 246)",
       "gray-200": "rgb(229 231 235)",
@@ -56,16 +58,22 @@ module.exports = {
       "2xl": "1505px",
     },
     extend: {
+      borderColor: {
+        'border-grey':'#e6e6e6',
+        'border-black':'#000',
+      },
       listStyleType: {
         'upper-roman': 'upper-roman',
       },
       fontSize: {
+        "2xl":"2rem",
         xxl: "4rem",
         "3xl": "3rem",
       },
-   
+
      
       fontWeight: {
+        light: 100,
         regular: 400,
         semibold: 600,
         bold: 700,

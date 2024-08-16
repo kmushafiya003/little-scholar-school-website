@@ -408,6 +408,7 @@
 }
 
 /* Disable flipping for the scale card */
+
 .scale-card .flip-box:hover {
   transform: scale(1.09); /* Adjust the scale value as needed */
 }
