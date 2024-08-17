@@ -10,8 +10,6 @@ import ScrollText from './components/common/ScrollText'
 import Loading from './components/common/Loading'
 import ScrollTop from './components/common/ScrollTop'
 
-// import PresentationTable from './components/student-life/Socio-Cultural-Development/PresentationTable.jsx';
-// import ChampionshipTable from './components/student-life/Socio-Cultural-Development/ChampionshipTable.jsx';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'))
 const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'))
@@ -49,7 +47,7 @@ const EventCalendar = lazy(() =>
 )
 
 const NewsCalendar = lazy(() => import('./pages/NewsCalendar'))
-const ScholarTimes = lazy(() =>
+const EScholar = lazy(() =>
   import('./components/news&calendar/scholar/ScholarTimes.jsx')
 )
 
@@ -167,7 +165,7 @@ const App = () => {
           <Route element={<NewsCalendar />}>
             <Route
               path='/news&calendar/scholars-times'
-              element={<ScholarTimes />}
+              element={<EScholar />}
             />
           </Route>
 
