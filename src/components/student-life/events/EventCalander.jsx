@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { eventcalander } from '../../../data/StudentLife/events'
 import EventMonths from './EventMonths'
-import FlipCard from './FlipCard'
+import FlipCard from '../../common/FlipCard'
 
 const EventsCalendar = () => {
   const [eventyear, setEventYear] = useState('')

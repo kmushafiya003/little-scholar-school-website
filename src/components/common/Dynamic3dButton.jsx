@@ -48,7 +48,7 @@ Dynamic3dButton.defaultProps = {
   className: '',
   showIcon: true,
   hasLink: false,
-  link: '#', // Default link to a placeholder
+  link: '#', 
 };
 
 export default Dynamic3dButton;

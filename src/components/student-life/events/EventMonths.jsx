@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FlipCard from './FlipCard'
+import FlipCard from '../../common/FlipCard'
 import { eventcalander } from '../../../data/StudentLife/events'
 import EventHoliday from './EventHoliday';
 
