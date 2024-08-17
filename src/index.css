@@ -31,7 +31,7 @@
 .hover\:pause-marquee:hover {
   animation-play-state: paused;
 }
-
+/* ----------swiper-------- */
 .swiper-next,
 .swiper-prev {
   position: absolute;
@@ -280,7 +280,7 @@
 .swiper-pagination-bullets {
   display: none;
 }
-
+/* ----------end swiper------------------------------------ */
 
 .box-container {
   box-sizing: border-box;
