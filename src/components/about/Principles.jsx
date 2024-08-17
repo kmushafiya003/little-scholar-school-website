@@ -78,8 +78,8 @@ const Principles = () => {
 
 const SectionCard = ({ section }) => {
   const [selectedYear, setSelectedYear] = useState('2022-23')
-  const [season, setSeason] = useState('winter')
-  const [gender, setGender] = useState('boys')
+  // const [season, setSeason] = useState('winter')
+  // const [gender, setGender] = useState('boys')
 
   const getDataForYear = year => {
     switch (year) {

@@ -1,0 +1,24 @@
+/* Swiper container style */
+.swiper-container {
+    position: relative;
+  }
+  
+  /* Swiper button style */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000; /* Button color */
+  }
+  
+  /* Contract button size on hover */
+  .swiper-container:hover .swiper-button-next,
+  .swiper-container:hover .swiper-button-prev {
+    transform: scale(0.7); /* Contract button size */
+    transition: transform 0.3s;
+  }
+  
+  /* Expand button size on hover */
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    transform: scale(1); /* Expand button size on hover */
+  }
+  
