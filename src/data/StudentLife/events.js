@@ -1,9 +1,24 @@
+import match from '../../images/StudentLife/Events Calendar/match.webp'
+import ram_mandir from '../../images/StudentLife/Events Calendar/ram_mandir.webp'
+import april from '../../images/StudentLife/Events Calendar/april.webp'
+import may from '../../images/StudentLife/Events Calendar/may.webp'
+import june from '../../images/StudentLife/Events Calendar/june.webp'
+import july from '../../images/StudentLife/Events Calendar/july.webp'
+import august from '../../images/StudentLife/Events Calendar/august.webp'
+import september from '../../images/StudentLife/Events Calendar/september.webp'
+import october from '../../images/StudentLife/Events Calendar/october.webp'
+import november from '../../images/StudentLife/Events Calendar/november.webp'
+import december from '../../images/StudentLife/Events Calendar/december.webp'
+
+
+
 
 export const eventcalander = [
     {
         id: 1,
         year: "2023",
-        title: 'Year of World Lose'
+        title: 'Year of World Lose',
+        bgimg: match
 
 
     },
@@ -11,13 +26,14 @@ export const eventcalander = [
         id: 2,
         year: "2024",
         title: 'Year of Ram Mandir',
+        bgimg: ram_mandir,
         months: [
             {
                 id: 1,
                 month: "April",
                 description: "Showers bring flowers, nature's rebirth and growth in abundance.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: april,
+                backimg: april,
                 specialDayDetails: [
                     {
                         id: 1,
@@ -50,8 +66,8 @@ export const eventcalander = [
                 id: 2,
                 month: "May",
                 description: "Blooms flourish, warmth returns and the outdoors beckon anew.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: may,
+                backimg: may,
                 specialDayDetails: [
                     {
                         id: 1,
@@ -84,8 +100,8 @@ export const eventcalander = [
                 id: 3,
                 month: "June",
                 description: "Summer arrival, sunshine and jouous moments under clear skies.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: june,
+                backimg: june,
                 specialDayDetails: [
                    
                 ]
@@ -94,8 +110,8 @@ export const eventcalander = [
                 id: 4,
                 month: "July",
                 description: "Independance celebrated, vacation and carefree summer vibes.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: july,
+                backimg: july,
                 specialDayDetails: [
                     {
                         id: 1,
@@ -118,8 +134,8 @@ export const eventcalander = [
                 id: 5,
                 month: "August",
                 description: "Heat peaks, holidays and last burst of summer advantures.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: august,
+                backimg: august,
                 specialDayDetails: [
                    {
                        id: 1,
@@ -172,8 +188,8 @@ export const eventcalander = [
                 id: 6,
                 month: "September",
                 description: "Autumn starts, a shift in colors and a gentle coolness.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: september,
+                backimg: september,
                 specialDayDetails: [
                     {
                         id: 1,
@@ -196,8 +212,8 @@ export const eventcalander = [
                 id: 7,
                 month: "October",
                 description: "Harvest season, crisp air and the beauty of changing landscapes.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: october,
+                backimg: october,
                 specialDayDetails: [
                     {
                         id: 1,
@@ -240,8 +256,8 @@ export const eventcalander = [
                 id: 8,
                 month: "November",
                 description: "Thanksgiving Gratitudd, cozy vibes and the approach of winter.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: november,
+                backimg: november,
                 specialDayDetails: [
                     {
                         id: 1,
@@ -279,8 +295,8 @@ export const eventcalander = [
                 id: 9,
                 month: "December",
                 description: "Festive cheer, winter magic and reflections on the year's end.",
-                // fontimg: font,
-                // backimg: Back,
+                fontimg: december,
+                backimg: december,
                 specialDayDetails: [
                     {
                         id: 1,

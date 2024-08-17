@@ -59,16 +59,11 @@ export const navData = [
         path: '/student-life/social-cultural&development'
       },
       { id: 35, title: 'Counselling', path: '/student-life/counselling' },
-  
       { id: 36, title: 'Achievements', path: '/student-life/achievements' },
       { id: 37, title: 'Events Calendar', path: '/student-life/events' },
       { id: 38, title: 'Toppers', path: '/student-life/toppers' },
       { id: 39, title: 'Cabinet', path: '/student-life/cabinet' },
-      {
-        id: 40,
-        title: 'Transfer Certificate',
-        path: '/studentlife/transfer-certificate'
-      }
+      {id: 40,title: 'Transfer Certificate',path: '/studentlife/transfer-certificate'}
     ]
   },
   {
@@ -76,10 +71,7 @@ export const navData = [
     title: 'News & Calendar',
     dropdown: [
       { id: 41, title: 'Student Hand Book', path: '/news&calendar/student-handbook' },
-      {
-        id: 42,
-        title: 'Newsletter/Scholars Times',
-        path: '/news&calendar/scholars-times'
+      {id: 42,title: 'Newsletter/Scholars Times',path: '/news&calendar/scholars-times'
       }
     ]
   },

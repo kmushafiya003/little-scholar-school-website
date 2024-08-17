@@ -1,18 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { FaArrowCircleDown } from 'react-icons/fa';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import { FaArrowCircleDown } from 'react-icons/fa'
 
-const Dynamic3dButton = ({ text1, text2, className, showIcon, hasLink, link , handler}) => {
+const Dynamic3dButton = ({
+  text1,
+  text2,
+  className,
+  showIcon,
+  hasLink,
+  link,
+  handler
+}) => {
   return (
-    <div className={`box-container w-full ${className}`} onClick={handler}>
+    <div className={`box-container w-full  ${className}`} onClick={handler}>
       <div className='p-2 box-item'>
-        <div className='flip-box'>
+        <div className='cursor-pointer flip-box'>
           <div className='text-center flip-box-front'>
             <div className='p-4 inner color-white'>
-              <h3 className='font-bold text-white flip-box-header'>
-                {text1}
-              </h3>
+              <h3 className='font-bold text-white flip-box-header'>{text1}</h3>
             </div>
           </div>
           <div className='flex text-center flip-box-back'>
@@ -32,8 +38,8 @@ const Dynamic3dButton = ({ text1, text2, className, showIcon, hasLink, link , ha
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 Dynamic3dButton.propTypes = {
   text1: PropTypes.string.isRequired,
@@ -41,14 +47,14 @@ Dynamic3dButton.propTypes = {
   className: PropTypes.string,
   showIcon: PropTypes.bool,
   hasLink: PropTypes.bool,
-  link: PropTypes.string,
-};
+  link: PropTypes.string
+}
 
 Dynamic3dButton.defaultProps = {
   className: '',
   showIcon: true,
   hasLink: false,
-  link: '#', // Default link to a placeholder
-};
+  link: '#'
+}
 
-export default Dynamic3dButton;
+export default Dynamic3dButton
