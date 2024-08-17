@@ -32,27 +32,31 @@ const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
-const Academics =lazy(()=>import('./components/student-life/academics/Academics.jsx'))
-const Sports =lazy(()=>import('./components/student-life/sports/Sports.jsx'))
+const Academics = lazy(() => import('./components/student-life/academics/Academics.jsx'))
+const Sports = lazy(() => import('./components/student-life/sports/Sports.jsx'))
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
-const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
+const EventCalendar = lazy(() => import('./components/student-life/events/EventCalander'))
 
 
 const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
-const BookList  = lazy(() => import('./components/MandatoryDisclosure/BookList.jsx'))
+const BookList = lazy(() => import('./components/MandatoryDisclosure/BookList.jsx'))
+
+const Contact = lazy(() => import ('./pages/Contact.jsx'))
+
+
 
 
 const App = () => {
 
   const location = useLocation();
 
-  useEffect(()=> {
-    
+  useEffect(() => {
+
     window.scrollTo({
       top: 10,
-    
-  });
+
+    });
 
   }, [location.pathname])
 
@@ -109,22 +113,30 @@ const App = () => {
 
           {/* -------------- Student Life ------------------ */}
 
-          <Route element={<StudentLife/>}>
-          <Route path='/student-life/academics' element={<Academics/>}/>
-          <Route path='/student-life/sports' element={<Sports/>}/>
-          <Route path='/student-life/achievements' element={<Achievements />} />
-          <Route path='/student-life/toppers' element={<Topper />} />
-          <Route path='/student-life/events' element={<EventCalendar />} />
-        
+          <Route element={<StudentLife />}>
+            <Route path='/student-life/academics' element={<Academics />} />
+            <Route path='/student-life/sports' element={<Sports />} />
+            <Route path='/student-life/achievements' element={<Achievements />} />
+            <Route path='/student-life/toppers' element={<Topper />} />
+            <Route path='/student-life/events' element={<EventCalendar />} />
+
           </Route>
 
 
-           {/* -------------- Mandatory Disclosure ------------------ */}
+          {/* -------------- Mandatory Disclosure ------------------ */}
 
-           <Route element={<MandatoryDisclosure/>}>
-          <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
-        
+          <Route element={<MandatoryDisclosure />}>
+            <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
+
           </Route>
+
+
+          {/* -------------- Contact Us  ------------------ */}
+
+          <Route path='/contact-us'  element={<Contact/>}/>
+
+      
+
 
 
         </Routes>

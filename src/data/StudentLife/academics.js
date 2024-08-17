@@ -267,7 +267,7 @@ export const academicsData = [
           teachers: [
             { name: "Ms. ANNANYA TIWARI", image: facultyImage25 },
             { name: "Ms. ASHA DHOUNDIYAL", image: facultyImage13 },
-            { name: "Ms. BABITA PUNETHA", image: facultyImage17 },,
+            { name: "Ms. BABITA PUNETHA", image: facultyImage17 },
             { name: "Ms. DIVYA ARORA", image: facultyImage14 },
             { name: "Ms. JSHLEEN ARORA", image: facultyImage10 },
             { name: "Mr. MALKEET SINGH", image: facultyImage46 },

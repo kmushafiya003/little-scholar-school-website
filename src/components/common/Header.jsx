@@ -9,7 +9,7 @@ const Header = ({ page }) => {
   //get the current location 
   const location = useLocation();
   const path = location.pathname.split("/");
-  const pathName = path[2];
+  const pathName = path.length === 3 ? path[2] : path[1];
 
 
 
