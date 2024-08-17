@@ -10,16 +10,18 @@ import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
 
+import PresentationTable from './components/student-life/Socio-Cultural-Development/PresentationTable.jsx';
+import ChampionshipTable from './components/student-life/Socio-Cultural-Development/ChampionshipTable.jsx';
 
 const Home = lazy(() => import('./pages/Home'));
 
 const About = lazy(() => import('./pages/About'));
-const FounderDesk = lazy(() => import('./components/About/AboutModal.jsx'));
-const PrincipalDesk = lazy(() => import('./components/About/PrincipalDesk.jsx'));
-const SchoolManagement = lazy(() => import('./components/About/SchoolManagement.jsx'));
-const ManagingCommittee = lazy(() => import('./components/About/ManagingCommittee.jsx'));
-const Principles = lazy(() => import('./components/About/Principles.jsx'));
-const Infragallery = lazy(() => import('./components/About/Infragallery.jsx'));
+const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'));
+const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk.jsx'));
+const SchoolManagement = lazy(() => import('./components/about/SchoolManagement.jsx'));
+const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee.jsx'));
+const Principles = lazy(() => import('./components/about/Principles.jsx'));
+const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'));
 
 
 const Admission = lazy(() => import('./pages/Admission'));
@@ -37,6 +39,7 @@ const Sports =lazy(()=>import('./components/student-life/sports/Sports.jsx'))
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
 const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
+
 
 
 const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
@@ -58,7 +61,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <ScrollText />
+      {/* <ScrollText /> */}
       {/* ------ Dynamic button with flip animation --------- */}
 
       {/* <Dynamic3dButton
@@ -76,52 +79,52 @@ const App = () => {
         showIcon={false} //Hide Icon
       /> */}
 
-      <Navbar />
+      {/* <Navbar />
 
       <Suspense fallback={<div> <Loading /> </div>}>
-        <Routes>
+        <Routes> */}
 
           {/* ------------ Home Page --------------- */}
-
-          <Route path='/' element={<Home />} />
+{/* 
+          <Route path='/' element={<Home />} /> */}
 
           {/* ------------ About Page --------------- */}
 
-          <Route element={<About />}>
+          {/* <Route element={<About />}>
             <Route path='/about-us/founder-desk' element={<FounderDesk />} />
             <Route path='/about-us/principal-desk' element={<PrincipalDesk />} />
             <Route path='/about-us/school-management' element={<SchoolManagement />} />
             <Route path='/about-us/managing-committee' element={<ManagingCommittee />} />
             <Route path='/about-us/principles&policies' element={<Principles />} />
             <Route path='/about-us/infrastructure' element={<Infragallery />} />
-          </Route>
+          </Route> */}
 
           {/* -------------- Admission Page ------------------ */}
 
-          <Route element={<Admission />}>
+          {/* <Route element={<Admission />}>
             <Route path='/admissions/admission-enquiry' element={<Helpdesk />} />
             <Route path='/admissions/admission-procedure' element={<AdmissionProcedure />} />
             <Route path='/admissions/registration' element={<Registration />} />
             <Route path='/admissions/fee-structure' element={<FeeStructure />} />
             <Route path='/admissions/school-timings' element={<SchoolTiming />} />
             <Route path='/admissions/faq' element={<FAQ />} />
-          </Route>
+          </Route> */}
 
           {/* -------------- Student Life ------------------ */}
 
-          <Route element={<StudentLife/>}>
+          {/* <Route element={<StudentLife/>}>
           <Route path='/student-life/academics' element={<Academics/>}/>
           <Route path='/student-life/sports' element={<Sports/>}/>
           <Route path='/student-life/achievements' element={<Achievements />} />
           <Route path='/student-life/toppers' element={<Topper />} />
           <Route path='/student-life/events' element={<EventCalendar />} />
         
-          </Route>
+          </Route> */}
 
 
            {/* -------------- Mandatory Disclosure ------------------ */}
 
-           <Route element={<MandatoryDisclosure/>}>
+           {/* <Route element={<MandatoryDisclosure/>}>
           <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
         
           </Route>
@@ -131,7 +134,10 @@ const App = () => {
       </Suspense>
 
       <ScrollTop />
-      <Footer />
+      <Footer /> */}
+
+
+      <PresentationTable/>
 
     </div>
   );
