@@ -18,9 +18,9 @@ const EventsCalendar = () => {
                 className={'w-full'}
                 text1={data.year}
                 text2={data.title}
-                // useBgImage={true}
-                // frontImage={data.frontImage}
-                // backImage={data.backImage}
+                useBgImage={true}
+                frontImage={data.bgimg}
+                backImage={data.bgimg}
               />
             ))}
           </div>

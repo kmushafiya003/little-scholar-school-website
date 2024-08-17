@@ -18,9 +18,9 @@ const EventMonths = () => {
                 text2={data.description}
                 className={'w-full'}
                 handlar={() => setEventMonth(data.month)}
-                // frontImage={data.frontImage}
-                // backImage={data.backImage}
-                // useBgImage={true}
+                frontImage={data.fontimg}
+                backImage={data.backimg}
+                useBgImage={true}
               />
             ))}
           </div>

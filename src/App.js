@@ -14,12 +14,12 @@ import ScrollTop from './components/common/ScrollTop';
 const Home = lazy(() => import('./pages/Home'));
 
 const About = lazy(() => import('./pages/About'));
-const FounderDesk = lazy(() => import('./components/About/AboutModal.jsx'));
-const PrincipalDesk = lazy(() => import('./components/About/PrincipalDesk.jsx'));
-const SchoolManagement = lazy(() => import('./components/About/SchoolManagement.jsx'));
-const ManagingCommittee = lazy(() => import('./components/About/ManagingCommittee.jsx'));
-const Principles = lazy(() => import('./components/About/Principles.jsx'));
-const Infragallery = lazy(() => import('./components/About/Infragallery.jsx'));
+const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'));
+const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk.jsx'));
+const SchoolManagement = lazy(() => import('./components/about/SchoolManagement.jsx'));
+const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee.jsx'));
+const Principles = lazy(() => import('./components/about/Principles.jsx'));
+const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'));
 
 
 const Admission = lazy(() => import('./pages/Admission'));
