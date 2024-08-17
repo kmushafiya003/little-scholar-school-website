@@ -71,7 +71,7 @@ function BookList() {
             <tr>
               <td className="p-4 border-2 border-border-grey" >6. Drawing Sketch book-1</td>
               <td className="p-4 border-2 border-border-grey" >7. Crayons colour box</td>
-              <td className="p-4 border-2 border-border-grey" >	8. Plastic Folder</td>
+              <td className="p-4 border-2 border-border-grey" >8. Plastic Folder</td>
               <td className="p-4 border-2 border-border-grey" >9. Scrapbook with colourful page-1</td>
               <td className="p-4 border-2 border-border-grey" >10. School Diary</td>
 
