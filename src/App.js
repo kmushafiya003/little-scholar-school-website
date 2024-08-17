@@ -49,7 +49,7 @@ const EventCalendar = lazy(() =>
 
 const NewsCalendar = lazy(() => import('./pages/NewsCalendar'))
 const ScholarTimes = lazy(() =>
-  import('./components/news&calendar/ScholarTimes')
+  import('./components/news&calendar/scholar/ScholarTimes.jsx')
 )
 
 const MandatoryDisclosure = lazy(() =>

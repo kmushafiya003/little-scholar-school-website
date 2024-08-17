@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { scholars } from '../../data/News&Calendar/scholars-time';
-import Dynamic3dButton from '../common/Dynamic3dButton';
+import { scholars } from '../../../data/News&Calendar/scholars-time';
+import Dynamic3dButton from '../../common/Dynamic3dButton';
 import ScholarMonths from './ScholarMonths';
 
 function ScholarTimes() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FlipCard from '../common/FlipCard';
+import FlipCard from '../../common/FlipCard';
 
 const ScholarMonths = ({ timetable }) => {
 
