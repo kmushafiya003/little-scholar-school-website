@@ -10,7 +10,8 @@ import ScrollText from './components/common/ScrollText'
 import Loading from './components/common/Loading'
 import ScrollTop from './components/common/ScrollTop'
 
-const Home = lazy(() => import('./pages/Home'))
+import PresentationTable from './components/student-life/Socio-Cultural-Development/PresentationTable.jsx';
+import ChampionshipTable from './components/student-life/Socio-Cultural-Development/ChampionshipTable.jsx';
 
 const About = lazy(() => import('./pages/About'))
 const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'))
@@ -99,7 +100,7 @@ const App = () => {
         }
       >
         <Routes>
-          {/* ------------ Home Page --------------- */}
+          {/* ------------ Home Page ---------------*/}
 
           <Route path='/' element={<Home />} />
 
@@ -147,7 +148,7 @@ const App = () => {
               element={<SchoolTiming />}
             />
             <Route path='/admissions/faq' element={<FAQ />} />
-          </Route>
+          </Route> 
 
           {/* -------------- Student Life ------------------ */}
 
