@@ -1,67 +1,77 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import './App.css';
-import './index.css';
-import Navbar from './components/common/Navbar';
-import Footer from './components/common/Footer';
-import ScrollText from './components/common/ScrollText';
-import Loading from './components/common/Loading';
-import ScrollTop from './components/common/ScrollTop';
+import React, { Suspense, lazy } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import './App.css'
+import './index.css'
+import Navbar from './components/common/Navbar'
+import Footer from './components/common/Footer'
+import ScrollText from './components/common/ScrollText'
+import Loading from './components/common/Loading'
+import ScrollTop from './components/common/ScrollTop'
 
 import PresentationTable from './components/student-life/Socio-Cultural-Development/PresentationTable.jsx';
 import ChampionshipTable from './components/student-life/Socio-Cultural-Development/ChampionshipTable.jsx';
 
-const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'))
+const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'))
+const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk.jsx'))
+const SchoolManagement = lazy(() =>
+  import('./components/about/SchoolManagement.jsx')
+)
+const ManagingCommittee = lazy(() =>
+  import('./components/about/ManagingCommittee.jsx')
+)
+const Principles = lazy(() => import('./components/about/Principles.jsx'))
+const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'))
 
-const About = lazy(() => import('./pages/About'));
-const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'));
-const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk.jsx'));
-const SchoolManagement = lazy(() => import('./components/about/SchoolManagement.jsx'));
-const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee.jsx'));
-const Principles = lazy(() => import('./components/about/Principles.jsx'));
-const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'));
+const Admission = lazy(() => import('./pages/Admission'))
+const Helpdesk = lazy(() => import('./components/adimission/Helpdesk'))
+const AdmissionProcedure = lazy(() =>
+  import('./components/adimission/AdmissionProcedure')
+)
+const Registration = lazy(() => import('./components/adimission/Registration'))
+const FeeStructure = lazy(() => import('./components/adimission/FeeStructure'))
+const SchoolTiming = lazy(() => import('./components/adimission/SchoolTiming'))
+const FAQ = lazy(() => import('./components/adimission/FQA'))
 
+const StudentLife = lazy(() => import('./pages/StudentLIfe'))
+const Academics = lazy(() =>
+  import('./components/student-life/academics/Academics.jsx')
+)
+const Sports = lazy(() => import('./components/student-life/sports/Sports.jsx'))
+const Achievements = lazy(() =>
+  import('./components/student-life/achievement/Achievement')
+)
+const Topper = lazy(() => import('./components/student-life/toppers/Topper'))
+const EventCalendar = lazy(() =>
+  import('./components/student-life/events/EventCalander')
+)
 
-const Admission = lazy(() => import('./pages/Admission'));
-const Helpdesk = lazy(() => import('./components/adimission/Helpdesk'));
-const AdmissionProcedure = lazy(() => import('./components/adimission/AdmissionProcedure'));
-const Registration = lazy(() => import('./components/adimission/Registration'));
-const FeeStructure = lazy(() => import('./components/adimission/FeeStructure'));
-const SchoolTiming = lazy(() => import('./components/adimission/SchoolTiming'));
-const FAQ = lazy(() => import('./components/adimission/FQA'));
+const NewsCalendar = lazy(() => import('./pages/NewsCalendar'))
+const ScholarTimes = lazy(() =>
+  import('./components/news&calendar/ScholarTimes')
+)
 
-
-const StudentLife = lazy(() => import('./pages/StudentLIfe'));
-const Academics =lazy(()=>import('./components/student-life/academics/Academics.jsx'))
-const Sports =lazy(()=>import('./components/student-life/sports/Sports.jsx'))
-const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
-const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
-const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
-
-
-
-const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
-const BookList  = lazy(() => import('./components/MandatoryDisclosure/BookList.jsx'))
-
+const MandatoryDisclosure = lazy(() =>
+  import('./pages/MandatoryDisclosure.jsx')
+)
+const BookList = lazy(() =>
+  import('./components/MandatoryDisclosure/BookList.jsx')
+)
 
 const App = () => {
+  const location = useLocation()
 
-  const location = useLocation();
-
-  useEffect(()=> {
-    
+  useEffect(() => {
     window.scrollTo({
-      top: 10,
-    
-  });
-
+      top: 10
+    })
   }, [location.pathname])
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      {/* <ScrollText /> */}
+    <div className='min-h-screen overflow-x-hidden'>
+      <ScrollText />
       {/* ------ Dynamic button with flip animation --------- */}
 
       {/* <Dynamic3dButton
@@ -79,68 +89,103 @@ const App = () => {
         showIcon={false} //Hide Icon
       /> */}
 
-      {/* <Navbar />
+      <Navbar />
 
-      <Suspense fallback={<div> <Loading /> </div>}>
-        <Routes> */}
+      <Suspense
+        fallback={
+          <div>
+            {' '}
+            <Loading />{' '}
+          </div>
+        }
+      >
+        <Routes>
+          {/* ------------ Home Page ---------------*/}
 
-          {/* ------------ Home Page --------------- */}
-{/* 
-          <Route path='/' element={<Home />} /> */}
+          <Route path='/' element={<Home />} />
 
           {/* ------------ About Page --------------- */}
 
-          {/* <Route element={<About />}>
+          <Route element={<About />}>
             <Route path='/about-us/founder-desk' element={<FounderDesk />} />
-            <Route path='/about-us/principal-desk' element={<PrincipalDesk />} />
-            <Route path='/about-us/school-management' element={<SchoolManagement />} />
-            <Route path='/about-us/managing-committee' element={<ManagingCommittee />} />
-            <Route path='/about-us/principles&policies' element={<Principles />} />
+            <Route
+              path='/about-us/principal-desk'
+              element={<PrincipalDesk />}
+            />
+            <Route
+              path='/about-us/school-management'
+              element={<SchoolManagement />}
+            />
+            <Route
+              path='/about-us/managing-committee'
+              element={<ManagingCommittee />}
+            />
+            <Route
+              path='/about-us/principles&policies'
+              element={<Principles />}
+            />
             <Route path='/about-us/infrastructure' element={<Infragallery />} />
-          </Route> */}
+          </Route>
 
           {/* -------------- Admission Page ------------------ */}
 
-          {/* <Route element={<Admission />}>
-            <Route path='/admissions/admission-enquiry' element={<Helpdesk />} />
-            <Route path='/admissions/admission-procedure' element={<AdmissionProcedure />} />
+          <Route element={<Admission />}>
+            <Route
+              path='/admissions/admission-enquiry'
+              element={<Helpdesk />}
+            />
+            <Route
+              path='/admissions/admission-procedure'
+              element={<AdmissionProcedure />}
+            />
             <Route path='/admissions/registration' element={<Registration />} />
-            <Route path='/admissions/fee-structure' element={<FeeStructure />} />
-            <Route path='/admissions/school-timings' element={<SchoolTiming />} />
+            <Route
+              path='/admissions/fee-structure'
+              element={<FeeStructure />}
+            />
+            <Route
+              path='/admissions/school-timings'
+              element={<SchoolTiming />}
+            />
             <Route path='/admissions/faq' element={<FAQ />} />
-          </Route> */}
+          </Route> 
 
           {/* -------------- Student Life ------------------ */}
 
-          {/* <Route element={<StudentLife/>}>
-          <Route path='/student-life/academics' element={<Academics/>}/>
-          <Route path='/student-life/sports' element={<Sports/>}/>
-          <Route path='/student-life/achievements' element={<Achievements />} />
-          <Route path='/student-life/toppers' element={<Topper />} />
-          <Route path='/student-life/events' element={<EventCalendar />} />
-        
-          </Route> */}
-
-
-           {/* -------------- Mandatory Disclosure ------------------ */}
-
-           {/* <Route element={<MandatoryDisclosure/>}>
-          <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
-        
+          <Route element={<StudentLife />}>
+            <Route path='/student-life/academics' element={<Academics />} />
+            <Route path='/student-life/sports' element={<Sports />} />
+            <Route
+              path='/student-life/achievements'
+              element={<Achievements />}
+            />
+            <Route path='/student-life/toppers' element={<Topper />} />
+            <Route path='/student-life/events' element={<EventCalendar />} />
           </Route>
 
+          {/* -------------- News & Calendar  ------------------ */}
+          <Route element={<NewsCalendar />}>
+            <Route
+              path='/news&calendar/scholars-times'
+              element={<ScholarTimes />}
+            />
+          </Route>
 
+          {/* -------------- Mandatory Disclosure ------------------ */}
+
+          <Route element={<MandatoryDisclosure />}>
+            <Route
+              path='/mandatory-disclosures/booklist'
+              element={<BookList />}
+            />
+          </Route>
         </Routes>
       </Suspense>
 
       <ScrollTop />
-      <Footer /> */}
-
-
-      <PresentationTable/>
-
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
