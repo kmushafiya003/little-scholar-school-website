@@ -11,7 +11,7 @@ const EventsCalendar = () => {
         {/* -------------year button--------------- */}
         {eventyear === '' && (
           <div className='grid w-10/12 grid-cols-1 gap-2 pt-20 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-            {eventcalander.map((data, index) => (
+            {eventcalander.map((data) => (
               <FlipCard
                 handlar={() => setEventYear(data.year)}
                 key={data.id}

@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import { FaArrowCircleDown } from 'react-icons/fa'
 
 const FlipCard = ({
   text1,
   text2,
   className,
   handlar,
+  showIcon,
+  hasLink,
+  link,
   frontImage,
   backImage,
   useBgImage
@@ -46,8 +51,15 @@ const FlipCard = ({
               }
             >
               <div className='flex items-center justify-center h-full inner color-white'>
-                <h3 className='flex items-center space-x-2 text-white flip-box-header'>
-                  {text2}
+                <h3 className='flex items-center gap-4 space-x-2 text-white flip-box-header'>
+                {showIcon && <FaArrowCircleDown className='text-red' />}
+                {hasLink ? (
+                  <Link to={link} className='text-lg text-white '>
+                    {text2}
+                  </Link>
+                ) : (
+                  text2
+                )}
                 </h3>
               </div>
             </div>
@@ -65,14 +77,21 @@ FlipCard.propTypes = {
   handlar: PropTypes.func,
   frontImage: PropTypes.string,
   backImage: PropTypes.string,
-  useBgImage: PropTypes.bool
+  useBgImage: PropTypes.bool,
+  showIcon: PropTypes.bool,
+  hasLink: PropTypes.bool,
+  link: PropTypes.string
 }
 
 FlipCard.defaultProps = {
   className: '',
   frontImage: '',
   backImage: '',
-  useBgImage: false
+  useBgImage: false,
+  showIcon: true,
+  hasLink: false,
+  link: '#',
+  
 }
 
 export default FlipCard
