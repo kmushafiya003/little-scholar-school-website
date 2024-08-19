@@ -50,11 +50,11 @@ Dynamic3dButton.propTypes = {
   link: PropTypes.string
 }
 
-Dynamic3dButton.defaultProps = {
-  className: '',
-  showIcon: true,
-  hasLink: false,
-  link: '#'
-}
+// Dynamic3dButton.defaultProps = {
+//   className: '',
+//   showIcon: true,
+//   hasLink: false,
+//   link: '#'
+// }
 
 export default Dynamic3dButton

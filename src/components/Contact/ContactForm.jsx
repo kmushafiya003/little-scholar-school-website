@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import { MdEmail } from 'react-icons/md';
 import { IoEarthOutline } from 'react-icons/io5';
-import { socialIcon } from '../data/Contact/contact-data';
+import { socialIcon } from '../../data/Contact/contact-data';
 
 const ContactForm = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -33,7 +33,7 @@ const ContactForm = () => {
   return (
     <section className='bg-off-white-bg'>
       {/* Container */}
-      <div className='w-10/12 py-20 mx-auto gap-y-12'>
+      <div className='xmd:w-10/12 md:w-11/12 xs:w-10/12 w-[93%] py-20 mx-auto gap-y-12'>
         {/* Top part (heading) */}
         <div className='flex flex-col items-center gap-y-2'>
           <h1 className='text-[40px] font-bold'>Contact Us</h1>
@@ -41,9 +41,9 @@ const ContactForm = () => {
         </div>
 
         {/* Bottom part (form section) */}
-        <div className='flex flex-col w-full gap-5 px-4 py-4 bg-white md:flex-row rounded-xl'>
+        <div className='flex flex-col w-full gap-5 xmd:px-4 px-2 py-4 bg-white md:flex-row rounded-xl mt-10'>
           {/* Contact part */}
-          <div className='flex flex-col gap-y-8 md:w-[42%] bg-bright-black text-white py-8 px-8 rounded-xl'>
+          <div className='flex flex-col gap-y-8 xmd:w-[42%] md:w-[45%] bg-bright-black text-white py-8 px-8 rounded-xl'>
             {/* Heading */}
             <div className='flex flex-col gap-y-3'>
               <p className='text-xl'>Happy to help!</p>
@@ -55,7 +55,7 @@ const ContactForm = () => {
             {/* Contact ways */}
             <div className='flex flex-col gap-y-8'>
               {/* Phone */}
-              <a href={`tel:${countryCode}${phoneNumber}`} className='flex items-center font-light gap-x-6 group'>
+              <a href={`tel:${countryCode}${phoneNumber}`} className='flex items-center font-light xmd:gap-x-6 gap-x-4 group'>
                 <span className='text-[24px] group-hover:rotate-[360deg] transition-all duration-500'>
                   <BiSolidPhoneCall />
                 </span>
@@ -63,7 +63,7 @@ const ContactForm = () => {
               </a>
 
               {/* Email */}
-              <a href={`mailto:${emailAddress}`} className='flex items-center font-light gap-x-6 group'>
+              <a href={`mailto:${emailAddress}`} className='flex items-center font-light xmd:gap-x-6 gap-x-4 group'>
                 <span className='text-[24px] group-hover:rotate-[360deg] transition-all duration-500'>
                   <MdEmail />
                 </span>
@@ -71,7 +71,7 @@ const ContactForm = () => {
               </a>
 
               {/* Address */}
-              <a className='flex items-center font-light gap-x-6 group' href={googleMapUrl} target='_blank' rel='noopener noreferrer'>
+              <a className='flex items-center font-light xmd:gap-x-6 gap-x-4 group' href={googleMapUrl} target='_blank' rel='noopener noreferrer'>
                 <span className='text-[24px] group-hover:rotate-[360deg] transition-all duration-500'>
                   <IoEarthOutline />
                 </span>
@@ -164,7 +164,7 @@ const ContactForm = () => {
                     {errors.subject && <span className='text-red-500'>Subject is required</span>}
                   </div>
                 </div>
-                <div className='mb-4'>
+                <div className='mt-6 mb-4'>
                   <label className='block text-gray-700'>Message</label>
                   <textarea
                     {...register('message', { required: true })}

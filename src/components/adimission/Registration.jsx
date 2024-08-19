@@ -23,7 +23,7 @@ const Registration = () => {
 
   const onSubmit = data => {
     console.log(data)
-    toast.success('Login Successful!', {
+    toast.success('Submitted Successful!', {
       position: 'top-center',
       autoClose: 4000
     })
