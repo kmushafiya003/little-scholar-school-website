@@ -15,7 +15,7 @@ const ScrollText = () => {
                     <div className="inline-block animate-marquee hover:pause-marquee">
 
                         {Array.from({ length: repeatCount }).map((_, index) => (
-                            <span key={index} className="inline-block mx-4 text-lg font-semibold text-white hover:underline">
+                            <span key={index} className="inline-block mx-4 text-lg font-semibold text-white cursor-pointer hover:underline">
                                 <FaBook className="inline mr-2" />
                                 {text}
                                 <FaBook className="inline ml-2" />

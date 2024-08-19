@@ -1,79 +1,55 @@
-// src/components/TopperAlbum/TopperAlbumTamplate.js
+import React, { useEffect } from 'react'
+import { useState } from 'react'
 
-import React from 'react';
+const TopperAlbumTamplate = ({ activeTab, topperData }) => {
+  const [topperList, setTopperList] = useState(topperData.toppers[0].students)
 
-// const tabData = [
-//   {
-//     std: "X",
-//     name: "Class 'X'",
-//     className: '10th Standard' // Corresponding description for filtering
-//   },
-//   {
-//     std: "XII",
-//     name: "Class 'XII'",
-//     className: '12th Standard' // Corresponding description for filtering
-//   }
-// ];
+  useEffect(() => {
+    const filterTopperData = topperData.toppers.filter(
+      item => item.std === activeTab
+    )
 
-const TopperAlbumTamplate = ({ activeTab, session  }) => {
-
-  
-  // const activeClass = tabData.find(tab => tab.name === activeTab)?.className;
-
-  const filterData = session
-  .filter(data => data.std === activeTab );
-
-
-  
+    setTopperList(filterTopperData[0].students)
+  }, [activeTab, topperData.toppers]) // without topperdata.toppers it shows warning thats why i added this
 
   return (
-    <section className='relative w-full'>
-      <div className='w-10/12 mx-auto'>
-        <div className='grid grid-cols-1 pt-3 mx-auto gap-y-6 gap-x-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
-          {/* { session ? session
-            .filter(data => data.desc === activeClass)
-            .map((data, index) => (
-              <div
-                key={index}
-                className='flex flex-col items-center transition duration-300 transform border border-none rounded-3xl shadow1 hover:scale-105'
-              >
-                <img
-                  src={data.image}
-                  alt={data.title}
-                  className='object-cover w-full h-[100%] mb-4 border border-black rounded-lg'
-                />
-                <h1 className='mt-2 text-lg font-semibold text-center'>
-                  {data.title}
-                </h1>
-                <p className='mt-1 text-center'>{data.percentage}</p>
-              </div>
-            ))  : ""
-          } */}
-
-         {
-         session ? filterData[0].class.map((data, index) => (
+    <div>
+      <div className='grid grid-cols-1 px-5 py-6 mx-auto border border-gray-200 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 mmd:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 gap-y-8 justify-items-center'>
+        {topperList.map((item, index) => (
           <div
             key={index}
-            className='flex flex-col items-center transition duration-300 transform border border-none rounded-3xl shadow1 hover:scale-105'
+            className='flex flex-col items-center transition-transform duration-300 gap-y-2 hover:scale-105'
           >
-            <img
-              src={data.image}
-              alt={data.title}
-              className='object-cover w-full h-[100%] mb-4 border border-black rounded-lg'
-            />
-            <h1 className='mt-2 text-lg font-semibold text-center'>
-              {data.title}
-            </h1>
-            <p className='mt-1 text-center'>{data.percentage}</p>
-          </div>
-        ))  : ""
-          
-         }
-          
-        </div>
-      </div>
-    </section>
-  );
-};
+            {/* --------- image -------- */}
 
-export default TopperAlbumTamplate;
+            <div className=' w-[170px] h-[200px]'>
+              <img
+                src={item.image}
+                alt={item.title}
+                className='object-cover w-full h-full border border-black rounded-md'
+              />
+            </div>
+
+            {/* -------- name -------- */}
+
+            <p className='text-lg font-semibold text-center uppercase text-resp-black-2'>
+              {item.title}
+            </p>
+
+            {/* ----------- stream and percentage---------- */}
+
+            <div className='flex items-center gap-x-2 text-resp-black-2'>
+              {activeTab === 'XII' && (
+                <span className='text-lg'>{item.stream}</span>
+              )}
+
+              <span>{item.percentage}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default TopperAlbumTamplate

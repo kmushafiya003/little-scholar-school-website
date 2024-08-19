@@ -3,19 +3,52 @@
 import React, { useState } from 'react';
 import Tabs from './Tabs';
 import TopperAlbumTamplate from './TopperAlbumTamplate';
-import { session_23_24 } from '../../../data/StudentLife/topper-data'; // Adjust the path to your data file
+import GoBackBtn from '../../common/GoBackBtn';
 
-const TopperSection = ({topperYear}) => {
-  
+
+const TopperSection = ({ topperYear, setTopperYear }) => {
+
+  const goBackHandler = () => {
+    setTopperYear(null);
+  }
+
+
   const [activeTab, setActiveTab] = useState('X')
 
   return (
-    <div className="w-full">
-    
-      <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      <TopperAlbumTamplate activeTab={activeTab} session ={session_23_24}  />
-    
-    </div>
+    <section className='relative w-full '>
+
+      {/* --------- container ---------- */}
+      <div className="flex flex-col w-10/12 pt-20 mx-auto xl:w-10/12 sm:w-11/12 pb-28 gap-y-8">
+
+        {/* ------ go back btn -------- */}
+
+        <GoBackBtn handler={goBackHandler} />
+
+
+        {/* ---------- Heading ----------- */}
+
+        <div className='flex flex-col gap-y-4 '>
+
+          <h1 className='uppercase text-[32px] font-semibold text-resp-black  '>Session <span>{topperYear.year}</span></h1>
+
+
+          {/* ----------- small underline ----------- */}
+          <div className='w-[75px] h-1 bg-black'></div>
+
+
+        </div>
+
+        <div>
+
+
+          <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+          <TopperAlbumTamplate activeTab={activeTab} topperData={topperYear} />
+        </div>
+
+      </div>
+
+    </section>
   );
 };
 

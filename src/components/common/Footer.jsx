@@ -62,7 +62,7 @@ const Footer = () => {
               <ul className='flex flex-col gap-y-3'>
                 {usefulLinks.map((link) => (
                   <li key={link.id} className='flex items-center mb-2'>
-                    <FaChevronRight className='mr-2 text-gray-400 text-dark-blue text-sm' />
+                    <FaChevronRight className='mr-2 text-dark-blue text-sm' />
                     <Link to={link.url} className='hover:text-white transition-colors duration-200'>
                       {link.name}
                     </Link>

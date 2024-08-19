@@ -72,12 +72,7 @@ module.exports = {
       },
 
      
-      fontWeight: {
-        light: 100,
-        regular: 400,
-        semibold: 600,
-        bold: 700,
-      },
+   
       borderWidth: {
         '0.2': '0.2px',
       },
