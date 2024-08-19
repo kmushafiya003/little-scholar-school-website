@@ -46,7 +46,7 @@ import lakshya from '../../images/StudentLife/Topper/XII-Student/LAKSHYA GOYAL.w
 
 
 
-export const year = [
+export const toppersOfYear = [
     {
         id : 1,
         year: "2023-24",
@@ -369,6 +369,7 @@ export const year = [
                         image: adityaS,
                         title: "ADITYA SINGH",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -788,6 +789,7 @@ export const year = [
                         image: adityaS,
                         title: "ADITYA SINGH",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -1207,6 +1209,7 @@ export const year = [
                         image: adityaS,
                         title: "ADITYA SINGH",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -1626,6 +1629,7 @@ export const year = [
                         image: adityaS,
                         title: "ADITYA SINGH",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -2045,6 +2049,7 @@ export const year = [
                         image: adityaS,
                         title: "ADITYA SINGH",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -2464,6 +2469,7 @@ export const year = [
                         image: adityaS,
                         title: "ADITYA SINGH",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -2883,6 +2889,7 @@ export const year = [
                         image: adityaS,
                         title: "ADITYA SINGH",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
