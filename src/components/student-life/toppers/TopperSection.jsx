@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Tabs from './Tabs';
 import TopperAlbumTamplate from './TopperAlbumTamplate';
-
 import GoBackBtn from '../../common/GoBackBtn';
 
 
@@ -17,10 +16,10 @@ const TopperSection = ({ topperYear, setTopperYear }) => {
   const [activeTab, setActiveTab] = useState('X')
 
   return (
-    <section className='w-full relative '>
+    <section className='relative w-full '>
 
       {/* --------- container ---------- */}
-      <div className="xl:w-10/12 sm:w-11/12 w-10/12 mx-auto  pt-20 pb-28 flex flex-col gap-y-8">
+      <div className="flex flex-col w-10/12 pt-20 mx-auto xl:w-10/12 sm:w-11/12 pb-28 gap-y-8">
 
         {/* ------ go back btn -------- */}
 
@@ -29,7 +28,7 @@ const TopperSection = ({ topperYear, setTopperYear }) => {
 
         {/* ---------- Heading ----------- */}
 
-        <div className='flex flex-col gap-y-4  '>
+        <div className='flex flex-col gap-y-4 '>
 
           <h1 className='uppercase text-[32px] font-semibold text-resp-black  '>Session <span>{topperYear.year}</span></h1>
 
