@@ -305,6 +305,7 @@ export const year = [
                         image: garv,
                         title: "Garv Bajaj",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -312,6 +313,7 @@ export const year = [
                         image: manshi,
                         title: "Manshi Belwal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -319,6 +321,7 @@ export const year = [
                         image: swati,
                         title: "Swati Arya",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "97.6%",
                     },
                     {
@@ -326,6 +329,7 @@ export const year = [
                         image: shifa,
                         title: "Shifa Khan",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.6%",
                     },
                     {
@@ -333,6 +337,7 @@ export const year = [
                         image: prajjwal,
                         title: "Prajwal Pant",
                         desc: "10th Standard",
+                        stream: "Commerce",
                         percentage: "96.4%",
                     },
                     {
@@ -340,6 +345,7 @@ export const year = [
                         image: lakshya,
                         title: "Lakshya Goyal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.2%",
                     },
                     {
@@ -347,6 +353,7 @@ export const year = [
                         image: isha,
                         title: "ISHA",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -354,6 +361,7 @@ export const year = [
                         image: sandhya,
                         title: "SANDHYA RAWAT",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -368,6 +376,7 @@ export const year = [
                         image: saksham,
                         title: "SAKSHAM AGARWAL",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -375,6 +384,7 @@ export const year = [
                         image: tazeem,
                         title: "TAZEEM KHAN",
                         desc: "12th Standard",
+                        stream: "Humanities",
                         percentage: "95.4%",
                     },
                     {
@@ -382,6 +392,7 @@ export const year = [
                         image: adityaY,
                         title: "ADITYA YADAV",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "95%",
                     },
                     {
@@ -389,6 +400,7 @@ export const year = [
                         image: kanishk,
                         title: "KANISHK UPADHYAY",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.8%",
                     },
                     {
@@ -396,6 +408,7 @@ export const year = [
                         image: jashndeep,
                         title: "JASHNDEEP SINGH",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -403,6 +416,7 @@ export const year = [
                         image: manvi,
                         title: "MANVI AGARWAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -410,6 +424,7 @@ export const year = [
                         image: shubh,
                         title: "SHUBH GOYAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94%",
                     },
                     {
@@ -417,6 +432,7 @@ export const year = [
                         image: nivedita,
                         title: "NIVEDITA CHAUHAN",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.8%",
                     },
                     {
@@ -424,6 +440,7 @@ export const year = [
                         image: pragya,
                         title: "PRAGYA GAHLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.4%",
                     },
                     {
@@ -431,6 +448,7 @@ export const year = [
                         image: daksh,
                         title: "DAKSH GAGLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93%",
                     },
                     {
@@ -438,107 +456,11 @@ export const year = [
                         image: nikhil,
                         title: "NIKHIL TIWARI",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "92.6%",
                     },
-                    {
-                        id: 21,
-                        image: somya,
-                        title: "SOMYA RAWAT",
-                        desc: "12th Standard",
-                        percentage: "92.4%",
-                    },
-                    {
-                        id: 22,
-                        image: diksha,
-                        title: "DIKSHA NEGI",
-                        desc: "12th Standard",
-                        percentage: "92.2%",
-                    },
-                    {
-                        id: 23,
-                        image: prachi,
-                        title: "PRACHI TRIPATHI",
-                        desc: "12th Standard",
-                        percentage: "90.8%",
-                    },
-                    {
-                        id: 24,
-                        image: prabhu,
-                        title: "PRABHU SANIDHYA",
-                        desc: "12th Standard",
-                        percentage: "90.6%",
-                    },
-                    {
-                        id: 25,
-                        image: abhivyakti,
-                        title: "ABHIVYAKTI",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 26,
-                        image: atulya,
-                        title: "ATULYA AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 27,
-                        image: ritika,
-                        title: "RITIKA RAJWAR",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 28,
-                        image: aakriti,
-                        title: "AAKRITI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 29,
-                        image: karan,
-                        title: "KARAN KUMAR",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 30,
-                        image: gurman,
-                        title: "GURMAN SINGH ANAND",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 31,
-                        image: nandini,
-                        title: "NANDINI SINGH",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 32,
-                        image: parth,
-                        title: "PARTH CHAUHAN",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 33,
-                        image: shrusti,
-                        title: "SHURSTI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 34,
-                        image: siddhi,
-                        title: "SIDDHI CHAUDHARY",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    }
-
+                    
+                     
                 ]
             },
 
@@ -802,6 +724,7 @@ export const year = [
                         image: garv,
                         title: "Garv Bajaj",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -809,6 +732,7 @@ export const year = [
                         image: manshi,
                         title: "Manshi Belwal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -816,6 +740,7 @@ export const year = [
                         image: swati,
                         title: "Swati Arya",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "97.6%",
                     },
                     {
@@ -823,6 +748,7 @@ export const year = [
                         image: shifa,
                         title: "Shifa Khan",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.6%",
                     },
                     {
@@ -830,6 +756,7 @@ export const year = [
                         image: prajjwal,
                         title: "Prajwal Pant",
                         desc: "10th Standard",
+                        stream: "Commerce",
                         percentage: "96.4%",
                     },
                     {
@@ -837,6 +764,7 @@ export const year = [
                         image: lakshya,
                         title: "Lakshya Goyal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.2%",
                     },
                     {
@@ -844,6 +772,7 @@ export const year = [
                         image: isha,
                         title: "ISHA",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -851,6 +780,7 @@ export const year = [
                         image: sandhya,
                         title: "SANDHYA RAWAT",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -865,6 +795,7 @@ export const year = [
                         image: saksham,
                         title: "SAKSHAM AGARWAL",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -872,6 +803,7 @@ export const year = [
                         image: tazeem,
                         title: "TAZEEM KHAN",
                         desc: "12th Standard",
+                        stream: "Humanities",
                         percentage: "95.4%",
                     },
                     {
@@ -879,6 +811,7 @@ export const year = [
                         image: adityaY,
                         title: "ADITYA YADAV",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "95%",
                     },
                     {
@@ -886,6 +819,7 @@ export const year = [
                         image: kanishk,
                         title: "KANISHK UPADHYAY",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.8%",
                     },
                     {
@@ -893,6 +827,7 @@ export const year = [
                         image: jashndeep,
                         title: "JASHNDEEP SINGH",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -900,6 +835,7 @@ export const year = [
                         image: manvi,
                         title: "MANVI AGARWAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -907,6 +843,7 @@ export const year = [
                         image: shubh,
                         title: "SHUBH GOYAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94%",
                     },
                     {
@@ -914,6 +851,7 @@ export const year = [
                         image: nivedita,
                         title: "NIVEDITA CHAUHAN",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.8%",
                     },
                     {
@@ -921,6 +859,7 @@ export const year = [
                         image: pragya,
                         title: "PRAGYA GAHLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.4%",
                     },
                     {
@@ -928,6 +867,7 @@ export const year = [
                         image: daksh,
                         title: "DAKSH GAGLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93%",
                     },
                     {
@@ -935,107 +875,11 @@ export const year = [
                         image: nikhil,
                         title: "NIKHIL TIWARI",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "92.6%",
                     },
-                    {
-                        id: 21,
-                        image: somya,
-                        title: "SOMYA RAWAT",
-                        desc: "12th Standard",
-                        percentage: "92.4%",
-                    },
-                    {
-                        id: 22,
-                        image: diksha,
-                        title: "DIKSHA NEGI",
-                        desc: "12th Standard",
-                        percentage: "92.2%",
-                    },
-                    {
-                        id: 23,
-                        image: prachi,
-                        title: "PRACHI TRIPATHI",
-                        desc: "12th Standard",
-                        percentage: "90.8%",
-                    },
-                    {
-                        id: 24,
-                        image: prabhu,
-                        title: "PRABHU SANIDHYA",
-                        desc: "12th Standard",
-                        percentage: "90.6%",
-                    },
-                    {
-                        id: 25,
-                        image: abhivyakti,
-                        title: "ABHIVYAKTI",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 26,
-                        image: atulya,
-                        title: "ATULYA AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 27,
-                        image: ritika,
-                        title: "RITIKA RAJWAR",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 28,
-                        image: aakriti,
-                        title: "AAKRITI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 29,
-                        image: karan,
-                        title: "KARAN KUMAR",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 30,
-                        image: gurman,
-                        title: "GURMAN SINGH ANAND",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 31,
-                        image: nandini,
-                        title: "NANDINI SINGH",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 32,
-                        image: parth,
-                        title: "PARTH CHAUHAN",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 33,
-                        image: shrusti,
-                        title: "SHURSTI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 34,
-                        image: siddhi,
-                        title: "SIDDHI CHAUDHARY",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    }
-
+                    
+                     
                 ]
             },
 
@@ -1299,6 +1143,7 @@ export const year = [
                         image: garv,
                         title: "Garv Bajaj",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -1306,6 +1151,7 @@ export const year = [
                         image: manshi,
                         title: "Manshi Belwal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -1313,6 +1159,7 @@ export const year = [
                         image: swati,
                         title: "Swati Arya",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "97.6%",
                     },
                     {
@@ -1320,6 +1167,7 @@ export const year = [
                         image: shifa,
                         title: "Shifa Khan",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.6%",
                     },
                     {
@@ -1327,6 +1175,7 @@ export const year = [
                         image: prajjwal,
                         title: "Prajwal Pant",
                         desc: "10th Standard",
+                        stream: "Commerce",
                         percentage: "96.4%",
                     },
                     {
@@ -1334,6 +1183,7 @@ export const year = [
                         image: lakshya,
                         title: "Lakshya Goyal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.2%",
                     },
                     {
@@ -1341,6 +1191,7 @@ export const year = [
                         image: isha,
                         title: "ISHA",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -1348,6 +1199,7 @@ export const year = [
                         image: sandhya,
                         title: "SANDHYA RAWAT",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -1362,6 +1214,7 @@ export const year = [
                         image: saksham,
                         title: "SAKSHAM AGARWAL",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -1369,6 +1222,7 @@ export const year = [
                         image: tazeem,
                         title: "TAZEEM KHAN",
                         desc: "12th Standard",
+                        stream: "Humanities",
                         percentage: "95.4%",
                     },
                     {
@@ -1376,6 +1230,7 @@ export const year = [
                         image: adityaY,
                         title: "ADITYA YADAV",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "95%",
                     },
                     {
@@ -1383,6 +1238,7 @@ export const year = [
                         image: kanishk,
                         title: "KANISHK UPADHYAY",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.8%",
                     },
                     {
@@ -1390,6 +1246,7 @@ export const year = [
                         image: jashndeep,
                         title: "JASHNDEEP SINGH",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -1397,6 +1254,7 @@ export const year = [
                         image: manvi,
                         title: "MANVI AGARWAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -1404,6 +1262,7 @@ export const year = [
                         image: shubh,
                         title: "SHUBH GOYAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94%",
                     },
                     {
@@ -1411,6 +1270,7 @@ export const year = [
                         image: nivedita,
                         title: "NIVEDITA CHAUHAN",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.8%",
                     },
                     {
@@ -1418,6 +1278,7 @@ export const year = [
                         image: pragya,
                         title: "PRAGYA GAHLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.4%",
                     },
                     {
@@ -1425,6 +1286,7 @@ export const year = [
                         image: daksh,
                         title: "DAKSH GAGLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93%",
                     },
                     {
@@ -1432,107 +1294,11 @@ export const year = [
                         image: nikhil,
                         title: "NIKHIL TIWARI",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "92.6%",
                     },
-                    {
-                        id: 21,
-                        image: somya,
-                        title: "SOMYA RAWAT",
-                        desc: "12th Standard",
-                        percentage: "92.4%",
-                    },
-                    {
-                        id: 22,
-                        image: diksha,
-                        title: "DIKSHA NEGI",
-                        desc: "12th Standard",
-                        percentage: "92.2%",
-                    },
-                    {
-                        id: 23,
-                        image: prachi,
-                        title: "PRACHI TRIPATHI",
-                        desc: "12th Standard",
-                        percentage: "90.8%",
-                    },
-                    {
-                        id: 24,
-                        image: prabhu,
-                        title: "PRABHU SANIDHYA",
-                        desc: "12th Standard",
-                        percentage: "90.6%",
-                    },
-                    {
-                        id: 25,
-                        image: abhivyakti,
-                        title: "ABHIVYAKTI",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 26,
-                        image: atulya,
-                        title: "ATULYA AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 27,
-                        image: ritika,
-                        title: "RITIKA RAJWAR",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 28,
-                        image: aakriti,
-                        title: "AAKRITI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 29,
-                        image: karan,
-                        title: "KARAN KUMAR",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 30,
-                        image: gurman,
-                        title: "GURMAN SINGH ANAND",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 31,
-                        image: nandini,
-                        title: "NANDINI SINGH",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 32,
-                        image: parth,
-                        title: "PARTH CHAUHAN",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 33,
-                        image: shrusti,
-                        title: "SHURSTI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 34,
-                        image: siddhi,
-                        title: "SIDDHI CHAUDHARY",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    }
-
+                    
+                     
                 ]
             },
 
@@ -1796,6 +1562,7 @@ export const year = [
                         image: garv,
                         title: "Garv Bajaj",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -1803,6 +1570,7 @@ export const year = [
                         image: manshi,
                         title: "Manshi Belwal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -1810,6 +1578,7 @@ export const year = [
                         image: swati,
                         title: "Swati Arya",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "97.6%",
                     },
                     {
@@ -1817,6 +1586,7 @@ export const year = [
                         image: shifa,
                         title: "Shifa Khan",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.6%",
                     },
                     {
@@ -1824,6 +1594,7 @@ export const year = [
                         image: prajjwal,
                         title: "Prajwal Pant",
                         desc: "10th Standard",
+                        stream: "Commerce",
                         percentage: "96.4%",
                     },
                     {
@@ -1831,6 +1602,7 @@ export const year = [
                         image: lakshya,
                         title: "Lakshya Goyal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.2%",
                     },
                     {
@@ -1838,6 +1610,7 @@ export const year = [
                         image: isha,
                         title: "ISHA",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -1845,6 +1618,7 @@ export const year = [
                         image: sandhya,
                         title: "SANDHYA RAWAT",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -1859,6 +1633,7 @@ export const year = [
                         image: saksham,
                         title: "SAKSHAM AGARWAL",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -1866,6 +1641,7 @@ export const year = [
                         image: tazeem,
                         title: "TAZEEM KHAN",
                         desc: "12th Standard",
+                        stream: "Humanities",
                         percentage: "95.4%",
                     },
                     {
@@ -1873,6 +1649,7 @@ export const year = [
                         image: adityaY,
                         title: "ADITYA YADAV",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "95%",
                     },
                     {
@@ -1880,6 +1657,7 @@ export const year = [
                         image: kanishk,
                         title: "KANISHK UPADHYAY",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.8%",
                     },
                     {
@@ -1887,6 +1665,7 @@ export const year = [
                         image: jashndeep,
                         title: "JASHNDEEP SINGH",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -1894,6 +1673,7 @@ export const year = [
                         image: manvi,
                         title: "MANVI AGARWAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -1901,6 +1681,7 @@ export const year = [
                         image: shubh,
                         title: "SHUBH GOYAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94%",
                     },
                     {
@@ -1908,6 +1689,7 @@ export const year = [
                         image: nivedita,
                         title: "NIVEDITA CHAUHAN",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.8%",
                     },
                     {
@@ -1915,6 +1697,7 @@ export const year = [
                         image: pragya,
                         title: "PRAGYA GAHLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.4%",
                     },
                     {
@@ -1922,6 +1705,7 @@ export const year = [
                         image: daksh,
                         title: "DAKSH GAGLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93%",
                     },
                     {
@@ -1929,107 +1713,11 @@ export const year = [
                         image: nikhil,
                         title: "NIKHIL TIWARI",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "92.6%",
                     },
-                    {
-                        id: 21,
-                        image: somya,
-                        title: "SOMYA RAWAT",
-                        desc: "12th Standard",
-                        percentage: "92.4%",
-                    },
-                    {
-                        id: 22,
-                        image: diksha,
-                        title: "DIKSHA NEGI",
-                        desc: "12th Standard",
-                        percentage: "92.2%",
-                    },
-                    {
-                        id: 23,
-                        image: prachi,
-                        title: "PRACHI TRIPATHI",
-                        desc: "12th Standard",
-                        percentage: "90.8%",
-                    },
-                    {
-                        id: 24,
-                        image: prabhu,
-                        title: "PRABHU SANIDHYA",
-                        desc: "12th Standard",
-                        percentage: "90.6%",
-                    },
-                    {
-                        id: 25,
-                        image: abhivyakti,
-                        title: "ABHIVYAKTI",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 26,
-                        image: atulya,
-                        title: "ATULYA AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 27,
-                        image: ritika,
-                        title: "RITIKA RAJWAR",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 28,
-                        image: aakriti,
-                        title: "AAKRITI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 29,
-                        image: karan,
-                        title: "KARAN KUMAR",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 30,
-                        image: gurman,
-                        title: "GURMAN SINGH ANAND",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 31,
-                        image: nandini,
-                        title: "NANDINI SINGH",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 32,
-                        image: parth,
-                        title: "PARTH CHAUHAN",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 33,
-                        image: shrusti,
-                        title: "SHURSTI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 34,
-                        image: siddhi,
-                        title: "SIDDHI CHAUDHARY",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    }
-
+                    
+                     
                 ]
             },
 
@@ -2293,6 +1981,7 @@ export const year = [
                         image: garv,
                         title: "Garv Bajaj",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -2300,6 +1989,7 @@ export const year = [
                         image: manshi,
                         title: "Manshi Belwal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -2307,6 +1997,7 @@ export const year = [
                         image: swati,
                         title: "Swati Arya",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "97.6%",
                     },
                     {
@@ -2314,6 +2005,7 @@ export const year = [
                         image: shifa,
                         title: "Shifa Khan",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.6%",
                     },
                     {
@@ -2321,6 +2013,7 @@ export const year = [
                         image: prajjwal,
                         title: "Prajwal Pant",
                         desc: "10th Standard",
+                        stream: "Commerce",
                         percentage: "96.4%",
                     },
                     {
@@ -2328,6 +2021,7 @@ export const year = [
                         image: lakshya,
                         title: "Lakshya Goyal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.2%",
                     },
                     {
@@ -2335,6 +2029,7 @@ export const year = [
                         image: isha,
                         title: "ISHA",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -2342,6 +2037,7 @@ export const year = [
                         image: sandhya,
                         title: "SANDHYA RAWAT",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -2356,6 +2052,7 @@ export const year = [
                         image: saksham,
                         title: "SAKSHAM AGARWAL",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -2363,6 +2060,7 @@ export const year = [
                         image: tazeem,
                         title: "TAZEEM KHAN",
                         desc: "12th Standard",
+                        stream: "Humanities",
                         percentage: "95.4%",
                     },
                     {
@@ -2370,6 +2068,7 @@ export const year = [
                         image: adityaY,
                         title: "ADITYA YADAV",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "95%",
                     },
                     {
@@ -2377,6 +2076,7 @@ export const year = [
                         image: kanishk,
                         title: "KANISHK UPADHYAY",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.8%",
                     },
                     {
@@ -2384,6 +2084,7 @@ export const year = [
                         image: jashndeep,
                         title: "JASHNDEEP SINGH",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -2391,6 +2092,7 @@ export const year = [
                         image: manvi,
                         title: "MANVI AGARWAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -2398,6 +2100,7 @@ export const year = [
                         image: shubh,
                         title: "SHUBH GOYAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94%",
                     },
                     {
@@ -2405,6 +2108,7 @@ export const year = [
                         image: nivedita,
                         title: "NIVEDITA CHAUHAN",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.8%",
                     },
                     {
@@ -2412,6 +2116,7 @@ export const year = [
                         image: pragya,
                         title: "PRAGYA GAHLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.4%",
                     },
                     {
@@ -2419,6 +2124,7 @@ export const year = [
                         image: daksh,
                         title: "DAKSH GAGLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93%",
                     },
                     {
@@ -2426,107 +2132,11 @@ export const year = [
                         image: nikhil,
                         title: "NIKHIL TIWARI",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "92.6%",
                     },
-                    {
-                        id: 21,
-                        image: somya,
-                        title: "SOMYA RAWAT",
-                        desc: "12th Standard",
-                        percentage: "92.4%",
-                    },
-                    {
-                        id: 22,
-                        image: diksha,
-                        title: "DIKSHA NEGI",
-                        desc: "12th Standard",
-                        percentage: "92.2%",
-                    },
-                    {
-                        id: 23,
-                        image: prachi,
-                        title: "PRACHI TRIPATHI",
-                        desc: "12th Standard",
-                        percentage: "90.8%",
-                    },
-                    {
-                        id: 24,
-                        image: prabhu,
-                        title: "PRABHU SANIDHYA",
-                        desc: "12th Standard",
-                        percentage: "90.6%",
-                    },
-                    {
-                        id: 25,
-                        image: abhivyakti,
-                        title: "ABHIVYAKTI",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 26,
-                        image: atulya,
-                        title: "ATULYA AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 27,
-                        image: ritika,
-                        title: "RITIKA RAJWAR",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 28,
-                        image: aakriti,
-                        title: "AAKRITI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 29,
-                        image: karan,
-                        title: "KARAN KUMAR",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 30,
-                        image: gurman,
-                        title: "GURMAN SINGH ANAND",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 31,
-                        image: nandini,
-                        title: "NANDINI SINGH",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 32,
-                        image: parth,
-                        title: "PARTH CHAUHAN",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 33,
-                        image: shrusti,
-                        title: "SHURSTI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 34,
-                        image: siddhi,
-                        title: "SIDDHI CHAUDHARY",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    }
-
+                    
+                     
                 ]
             },
 
@@ -2790,6 +2400,7 @@ export const year = [
                         image: garv,
                         title: "Garv Bajaj",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -2797,6 +2408,7 @@ export const year = [
                         image: manshi,
                         title: "Manshi Belwal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -2804,6 +2416,7 @@ export const year = [
                         image: swati,
                         title: "Swati Arya",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "97.6%",
                     },
                     {
@@ -2811,6 +2424,7 @@ export const year = [
                         image: shifa,
                         title: "Shifa Khan",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.6%",
                     },
                     {
@@ -2818,6 +2432,7 @@ export const year = [
                         image: prajjwal,
                         title: "Prajwal Pant",
                         desc: "10th Standard",
+                        stream: "Commerce",
                         percentage: "96.4%",
                     },
                     {
@@ -2825,6 +2440,7 @@ export const year = [
                         image: lakshya,
                         title: "Lakshya Goyal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.2%",
                     },
                     {
@@ -2832,6 +2448,7 @@ export const year = [
                         image: isha,
                         title: "ISHA",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -2839,6 +2456,7 @@ export const year = [
                         image: sandhya,
                         title: "SANDHYA RAWAT",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -2853,6 +2471,7 @@ export const year = [
                         image: saksham,
                         title: "SAKSHAM AGARWAL",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -2860,6 +2479,7 @@ export const year = [
                         image: tazeem,
                         title: "TAZEEM KHAN",
                         desc: "12th Standard",
+                        stream: "Humanities",
                         percentage: "95.4%",
                     },
                     {
@@ -2867,6 +2487,7 @@ export const year = [
                         image: adityaY,
                         title: "ADITYA YADAV",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "95%",
                     },
                     {
@@ -2874,6 +2495,7 @@ export const year = [
                         image: kanishk,
                         title: "KANISHK UPADHYAY",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.8%",
                     },
                     {
@@ -2881,6 +2503,7 @@ export const year = [
                         image: jashndeep,
                         title: "JASHNDEEP SINGH",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -2888,6 +2511,7 @@ export const year = [
                         image: manvi,
                         title: "MANVI AGARWAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -2895,6 +2519,7 @@ export const year = [
                         image: shubh,
                         title: "SHUBH GOYAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94%",
                     },
                     {
@@ -2902,6 +2527,7 @@ export const year = [
                         image: nivedita,
                         title: "NIVEDITA CHAUHAN",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.8%",
                     },
                     {
@@ -2909,6 +2535,7 @@ export const year = [
                         image: pragya,
                         title: "PRAGYA GAHLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.4%",
                     },
                     {
@@ -2916,6 +2543,7 @@ export const year = [
                         image: daksh,
                         title: "DAKSH GAGLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93%",
                     },
                     {
@@ -2923,107 +2551,11 @@ export const year = [
                         image: nikhil,
                         title: "NIKHIL TIWARI",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "92.6%",
                     },
-                    {
-                        id: 21,
-                        image: somya,
-                        title: "SOMYA RAWAT",
-                        desc: "12th Standard",
-                        percentage: "92.4%",
-                    },
-                    {
-                        id: 22,
-                        image: diksha,
-                        title: "DIKSHA NEGI",
-                        desc: "12th Standard",
-                        percentage: "92.2%",
-                    },
-                    {
-                        id: 23,
-                        image: prachi,
-                        title: "PRACHI TRIPATHI",
-                        desc: "12th Standard",
-                        percentage: "90.8%",
-                    },
-                    {
-                        id: 24,
-                        image: prabhu,
-                        title: "PRABHU SANIDHYA",
-                        desc: "12th Standard",
-                        percentage: "90.6%",
-                    },
-                    {
-                        id: 25,
-                        image: abhivyakti,
-                        title: "ABHIVYAKTI",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 26,
-                        image: atulya,
-                        title: "ATULYA AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 27,
-                        image: ritika,
-                        title: "RITIKA RAJWAR",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 28,
-                        image: aakriti,
-                        title: "AAKRITI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 29,
-                        image: karan,
-                        title: "KARAN KUMAR",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 30,
-                        image: gurman,
-                        title: "GURMAN SINGH ANAND",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 31,
-                        image: nandini,
-                        title: "NANDINI SINGH",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 32,
-                        image: parth,
-                        title: "PARTH CHAUHAN",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 33,
-                        image: shrusti,
-                        title: "SHURSTI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 34,
-                        image: siddhi,
-                        title: "SIDDHI CHAUDHARY",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    }
-
+                    
+                     
                 ]
             },
 
@@ -3287,6 +2819,7 @@ export const year = [
                         image: garv,
                         title: "Garv Bajaj",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -3294,6 +2827,7 @@ export const year = [
                         image: manshi,
                         title: "Manshi Belwal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "98.2%",
                     },
                     {
@@ -3301,6 +2835,7 @@ export const year = [
                         image: swati,
                         title: "Swati Arya",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "97.6%",
                     },
                     {
@@ -3308,6 +2843,7 @@ export const year = [
                         image: shifa,
                         title: "Shifa Khan",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.6%",
                     },
                     {
@@ -3315,6 +2851,7 @@ export const year = [
                         image: prajjwal,
                         title: "Prajwal Pant",
                         desc: "10th Standard",
+                        stream: "Commerce",
                         percentage: "96.4%",
                     },
                     {
@@ -3322,6 +2859,7 @@ export const year = [
                         image: lakshya,
                         title: "Lakshya Goyal",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "96.2%",
                     },
                     {
@@ -3329,6 +2867,7 @@ export const year = [
                         image: isha,
                         title: "ISHA",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -3336,6 +2875,7 @@ export const year = [
                         image: sandhya,
                         title: "SANDHYA RAWAT",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.6%",
                     },
                     {
@@ -3350,6 +2890,7 @@ export const year = [
                         image: saksham,
                         title: "SAKSHAM AGARWAL",
                         desc: "12th Standard",
+                        stream: "Commerce",
                         percentage: "95.4%",
                     },
                     {
@@ -3357,6 +2898,7 @@ export const year = [
                         image: tazeem,
                         title: "TAZEEM KHAN",
                         desc: "12th Standard",
+                        stream: "Humanities",
                         percentage: "95.4%",
                     },
                     {
@@ -3364,6 +2906,7 @@ export const year = [
                         image: adityaY,
                         title: "ADITYA YADAV",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "95%",
                     },
                     {
@@ -3371,6 +2914,7 @@ export const year = [
                         image: kanishk,
                         title: "KANISHK UPADHYAY",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.8%",
                     },
                     {
@@ -3378,6 +2922,7 @@ export const year = [
                         image: jashndeep,
                         title: "JASHNDEEP SINGH",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -3385,6 +2930,7 @@ export const year = [
                         image: manvi,
                         title: "MANVI AGARWAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94.6%",
                     },
                     {
@@ -3392,6 +2938,7 @@ export const year = [
                         image: shubh,
                         title: "SHUBH GOYAL",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "94%",
                     },
                     {
@@ -3399,6 +2946,7 @@ export const year = [
                         image: nivedita,
                         title: "NIVEDITA CHAUHAN",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.8%",
                     },
                     {
@@ -3406,6 +2954,7 @@ export const year = [
                         image: pragya,
                         title: "PRAGYA GAHLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93.4%",
                     },
                     {
@@ -3413,6 +2962,7 @@ export const year = [
                         image: daksh,
                         title: "DAKSH GAGLOT",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "93%",
                     },
                     {
@@ -3420,107 +2970,11 @@ export const year = [
                         image: nikhil,
                         title: "NIKHIL TIWARI",
                         desc: "12th Standard",
+                        stream: "Science",
                         percentage: "92.6%",
                     },
-                    {
-                        id: 21,
-                        image: somya,
-                        title: "SOMYA RAWAT",
-                        desc: "12th Standard",
-                        percentage: "92.4%",
-                    },
-                    {
-                        id: 22,
-                        image: diksha,
-                        title: "DIKSHA NEGI",
-                        desc: "12th Standard",
-                        percentage: "92.2%",
-                    },
-                    {
-                        id: 23,
-                        image: prachi,
-                        title: "PRACHI TRIPATHI",
-                        desc: "12th Standard",
-                        percentage: "90.8%",
-                    },
-                    {
-                        id: 24,
-                        image: prabhu,
-                        title: "PRABHU SANIDHYA",
-                        desc: "12th Standard",
-                        percentage: "90.6%",
-                    },
-                    {
-                        id: 25,
-                        image: abhivyakti,
-                        title: "ABHIVYAKTI",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 26,
-                        image: atulya,
-                        title: "ATULYA AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 27,
-                        image: ritika,
-                        title: "RITIKA RAJWAR",
-                        desc: "12th Standard",
-                        percentage: "90.4%",
-                    },
-                    {
-                        id: 28,
-                        image: aakriti,
-                        title: "AAKRITI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 29,
-                        image: karan,
-                        title: "KARAN KUMAR",
-                        desc: "12th Standard",
-                        percentage: "90.2%",
-                    },
-                    {
-                        id: 30,
-                        image: gurman,
-                        title: "GURMAN SINGH ANAND",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 31,
-                        image: nandini,
-                        title: "NANDINI SINGH",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 32,
-                        image: parth,
-                        title: "PARTH CHAUHAN",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 33,
-                        image: shrusti,
-                        title: "SHURSTI AGARWAL",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    },
-                    {
-                        id: 34,
-                        image: siddhi,
-                        title: "SIDDHI CHAUDHARY",
-                        desc: "12th Standard",
-                        percentage: "90%",
-                    }
-
+                    
+                     
                 ]
             },
 
@@ -3529,498 +2983,3 @@ export const year = [
 ]
 
 
-export const session_23_24 = [
-    {
-        id: 1,
-        std: 'X',
-        title: "10th Standard",
-        class: [
-            {
-                id: 1,
-                image: aarna,
-                title: "AARNA",
-                year: "2023 - 24",
-                desc: "10th Standard",
-                percentage: "98.2%",
-            },
-            {
-                id: 2,
-                image: ansh,
-                title: "ANSH AGARWAL",
-                desc: "10th Standard",
-                percentage: "98.2%",
-            },
-            {
-                id: 3,
-                image: pranjali,
-                title: "PRANJALI JOSHI",
-                desc: "10th Standard",
-                percentage: "97.6%",
-            },
-            {
-                id: 4,
-                image: aditi,
-                title: "ADITI SUYAL",
-                desc: "10th Standard",
-                percentage: "96.6%",
-            },
-            {
-                id: 5,
-                image: parneet,
-                title: "PARNEET KAUR",
-                desc: "10th Standard",
-                percentage: "96.4%",
-            },
-            {
-                id: 6,
-                image: sonakashi,
-                title: "SONAKASHI JOSHI",
-                desc: "10th Standard",
-                percentage: "96.2%",
-            },
-            {
-                id: 7,
-                image: isha,
-                title: "ISHA",
-                desc: "10th Standard",
-                percentage: "95.6%",
-            },
-            {
-                id: 8,
-                image: sandhya,
-                title: "SANDHYA RAWAT",
-                desc: "10th Standard",
-                percentage: "95.6%",
-            },
-            {
-                id: 9,
-                image: adityaS,
-                title: "ADITYA SINGH",
-                desc: "10th Standard",
-                percentage: "95.4%",
-            },
-            {
-                id: 10,
-                image: saksham,
-                title: "SAKSHAM AGARWAL",
-                desc: "10th Standard",
-                percentage: "95.4%",
-            },
-            {
-                id: 11,
-                image: tazeem,
-                title: "TAZEEM KHAN",
-                desc: "10th Standard",
-                percentage: "95.4%",
-            },
-            {
-                id: 12,
-                image: adityaY,
-                title: "ADITYA YADAV",
-                desc: "10th Standard",
-                percentage: "95%",
-            },
-            {
-                id: 13,
-                image: kanishk,
-                title: "KANISHK UPADHYAY",
-                desc: "10th Standard",
-                percentage: "94.8%",
-            },
-            {
-                id: 14,
-                image: jashndeep,
-                title: "JASHNDEEP SINGH",
-                desc: "10th Standard",
-                percentage: "94.6%",
-            },
-            {
-                id: 15,
-                image: manvi,
-                title: "MANVI AGARWAL",
-                desc: "10th Standard",
-                percentage: "94.6%",
-            },
-            {
-                id: 16,
-                image: shubh,
-                title: "SHUBH GOYAL",
-                desc: "10th Standard",
-                percentage: "94%",
-            },
-            {
-                id: 17,
-                image: nivedita,
-                title: "NIVEDITA CHAUHAN",
-                desc: "10th Standard",
-                percentage: "93.8%",
-            },
-            {
-                id: 18,
-                image: pragya,
-                title: "PRAGYA GAHLOT",
-                desc: "10th Standard",
-                percentage: "93.4%",
-            },
-            {
-                id: 19,
-                image: daksh,
-                title: "DAKSH GAGLOT",
-                desc: "10th Standard",
-                percentage: "93%",
-            },
-            {
-                id: 20,
-                image: nikhil,
-                title: "NIKHIL TIWARI",
-                desc: "10th Standard",
-                percentage: "92.6%",
-            },
-            {
-                id: 21,
-                image: somya,
-                title: "SOMYA RAWAT",
-                desc: "10th Standard",
-                percentage: "92.4%",
-            },
-            {
-                id: 22,
-                image: diksha,
-                title: "DIKSHA NEGI",
-                desc: "10th Standard",
-                percentage: "92.2%",
-            },
-            {
-                id: 23,
-                image: prachi,
-                title: "PRACHI TRIPATHI",
-                desc: "10th Standard",
-                percentage: "90.8%",
-            },
-            {
-                id: 24,
-                image: prabhu,
-                title: "PRABHU SANIDHYA",
-                desc: "10th Standard",
-                percentage: "90.6%",
-            },
-            {
-                id: 25,
-                image: abhivyakti,
-                title: "ABHIVYAKTI",
-                desc: "10th Standard",
-                percentage: "90.4%",
-            },
-            {
-                id: 26,
-                image: atulya,
-                title: "ATULYA AGARWAL",
-                desc: "10th Standard",
-                percentage: "90.4%",
-            },
-            {
-                id: 27,
-                image: ritika,
-                title: "RITIKA RAJWAR",
-                desc: "10th Standard",
-                percentage: "90.4%",
-            },
-            {
-                id: 28,
-                image: aakriti,
-                title: "AAKRITI AGARWAL",
-                desc: "10th Standard",
-                percentage: "90.2%",
-            },
-            {
-                id: 29,
-                image: karan,
-                title: "KARAN KUMAR",
-                desc: "10th Standard",
-                percentage: "90.2%",
-            },
-            {
-                id: 30,
-                image: gurman,
-                title: "GURMAN SINGH ANAND",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 31,
-                image: nandini,
-                title: "NANDINI SINGH",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 32,
-                image: parth,
-                title: "PARTH CHAUHAN",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 33,
-                image: shrusti,
-                title: "SHURSTI AGARWAL",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 34,
-                image: siddhi,
-                title: "SIDDHI CHAUDHARY",
-                desc: "10th Standard",
-                percentage: "90%",
-            }
-        ]
-        
-    },
-    {
-        id: 2,
-        std: 'XII',
-        title: "12th Standard",
-        class: [
-            {
-                id: 1,
-                image: aarna,
-                title: "Aparna",
-                year: "2023 - 24",
-                desc: "10th Standard",
-                percentage: "98.2%",
-            },
-            {
-                id: 2,
-                image: ansh,
-                title: "ANSH AGARWAL",
-                desc: "10th Standard",
-                percentage: "98.2%",
-            },
-            {
-                id: 3,
-                image: pranjali,
-                title: "PRANJALI JOSHI",
-                desc: "10th Standard",
-                percentage: "97.6%",
-            },
-            {
-                id: 4,
-                image: aditi,
-                title: "ADITI SUYAL",
-                desc: "10th Standard",
-                percentage: "96.6%",
-            },
-            {
-                id: 5,
-                image: parneet,
-                title: "PARNEET KAUR",
-                desc: "10th Standard",
-                percentage: "96.4%",
-            },
-            {
-                id: 6,
-                image: sonakashi,
-                title: "SONAKASHI JOSHI",
-                desc: "10th Standard",
-                percentage: "96.2%",
-            },
-            {
-                id: 7,
-                image: isha,
-                title: "ISHA",
-                desc: "10th Standard",
-                percentage: "95.6%",
-            },
-            {
-                id: 8,
-                image: sandhya,
-                title: "SANDHYA RAWAT",
-                desc: "10th Standard",
-                percentage: "95.6%",
-            },
-            {
-                id: 9,
-                image: adityaS,
-                title: "ADITYA SINGH",
-                desc: "10th Standard",
-                percentage: "95.4%",
-            },
-            {
-                id: 10,
-                image: saksham,
-                title: "SAKSHAM AGARWAL",
-                desc: "10th Standard",
-                percentage: "95.4%",
-            },
-            {
-                id: 11,
-                image: tazeem,
-                title: "TAZEEM KHAN",
-                desc: "10th Standard",
-                percentage: "95.4%",
-            },
-            {
-                id: 12,
-                image: adityaY,
-                title: "ADITYA YADAV",
-                desc: "10th Standard",
-                percentage: "95%",
-            },
-            {
-                id: 13,
-                image: kanishk,
-                title: "KANISHK UPADHYAY",
-                desc: "10th Standard",
-                percentage: "94.8%",
-            },
-            {
-                id: 14,
-                image: jashndeep,
-                title: "JASHNDEEP SINGH",
-                desc: "10th Standard",
-                percentage: "94.6%",
-            },
-            {
-                id: 15,
-                image: manvi,
-                title: "MANVI AGARWAL",
-                desc: "10th Standard",
-                percentage: "94.6%",
-            },
-            {
-                id: 16,
-                image: shubh,
-                title: "SHUBH GOYAL",
-                desc: "10th Standard",
-                percentage: "94%",
-            },
-            {
-                id: 17,
-                image: nivedita,
-                title: "NIVEDITA CHAUHAN",
-                desc: "10th Standard",
-                percentage: "93.8%",
-            },
-            {
-                id: 18,
-                image: pragya,
-                title: "PRAGYA GAHLOT",
-                desc: "10th Standard",
-                percentage: "93.4%",
-            },
-            {
-                id: 19,
-                image: daksh,
-                title: "DAKSH GAGLOT",
-                desc: "10th Standard",
-                percentage: "93%",
-            },
-            {
-                id: 20,
-                image: nikhil,
-                title: "NIKHIL TIWARI",
-                desc: "10th Standard",
-                percentage: "92.6%",
-            },
-            {
-                id: 21,
-                image: somya,
-                title: "SOMYA RAWAT",
-                desc: "10th Standard",
-                percentage: "92.4%",
-            },
-            {
-                id: 22,
-                image: diksha,
-                title: "DIKSHA NEGI",
-                desc: "10th Standard",
-                percentage: "92.2%",
-            },
-            {
-                id: 23,
-                image: prachi,
-                title: "PRACHI TRIPATHI",
-                desc: "10th Standard",
-                percentage: "90.8%",
-            },
-            {
-                id: 24,
-                image: prabhu,
-                title: "PRABHU SANIDHYA",
-                desc: "10th Standard",
-                percentage: "90.6%",
-            },
-            {
-                id: 25,
-                image: abhivyakti,
-                title: "ABHIVYAKTI",
-                desc: "10th Standard",
-                percentage: "90.4%",
-            },
-            {
-                id: 26,
-                image: atulya,
-                title: "ATULYA AGARWAL",
-                desc: "10th Standard",
-                percentage: "90.4%",
-            },
-            {
-                id: 27,
-                image: ritika,
-                title: "RITIKA RAJWAR",
-                desc: "10th Standard",
-                percentage: "90.4%",
-            },
-            {
-                id: 28,
-                image: aakriti,
-                title: "AAKRITI AGARWAL",
-                desc: "10th Standard",
-                percentage: "90.2%",
-            },
-            {
-                id: 29,
-                image: karan,
-                title: "KARAN KUMAR",
-                desc: "10th Standard",
-                percentage: "90.2%",
-            },
-            {
-                id: 30,
-                image: gurman,
-                title: "GURMAN SINGH ANAND",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 31,
-                image: nandini,
-                title: "NANDINI SINGH",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 32,
-                image: parth,
-                title: "PARTH CHAUHAN",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 33,
-                image: shrusti,
-                title: "SHURSTI AGARWAL",
-                desc: "10th Standard",
-                percentage: "90%",
-            },
-            {
-                id: 34,
-                image: siddhi,
-                title: "SIDDHI CHAUDHARY",
-                desc: "10th Standard",
-                percentage: "90%",
-            }
-        ]
-    }
-]
