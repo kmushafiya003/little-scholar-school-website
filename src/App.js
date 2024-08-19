@@ -9,8 +9,11 @@ import Footer from './components/common/Footer'
 import ScrollText from './components/common/ScrollText'
 import Loading from './components/common/Loading'
 import ScrollTop from './components/common/ScrollTop'
+// import SummerCampConsentForm from './components/news&calendar/student/SummerCamp.jsx'
+// import SummerCampConsentForm2 from './components/news&calendar/student/SummerCamp2.jsx'
 
 const Home = lazy(() => import('./pages/Home'))
+
 
 const About = lazy(() => import('./pages/About'))
 const FounderDesk = lazy(() => import('./components/about/FounderDesk.jsx'))
@@ -187,6 +190,11 @@ const App = () => {
         </Routes>
       </Suspense>
 
+
+
+
+    {/* <SummerCampConsentForm/>
+    <SummerCampConsentForm2/> */}
       <ScrollTop />
       <Footer />
     </div>

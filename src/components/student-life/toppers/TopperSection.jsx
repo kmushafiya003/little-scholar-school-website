@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import Tabs from './Tabs';
-import TopperAlbumTamplate from './TopperAlbumTamplate';
-import { session_23_24 } from '../../../data/StudentLife/topper-data'; // Adjust the path to your data file
+// import TopperAlbumTamplate from './TopperAlbumTamplate';
+// import { session_23_24 } from '../../../data/StudentLife/topper-data'; // Adjust the path to your data file
 
 const TopperSection = ({topperYear}) => {
   
@@ -13,7 +13,7 @@ const TopperSection = ({topperYear}) => {
     <div className="w-full">
     
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      <TopperAlbumTamplate activeTab={activeTab} session ={session_23_24}  />
+      {/* <TopperAlbumTamplate activeTab={activeTab} session ={session_23_24}  /> */}
     
     </div>
   );
