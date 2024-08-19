@@ -1,24 +1,38 @@
-/* Swiper container style */
-.swiper-container {
-    position: relative;
-  }
-  
-  /* Swiper button style */
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #000; /* Button color */
-  }
-  
-  /* Contract button size on hover */
-  .swiper-container:hover .swiper-button-next,
-  .swiper-container:hover .swiper-button-prev {
-    transform: scale(0.7); /* Contract button size */
-    transition: transform 0.3s;
-  }
-  
-  /* Expand button size on hover */
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    transform: scale(1); /* Expand button size on hover */
-  }
-  
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-prev,
+.swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.swiper-prev {
+  left: 0px;
+}
+
+.swiper-next {
+  right: 0px;
+}
+
+.swiper-slide:hover .swiper-prev {
+  transform: translate(100%, -50%);
+}
+
+.swiper-slide:hover .swiper-next {
+  transform: translate(-100%, -50%);
+}
+
+.swiper-prev:hover,
+.swiper-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}

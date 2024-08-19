@@ -11,6 +11,7 @@ import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
 
 
+
 const Home = lazy(() => import('./pages/Home'));
 
 const About = lazy(() => import('./pages/About'));
@@ -33,6 +34,7 @@ const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
 const Academics =lazy(()=>import('./components/student-life/academics/Academics.jsx'))
+const Cocurricular=lazy(()=>import('./components/student-life/co-curricular/Cocurricular.jsx'))
 const Sports =lazy(()=>import('./components/student-life/sports/Sports.jsx'))
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
@@ -112,6 +114,7 @@ const App = () => {
           <Route element={<StudentLife/>}>
           <Route path='/student-life/academics' element={<Academics/>}/>
           <Route path='/student-life/sports' element={<Sports/>}/>
+          <Route path='/student-life/co-curricular' element={<Cocurricular/>}/>
           <Route path='/student-life/achievements' element={<Achievements />} />
           <Route path='/student-life/toppers' element={<Topper />} />
           <Route path='/student-life/events' element={<EventCalendar />} />

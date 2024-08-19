@@ -60,7 +60,7 @@ const Principles = () => {
         </div>
 
         {/* Main content area */}
-        <div className='w-full md:mx-auto 2xl:w-full scroll-smooth scrollbar-none'>
+        <div className='w-3/4 p-4 overflow-y-auto'>
           {principlesData.map((section, index) => (
             <div
               key={index}
@@ -123,13 +123,13 @@ const SectionCard = ({ section }) => {
           </p>
         ))
       ) : (
-        <p className='mb-4 text-gray-700'>{section.paragraph}</p>
+        <p className='mb-4 text-lg font-[300]'>{section.paragraph}</p>
       )}
 
       {section.section === 'House System' && (
         <div className='mt-4 font-open-sans'>
           {/* Tabs for Year Selector */}
-          <div className='tabs flex relative border-b-0.2 border-gray-300 bg-white'>
+          <div className='tabs flex  relative border-b-0.2 border-gray-300 bg-white'>
             <button
               onClick={() => setSelectedYear('2017-18')}
               className={`px-4 py-2 border-gray-300 hover:rounded-tl-lg hover:rounded-tr-lg hover:border hover:border-b-0 hover:border-gray-300 ${

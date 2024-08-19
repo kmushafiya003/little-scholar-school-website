@@ -125,10 +125,10 @@ const ImageSlider = ({
         </Swiper>
 
         <button className={`owl-next ${hovered ? "arrow-animate-next" : ""}`}>
-          <FaAngleRight className="text-2xl icon" />
+          <FaAngleRight className="text-3xl icon" />
         </button>
         <button className={`owl-prev ${hovered ? "arrow-animate-prev" : ""}`}>
-          <FaAngleLeft className="text-2xl icon" />
+          <FaAngleLeft className="text-3xl icon" />
         </button>
       </div>
     </section>
