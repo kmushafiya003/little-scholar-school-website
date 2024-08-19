@@ -25,7 +25,7 @@ function Topper () {
                 text1=''
                 text2={data.year}
                 className='scale-card'
-                hasLink={true}
+                hasLink={false}
                 handler={() => setTopperYear(data)}
                 link='/'
                 showIcon={false}

@@ -38,7 +38,7 @@ const StudentLife = lazy(() => import('./pages/StudentLIfe'))
 const Academics = lazy(() =>
   import('./components/student-life/academics/Academics.jsx')
 )
-const Sports = lazy(() => import('./components/student-life/sports/Sports.jsx'))
+const Sports = lazy(() => import('./components/student-life/sports/Sports'))
 const Achievements = lazy(() =>
   import('./components/student-life/achievement/Achievement')
 )
@@ -46,6 +46,7 @@ const Topper = lazy(() => import('./components/student-life/toppers/Topper'))
 const EventCalendar = lazy(() =>
   import('./components/student-life/events/EventCalander')
 )
+const Cabinet = lazy(() => import('./components/student-life/cabinet/CabinetYear'))
 
 const NewsCalendar = lazy(() => import('./pages/NewsCalendar'))
 const ScholarTimes = lazy(() =>
@@ -161,6 +162,7 @@ const App = () => {
             />
             <Route path='/student-life/toppers' element={<Topper />} />
             <Route path='/student-life/events' element={<EventCalendar />} />
+            <Route path='/student-life/cabinet' element={<Cabinet />} />
           </Route>
           {/* -------------- News & Calendar  ------------------ */}
           <Route element={<NewsCalendar />}>
