@@ -16,10 +16,10 @@ const FlipCard = ({
   useBgImage
 }) => {
   return (
-    <div className={`w-full relative ${className}`} onClick={handlar}>
+    <div className={`w-full relative  ${className}`} onClick={handlar}>
       <div className='box-container md:w-full sm:w-full dxs:-inset-1'>
         <div className='box-item'>
-          <div className='flip-box'>
+          <div className='cursor-pointer flip-box'>
             <div
               className='text-center flip-box-front'
               style={

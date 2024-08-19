@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp, IoMdClose, IoMdMenu } from "react-icons/io";
 import { navData } from '../../data/common/navbar-links';
 import logo from '../../assets/logo.webp';
@@ -123,18 +123,26 @@ const Navbar = () => {
                     onMouseLeave={() => handleMouseLeave('dropdown')}
                   >
                     {/* Main Navigation Link */}
-                    <p
+                    {
+                      navItem.dropdown ? (
+                        <p
                      
-                      className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
-                      ${navItem.dropdown && activeDropdown === navItem.id ? 'bg-[rgb(32,44,69)] text-white' : 'hover:bg-[rgb(32,44,69)] hover:text-white'}`}
-                    >
-                      {navItem.title}
-                      {navItem.dropdown && <span className='mt-2 ml-1'><IoIosArrowDown /></span>}
-                    </p>
+                        className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
+                        ${navItem.dropdown && activeDropdown === navItem.id ? 'bg-[rgb(32,44,69)] text-white' : 'hover:bg-[rgb(32,44,69)] hover:text-white'}`}
+                      >
+                        {navItem.title}
+                        {navItem.dropdown && <span className='mt-2 ml-1'><IoIosArrowDown /></span>}
+                      </p>
+  
 
+                      ) : (
+                        <Link to={navItem.path} className='flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer hover:bg-dark-blue hover:text-white'> {navItem.title}</Link>
+                      )
+                    }
+                   
                     {/* Dropdown Menu */}
                     {navItem.dropdown && (
-                      <ul className={`absolute left-0 mt-6 z-10 w-60 border-[rgb(6,4,4)] border-t-4 text-black bg-white 
+                      <ul className={`absolute left-0 mt-6 z-20 w-60 border-[rgb(6,4,4)] border-t-4 text-black bg-white 
                         ${activeDropdown === navItem.id ? 'block opacity-100' : 'hidden opacity-0'}`}>
                         {navItem.dropdown.map((submenuItem) => (
                           <li

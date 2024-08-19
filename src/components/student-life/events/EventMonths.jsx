@@ -21,6 +21,7 @@ const EventMonths = () => {
                 frontImage={data.fontimg}
                 backImage={data.backimg}
                 useBgImage={true}
+                showIcon={false}
               />
             ))}
           </div>

@@ -13,9 +13,9 @@ const Dynamic3dButton = ({
   handler
 }) => {
   return (
-    <div className={`box-container w-full ${className}`} onClick={handler}>
+    <div className={`box-container w-full  ${className}`} onClick={handler}>
       <div className='p-2 box-item'>
-        <div className='flip-box'>
+        <div className='cursor-pointer flip-box'>
           <div className='text-center flip-box-front'>
             <div className='p-4 inner color-white'>
               <h3 className='font-bold text-white flip-box-header'>{text1}</h3>
@@ -50,11 +50,11 @@ Dynamic3dButton.propTypes = {
   link: PropTypes.string
 }
 
-Dynamic3dButton.defaultProps = {
-  className: '',
-  showIcon: true,
-  hasLink: false,
-  link: '#'
-}
+// Dynamic3dButton.defaultProps = {
+//   className: '',
+//   showIcon: true,
+//   hasLink: false,
+//   link: '#'
+// }
 
 export default Dynamic3dButton

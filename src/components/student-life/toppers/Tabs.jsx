@@ -19,13 +19,13 @@ const Tabs = ({ activeTab, setActiveTab }) => {
   };
 
   return (
-    <section className='relative w-full'>
-      <div className="flex w-10/12 mx-auto border-b border-gray-200">
-      {tabData.map((tab) => (
+    
+      <div className="flex w-full  border-b border-gray-200 mt-4">
+      {tabData.map((tab , index) => (
         <button
-          key={tab.name}
-          className={`px-4 py-2 rounded-t-lg focus:outline-none ${
-            activeTab === tab.name ? 'border border-b-0 border-gray-200 bg-white text-gray-900' : 'text-gray-500'
+          key={index}
+          className={`px-4 py-2 rounded-t-lg focus:outline-none  cursor-pointer font-light ${
+            activeTab === tab.std ? 'border border-b-0 border-gray-200 bg-white text-gray-900' : 'text-gray-500'
           }`}
           onClick={() => handleTabClick(tab.std)}
         >
@@ -33,7 +33,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
         </button>
       ))}
     </div>
-    </section>
+    
   );
 };
 

@@ -10,12 +10,12 @@ import ScrollText from './components/common/ScrollText'
 import Loading from './components/common/Loading'
 import ScrollTop from './components/common/ScrollTop'
 
-// import PresentationTable from './components/student-life/Socio-Cultural-Development/PresentationTable.jsx';
-import ChampionshipForm from './components/student-life/Socio-Cultural-Development/ChampionshipForm.jsx';
-import ChampionshipTable from './components/student-life/Socio-Cultural-Development/ChampionshipTable.jsx'
-const Home = lazy(() => import('./pages/Home'));
+
+const Home = lazy(() => import('./pages/Home'))
+
+
 const About = lazy(() => import('./pages/About'))
-const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'))
+const FounderDesk = lazy(() => import('./components/about/FounderDesk.jsx'))
 const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk.jsx'))
 const SchoolManagement = lazy(() =>
   import('./components/about/SchoolManagement.jsx')
@@ -40,7 +40,7 @@ const StudentLife = lazy(() => import('./pages/StudentLIfe'))
 const Academics = lazy(() =>
   import('./components/student-life/academics/Academics.jsx')
 )
-const Sports = lazy(() => import('./components/student-life/sports/Sports.jsx'))
+const Sports = lazy(() => import('./components/student-life/sports/Sports'))
 const Achievements = lazy(() =>
   import('./components/student-life/achievement/Achievement')
 )
@@ -48,10 +48,11 @@ const Topper = lazy(() => import('./components/student-life/toppers/Topper'))
 const EventCalendar = lazy(() =>
   import('./components/student-life/events/EventCalander')
 )
+const Cabinet = lazy(() => import('./components/student-life/cabinet/CabinetYear'))
 
 const NewsCalendar = lazy(() => import('./pages/NewsCalendar'))
 const ScholarTimes = lazy(() =>
-  import('./components/news&calendar/scholar/ScholarTimes.jsx')
+  import('./components/news&calendar/scholar/ScholarTimes')
 )
 
 const MandatoryDisclosure = lazy(() =>
@@ -60,6 +61,8 @@ const MandatoryDisclosure = lazy(() =>
 const BookList = lazy(() =>
   import('./components/MandatoryDisclosure/BookList.jsx')
 )
+
+const Contact = lazy(() => import('./pages/Contact.jsx'))
 
 const App = () => {
   const location = useLocation()
@@ -91,7 +94,6 @@ const App = () => {
       /> */}
 
       <Navbar />
-
       <Suspense
         fallback={
           <div>
@@ -101,7 +103,7 @@ const App = () => {
         }
       >
         <Routes>
-          {/* ------------ Home Page ---------------*/}
+          {/* ------------ Home Page --------------- */}
 
           <Route path='/' element={<Home />} />
 
@@ -149,7 +151,7 @@ const App = () => {
               element={<SchoolTiming />}
             />
             <Route path='/admissions/faq' element={<FAQ />} />
-          </Route> 
+          </Route>
 
           {/* -------------- Student Life ------------------ */}
 
@@ -162,8 +164,8 @@ const App = () => {
             />
             <Route path='/student-life/toppers' element={<Topper />} />
             <Route path='/student-life/events' element={<EventCalendar />} />
+            <Route path='/student-life/cabinet' element={<Cabinet />} />
           </Route>
-
           {/* -------------- News & Calendar  ------------------ */}
           <Route element={<NewsCalendar />}>
             <Route
@@ -180,8 +182,16 @@ const App = () => {
               element={<BookList />}
             />
           </Route>
+
+          {/* -------------- Contact Us  ------------------ */}
+
+          <Route path='/contact-us' element={<Contact />} />
         </Routes>
       </Suspense>
+
+
+
+
 
       <ScrollTop />
       <Footer />

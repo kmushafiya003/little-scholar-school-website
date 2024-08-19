@@ -100,11 +100,7 @@ export const navData = [
   {
     id: 6,
     title: 'Contact Us',
-    dropdown: [
-      { id: 61, title: 'Reach Us', path: '/contact-us/reach-us' },
-      { id: 62, title: 'Career', path: '/contact-us/career' },
-      { id: 63, title: 'Guest Book', path: '/contact-us/guest-book' }
-    ]
+    path: '/contact-us'
   },
   {
     id: 7,
