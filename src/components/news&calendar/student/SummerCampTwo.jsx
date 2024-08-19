@@ -4,9 +4,9 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Fieldset } from '@headlessui/react'
 import { Field } from '@headlessui/react'
-import swim from '../../../images/News&Calendar/swim.webp'
+import summer from '../../../images/News&Calendar/summercamp.webp'
 
-const SummerCampConsentForm2 = () => {
+const SummerCampTwo = () => {
   const {
     register,
     handleSubmit,
@@ -28,10 +28,16 @@ const SummerCampConsentForm2 = () => {
 
   return (
     <section className='relative w-full'>
-      <div className='grid w-10/12 grid-cols-1 gap-20 mx-auto xxl:grid-cols-2'>
-        <img src={swim} alt='Summer Camp' />
-        <div className='max-w-2xl p-6 mx-auto border-[3.5px] rounded-lg shadow-md'>
-          <div className='p-10 border-[3.5px] border-black rounded-md pt-10'>
+      <div className='grid grid-cols-1 mx-auto mb-20 lg:gap-14 lg:w-10/12 lg:pt-20 lg:grid-cols-2 dxs:pt-2 dxs:w-11/12 dxs:gap-1'>
+        <div className='flex justify-center lg:pt-20 dxs:pt-10'>
+          <img
+            src={summer}
+            alt=''
+            className='w-fit border-2 h-[75%] rounded-xl'
+          />
+        </div>
+        <div className='lg:p-6 mx-auto border-[3.5px] rounded-lg shadow-md w-full dxs:p-5'>
+          <div className='p-10 border-[3.5px] border-black rounded-md'>
             <h2 className='mb-1 font-semibold text-[1.5rem]'>
               SUMMER CAMP CONSENT
             </h2>
@@ -45,7 +51,7 @@ const SummerCampConsentForm2 = () => {
 
             {showForm ? (
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className='grid grid-cols-1 gap-12 mb-10 md:grid-cols-2'>
+                <div className='grid grid-cols-1 gap-10 mb-10 md:grid-cols-2'>
                   <div>
                     <input
                       type='text'
@@ -229,7 +235,7 @@ const SummerCampConsentForm2 = () => {
                 </p>
                 <button
                   onClick={handleAnotherForm}
-                  className='px-12 py-4 mt-4 text-sm font-medium leading-4 text-white border border-transparent rounded-full shadow-sm bg-dark-blue hover:bg-white hover:text-black hover:border-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                  className='py-12 mt-4 text-sm font-medium leading-4 text-white border border-transparent rounded-full shadow-sm px-44 bg-dark-blue hover:bg-white hover:text-black hover:border-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Fill another form
                 </button>
@@ -243,4 +249,4 @@ const SummerCampConsentForm2 = () => {
   )
 }
 
-export default SummerCampConsentForm2
+export default SummerCampTwo

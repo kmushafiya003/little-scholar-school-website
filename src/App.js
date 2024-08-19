@@ -9,8 +9,8 @@ import Footer from './components/common/Footer'
 import ScrollText from './components/common/ScrollText'
 import Loading from './components/common/Loading'
 import ScrollTop from './components/common/ScrollTop'
-// import SummerCampConsentForm from './components/news&calendar/student/SummerCamp.jsx'
-// import SummerCampConsentForm2 from './components/news&calendar/student/SummerCamp2.jsx'
+import SummerCampTwo from './components/news&calendar/student/SummerCampTwo.jsx'
+
 
 const Home = lazy(() => import('./pages/Home'))
 
@@ -77,24 +77,8 @@ const App = () => {
   return (
     <div className='min-h-screen overflow-x-hidden'>
       <ScrollText />
-      {/* ------ Dynamic button with flip animation --------- */}
-
-      {/* <Dynamic3dButton
-        text1="Front Text - Flip"
-        text2="Back Text - Flip"
-        className="flip-card"
-        showIcon={true} //Show Icon
-      /> */}
-
-      {/* ------ Dynamic button with scale animation --------- */}
-
-      {/* <Dynamic3dButton
-        text1="Front Text - Scale"
-        className="scale-card"
-        showIcon={false} //Hide Icon
-      /> */}
-
       <Navbar />
+    <SummerCampTwo/>
       <Suspense
         fallback={
           <div>
