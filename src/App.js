@@ -11,7 +11,8 @@ import Loading from './components/common/Loading'
 import ScrollTop from './components/common/ScrollTop'
 
 // import PresentationTable from './components/student-life/Socio-Cultural-Development/PresentationTable.jsx';
-// import ChampionshipTable from './components/student-life/Socio-Cultural-Development/ChampionshipTable.jsx';
+import ChampionshipForm from './components/student-life/Socio-Cultural-Development/ChampionshipForm.jsx';
+import ChampionshipTable from './components/student-life/Socio-Cultural-Development/ChampionshipTable.jsx'
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'))
 const FounderDesk = lazy(() => import('./components/about/AboutModal.jsx'))
@@ -184,6 +185,8 @@ const App = () => {
 
       <ScrollTop />
       <Footer />
+
+     
     </div>
   )
 }
