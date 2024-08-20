@@ -1,5 +1,5 @@
 import React from 'react';
-import { footerData } from '../../data/Home/footer-data';
+import { footerData } from '../../data/common/footer-data';
 import { Link } from 'react-router-dom';
 import { FaChevronRight } from 'react-icons/fa';
 
@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className='relative w-full pt-20 pb-10 bg-bright-black text-dark-light-black'>
+      <div className='relative w-full pt-20 pb-10 bg-bright-black text-dark-light-black '>
         <div className='w-10/12 mx-auto'>
           <div className='container grid grid-cols-1 gap-8 mx-auto md:grid-cols-4'>
             <div className='flex flex-col items-center md:items-start'>
@@ -39,9 +39,9 @@ const Footer = () => {
             </div>
             <div>
               <h3 className='mb-6 text-[1.5rem] border-b-[3px] border-border-2 border-opacity-25 pb-5'>Birthdays</h3>
-              <ul className='flex flex-col gap-y-3'>
+              <ul className='flex flex-col gap-y-3 h-[250px] overflow-y-scroll'>
                 {birthdays.map((birthday) => (
-                  <li key={birthday.id} className='mb-4'>
+                  <li key={birthday.id} className='mb-4 '>
                     <div className='flex'>
                       <img
                         src={birthday.image}

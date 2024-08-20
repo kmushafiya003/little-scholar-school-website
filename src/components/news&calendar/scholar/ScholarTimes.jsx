@@ -4,7 +4,7 @@ import Dynamic3dButton from '../../common/Dynamic3dButton';
 import ScholarMonths from './ScholarMonths';
 
 function ScholarTimes() {
-    const [scholartime, setScholarTiime] = useState(null);
+    const [scholartime, setScholarTime] = useState(null);
 
     return (
         <section className='relative w-full'>
@@ -19,14 +19,14 @@ function ScholarTimes() {
                                 text2=''
                                 className='scale-card'
                                 hasLink={false}
-                                handler={() => setScholarTiime(data)} // Pass the entire data object
+                                handler={() => setScholarTime(data)} // Pass the entire data object
                                 showIcon={false}
                             />
                         ))}
                     </div>
                 )}
                 {/* ---------------Scholar Time Details--------------- */}
-                {scholartime && <ScholarMonths timetable={scholartime.timetable} />} {/* Pass timetable array */}
+                {scholartime && <ScholarMonths timetable={scholartime.timetable} setScholarTime={setScholarTime} />} {/* Pass timetable array */}
             </div>
         </section>
     );

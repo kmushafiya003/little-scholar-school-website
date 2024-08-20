@@ -28,7 +28,7 @@ function CabinetYear () {
             </div>
         )
       }
-      {cabinetYear && <CabinetStudent cabinetYear={cabinetYear} />}
+      {cabinetYear && <CabinetStudent cabinetYear={cabinetYear} setCabinetYear={setCabinetYear} />}
       
       </div>
     </section>
