@@ -53,6 +53,12 @@ const NewsCalendar = lazy(()=> import('./pages/NewsCalendar.jsx'))
 const StudentHandBook = lazy(() => import('./components/news&calendar/StudentHandbook.jsx'));
 const ScholarTimes = lazy(() => import('./components/news&calendar/scholar/ScholarTimes.jsx'));
 
+// ----------- students (for summer camp) --------------
+
+const Students = lazy(()=> import('./pages/Students.jsx'));
+const SummerCampConsent = lazy(()=> import('./components/news&calendar/student/SummerCampConsent.jsx'));
+const SummerCamp = lazy(() => import('./components/news&calendar/student/SummerCamp.jsx'))
+
 
 // ------------ Mandatory Disclosure ----------
 const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
@@ -129,6 +135,17 @@ const App = () => {
           <Route path='/news&calendar/student-handbook' element={<StudentHandBook/>}/>
           <Route path='/news&calendar/scholars-times' element={<ScholarTimes/>}/>
           </Route>
+
+
+          {/* ------------------- Students ( for summer camp -----------) */}
+
+          <Route element={<Students/>}>
+
+          <Route path='/summer-consent-form' element={<SummerCampConsent/>}/>
+          <Route path='/summer-camp-form' element={<SummerCamp/>}/>
+
+          </Route>
+
 
            
 

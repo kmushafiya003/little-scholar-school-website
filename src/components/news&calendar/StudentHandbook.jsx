@@ -8,7 +8,7 @@ const StudentHandbook = () => {
 
             {/* ----------- container -------------- */}
 
-            <div className='w-10/12 mx-auto border border-red flex flex-col gap-y-16 py-6'>
+            <div className='w-10/12 mx-auto flex flex-col gap-y-16 py-6'>
 
                 {/* --------------------- upper part ------------------- */}
 
@@ -66,7 +66,7 @@ const StudentHandbook = () => {
                                 <tr className='hover:bg-light-grey transition-all duration-300' >
                                     <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>1</td>
                                     <td className='border border-light-grey py-3 px-4 text-left text-resp-black '>Summer Camp Consent</td>
-                                    <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '><Link className='flex items-center gap-x-2 cursor-pointer arrow-container' >
+                                    <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '><Link to="/summer-consent-form" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
                                     <span className='text-red arrow-icon'><FaCircleRight /></span>
                                     <span className='text-lg font-semibold text-resp-black'>fill</span>
                                     </Link></td>
@@ -75,7 +75,7 @@ const StudentHandbook = () => {
                                 <tr className='hover:bg-light-grey transition-all duration-300' >
                                     <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>2</td>
                                     <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>Summer Camp (open for all)</td>
-                                    <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><Link className='flex items-center gap-x-2 cursor-pointer arrow-container' >
+                                    <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><Link to="/summer-camp-form" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
                                     <span className='text-red arrow-icon'><FaCircleRight /></span>
                                     <span className='text-lg font-semibold text-resp-black'>fill</span>
                                     </Link></td>
