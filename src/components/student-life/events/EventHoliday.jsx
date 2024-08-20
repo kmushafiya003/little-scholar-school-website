@@ -1,17 +1,24 @@
 import React from 'react'
 import { eventcalander } from '../../../data/StudentLife/events'
 import { FaPlusCircle } from 'react-icons/fa'
+import GoBackBtn from '../../common/GoBackBtn'
 
-const EventHoliday = ({ eventMonth }) => {
+const EventHoliday = ({ eventMonth, setEventMonth }) => {
   // Find the event calendar for the year you're interested in
   const selectedEvent = eventcalander[1] // Assuming you're focusing on the second event in the array
   const selectedMonth = selectedEvent.months.find(
     month => month.month === eventMonth
   )
 
+  const goBackHandler = () => {
+    setEventMonth(null)
+  }
   return (
     <section className='relative w-full'>
-      <div className='w-10/12 pt-20 pb-10 mx-auto'>
+      <div className='pb-10 '>
+        <div className='mb-10'>
+          <GoBackBtn handler={goBackHandler} />
+        </div>
         {selectedMonth &&
           selectedMonth.specialDayDetails.map((data, index) => (
             <div

@@ -1,9 +1,16 @@
 import React from 'react'
+import GoBackBtn from '../../common/GoBackBtn';
 
-function CabinetStudent ({ cabinetYear }) {
+function CabinetStudent ({ cabinetYear, setCabinetYear }) {
+  const goBackHandler = () => {
+    setCabinetYear(null);
+  }
+
   return (
-    <section className='relative w-full'>
-      <div className='grid grid-cols-1 pt-20 mx-auto mb-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-6'>
+    <section className='relative w-full pt-20'>
+       <GoBackBtn handler={goBackHandler} />
+      <div className='grid grid-cols-1 mx-auto mb-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-6'>
+     
         {cabinetYear.pictures.map((data, index) => (
           <div
             key={index}
