@@ -46,6 +46,7 @@ const Sports =lazy(()=>import('./components/student-life/sports/Sports.jsx'))
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
 const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
+const Cabinet = lazy(()=> import('./components/student-life/cabinet/CabinetYear.jsx'))
 
 // -------------- News & Calendar ---------------
 
@@ -123,8 +124,9 @@ const App = () => {
           <Route path='/student-life/sports' element={<Sports/>}/>
           <Route path='/student-life/co-curricular' element={<Cocurricular/>}/>
           <Route path='/student-life/achievements' element={<Achievements />} />
-          <Route path='/student-life/toppers' element={<Topper />} />
           <Route path='/student-life/events' element={<EventCalendar />} />
+          <Route path='/student-life/toppers' element={<Topper />} />
+          <Route path='/student-life/cabinet' element={<Cabinet/>}/>
         
           </Route>
 
