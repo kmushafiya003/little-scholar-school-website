@@ -79,23 +79,6 @@ const App = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <ScrollText />
-      {/* ------ Dynamic button with flip animation --------- */}
-
-      {/* <Dynamic3dButton
-        text1="Front Text - Flip"
-        text2="Back Text - Flip"
-        className="flip-card"
-        showIcon={true} //Show Icon
-      /> */}
-
-      {/* ------ Dynamic button with scale animation --------- */}
-
-      {/* <Dynamic3dButton
-        text1="Front Text - Scale"
-        className="scale-card"
-        showIcon={false} //Hide Icon
-      /> */}
-
       <Navbar />
 
       <Suspense fallback={<div> <Loading /> </div>}>

@@ -27,7 +27,7 @@ const SummerCampTwo = () => {
   }
 
   return (
-    <section className='relative w-full'>
+    <section className='relative w-full summercmp'>
       <div className='grid grid-cols-1 mx-auto mb-20 lg:gap-14 lg:w-10/12 lg:pt-20 lg:grid-cols-2 dxs:pt-2 dxs:w-11/12 dxs:gap-1'>
         <div className='flex justify-center lg:pt-20 dxs:pt-10'>
           <img
@@ -36,7 +36,7 @@ const SummerCampTwo = () => {
             className='w-fit border-2 h-[75%] rounded-xl'
           />
         </div>
-        <div className='lg:p-6 mx-auto border-[3.5px] rounded-lg shadow-md w-full dxs:p-5'>
+        <div className='lg:p-6 mx-auto border-[3.5px] rounded-lg shadow-md w-full dxs:p-5 bg-white'>
           <div className='p-10 border-[3.5px] border-black rounded-md'>
             <h2 className='mb-1 font-semibold text-[1.5rem]'>
               SUMMER CAMP CONSENT

@@ -20,12 +20,12 @@ const SummerCamp = () => {
   };
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full summercmp">
       <div className="grid w-10/12 grid-cols-1 gap-10 pt-20 mx-auto mb-20 xxl:grid-cols-2">
         <div className="lg:pt-20 dxs:pt-2" >
         <img src={swim} alt="" className="w-full border-2 rounded-xl"/>
         </div>
-        <div className="max-w-2xl p-6 mx-auto border-[3.5px] rounded-lg shadow-md">
+        <div className="max-w-2xl p-6 mx-auto border-[3.5px] rounded-lg shadow-md bg-white">
           <div className="p-10 border-[3.5px] border-black rounded-md pt-10">
             <h2 className="mb-6 font-semibold text-[1.5rem]">
               SUMMER CAMP CONSENT
