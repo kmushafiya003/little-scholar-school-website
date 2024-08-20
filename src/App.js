@@ -11,8 +11,12 @@ import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
 
 
+// -------- Home -------
 
 const Home = lazy(() => import('./pages/Home'));
+
+
+// ------ About -----------
 
 const About = lazy(() => import('./pages/About'));
 const FounderDesk = lazy(() => import('./components/about/FounderDesk.jsx'));
@@ -22,6 +26,7 @@ const ManagingCommittee = lazy(() => import('./components/about/ManagingCommitte
 const Principles = lazy(() => import('./components/about/Principles.jsx'));
 const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'));
 
+// ------------ Admission -------
 
 const Admission = lazy(() => import('./pages/Admission'));
 const Helpdesk = lazy(() => import('./components/adimission/Helpdesk'));
@@ -32,6 +37,8 @@ const SchoolTiming = lazy(() => import('./components/adimission/SchoolTiming'));
 const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 
+// ------------ Student Life ------------
+
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
 const Academics =lazy(()=>import('./components/student-life/academics/Academics.jsx'))
 const Cocurricular=lazy(()=>import('./components/student-life/co-curricular/Cocurricular.jsx'))
@@ -41,8 +48,13 @@ const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
 const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
 
 
+// ------------ Mandatory Disclosure ----------
 const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
 const BookList  = lazy(() => import('./components/MandatoryDisclosure/BookList.jsx'))
+
+// ------------- Contact ------------
+
+const Contact = lazy(()=> import('./pages/Contact.jsx'));
 
 
 const App = () => {
@@ -128,6 +140,11 @@ const App = () => {
           <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
         
           </Route>
+
+
+          {/* ------------------- Contact us page -------------------- */}
+
+          <Route path='/contact-us' element={<Contact/>}/>
 
 
         </Routes>
