@@ -14,6 +14,7 @@ module.exports = {
       "red-600": "rgb(239 68 68)",
       "off-white-bg": "#f6f6f6",
       "bg-light": "#f8f9fa",
+      "bg-drop": "#363636",
       "dark-blue": "#202C45",
       "dark-grey": "#666",
       "resp-black": "#333",

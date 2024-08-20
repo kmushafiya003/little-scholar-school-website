@@ -5,6 +5,7 @@ import { navData } from '../../data/common/navbar-links';
 import logo from '../../assets/logo.webp';
 import '../../App.css'; // Ensure this file imports your CSS
 import { useLocation } from 'react-router-dom';
+import {motion , AnimatePresence} from 'framer-motion'
 
 const Navbar = () => {
   const location = useLocation();
@@ -25,6 +26,7 @@ const Navbar = () => {
     setActiveDropdown(null);
     setActiveSubDropdown(null);
     setActiveSubSubDropdown(null);
+    setIsOpen(false);
 
   }, [location.pathname])
 
@@ -100,8 +102,43 @@ const Navbar = () => {
     setActiveSubSubDropdown(null);
   };
 
+  const openDropdown = ( navItem)=>{
+
+    if(navItem.dropdown){
+      toggleDropdown(navItem.id)
+    
+    }
+    return;
+
+  }
+
+  useEffect(() => {
+
+    if (isOpen) {
+        document.body.style.overflow = 'hidden';
+    } else {
+
+        document.body.style.overflow = 'auto';
+
+    }
+
+    return () => {
+        document.body.style.overflow = 'auto';
+    }
+
+}, [isOpen])
+
+const variants = {
+  hidden: { opacity: 0, height: 0 },
+  visible: { opacity: 1, height: "auto" },
+  exit: { opacity: 0, height: 0 },
+
+};
+
+  
+
   return (
-    <header className={`transition-all duration-500 bg-white  shadow-lg ${isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px] opacity-0' : 'top-0'}`}>
+    <header className={`transition-all duration-500 bg-white  shadow-lg pr-2 ${isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px] opacity-0 z-0' : 'top-0'}`}>
       <div className='xxxl:w-10/12 xl:w-[95%] xsm:w-10/12 xs:mx-auto xsm:mr-auto w-full  '>
         <nav className="text-[16px] text-black navbar">
           <div className="flex items-center justify-between px-4 py-4 mx-auto rounded-full">
@@ -224,32 +261,43 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Navigation Menu */}
-          <div className={`xl:hidden fixed inset-0 bg-white text-black text-sm transition-all duration-300 ${isOpen ? 'block z-[80] mt-10 h-[40%]' : 'hidden'}`}>
+
+          <AnimatePresence initial={false}>
+          <motion.div
+         
+         initial="hidden"
+         animate="visible"
+         exit="exit"
+         variants={variants}
+         transition={{ duration: 0.3 }}
+         
+           className={`xl:hidden fixed top-0 right-0 left-0 bg-resp-black text-black text-sm transition-all duration-300  ${isOpen ? 'block z-[80] mt-10 max-h-[600px]  overflow-y-scroll opacity-100' : 'hidden opacity-0'}`}>
             {/* Close Button for Mobile Menu */}
+
+            <div className='flex justify-end bg-white py-6 px-6'>
             {isOpen && (
+              
               <button
                 onClick={closeAllMenus}
-                className="absolute top-4 right-4 text-2xl"
+                className=" text-2xl "
               >
                 <IoMdClose />
               </button>
             )}
+            </div>
 
-            <ul className="pt-16">
+            <ul className=" h-full">
               {navData.map((navItem) => (
-                <li key={navItem.id} className="relative">
+                <li key={navItem.id} className="relative  text-[17px]  bg-resp-black border-b-0.2 border-b-resp-black-2 hover:border-b-dark-blue transition-all duration-200">
                   <div
-                    className="flex justify-between items-center bg-resp-black hover:bg-[rgb(132,128,128)] border-b-0.2"
+                    className="flex justify-between items-center  "
                     onClick={() => toggleDropdown(navItem.id)}
                   >
                     {/* Mobile Navigation Link */}
                     <NavLink
                       to={navItem.path}
-                      className="block w-full px-4 py-2 font-bold text-left text-white transition duration-300"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        closeAllMenus();
-                      }}
+                      className="block  w-full px-4 py-3 font-semibold text-left text-white  transition duration-300 "
+                      onClick={()=> openDropdown(navItem)}
                     >
                       {navItem.title}
                     </NavLink>
@@ -257,30 +305,28 @@ const Navbar = () => {
                     {/* Mobile Dropdown Toggle Button */}
                     {navItem.dropdown && (
                       <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleDropdown(navItem.id);
-                        }}
-                        className="px-4 py-2 text-left transition duration-300 scroll-auto"
+                      
+                        
+                        className="px-4 py-4 text-left transition duration-300 scroll-auto "
                       >
                         {activeDropdown === navItem.id ? <IoIosArrowUp className='text-white' /> : <IoIosArrowDown className='text-white' />}
-                      </button>
+                      </button> 
                     )}
                   </div>
 
                   {/* Mobile Dropdown Menu */}
                   {navItem.dropdown && activeDropdown === navItem.id && (
-                    <ul className={`bg-gray-800 border-l-0.2 border-r-0.2 border-[rgb(141,141,141)] text-white transition-all duration-300 overflow-hidden ${activeDropdown === navItem.id ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <ul className={`  text-white transition-all duration-300 overflow-hidden bg-resp-black-2 border-t border-t-black${activeDropdown === navItem.id ? ' opacity-100' : ' opacity-0'}`}>
                       {navItem.dropdown.map((submenuItem) => (
-                        <li key={submenuItem.id} className="relative">
+                        <li key={submenuItem.id} className="relative group">
                           <div
-                            className="flex items-center justify-between border-2 group"
+                            className="flex items-center justify-between group-hover:border-l-[5px] border-black transition-all duration-200"
                             onClick={() => toggleSubDropdown(submenuItem.id)}
                           >
                             {/* Mobile Submenu Link */}
                             <NavLink
                               to={submenuItem.path}
-                              className="block w-full px-4 py-2 text-left transition duration-300 border-t-0.2 border-[rgb(202,197,197)] text-black font-regular whitespace-normal dropdown-item hover:translate-x-1"
+                              className="block w-full pl-10 pr-4 py-[10px] text-[15px] font-semibold group-hover:translate-x-1 text-left transition duration-300 border-b border-resp-black group-hover:border-dark-blue text-white font-regular whitespace-normal  "
                               onClick={(e) => {
                                 e.stopPropagation();
                                 closeAllMenus();
@@ -330,7 +376,8 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
+          </AnimatePresence>
         </nav>
       </div>
     </header>
