@@ -10,7 +10,13 @@
   background-size: cover;
   overflow: auto;
 }
-
+.summercmp {
+  background-image: url("./images/News&Calendar/summerCampBG.webp");
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-size: cover;
+  /* overflow: auto; */
+}
 /* Add this CSS in your global CSS file or as part of the component styles */
 
 .marquee-container {
