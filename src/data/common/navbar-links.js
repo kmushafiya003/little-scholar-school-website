@@ -1,4 +1,5 @@
 // navData.js
+
 export const navData = [
 
   {
@@ -88,12 +89,12 @@ export const navData = [
       {
         id: 53,
         title: 'CBSE-OASIS',
-        path: '#'
+        path: 'https://littlescholars-kashipur.com/pdf/oasis.pdf'
       },
       {
         id: 54,
         title: 'Mandatory Public Disclosures',
-        path: '#'
+        path: 'https://littlescholars-kashipur.com/pdf/Mandatory_Disclosures.pdf'
       }
     ]
   },
