@@ -71,7 +71,7 @@ export const navData = [
     title: 'News & Calendar',
     dropdown: [
       { id: 41, title: 'Student Hand Book', path: '/news&calendar/student-handbook' },
-      {id: 42,title: 'Newsletter/Scholars Times',path: '/news&calendar/scholars-times'
+      {id: 42,title: 'Newsletter/Scholars Times', path: '/news&calendar/scholars-times'
       }
     ]
   },

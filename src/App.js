@@ -47,6 +47,12 @@ const Achievements = lazy(() => import('./components/student-life/achievement/Ac
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
 const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
 
+// -------------- News & Calendar ---------------
+
+const NewsCalendar = lazy(()=> import('./pages/NewsCalendar.jsx'))
+const StudentHandBook = lazy(() => import('./components/news&calendar/StudentHandbook.jsx'));
+const ScholarTimes = lazy(() => import('./components/news&calendar/scholar/ScholarTimes.jsx'));
+
 
 // ------------ Mandatory Disclosure ----------
 const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
@@ -131,6 +137,15 @@ const App = () => {
           <Route path='/student-life/toppers' element={<Topper />} />
           <Route path='/student-life/events' element={<EventCalendar />} />
         
+          </Route>
+
+
+          {/* --------------- News & Calendar -------------------- */}
+
+          <Route element={<NewsCalendar/>}>
+          <Route path='/news&calendar/student-handbook' element={<StudentHandBook/>}/>
+          <Route path='/news&calendar/scholars-times' element={<ScholarTimes/>}/>
+
           </Route>
 
 
