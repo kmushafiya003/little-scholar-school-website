@@ -64,10 +64,12 @@ const SummerCamp = lazy(() => import('./components/news&calendar/student/SummerC
 // ------------ Mandatory Disclosure ----------
 const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
 const BookList  = lazy(() => import('./components/MandatoryDisclosure/BookList.jsx'))
+const SafetyCertificates = lazy(() => import('./components/MandatoryDisclosure/SafetyCertificates.jsx'))
 
 // ------------- Contact ------------
 
 const Contact = lazy(()=> import('./pages/Contact.jsx'));
+
 
 
 const App = () => {
@@ -170,6 +172,8 @@ const App = () => {
 
       <ScrollTop />
       <Footer />
+
+     
 
     </div>
   );
