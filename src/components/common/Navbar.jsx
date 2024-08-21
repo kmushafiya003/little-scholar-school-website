@@ -325,11 +325,11 @@ const Navbar = () => {
                     {navData.map(navItem => (
                       <li
                         key={navItem.id}
-                        className='flex flex-col'
+                        className='flex flex-col border border-gray-100 rounded-lg'
                         onClick={() => openDropdown(navItem)}
                       >
                         <p
-                          className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer ${
+                          className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer   ${
                             activeDropdown === navItem.id
                               ? 'bg-[rgb(32,44,69)] text-white'
                               : 'hover:bg-[rgb(32,44,69)] hover:text-white'
