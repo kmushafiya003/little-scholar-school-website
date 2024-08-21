@@ -367,7 +367,7 @@ const Navbar = () => {
                     {navData.map((navItem) => (
                       <li
                         key={navItem.id}
-                        className="flex flex-col border border-gray-100 rounded-lg"
+                        className="flex flex-col border border-gray-100 rounded-lg pb-2 px-2"
                       >
                         {/* Use NavLink directly and conditionally render the dropdown toggle */}
                         <NavLink
@@ -413,14 +413,14 @@ const Navbar = () => {
                                 {navItem.dropdown.map((submenuItem) => (
                                   <li
                                     key={submenuItem.id}
-                                    className="flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey"
+                                    className="flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey transition-all duration-300 hover:bg-dark-light-black hover:border-l-[6px] border-dark-blue group "
                                     onClick={() =>
                                       toggleSubDropdown(submenuItem.id)
                                     }
                                   >
                                     <NavLink
                                       to={submenuItem.path}
-                                      className="flex items-center justify-between text-black hover:text-dark-blue"
+                                      className="flex items-center justify-between text-black hover:text-dark-blue group-hover:translate-x-1 transition-all duration-300"
                                     >
                                       {submenuItem.title}
                                       {submenuItem.dropdown && (
