@@ -295,90 +295,111 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           {isOpen && windowWidth <= 1280 && (
-            <div className='xl:hidden'>
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className='w-full pb-4 mt-4 text-black bg-white shadow-lg rounded-b-2xl'
-              >
-                <ul className='flex flex-col px-4 py-2 space-y-2'>
-                  {navData.map(navItem => (
-                    <li
-                      key={navItem.id}
-                      className='flex flex-col'
-                      onClick={() => openDropdown(navItem)}
-                    >
-                      <p
-                        className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer ${
-                          activeDropdown === navItem.id
-                            ? 'bg-[rgb(32,44,69)] text-white'
-                            : 'hover:bg-[rgb(32,44,69)] hover:text-white'
-                        }`}
+            <div
+              className='fixed top-0 left-0 z-50 w-full h-full bg-white xl:hidden' // Fixed position and full-screen coverage
+              style={{ overflowY: 'auto' }} // Enable vertical scrolling
+            >
+              <div className='flex flex-col h-full'>
+                <div className='flex justify-between p-[4rem]'>
+                  {/* Logo Section and Close Button */}
+                  <NavLink to='/'>
+                    <img src={logo} alt='Logo' className='w-[110px]' />
+                  </NavLink>
+                  <button
+                    className='text-black focus:outline-none'
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <IoMdClose className='w-8 h-8' />
+                  </button>
+                </div>
+
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className='flex-grow pb-4 text-black bg-white shadow-lg rounded-b-2xl'
+                  style={{ overflowY: 'auto' }} // Enable scrolling within the menu
+                >
+                  <ul className='flex flex-col px-4 py-2 space-y-2'>
+                    {navData.map(navItem => (
+                      <li
+                        key={navItem.id}
+                        className='flex flex-col'
+                        onClick={() => openDropdown(navItem)}
                       >
-                        {navItem.title}
-                        {navItem.dropdown && (
-                          <span>
-                            {activeDropdown === navItem.id ? (
-                              <IoIosArrowUp />
-                            ) : (
-                              <IoIosArrowDown />
-                            )}
-                          </span>
-                        )}
-                      </p>
-                      {navItem.dropdown && activeDropdown === navItem.id && (
-                        <ul className='pl-4 mt-2 space-y-2'>
-                          {navItem.dropdown.map(submenuItem => (
-                            <li
-                              key={submenuItem.id}
-                              className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey'
-                              onClick={() => toggleSubDropdown(submenuItem.id)}
-                            >
-                              <NavLink
-                                to={submenuItem.path}
-                                className='flex items-center justify-between text-black hover:text-dark-blue'
+                        <p
+                          className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer ${
+                            activeDropdown === navItem.id
+                              ? 'bg-[rgb(32,44,69)] text-white'
+                              : 'hover:bg-[rgb(32,44,69)] hover:text-white'
+                          }`}
+                        >
+                          {navItem.title}
+                          {navItem.dropdown && (
+                            <span>
+                              {activeDropdown === navItem.id ? (
+                                <IoIosArrowUp />
+                              ) : (
+                                <IoIosArrowDown />
+                              )}
+                            </span>
+                          )}
+                        </p>
+                        {navItem.dropdown && activeDropdown === navItem.id && (
+                          <ul className='pl-4 mt-2 space-y-2'>
+                            {navItem.dropdown.map(submenuItem => (
+                              <li
+                                key={submenuItem.id}
+                                className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey'
+                                onClick={() =>
+                                  toggleSubDropdown(submenuItem.id)
+                                }
                               >
-                                {submenuItem.title}
-                                {submenuItem.dropdown && (
-                                  <span>
-                                    {activeSubDropdown === submenuItem.id ? (
-                                      <IoIosArrowUp />
-                                    ) : (
-                                      <IoIosArrowDown />
-                                    )}
-                                  </span>
-                                )}
-                              </NavLink>
-                              {submenuItem.dropdown &&
-                                activeSubDropdown === submenuItem.id && (
-                                  <ul className='pl-4 mt-2 space-y-2'>
-                                    {submenuItem.dropdown.map(
-                                      subSubmenuItem => (
-                                        <li
-                                          key={subSubmenuItem.id}
-                                          className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey hover:bg-gray-200'
-                                        >
-                                          <NavLink
-                                            to={subSubmenuItem.path}
-                                            className='text-black hover:text-dark-blue'
+                                <NavLink
+                                  to={submenuItem.path}
+                                  className='flex items-center justify-between text-black hover:text-dark-blue'
+                                >
+                                  {submenuItem.title}
+                                  {submenuItem.dropdown && (
+                                    <span>
+                                      {activeSubDropdown === submenuItem.id ? (
+                                        <IoIosArrowUp />
+                                      ) : (
+                                        <IoIosArrowDown />
+                                      )}
+                                    </span>
+                                  )}
+                                </NavLink>
+                                {submenuItem.dropdown &&
+                                  activeSubDropdown === submenuItem.id && (
+                                    <ul className='pl-4 mt-2 space-y-2'>
+                                      {submenuItem.dropdown.map(
+                                        subSubmenuItem => (
+                                          <li
+                                            key={subSubmenuItem.id}
+                                            className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey hover:bg-gray-200'
                                           >
-                                            {subSubmenuItem.title}
-                                          </NavLink>
-                                        </li>
-                                      )
-                                    )}
-                                  </ul>
-                                )}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+                                            <NavLink
+                                              to={subSubmenuItem.path}
+                                              className='text-black hover:text-dark-blue'
+                                            >
+                                              {subSubmenuItem.title}
+                                            </NavLink>
+                                          </li>
+                                        )
+                                      )}
+                                    </ul>
+                                  )}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
             </div>
           )}
         </nav>
