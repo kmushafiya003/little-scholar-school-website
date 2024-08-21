@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {
   IoIosArrowDown,
   IoIosArrowForward,
@@ -9,9 +9,10 @@ import {
 } from 'react-icons/io'
 import { navData } from '../../data/common/navbar-links'
 import logo from '../../assets/logo.webp'
-import '../../App.css' // Ensure this file imports your CSS
+import '../../App.css'
 import { useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { debounce } from 'lodash'
 
 const Navbar = () => {
   const location = useLocation()
@@ -21,15 +22,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isFixed, setIsFixed] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   const dropdownTimeout = useRef(null)
   const subDropdownTimeout = useRef(null)
   const subSubDropdownTimeout = useRef(null)
   const lastScrollY = useRef(0)
 
-
-  
-  // for closing the dropdown when we going to other page
   useEffect(() => {
     setActiveDropdown(null)
     setActiveSubDropdown(null)
@@ -51,10 +50,20 @@ const Navbar = () => {
       lastScrollY.current = window.scrollY
     }
 
+    const handleResize = debounce(() => {
+      const width = window.innerWidth
+      setWindowWidth(width)
+      if (width > 1024 && isOpen) {
+        setIsOpen(false)
+      }
+    }, 200)
+
     window.addEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
     }
   }, [isOpen])
 
@@ -81,7 +90,7 @@ const Navbar = () => {
         setActiveDropdown(null)
         setActiveSubDropdown(null)
         setActiveSubSubDropdown(null)
-      }, 200) // delay in ms
+      }, 200)
     } else if (level === 'subDropdown') {
       subDropdownTimeout.current = setTimeout(() => {
         setActiveSubDropdown(null)
@@ -113,7 +122,6 @@ const Navbar = () => {
     if (navItem.dropdown) {
       toggleDropdown(navItem.id)
     }
-    return
   }
 
   useEffect(() => {
@@ -128,19 +136,19 @@ const Navbar = () => {
     }
   }, [isOpen])
 
-  const variants = {
-    hidden: { top: -200},
-    visible: { top: 0 },
-    exit: { top: -200 }
+  const dropdownVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 }
   }
 
   return (
     <header
-      className={`transition-all duration-500 bg-white  shadow-lg pr-2 ${
+      className={`transition-all duration-500 bg-white shadow-lg pr-2 ${
         isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative '
       } ${isHidden ? '-top-[150px] opacity-0 z-[0]' : 'top-0'}`}
     >
-      <div className='xxxl:w-10/12 xl:w-[95%] xsm:w-10/12 xs:mx-auto xsm:mr-auto w-full  '>
+      <div className='xxxl:w-10/12 xl:w-[95%] xsm:w-10/12 xs:mx-auto xsm:mr-auto w-full'>
         <nav className='text-[16px] text-black navbar'>
           <div className='flex items-center justify-between px-4 py-4 mx-auto rounded-full'>
             {/* Logo Section */}
@@ -162,10 +170,9 @@ const Navbar = () => {
                     }
                     onMouseLeave={() => handleMouseLeave('dropdown')}
                   >
-                    {/* Main Navigation Link */}
                     {navItem.dropdown ? (
                       <p
-                        className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold bordercursor-pointer
+                        className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
                         ${
                           navItem.dropdown && activeDropdown === navItem.id
                             ? 'bg-[rgb(32,44,69)] text-white'
@@ -180,118 +187,91 @@ const Navbar = () => {
                         )}
                       </p>
                     ) : (
-                      <Link
+                      <NavLink
                         to={navItem.path}
                         className='flex items-center px-4 py-2 font-semibold text-black transition duration-300 rounded-full cursor-pointer hover:bg-dark-blue hover:text-white'
                       >
-                        {' '}
                         {navItem.title}
-                      </Link>
+                      </NavLink>
                     )}
 
-                    {/* Dropdown Menu */}
                     {navItem.dropdown && (
-                      <ul
-                        className={`absolute left-0 mt-6  w-60 border-[rgb(6,4,4)] border-t-4  border text-black bg-white 
-                        ${
-                          activeDropdown === navItem.id
-                            ? 'block opacity-100 z-20'
-                            : 'hidden opacity-0 z-0'
-                        }`}
-                      >
-                        {navItem.dropdown.map(submenuItem => (
-                          <li
-                            key={submenuItem.id}
-                            className='relative border-b-0.2 border-[rgb(234,226,226)] group'
-                            onMouseEnter={() =>
-                              handleMouseEnter(submenuItem.id, 'subDropdown')
-                            }
-                            onMouseLeave={() => handleMouseLeave('subDropdown')}
+                      <AnimatePresence>
+                        {activeDropdown === navItem.id && (
+                          <motion.ul
+                            className='absolute left-0 mt-6 w-60 border-[rgb(6,4,4)] border-t-4 border text-black bg-white z-20'
+                            initial='hidden'
+                            animate='visible'
+                            exit='exit'
+                            variants={dropdownVariants}
+                            transition={{ duration: 0.3 }}
                           >
-                            {/* Submenu Link */}
-                            <NavLink
-                              to={submenuItem.path}
-                              className='flex items-center px-4 transition duration-300 text-resp-black-2 dropdown-item hover:bg-light-grey hover:text-dark-blue'
-                            >
-                              <p className='flex items-center py-2 transition-transform duration-200 hover:translate-x-1'>
-                                {submenuItem.title}
-                                {submenuItem.dropdown && (
-                                  <IoIosArrowForward className='ml-4' />
-                                )}
-                              </p>
-                            </NavLink>
-
-                            {/* Sub-dropdown Menu */}
-                            {submenuItem.dropdown && (
-                              <ul
-                                className={`absolute left-full top-0 mt-0 bg-white border border-gray-300 transition-all duration-300
-                                ${
-                                  activeSubDropdown === submenuItem.id
-                                    ? 'block opacity-100'
-                                    : 'hidden opacity-0'
-                                }`}
+                            {navItem.dropdown.map(submenuItem => (
+                              <li
+                                key={submenuItem.id}
+                                className='relative border-b-0.2 border-[rgb(234,226,226)] group'
+                                onMouseEnter={() =>
+                                  handleMouseEnter(
+                                    submenuItem.id,
+                                    'subDropdown'
+                                  )
+                                }
+                                onMouseLeave={() =>
+                                  handleMouseLeave('subDropdown')
+                                }
                               >
-                                {submenuItem.dropdown.map(subSubmenuItem => (
-                                  <li
-                                    key={subSubmenuItem.id}
-                                    className='relative transition duration-200 ease-in-out transform'
-                                    onMouseEnter={() =>
-                                      handleMouseEnter(
-                                        subSubmenuItem.id,
-                                        'subSubDropdown'
-                                      )
-                                    }
-                                    onMouseLeave={() =>
-                                      handleMouseLeave('subSubDropdown')
-                                    }
-                                  >
-                                    {/* Sub-submenu Link */}
-                                    <NavLink
-                                      to={subSubmenuItem.path}
-                                      className='border-b-0.2 border-[rgb(143,140,140)] px-4 transition duration-300 w-[150px] text-resp-black-2 flex items-center dropdown-item hover:bg-light-grey hover:text-dark-blue'
-                                    >
-                                      <p className='flex items-center py-1 transition-transform duration-200 hover:translate-x-1'>
-                                        {subSubmenuItem.title}
-                                        {subSubmenuItem.dropdown && (
-                                          <IoIosArrowForward className='ml-4' />
-                                        )}
-                                      </p>
-                                    </NavLink>
-
-                                    {/* Sub-sub-dropdown Menu */}
-                                    {subSubmenuItem.dropdown && (
-                                      <ul
-                                     
-                                        className={`absolute left-full top-0 mt-0 bg-gray-800 text-white border border-gray-300 transition-all duration-300
-                                        ${
-                                          activeSubSubDropdown ===
-                                          subSubmenuItem.id
-                                            ? 'block opacity-100'
-                                            : 'hidden opacity-0'
-                                        }`}
-                                      >
-                                        {subSubmenuItem.dropdown.map(
-                                          subSubmenuItem => (
-                                            <li key={subSubmenuItem.id}>
-                                              {/* Sub-sub-submenu Link */}
-                                              <NavLink
-                                                to={subSubmenuItem.path}  
-                                                className='block px-4 py-2 transition duration-300 hover:bg-[rgb(212,56,12)] text-black'
-                                              >
-                                                {subSubmenuItem.title}
-                                              </NavLink>
-                                            </li>
-                                          )
-                                        )}
-                                      </ul>
+                                <NavLink
+                                  to={submenuItem.path}
+                                  className='flex items-center px-4 transition duration-300 text-resp-black-2 dropdown-item hover:bg-light-grey hover:text-dark-blue'
+                                >
+                                  <p className='flex items-center py-2 transition-transform duration-200 hover:translate-x-1'>
+                                    {submenuItem.title}
+                                    {submenuItem.dropdown && (
+                                      <IoIosArrowForward className='ml-4' />
                                     )}
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                                  </p>
+                                </NavLink>
+
+                                {submenuItem.dropdown && (
+                                  <ul
+                                    className={`absolute left-full top-0 mt-0 bg-white border border-gray-300 transition-all duration-300
+                                    ${
+                                      activeSubDropdown === submenuItem.id
+                                        ? 'visible opacity-100'
+                                        : 'invisible opacity-0'
+                                    }`}
+                                  >
+                                    {submenuItem.dropdown.map(
+                                      subSubmenuItem => (
+                                        <li
+                                          key={subSubmenuItem.id}
+                                          className='relative group'
+                                          onMouseEnter={() =>
+                                            handleMouseEnter(
+                                              subSubmenuItem.id,
+                                              'subSubDropdown'
+                                            )
+                                          }
+                                          onMouseLeave={() =>
+                                            handleMouseLeave('subSubDropdown')
+                                          }
+                                        >
+                                          <NavLink
+                                            to={subSubmenuItem.path}
+                                            className='flex items-center px-4 py-2 text-black transition duration-300 hover:bg-light-grey hover:text-dark-blue'
+                                          >
+                                            {subSubmenuItem.title}
+                                          </NavLink>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                )}
+                              </li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
                     )}
                   </li>
                 ))}
@@ -299,155 +279,108 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              className='text-2xl xl:hidden'
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <IoMdClose /> : <IoMdMenu />}
-            </button>
+            {windowWidth <= 1024 && (
+              <button
+                className='z-20 flex items-center xl:hidden focus:outline-none'
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {isOpen ? (
+                  <IoMdClose className='w-8 h-8' />
+                ) : (
+                  <IoMdMenu className='w-8 h-8' />
+                )}
+              </button>
+            )}
           </div>
 
-          {/* Mobile Navigation Menu */}
-
-{
-  isOpen && (<AnimatePresence initial={false}>
-    <motion.div
-      initial='hidden'
-      animate='visible'
-      exit='exit'
-      variants={variants}
-      transition={{ duration: 1 }}
-      className={`xl:hidden fixed top-0 right-0 left-0 bg-resp-black text-black text-sm transition-all duration-300  ${
-        isOpen
-          ? 'block z-[80] mt-10 max-h-[600px]  overflow-y-scroll opacity-100'
-          : 'hidden opacity-0 z-0'
-      }`}
-    >
-      {/* Close Button for Mobile Menu */}
-
-      <div className='flex justify-end px-6 py-6 bg-white'>
-        {isOpen && (
-          <button onClick={closeAllMenus} className='text-2xl '>
-            <IoMdClose />
-          </button>
-        )}
-      </div>
-
-      <ul className='h-full '>
-        {navData.map(navItem => (
-          <li
-            key={navItem.id}
-            className='relative  text-[17px]  bg-resp-black border-b-0.2 border-b-resp-black-2 hover:border-b-dark-blue transition-all duration-200'
-          >
-            <div
-              className='flex items-center justify-between '
-              onClick={() => toggleDropdown(navItem.id)}
-            >
-              {/* Mobile Navigation Link */}
-              <NavLink
-                to={navItem.path}
-                className='block w-full px-4 py-3 font-semibold text-left text-white transition duration-300 '
-                onClick={() => openDropdown(navItem)}
+          {/* Mobile Menu */}
+          {isOpen && windowWidth <= 1024 && (
+            <div className='xl:hidden'>
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className='w-full pb-4 mt-4 text-black bg-white shadow-lg rounded-b-2xl'
               >
-                {navItem.title}
-              </NavLink>
-
-              {/* Mobile Dropdown Toggle Button */}
-              {navItem.dropdown && (
-                <button className='px-4 py-4 text-left transition duration-300 scroll-auto '>
-                  {activeDropdown === navItem.id ? (
-                    <IoIosArrowUp className='text-white' />
-                  ) : (
-                    <IoIosArrowDown className='text-white' />
-                  )}
-                </button>
-              )}
-            </div>
-
-            {/* Mobile Dropdown Menu */}
-            {navItem.dropdown && activeDropdown === navItem.id && (
-              <ul
-                className={`  text-white transition-all duration-300 overflow-hidden bg-resp-black-2 border-t border-t-black${
-                  activeDropdown === navItem.id
-                    ? ' opacity-100'
-                    : ' opacity-0'
-                }`}
-              >
-                {navItem.dropdown.map(submenuItem => (
-                  <li key={submenuItem.id} className='relative group'>
-                    <div
-                      className='flex items-center justify-between group-hover:border-l-[5px] border-black transition-all duration-200'
-                      onClick={() => toggleSubDropdown(submenuItem.id)}
+                <ul className='flex flex-col px-4 py-2 space-y-2'>
+                  {navData.map(navItem => (
+                    <li
+                      key={navItem.id}
+                      className='flex flex-col'
+                      onClick={() => openDropdown(navItem)}
                     >
-                      {/* Mobile Submenu Link */}
-                      <NavLink
-                        to={submenuItem.path}
-                       
-                        className='block w-full pl-10 pr-4 py-[10px] text-[15px] font-semibold group-hover:translate-x-1 text-left transition duration-300 border-b border-resp-black group-hover:border-dark-blue text-white font-regular whitespace-normal  '
-                        onClick={e => {
-                          e.stopPropagation()
-                          closeAllMenus()
-                        }}
+                      <p
+                        className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer ${
+                          activeDropdown === navItem.id
+                            ? 'bg-[rgb(32,44,69)] text-white'
+                            : 'hover:bg-[rgb(32,44,69)] hover:text-white'
+                        }`}
                       >
-                        {submenuItem.title}
-                      </NavLink>
-
-                      {/* Mobile Sub-dropdown Toggle Button */}
-                      {submenuItem.dropdown && (
-                        <button
-                          onClick={e => {
-                            e.stopPropagation()
-                            toggleSubDropdown(submenuItem.id)
-                          }}
-                          className='bg-[rgb(74,72,72)] px-3 py-3 mt-3 hover:bg-[rgb(121,119,119)] text-left transition duration-300'
-                        >
-                          {activeSubDropdown === submenuItem.id ? (
-                            <IoIosArrowUp className='bg-[rgb(74,72,72)]' />
-                          ) : (
-                            <IoIosArrowDown className='bg-[rgb(74,72,72)]' />
-                          )}
-                        </button>
-                      )}
-                    </div>
-
-                    {/* Mobile Sub-dropdown Menu */}
-                    {submenuItem.dropdown &&
-                      activeSubDropdown === submenuItem.id && (
-                        <ul
-                          className={`w-[40%] ml-auto border-2 border-[rgb(141,141,141)] text-white transition-all duration-300 overflow-hidden ${
-                            activeSubDropdown === submenuItem.id
-                              ? 'max-h-screen opacity-100'
-                              : 'max-h-0 opacity-0'
-                          }`}
-                        >
-                          {submenuItem.dropdown.map(subSubmenuItem => (
-                            <li key={subSubmenuItem.id}>
-                              {/* Mobile Sub-submenu Link */}
+                        {navItem.title}
+                        {navItem.dropdown && (
+                          <span>
+                            {activeDropdown === navItem.id ? (
+                              <IoIosArrowUp />
+                            ) : (
+                              <IoIosArrowDown />
+                            )}
+                          </span>
+                        )}
+                      </p>
+                      {navItem.dropdown && activeDropdown === navItem.id && (
+                        <ul className='pl-4 mt-2 space-y-2'>
+                          {navItem.dropdown.map(submenuItem => (
+                            <li
+                              key={submenuItem.id}
+                              className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey'
+                              onClick={() => toggleSubDropdown(submenuItem.id)}
+                            >
                               <NavLink
-                                to={subSubmenuItem.path}
-                                className='block px-4 py-2 transition duration-300 text-right border-b border-[rgb(118,122,130)] hover:bg-[rgb(118,122,130)] text-black font-regular whitespace-normal dropdown-item'
-                                onClick={e => {
-                                  e.stopPropagation()
-                                  closeAllMenus()
-                                }}
+                                to={submenuItem.path}
+                                className='flex items-center justify-between text-black hover:text-dark-blue'
                               >
-                                {subSubmenuItem.title}
+                                {submenuItem.title}
+                                {submenuItem.dropdown && (
+                                  <span>
+                                    {activeSubDropdown === submenuItem.id ? (
+                                      <IoIosArrowUp />
+                                    ) : (
+                                      <IoIosArrowDown />
+                                    )}
+                                  </span>
+                                )}
                               </NavLink>
+                              {submenuItem.dropdown &&
+                                activeSubDropdown === submenuItem.id && (
+                                  <ul className='pl-4 mt-2 space-y-2'>
+                                    {submenuItem.dropdown.map(
+                                      subSubmenuItem => (
+                                        <li
+                                          key={subSubmenuItem.id}
+                                          className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey hover:bg-gray-200'
+                                        >
+                                          <NavLink
+                                            to={subSubmenuItem.path}
+                                            className='text-black hover:text-dark-blue'
+                                          >
+                                            {subSubmenuItem.title}
+                                          </NavLink>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                )}
                             </li>
                           ))}
                         </ul>
                       )}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
-    </motion.div>
-  </AnimatePresence>)
-}
-          
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          )}
         </nav>
       </div>
     </header>
