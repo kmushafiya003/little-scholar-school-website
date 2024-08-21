@@ -51,7 +51,7 @@ function SafetyCertificates() {
                             <tr className='hover:bg-light-grey transition-all duration-300' >
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>1.</td>
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>Affiliation</td>
-                                <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Fire_Safety.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
+                                <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Affiliation.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
                                     <span className='text-red arrow-icon'><FaCircleRight /></span>
                                     <span className='text-base font-semibold text-resp-black hover:text-red-600'>view</span>
                                 </a></td>
@@ -60,7 +60,7 @@ function SafetyCertificates() {
                             <tr className='hover:bg-light-grey transition-all duration-300' >
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>2.</td>
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>Building Safety</td>
-                                <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Fire_Safety.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
+                                <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Building_Safety.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
                                     <span className='text-red arrow-icon'><FaCircleRight /></span>
                                     <span className='text-base font-semibold text-resp-black hover:text-red-600'>view</span>
                                 </a></td>
