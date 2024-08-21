@@ -279,7 +279,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            {windowWidth <= 1024 && (
+            {windowWidth <= 1280 && (
               <button
                 className='z-20 flex items-center xl:hidden focus:outline-none'
                 onClick={() => setIsOpen(!isOpen)}
