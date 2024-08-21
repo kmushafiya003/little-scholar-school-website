@@ -3,8 +3,12 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import swim from "../../../images/News&Calendar/swim.webp";
+import GoBackBtn from "../../common/GoBackBtn";
+import { useNavigate } from "react-router-dom";
 
-const SummerCamp = () => {
+const SummerCampConsent = () => {
+
+  const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [showForm, setShowForm] = useState(true);
 
@@ -19,9 +23,20 @@ const SummerCamp = () => {
     setShowForm(true);
   };
 
+  const goBackHandler = () => {
+
+    navigate(-1);
+
+  }
+
   return (
     <section className="relative w-full summercmp">
-      <div className="grid w-10/12 grid-cols-1 gap-10 pt-20 mx-auto mb-20 xxl:grid-cols-2">
+
+      {/* ---------- container ---------- */}
+      <div className=' xl:w-10/12 dxs:w-11/12 mx-auto mb-20 flex flex-col gap-y-6 lg:pt-20 dxs:pt-2 '>
+      <GoBackBtn handler={goBackHandler}/>
+
+      <div className="grid grid-cols-1 gap-10 xxl:grid-cols-2">
         <div className="lg:pt-20 dxs:pt-2" >
         <img src={swim} alt="" className="w-full border-2 rounded-xl"/>
         </div>
@@ -177,8 +192,12 @@ const SummerCamp = () => {
           </div>
         </div>
       </div>
+
+      </div>
+
+     
     </section>
   );
 };
 
-export default SummerCamp
+export default SummerCampConsent
