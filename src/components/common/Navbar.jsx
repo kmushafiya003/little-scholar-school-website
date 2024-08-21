@@ -294,7 +294,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu */}
-          {isOpen && windowWidth <= 1024 && (
+          {isOpen && windowWidth <= 1280 && (
             <div className='xl:hidden'>
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
