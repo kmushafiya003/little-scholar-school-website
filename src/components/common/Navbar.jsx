@@ -129,16 +129,16 @@ const Navbar = () => {
   }, [isOpen])
 
   const variants = {
-    hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: 'auto' },
-    exit: { opacity: 0, height: 0 }
+    hidden: { top: -200},
+    visible: { top: 0 },
+    exit: { top: -200 }
   }
 
   return (
     <header
       className={`transition-all duration-500 bg-white  shadow-lg pr-2 ${
-        isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'
-      } ${isHidden ? '-top-[150px] opacity-0 z-0' : 'top-0'}`}
+        isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative '
+      } ${isHidden ? '-top-[150px] opacity-0 z-[0]' : 'top-0'}`}
     >
       <div className='xxxl:w-10/12 xl:w-[95%] xsm:w-10/12 xs:mx-auto xsm:mr-auto w-full  '>
         <nav className='text-[16px] text-black navbar'>
@@ -192,11 +192,11 @@ const Navbar = () => {
                     {/* Dropdown Menu */}
                     {navItem.dropdown && (
                       <ul
-                        className={`absolute left-0 mt-6 z-20 w-60 border-[rgb(6,4,4)] border-t-4  border text-black bg-white 
+                        className={`absolute left-0 mt-6  w-60 border-[rgb(6,4,4)] border-t-4  border text-black bg-white 
                         ${
                           activeDropdown === navItem.id
-                            ? 'block opacity-100'
-                            : 'hidden opacity-0'
+                            ? 'block opacity-100 z-20'
+                            : 'hidden opacity-0 z-0'
                         }`}
                       >
                         {navItem.dropdown.map(submenuItem => (
@@ -309,142 +309,145 @@ const Navbar = () => {
 
           {/* Mobile Navigation Menu */}
 
-          <AnimatePresence initial={false}>
-            <motion.div
-              initial='hidden'
-              animate='visible'
-              exit='exit'
-              variants={variants}
-              transition={{ duration: 0.3 }}
-              className={`xl:hidden fixed top-0 right-0 left-0 bg-resp-black text-black text-sm transition-all duration-300  ${
-                isOpen
-                  ? 'block z-[80] mt-10 max-h-[600px]  overflow-y-scroll opacity-100'
-                  : 'hidden opacity-0'
-              }`}
+{
+  isOpen && (<AnimatePresence initial={false}>
+    <motion.div
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+      variants={variants}
+      transition={{ duration: 1 }}
+      className={`xl:hidden fixed top-0 right-0 left-0 bg-resp-black text-black text-sm transition-all duration-300  ${
+        isOpen
+          ? 'block z-[80] mt-10 max-h-[600px]  overflow-y-scroll opacity-100'
+          : 'hidden opacity-0 z-0'
+      }`}
+    >
+      {/* Close Button for Mobile Menu */}
+
+      <div className='flex justify-end px-6 py-6 bg-white'>
+        {isOpen && (
+          <button onClick={closeAllMenus} className='text-2xl '>
+            <IoMdClose />
+          </button>
+        )}
+      </div>
+
+      <ul className='h-full '>
+        {navData.map(navItem => (
+          <li
+            key={navItem.id}
+            className='relative  text-[17px]  bg-resp-black border-b-0.2 border-b-resp-black-2 hover:border-b-dark-blue transition-all duration-200'
+          >
+            <div
+              className='flex items-center justify-between '
+              onClick={() => toggleDropdown(navItem.id)}
             >
-              {/* Close Button for Mobile Menu */}
+              {/* Mobile Navigation Link */}
+              <NavLink
+                to={navItem.path}
+                className='block w-full px-4 py-3 font-semibold text-left text-white transition duration-300 '
+                onClick={() => openDropdown(navItem)}
+              >
+                {navItem.title}
+              </NavLink>
 
-              <div className='flex justify-end px-6 py-6 bg-white'>
-                {isOpen && (
-                  <button onClick={closeAllMenus} className='text-2xl '>
-                    <IoMdClose />
-                  </button>
-                )}
-              </div>
+              {/* Mobile Dropdown Toggle Button */}
+              {navItem.dropdown && (
+                <button className='px-4 py-4 text-left transition duration-300 scroll-auto '>
+                  {activeDropdown === navItem.id ? (
+                    <IoIosArrowUp className='text-white' />
+                  ) : (
+                    <IoIosArrowDown className='text-white' />
+                  )}
+                </button>
+              )}
+            </div>
 
-              <ul className='h-full '>
-                {navData.map(navItem => (
-                  <li
-                    key={navItem.id}
-                    className='relative  text-[17px]  bg-resp-black border-b-0.2 border-b-resp-black-2 hover:border-b-dark-blue transition-all duration-200'
-                  >
+            {/* Mobile Dropdown Menu */}
+            {navItem.dropdown && activeDropdown === navItem.id && (
+              <ul
+                className={`  text-white transition-all duration-300 overflow-hidden bg-resp-black-2 border-t border-t-black${
+                  activeDropdown === navItem.id
+                    ? ' opacity-100'
+                    : ' opacity-0'
+                }`}
+              >
+                {navItem.dropdown.map(submenuItem => (
+                  <li key={submenuItem.id} className='relative group'>
                     <div
-                      className='flex items-center justify-between '
-                      onClick={() => toggleDropdown(navItem.id)}
+                      className='flex items-center justify-between group-hover:border-l-[5px] border-black transition-all duration-200'
+                      onClick={() => toggleSubDropdown(submenuItem.id)}
                     >
-                      {/* Mobile Navigation Link */}
+                      {/* Mobile Submenu Link */}
                       <NavLink
-                        to={navItem.path}
-                        className='block w-full px-4 py-3 font-semibold text-left text-white transition duration-300 '
-                        onClick={() => openDropdown(navItem)}
+                        to={submenuItem.path}
+                       
+                        className='block w-full pl-10 pr-4 py-[10px] text-[15px] font-semibold group-hover:translate-x-1 text-left transition duration-300 border-b border-resp-black group-hover:border-dark-blue text-white font-regular whitespace-normal  '
+                        onClick={e => {
+                          e.stopPropagation()
+                          closeAllMenus()
+                        }}
                       >
-                        {navItem.title}
+                        {submenuItem.title}
                       </NavLink>
 
-                      {/* Mobile Dropdown Toggle Button */}
-                      {navItem.dropdown && (
-                        <button className='px-4 py-4 text-left transition duration-300 scroll-auto '>
-                          {activeDropdown === navItem.id ? (
-                            <IoIosArrowUp className='text-white' />
+                      {/* Mobile Sub-dropdown Toggle Button */}
+                      {submenuItem.dropdown && (
+                        <button
+                          onClick={e => {
+                            e.stopPropagation()
+                            toggleSubDropdown(submenuItem.id)
+                          }}
+                          className='bg-[rgb(74,72,72)] px-3 py-3 mt-3 hover:bg-[rgb(121,119,119)] text-left transition duration-300'
+                        >
+                          {activeSubDropdown === submenuItem.id ? (
+                            <IoIosArrowUp className='bg-[rgb(74,72,72)]' />
                           ) : (
-                            <IoIosArrowDown className='text-white' />
+                            <IoIosArrowDown className='bg-[rgb(74,72,72)]' />
                           )}
                         </button>
                       )}
                     </div>
 
-                    {/* Mobile Dropdown Menu */}
-                    {navItem.dropdown && activeDropdown === navItem.id && (
-                      <ul
-                        className={`  text-white transition-all duration-300 overflow-hidden bg-resp-black-2 border-t border-t-black${
-                          activeDropdown === navItem.id
-                            ? ' opacity-100'
-                            : ' opacity-0'
-                        }`}
-                      >
-                        {navItem.dropdown.map(submenuItem => (
-                          <li key={submenuItem.id} className='relative group'>
-                            <div
-                              className='flex items-center justify-between group-hover:border-l-[5px] border-black transition-all duration-200'
-                              onClick={() => toggleSubDropdown(submenuItem.id)}
-                            >
-                              {/* Mobile Submenu Link */}
+                    {/* Mobile Sub-dropdown Menu */}
+                    {submenuItem.dropdown &&
+                      activeSubDropdown === submenuItem.id && (
+                        <ul
+                          className={`w-[40%] ml-auto border-2 border-[rgb(141,141,141)] text-white transition-all duration-300 overflow-hidden ${
+                            activeSubDropdown === submenuItem.id
+                              ? 'max-h-screen opacity-100'
+                              : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          {submenuItem.dropdown.map(subSubmenuItem => (
+                            <li key={subSubmenuItem.id}>
+                              {/* Mobile Sub-submenu Link */}
                               <NavLink
-                                to={submenuItem.path}
-                               
-                                className='block w-full pl-10 pr-4 py-[10px] text-[15px] font-semibold group-hover:translate-x-1 text-left transition duration-300 border-b border-resp-black group-hover:border-dark-blue text-white font-regular whitespace-normal  '
+                                to={subSubmenuItem.path}
+                                className='block px-4 py-2 transition duration-300 text-right border-b border-[rgb(118,122,130)] hover:bg-[rgb(118,122,130)] text-black font-regular whitespace-normal dropdown-item'
                                 onClick={e => {
                                   e.stopPropagation()
                                   closeAllMenus()
                                 }}
                               >
-                                {submenuItem.title}
+                                {subSubmenuItem.title}
                               </NavLink>
-
-                              {/* Mobile Sub-dropdown Toggle Button */}
-                              {submenuItem.dropdown && (
-                                <button
-                                  onClick={e => {
-                                    e.stopPropagation()
-                                    toggleSubDropdown(submenuItem.id)
-                                  }}
-                                  className='bg-[rgb(74,72,72)] px-3 py-3 mt-3 hover:bg-[rgb(121,119,119)] text-left transition duration-300'
-                                >
-                                  {activeSubDropdown === submenuItem.id ? (
-                                    <IoIosArrowUp className='bg-[rgb(74,72,72)]' />
-                                  ) : (
-                                    <IoIosArrowDown className='bg-[rgb(74,72,72)]' />
-                                  )}
-                                </button>
-                              )}
-                            </div>
-
-                            {/* Mobile Sub-dropdown Menu */}
-                            {submenuItem.dropdown &&
-                              activeSubDropdown === submenuItem.id && (
-                                <ul
-                                  className={`w-[40%] ml-auto border-2 border-[rgb(141,141,141)] text-white transition-all duration-300 overflow-hidden ${
-                                    activeSubDropdown === submenuItem.id
-                                      ? 'max-h-screen opacity-100'
-                                      : 'max-h-0 opacity-0'
-                                  }`}
-                                >
-                                  {submenuItem.dropdown.map(subSubmenuItem => (
-                                    <li key={subSubmenuItem.id}>
-                                      {/* Mobile Sub-submenu Link */}
-                                      <NavLink
-                                        to={subSubmenuItem.path}
-                                        className='block px-4 py-2 transition duration-300 text-right border-b border-[rgb(118,122,130)] hover:bg-[rgb(118,122,130)] text-black font-regular whitespace-normal dropdown-item'
-                                        onClick={e => {
-                                          e.stopPropagation()
-                                          closeAllMenus()
-                                        }}
-                                      >
-                                        {subSubmenuItem.title}
-                                      </NavLink>
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                   </li>
                 ))}
               </ul>
-            </motion.div>
-          </AnimatePresence>
+            )}
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  </AnimatePresence>)
+}
+          
         </nav>
       </div>
     </header>
