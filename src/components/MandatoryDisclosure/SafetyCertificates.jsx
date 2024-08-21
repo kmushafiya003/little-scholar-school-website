@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaCircleRight } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+
 
 function SafetyCertificates() {
     return (
@@ -46,24 +46,25 @@ function SafetyCertificates() {
                         </thead>
 
                         <tbody className='font-light'>
+
+
                             <tr className='hover:bg-light-grey transition-all duration-300' >
-                                <td className='border-b border-l border-r border-light-grey py-3 px-4 text-left  text-resp-black '>1.</td>
-                                <td className='border-b border-l border-r border-light-grey py-3 px-4 text-left text-resp-black '>Affiliation</td>
-                                <td className='border-b border-l border-r border-light-grey py-3 px-4 text-left  text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Affiliation.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
+                                <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>1.</td>
+                                <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>Affiliation</td>
+                                <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Fire_Safety.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
                                     <span className='text-red arrow-icon'><FaCircleRight /></span>
-                                    <span className='text-lg font-semibold text-resp-black hover:text-red-600'>view</span>
+                                    <span className='text-base font-semibold text-resp-black hover:text-red-600'>view</span>
                                 </a></td>
                             </tr>
 
                             <tr className='hover:bg-light-grey transition-all duration-300' >
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>2.</td>
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>Building Safety</td>
-                                <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Building_Safety.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
+                                <td className='border border-light-grey py-3 px-4 text-left text-resp-black '><a href="https://littlescholars-kashipur.com/pdf/Fire_Safety.pdf" className='flex items-center gap-x-2 cursor-pointer arrow-container' >
                                     <span className='text-red arrow-icon'><FaCircleRight /></span>
                                     <span className='text-base font-semibold text-resp-black hover:text-red-600'>view</span>
                                 </a></td>
                             </tr>
-
                             <tr className='hover:bg-light-grey transition-all duration-300' >
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>3.</td>
                                 <td className='border border-light-grey py-3 px-4 text-left  text-resp-black '>Fire Safety</td>

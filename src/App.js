@@ -158,6 +158,7 @@ const App = () => {
 
            <Route element={<MandatoryDisclosure/>}>
           <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
+         
         
           </Route>
 
