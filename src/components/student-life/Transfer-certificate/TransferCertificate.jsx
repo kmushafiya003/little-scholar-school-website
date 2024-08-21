@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TransferCertificate = () => {
   const [studentId, setStudentId] = useState('');
@@ -16,8 +18,10 @@ const TransferCertificate = () => {
     setError(''); // Clear error if validation passes
     console.log('Get Transfer Certificate for:', studentId);
 
-    // Show a popup with the student's name
-    alert(`Transfer Certificate requested for: ${studentId}`);
+    // Show a toast notification with the student's name
+    toast.success(`Transfer Certificate requested for: ${studentId}`, {
+      position: 'top-center',  // Using string directly for the position
+    });
 
     // Clear the input field
     setStudentId('');
@@ -48,6 +52,8 @@ const TransferCertificate = () => {
             Get Transfer Certificate
           </button>
         </form>
+        {/* Add ToastContainer to render toasts */}
+        <ToastContainer />
       </div>
     </section>
   );
