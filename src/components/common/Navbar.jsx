@@ -160,11 +160,11 @@ const Navbar = () => {
 
             {/* Main Navigation for large screens */}
             <div className='hidden space-x-4 xl:flex'>
-              <ul className='flex space-x-1'>
+              <ul className='flex space-x-1 pr-3'>
                 {navData.map(navItem => (
                   <li
                     key={navItem.id}
-                    className='relative group'
+                    className='relative group '
                     onMouseEnter={() =>
                       handleMouseEnter(navItem.id, 'dropdown')
                     }
@@ -172,7 +172,7 @@ const Navbar = () => {
                   >
                     {navItem.dropdown ? (
                       <p
-                        className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
+                        className={`flex items-center  rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
                         ${
                           navItem.dropdown && activeDropdown === navItem.id
                             ? 'bg-[rgb(32,44,69)] text-white'
@@ -328,6 +328,8 @@ const Navbar = () => {
                         className='flex flex-col border border-gray-100 rounded-lg'
                         onClick={() => openDropdown(navItem)}//all okey
                       >
+                        
+
                         <p
                           className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer   ${
                             activeDropdown === navItem.id
