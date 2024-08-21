@@ -15,7 +15,16 @@ const TransferCertificate = () => {
 
     setError(''); // Clear error if validation passes
     console.log('Get Transfer Certificate for:', studentId);
-    // Handle the form submission logic, e.g., API call
+
+    // Show a popup with the student's name
+    alert(`Transfer Certificate requested for: ${studentId}`);
+
+    // Clear the input field
+    setStudentId('');
+  };
+
+  const onClick = () => {
+    console.log('Button clicked');
   };
 
   return (
@@ -33,6 +42,7 @@ const TransferCertificate = () => {
           {error && <p className="text-red-500">{error}</p>}
           <button
             type="submit"
+            onClick={onClick}
             className="bg-dark-blue text-white rounded-sm py-2 px-6 transition duration-300"
           >
             Get Transfer Certificate
