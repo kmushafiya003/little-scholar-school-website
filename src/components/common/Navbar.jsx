@@ -295,13 +295,13 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           {isOpen && windowWidth <= 1024 && (
-            <div className='xl:hidden'>
+            <div className='xl:hidden pb-6'>
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className='w-full pb-4 mt-4 text-black bg-white shadow-lg rounded-b-2xl'
+                className='w-full  mt-4 text-black shadow-lg '
               >
                 <ul className='flex flex-col px-4 py-2 space-y-2'>
                   {navData.map(navItem => (
