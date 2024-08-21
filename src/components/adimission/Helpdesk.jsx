@@ -23,7 +23,7 @@ function StudentForm() {
   return (
     <section className='relative w-full pt-24 pb-10'>
       <div className=" p-5 mx-auto text-justify bg-white border-4 rounded-lg shadow-lg black xmd:w-[640px] xs:w-[80%] w-[90%] md:p-10 ">
-        <h2 className="mb-2 text-xl font-semibold text-left md:text-2xl">
+        <h2 className="mb-6 leading-10 text-xl font-semibold text-left md:text-2xl">
           Join Little Scholars: Your Path to Learning and Adventure!
         </h2>
         <p className="mb-6 text-left text-gray-400 font-regular">

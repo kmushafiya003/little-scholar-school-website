@@ -1,4 +1,5 @@
 // navData.js
+
 export const navData = [
 
   {
@@ -63,7 +64,7 @@ export const navData = [
       { id: 37, title: 'Events Calendar', path: '/student-life/events' },
       { id: 38, title: 'Toppers', path: '/student-life/toppers' },
       { id: 39, title: 'Cabinet', path: '/student-life/cabinet' },
-      {id: 40,title: 'Transfer Certificate',path: '/studentlife/transfer-certificate'}
+      {id: 40,title: 'Transfer Certificate',path: '/student-life/transfer-certificate'}
     ]
   },
   {
@@ -88,12 +89,12 @@ export const navData = [
       {
         id: 53,
         title: 'CBSE-OASIS',
-        path: '#'
+        path: 'https://littlescholars-kashipur.com/pdf/oasis.pdf'
       },
       {
         id: 54,
         title: 'Mandatory Public Disclosures',
-        path: '#'
+        path: 'https://littlescholars-kashipur.com/pdf/Mandatory_Disclosures.pdf'
       }
     ]
   },

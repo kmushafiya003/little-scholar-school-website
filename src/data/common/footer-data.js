@@ -4,6 +4,13 @@ import { FaYoutube } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
 import { FaFacebook } from "react-icons/fa";
 
+import AAKRITI from '../../images/StudentLife/Topper/X-Student/AAKRITI AGARWAL.webp'
+import ADITI from '../../images/StudentLife/Topper/X-Student/ADITI SUYAL.webp'
+import ADITYA from '../../images/StudentLife/Topper/X-Student/ADITYA SINGH.webp'
+import DAKSH from '../../images/StudentLife/Topper/X-Student/DAKSH GAHLOT.webp'
+import KARAN from '../../images/StudentLife/Topper/X-Student/KARAN KUMAR.webp'
+import TAZEEM from '../../images/StudentLife/Topper/X-Student/TAZEEM KHAN.webp'
+
 export const footerData = {
     logo: logo,
     address:
@@ -31,21 +38,39 @@ export const footerData = {
     birthdays: [
         {
             id: 1,
-            name: "Anjali Sharma",
+            name: "Aakriti Agarwal",
             date: "August 2nd, 2024",
-            image: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAzL2ZyZWVpbWFnZXNjb21wYW55X3Bob3RvX29mX3lvdW5nX2luZGlhbl9naXJsX2hvbGRpbmdfc3R1ZGVudF9iYV8zN2QyNjU4Yi0yOWIwLTQyZmQtODhmYy04OGU3ZTcxYmVlNDcucG5n.png'
+            image:AAKRITI,
         },
         {
             id: 2,
-            name: "Anjali Sharma",
+            name: "Aditya Singh",
             date: "July 26th, 2024",
-            image: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAzL2ZyZWVpbWFnZXNjb21wYW55X3Bob3RvX29mX3lvdW5nX2luZGlhbl9naXJsX2hvbGRpbmdfc3R1ZGVudF9iYV8zN2QyNjU4Yi0yOWIwLTQyZmQtODhmYy04OGU3ZTcxYmVlNDcucG5n.png'
+            image: ADITYA,
         },
         {
             id: 3,
-            name: "Anjali Sharma",
+            name: "Aditi Suyal",
             date: "July 18th, 2024",
-            image: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAzL2ZyZWVpbWFnZXNjb21wYW55X3Bob3RvX29mX3lvdW5nX2luZGlhbl9naXJsX2hvbGRpbmdfc3R1ZGVudF9iYV8zN2QyNjU4Yi0yOWIwLTQyZmQtODhmYy04OGU3ZTcxYmVlNDcucG5n.png'
+            image: ADITI
+        },
+        {
+            id: 4,
+            name: "Daksh Gehlot",
+            date: "August 2nd, 2024",
+            image: DAKSH
+        },
+        {
+            id: 5,
+            name: "Karan Kumar",
+            date: "July 26th, 2024",
+            image: KARAN
+        },
+        {
+            id: 6,
+            name: "Tazeem Khan",
+            date: "July 18th, 2024",
+            image:TAZEEM
         }
     ],
     usefulLinks: [

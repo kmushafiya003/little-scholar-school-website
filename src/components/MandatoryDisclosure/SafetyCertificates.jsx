@@ -8,7 +8,7 @@ function SafetyCertificates() {
 
             {/* ----------- container -------------- */}
 
-            <div className='w-full md:w-11/12 mx-0 md:mx-auto flex flex-col gap-y-16 py-6'>
+            <div className='w-11/12 md:w-10/12 mx-auto flex flex-col gap-y-16 py-6'>
 
                 {/* --------------------- upper part ------------------- */}
 

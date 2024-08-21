@@ -9,6 +9,7 @@ import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
+//import TransferCertificateForm from './components/student-life/Transfer-certificate/Transfer-certificate.jsx';
 
 
 // -------- Home -------
@@ -47,6 +48,7 @@ const Achievements = lazy(() => import('./components/student-life/achievement/Ac
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
 const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
 const Cabinet = lazy(()=> import('./components/student-life/cabinet/CabinetYear.jsx'))
+const TransferCertificate = lazy(()=> import('./components/student-life/Transfer-certificate/TransferCertificate.jsx'))
 
 // -------------- News & Calendar ---------------
 
@@ -129,6 +131,7 @@ const App = () => {
           <Route path='/student-life/events' element={<EventCalendar />} />
           <Route path='/student-life/toppers' element={<Topper />} />
           <Route path='/student-life/cabinet' element={<Cabinet/>}/>
+          <Route path='/student-life/Transfer-certificate' element={<TransferCertificate/>}/>
         
           </Route>
 
@@ -158,7 +161,7 @@ const App = () => {
 
            <Route element={<MandatoryDisclosure/>}>
           <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
-         
+          <Route path='/mandatory-disclosures/safety-certificate&affiliations' element={<SafetyCertificates/>}/>
         
           </Route>
 
