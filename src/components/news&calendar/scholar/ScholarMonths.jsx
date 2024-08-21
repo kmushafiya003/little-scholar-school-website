@@ -1,12 +1,17 @@
 import React from 'react';
 
 import FlipCard from '../../common/FlipCard';
+import GoBackBtn from '../../common/GoBackBtn';
 
-const ScholarMonths = ({ timetable }) => {
-
+const ScholarMonths = ({ timetable, setScholarTime }) => {
+  const goBackHandler = () => {
+    setScholarTime(null);
+  }
   return (
-    <section className='relative w-full'>
-      <div className='grid w-10/12 grid-cols-1 gap-2 pt-20 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+    <section className='relative w-full pt-20'>
+     <div className='w-10/12 mx-auto'>
+     <GoBackBtn handler={goBackHandler} />
+      <div className='grid grid-cols-1 gap-1 pt-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {timetable.map((data) => (
           <FlipCard
             key={data.id}
@@ -19,6 +24,7 @@ const ScholarMonths = ({ timetable }) => {
           />
         ))}
       </div>
+     </div>
     </section>
   );
 };

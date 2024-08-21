@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { socioculturalData } from '../../../data/StudentLife/sociocultural';
-import DiffImageSlider from '../../../components/common/DiffImageSlider';
+import DiffImageSlider from '../../common/DiffImageSlider';
 import Clubs from './subcomponents/Clubs';
 import PresentationTable from './subcomponents/PresentationTable';
 import Arms from './subcomponents/Arms';
 import IIMUNForm from './subcomponents/IIMUNForm';
 import Championship from './subcomponents/Championship';
 
-const SocioCultural = () => {
+const Sociocultural = () => {
   const [activeTab, setActiveTab] = useState({});
 
   useEffect(() => {
@@ -34,6 +34,7 @@ const SocioCultural = () => {
 
   return (
     <section className='academics-nds-container w-11/12 mx-auto bg-white'>
+      {console.log('rendering')}
       <div className="flex flex-wrap py-20 gap-2 rounded-lg 2xl:flex-nowrap">
         {/* Sidebar */}
         <div className="w-full  md:w-full 2xl:w-1/4 mt-4 overflow-y-auto text-center">
@@ -220,4 +221,4 @@ const SocioCultural = () => {
   );
 };
 
-export default SocioCultural;
+export default Sociocultural;

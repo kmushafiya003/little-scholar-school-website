@@ -1,32 +1,37 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp, IoMdClose, IoMdMenu } from "react-icons/io";
-import { navData } from '../../data/common/navbar-links';
-import logo from '../../assets/logo.webp';
-import '../../App.css'; // Ensure this file imports your CSS
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import {
+  IoIosArrowDown,
+  IoIosArrowForward,
+  IoMdClose,
+  IoMdMenu,
+  IoIosArrowUp, 
+} from 'react-icons/io';
+import { navData } from '../../data/common/navbar-links'; 
+import logo from '../../assets/logo.webp'; 
+import '../../App.css'; 
+import { motion, AnimatePresence } from 'framer-motion';
+import { debounce } from 'lodash';
 
 const Navbar = () => {
   const location = useLocation();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
-  const [activeSubSubDropdown, setActiveSubSubDropdown] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const dropdownTimeout = useRef(null);
   const subDropdownTimeout = useRef(null);
-  const subSubDropdownTimeout = useRef(null);
   const lastScrollY = useRef(0);
+  const navRef = useRef(null);
 
-  // for closing the dropdown when we going to other page
-  useEffect(()=>{
+  useEffect(() => {
     setActiveDropdown(null);
     setActiveSubDropdown(null);
-    setActiveSubSubDropdown(null);
-
-  }, [location.pathname])
+    setIsOpen(false); // Close menu on route change
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,27 +47,32 @@ const Navbar = () => {
       lastScrollY.current = window.scrollY;
     };
 
+    const handleResize = debounce(() => {
+      const width = window.innerWidth;
+      setWindowWidth(width);
+      if (width > 1024 && isOpen) {
+        setIsOpen(false);
+      }
+    }, 200);
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, [isOpen]);
 
   const handleMouseEnter = (id, level) => {
     clearTimeout(dropdownTimeout.current);
     clearTimeout(subDropdownTimeout.current);
-    clearTimeout(subSubDropdownTimeout.current);
 
     if (level === 'dropdown') {
       setActiveDropdown(id);
       setActiveSubDropdown(null);
-      setActiveSubSubDropdown(null);
     } else if (level === 'subDropdown') {
       setActiveSubDropdown(id);
-      setActiveSubSubDropdown(null);
-    } else if (level === 'subSubDropdown') {
-      setActiveSubSubDropdown(id);
     }
   };
 
@@ -71,16 +81,10 @@ const Navbar = () => {
       dropdownTimeout.current = setTimeout(() => {
         setActiveDropdown(null);
         setActiveSubDropdown(null);
-        setActiveSubSubDropdown(null);
-      }, 200); // delay in ms
+      }, 200);
     } else if (level === 'subDropdown') {
       subDropdownTimeout.current = setTimeout(() => {
         setActiveSubDropdown(null);
-        setActiveSubSubDropdown(null);
-      }, 200);
-    } else if (level === 'subSubDropdown') {
-      subSubDropdownTimeout.current = setTimeout(() => {
-        setActiveSubSubDropdown(null);
       }, 200);
     }
   };
@@ -96,241 +100,331 @@ const Navbar = () => {
   const closeAllMenus = () => {
     setIsOpen(false);
     setActiveDropdown(null);
-    setActiveSubDropdown(null);
-    setActiveSubSubDropdown(null);
+    setActiveSubDropdown(null); 
+  };
+
+  const openDropdown = (navItem) => {
+    if (navItem.dropdown) {
+      toggleDropdown(navItem.id);
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && navRef.current && !navRef.current.contains(event.target)) {
+        closeAllMenus();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'; 
+    };
+  }, [isOpen]);
+
+  const dropdownVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: { opacity: 1, height: 'auto' },
+    exit: { opacity: 0, height: 0 },
+  };
+
+  const mobileDropdownVariants = {
+    hidden: { opacity: 0, y: -20, height: 0 },
+    visible: { opacity: 1, y: 0, height: 'auto' },
+    exit: { opacity: 0, y: -20, height: 0 },
+  };
+
+  const subMenuVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: { opacity: 1, height: 'auto' },
+    exit: { opacity: 0, height: 0 },
   };
 
   return (
-    <header className={`transition-all duration-500 bg-white  shadow-lg ${isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'} ${isHidden ? '-top-[150px] opacity-0' : 'top-0'}`}>
-      <div className='xxxl:w-10/12 xl:w-[95%] xsm:w-10/12 xs:mx-auto xsm:mr-auto w-full  '>
-        <nav className="text-[16px] text-black navbar">
-          <div className="flex items-center justify-between px-4 py-4 mx-auto rounded-full">
-            {/* Logo Section */}
+    <header
+      className={`transition-all duration-500 bg-white shadow-lg pr-2 ${
+        isFixed && !isOpen ? 'fixed top-0 w-full z-50' : 'relative'
+      } ${isHidden ? '-top-[150px] opacity-0 z-[0]' : 'top-0'}`}
+    >
+      <div className='xxxl:w-10/12 xl:w-[95%] xsm:w-10/12 xs:mx-auto xsm:mr-auto w-full'>
+        <nav className='text-[16px] text-black navbar' ref={navRef}>
+          <div className='flex items-center justify-between px-4 py-4 mx-auto rounded-full'>
             <div className='flex items-center'>
-              <NavLink to="/">
-                <img src={logo} alt="Logo" className="w-[110px]" />
+              <NavLink to='/'>
+                <img src={logo} alt='Logo' className='w-[110px]' /> 
               </NavLink>
             </div>
 
-            {/* Main Navigation for large screens */}
-            <div className="hidden space-x-4 xl:flex">
-              <ul className="flex space-x-1">
+            <div className='hidden space-x-4 xl:flex'>
+              <ul className='flex space-x-1'>
                 {navData.map((navItem) => (
                   <li
                     key={navItem.id}
-                    className="relative group"
-                    onMouseEnter={() => handleMouseEnter(navItem.id, 'dropdown')}
+                    className='relative group'
+                    onMouseEnter={() =>
+                      handleMouseEnter(navItem.id, 'dropdown')
+                    }
                     onMouseLeave={() => handleMouseLeave('dropdown')}
                   >
-                    {/* Main Navigation Link */}
-                    {
-                      navItem.dropdown ? (
-                        <p
-                     
+                    {navItem.dropdown ? ( 
+                      <p
                         className={`flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer
-                        ${navItem.dropdown && activeDropdown === navItem.id ? 'bg-[rgb(32,44,69)] text-white' : 'hover:bg-[rgb(32,44,69)] hover:text-white'}`}
+                         ${
+                           navItem.dropdown && activeDropdown === navItem.id
+                             ? 'bg-[rgb(32,44,69)] text-white' 
+                             : 'hover:bg-[rgb(32,44,69)] hover:text-white' 
+                         }`}
                       >
                         {navItem.title}
-                        {navItem.dropdown && <span className='mt-2 ml-1'><IoIosArrowDown /></span>}
+                        {navItem.dropdown && (
+                          <span className='mt-2 ml-1'>
+                            <IoIosArrowDown />
+                          </span>
+                        )}
                       </p>
-  
+                    ) : (
+                      <NavLink
+                        to={navItem.path}
+                        className='flex items-center px-4 py-2 font-semibold text-black transition duration-300 rounded-full cursor-pointer hover:bg-dark-blue hover:text-white' 
+                      >
+                        {navItem.title}
+                      </NavLink>
+                    )}
 
-                      ) : (
-                        <Link to={navItem.path} className='flex items-center rounded-full px-4 py-2 transition duration-300 text-black font-semibold cursor-pointer hover:bg-dark-blue hover:text-white'> {navItem.title}</Link>
-                      )
-                    }
-                   
-                    {/* Dropdown Menu */}
-                    {navItem.dropdown && (
-                      <ul className={`absolute left-0 mt-6 z-20 w-60 border-[rgb(6,4,4)] border-t-4 text-black bg-white 
-                        ${activeDropdown === navItem.id ? 'block opacity-100' : 'hidden opacity-0'}`}>
-                        {navItem.dropdown.map((submenuItem) => (
-                          <li
-                            key={submenuItem.id}
-                            className="relative border-b-0.2 border-[rgb(234,226,226)] group"
-                            onMouseEnter={() => handleMouseEnter(submenuItem.id, 'subDropdown')}
-                            onMouseLeave={() => handleMouseLeave('subDropdown')}
+                    {navItem.dropdown && ( 
+                      <AnimatePresence>
+                        {activeDropdown === navItem.id && (
+                          <motion.ul
+                            className='absolute left-0 mt-6 w-60 border-[rgb(6,4,4)] border-t-4 border text-black bg-white z-20 overflow-hidden' 
+                            initial='hidden'
+                            animate='visible'
+                            exit='exit'
+                            variants={dropdownVariants}
+                            transition={{ duration: 0.3 }}
                           >
-                            {/* Submenu Link */}
-                            <NavLink
-                              to={submenuItem.path}
-                              className="flex items-center px-4 text-resp-black-2 transition duration-300 dropdown-item hover:bg-light-grey hover:text-dark-blue"
-                            >
-                              <p className='hover:translate-x-1 transition-transform duration-200 py-2 flex items-center'>
-                                {submenuItem.title}
-                                {submenuItem.dropdown && <IoIosArrowForward className="ml-4" />}
-                              </p>
-                            </NavLink>
-
-                            {/* Sub-dropdown Menu */}
-                            {submenuItem.dropdown && (
-                              <ul className={`absolute left-full top-0 mt-0 bg-white border border-gray-300 transition-all duration-300
-                                ${activeSubDropdown === submenuItem.id ? 'block opacity-100' : 'hidden opacity-0'}`}>
-                                {submenuItem.dropdown.map((subSubmenuItem) => (
-                                  <li
-                                    key={subSubmenuItem.id}
-                                    className="relative transition duration-200 ease-in-out transform"
-                                    onMouseEnter={() => handleMouseEnter(subSubmenuItem.id, 'subSubDropdown')}
-                                    onMouseLeave={() => handleMouseLeave('subSubDropdown')}
-                                  >
-                                    {/* Sub-submenu Link */}
-                                    <NavLink
-                                      to={subSubmenuItem.path}
-                                      className="border-b-0.2 border-[rgb(143,140,140)] px-4 transition duration-300 w-[150px] text-resp-black-2 flex items-center dropdown-item hover:bg-light-grey hover:text-dark-blue"
-                                    >
-                                      <p className='hover:translate-x-1 transition-transform duration-200 py-1 flex items-center'>
-                                        {subSubmenuItem.title}
-                                        {subSubmenuItem.dropdown && <IoIosArrowForward className="ml-4" />}
-                                      </p>
-                                    </NavLink>
-
-                                    {/* Sub-sub-dropdown Menu */}
-                                    {subSubmenuItem.dropdown && (
-                                      <ul className={`absolute left-full top-0 mt-0 bg-gray-800 text-white border border-gray-300 transition-all duration-300
-                                        ${activeSubSubDropdown === subSubmenuItem.id ? 'block opacity-100' : 'hidden opacity-0'}`}>
-                                        {subSubmenuItem.dropdown.map((subSubmenuItem) => (
-                                          <li key={subSubmenuItem.id}>
-                                            {/* Sub-sub-submenu Link */}
-                                            <NavLink
-                                              to={subSubmenuItem.path}
-                                              className="block px-4 py-2 transition duration-300 hover:bg-[rgb(212,56,12)] text-black"
-                                            >
-                                              {subSubmenuItem.title}
-                                            </NavLink>
-                                          </li>
-                                        ))}
-                                      </ul>
+                            {navItem.dropdown.map((submenuItem) => (
+                              <li
+                                key={submenuItem.id}
+                                className='relative border-b-0.2 border-[rgb(234,226,226)] group' 
+                                onMouseEnter={() =>
+                                  handleMouseEnter(
+                                    submenuItem.id,
+                                    'subDropdown'
+                                  )
+                                }
+                                onMouseLeave={() =>
+                                  handleMouseLeave('subDropdown')
+                                }
+                              >
+                                <NavLink
+                                  to={submenuItem.path}
+                                  className='flex items-center px-4 transition duration-300 text-resp-black-2 dropdown-item hover:bg-light-grey hover:text-dark-blue' 
+                                >
+                                  <p className='flex items-center py-2 transition-transform duration-200 hover:translate-x-1'> 
+                                    {submenuItem.title}
+                                    {submenuItem.dropdown && ( 
+                                      <IoIosArrowForward className='ml-4' />
                                     )}
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                                  </p>
+                                </NavLink>
+
+                                {submenuItem.dropdown && ( 
+                                  <ul
+                                    className={`absolute left-full top-0 mt-0 bg-white border border-gray-300 transition-all duration-300 overflow-hidden
+                                      ${
+                                        activeSubDropdown === submenuItem.id
+                                          ? 'visible opacity-100' 
+                                          : 'invisible opacity-0' 
+                                      }`}
+                                  >
+                                    {submenuItem.dropdown.map(
+                                      (subSubmenuItem) => (
+                                        <li
+                                          key={subSubmenuItem.id}
+                                          className='relative group'
+                                        >
+                                          <NavLink
+                                            to={subSubmenuItem.path}
+                                            className='flex items-center px-4 py-2 text-black transition duration-300 hover:bg-light-grey hover:text-dark-blue' 
+                                          >
+                                            {subSubmenuItem.title}
+                                          </NavLink>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                )}
+                              </li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
                     )}
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="text-2xl xl:hidden"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <IoMdClose /> : <IoMdMenu />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation Menu */}
-          <div className={`xl:hidden fixed inset-0 bg-white text-black text-sm transition-all duration-300 ${isOpen ? 'block z-[80] mt-10 h-[40%]' : 'hidden'}`}>
-            {/* Close Button for Mobile Menu */}
-            {isOpen && (
+            {windowWidth <= 1280 && ( 
               <button
-                onClick={closeAllMenus}
-                className="absolute top-4 right-4 text-2xl"
+                className='z-20 flex items-center xl:hidden focus:outline-none'
+                onClick={() => setIsOpen(!isOpen)}
               >
-                <IoMdClose />
+                {isOpen ? (
+                  <IoMdClose className='w-8 h-8' />
+                ) : (
+                  <IoMdMenu className='w-8 h-8' />
+                )}
               </button>
             )}
-
-            <ul className="pt-16">
-              {navData.map((navItem) => (
-                <li key={navItem.id} className="relative">
-                  <div
-                    className="flex justify-between items-center bg-resp-black hover:bg-[rgb(132,128,128)] border-b-0.2"
-                    onClick={() => toggleDropdown(navItem.id)}
-                  >
-                    {/* Mobile Navigation Link */}
-                    <NavLink
-                      to={navItem.path}
-                      className="block w-full px-4 py-2 font-bold text-left text-white transition duration-300"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        closeAllMenus();
-                      }}
-                    >
-                      {navItem.title}
-                    </NavLink>
-
-                    {/* Mobile Dropdown Toggle Button */}
-                    {navItem.dropdown && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleDropdown(navItem.id);
-                        }}
-                        className="px-4 py-2 text-left transition duration-300 scroll-auto"
-                      >
-                        {activeDropdown === navItem.id ? <IoIosArrowUp className='text-white' /> : <IoIosArrowDown className='text-white' />}
-                      </button>
-                    )}
-                  </div>
-
-                  {/* Mobile Dropdown Menu */}
-                  {navItem.dropdown && activeDropdown === navItem.id && (
-                    <ul className={`bg-gray-800 border-l-0.2 border-r-0.2 border-[rgb(141,141,141)] text-white transition-all duration-300 overflow-hidden ${activeDropdown === navItem.id ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
-                      {navItem.dropdown.map((submenuItem) => (
-                        <li key={submenuItem.id} className="relative">
-                          <div
-                            className="flex items-center justify-between border-2 group"
-                            onClick={() => toggleSubDropdown(submenuItem.id)}
-                          >
-                            {/* Mobile Submenu Link */}
-                            <NavLink
-                              to={submenuItem.path}
-                              className="block w-full px-4 py-2 text-left transition duration-300 border-t-0.2 border-[rgb(202,197,197)] text-black font-regular whitespace-normal dropdown-item hover:translate-x-1"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                closeAllMenus();
-                              }}
-                            >
-                              {submenuItem.title}
-                            </NavLink>
-
-                            {/* Mobile Sub-dropdown Toggle Button */}
-                            {submenuItem.dropdown && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  toggleSubDropdown(submenuItem.id);
-                                }}
-                                className="bg-[rgb(74,72,72)] px-3 py-3 mt-3 hover:bg-[rgb(121,119,119)] text-left transition duration-300"
-                              >
-                                {activeSubDropdown === submenuItem.id ? <IoIosArrowUp className='bg-[rgb(74,72,72)]' /> : <IoIosArrowDown className='bg-[rgb(74,72,72)]' />}
-                              </button>
-                            )}
-                          </div>
-
-                          {/* Mobile Sub-dropdown Menu */}
-                          {submenuItem.dropdown && activeSubDropdown === submenuItem.id && (
-                            <ul className={`w-[40%] ml-auto border-2 border-[rgb(141,141,141)] text-white transition-all duration-300 overflow-hidden ${activeSubDropdown === submenuItem.id ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
-                              {submenuItem.dropdown.map((subSubmenuItem) => (
-                                <li key={subSubmenuItem.id}>
-                                  {/* Mobile Sub-submenu Link */}
-                                  <NavLink
-                                    to={subSubmenuItem.path}
-                                    className="block px-4 py-2 transition duration-300 text-right border-b border-[rgb(118,122,130)] hover:bg-[rgb(118,122,130)] text-black font-regular whitespace-normal dropdown-item"
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      closeAllMenus();
-                                    }}
-                                  >
-                                    {subSubmenuItem.title}
-                                  </NavLink>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
           </div>
+
+          {isOpen && windowWidth <= 1280 && ( 
+            <div
+              className='fixed top-0 left-0 z-50 w-full h-full bg-white xl:hidden'
+              style={{ overflowY: 'auto' }}
+            >
+              <div className='flex flex-col h-full'>
+                <div className='flex justify-between p-10'>
+                  <NavLink to='/'>
+                    <img src={logo} alt='Logo' className='w-[110px]' /> 
+                  </NavLink>
+                  <button
+                    className='text-black focus:outline-none'
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <IoMdClose className='w-8 h-8' />
+                  </button>
+                </div>
+
+                <motion.div 
+                  initial='hidden'
+                  animate='visible'
+                  exit='exit'
+                  variants={mobileDropdownVariants}
+                  transition={{ duration: 0.3 }}
+                  className='flex-grow pb-4 overflow-hidden text-black bg-white shadow-lg rounded-b-2xl' 
+                  style={{ overflowY: 'auto' }} 
+                >
+                  <ul className='flex flex-col px-4 py-2 space-y-2'>
+                    {navData.map((navItem) => (
+                      <li
+                        key={navItem.id}
+                        className='flex flex-col px-2 pb-2 border border-gray-100 rounded-lg' 
+                      >
+                        <NavLink
+                          to={navItem.path}
+                          className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer
+                           ${
+                             activeDropdown === navItem.id
+                               ? 'bg-[rgb(32,44,69)] text-white' 
+                               : 'hover:bg-[rgb(32,44,69)] hover:text-white' 
+                           }`}
+                          onClick={(event) => {
+                            if (navItem.dropdown) {
+                              event.preventDefault();
+                              openDropdown(navItem);
+                            }
+                          }}
+                        >
+                          {navItem.title}
+                          {navItem.dropdown && (
+                            <span>
+                              {activeDropdown === navItem.id ? (
+                                <IoIosArrowUp /> 
+                              ) : (
+                                <IoIosArrowDown />
+                              )}
+                            </span>
+                          )}
+                        </NavLink>
+
+                        <AnimatePresence> 
+                          {navItem.dropdown &&
+                            activeDropdown === navItem.id && (
+                              <motion.ul
+                                className='pl-4 mt-2 space-y-2 overflow-hidden' 
+                                variants={subMenuVariants}
+                                initial='hidden'
+                                animate='visible'
+                                exit='exit'
+                                transition={{ duration: 0.3 }}
+                              >
+                                {navItem.dropdown.map((submenuItem) => (
+                                  <li
+                                    key={submenuItem.id}
+                                    className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey transition-all duration-300 hover:bg-dark-light-black hover:border-l-[6px] border-dark-blue group' 
+                                    onClick={() =>
+                                      toggleSubDropdown(submenuItem.id)
+                                    }
+                                  >
+                                    <NavLink 
+                                      to={submenuItem.path}
+                                      className='flex items-center justify-between text-black transition-all duration-300 hover:text-dark-blue group-hover:translate-x-1' 
+                                    >
+                                      {submenuItem.title}
+                                      {submenuItem.dropdown && ( 
+                                        <span>
+                                          {activeSubDropdown ===
+                                          submenuItem.id ? ( 
+                                            <IoIosArrowUp /> 
+                                          ) : (
+                                            <IoIosArrowDown />
+                                          )}
+                                        </span>
+                                      )}
+                                    </NavLink>
+
+                                    {submenuItem.dropdown &&
+                                      activeSubDropdown ===
+                                        submenuItem.id && (
+                                        <ul className='pl-4 mt-2 space-y-2'>
+                                          {submenuItem.dropdown.map(
+                                            (subSubmenuItem) => (
+                                              <li
+                                                key={subSubmenuItem.id}
+                                                className='flex flex-col px-4 py-2 rounded-lg cursor-pointer bg-light-grey hover:bg-gray-200' 
+                                              >
+                                                <NavLink 
+                                                  to={subSubmenuItem.path}
+                                                  className='text-black hover:text-dark-blue' 
+                                                >
+                                                  {subSubmenuItem.title}
+                                                </NavLink>
+                                              </li>
+                                            )
+                                          )}
+                                        </ul>
+                                      )}
+                                  </li>
+                                ))}
+                              </motion.ul>
+                            )}
+                        </AnimatePresence>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
+            </div>
+          )}
         </nav>
       </div>
     </header>

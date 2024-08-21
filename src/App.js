@@ -9,10 +9,15 @@ import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
+//import TransferCertificateForm from './components/student-life/Transfer-certificate/Transfer-certificate.jsx';
 
 
+// -------- Home -------
 
 const Home = lazy(() => import('./pages/Home'));
+
+
+// ------ About -----------
 
 const About = lazy(() => import('./pages/About'));
 const FounderDesk = lazy(() => import('./components/about/FounderDesk.jsx'));
@@ -22,6 +27,7 @@ const ManagingCommittee = lazy(() => import('./components/about/ManagingCommitte
 const Principles = lazy(() => import('./components/about/Principles.jsx'));
 const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'));
 
+// ------------ Admission -------
 
 const Admission = lazy(() => import('./pages/Admission'));
 const Helpdesk = lazy(() => import('./components/adimission/Helpdesk'));
@@ -32,19 +38,43 @@ const SchoolTiming = lazy(() => import('./components/adimission/SchoolTiming'));
 const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 
+// ------------ Student Life ------------
+
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
 const Academics =lazy(()=>import('./components/student-life/academics/Academics.jsx'))
+
 const Cocurricular=lazy(()=>import('./components/student-life/co-curricular/Cocurricular.jsx'))
-const SocioCultural=lazy(()=>import ('./components/student-life/sociocultural/SocioCultural.jsx'))
+const Sociocultural=lazy(()=>import('./components/student-life/sociocultural/Sociocultural'))
 const Counselling=lazy(()=>import('./components/student-life/counselling/Counselling.jsx'))
 const Sports =lazy(()=>import('./components/student-life/sports/Sports.jsx'))
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
 const EventCalendar = lazy (() => import('./components/student-life/events/EventCalander'))
+const Cabinet = lazy(()=> import('./components/student-life/cabinet/CabinetYear.jsx'))
+const TransferCertificate = lazy(()=> import('./components/student-life/Transfer-certificate/TransferCertificate.jsx'))
+
+// -------------- News & Calendar ---------------
+
+const NewsCalendar = lazy(()=> import('./pages/NewsCalendar.jsx'))
+const StudentHandBook = lazy(() => import('./components/news&calendar/StudentHandbook.jsx'));
+const ScholarTimes = lazy(() => import('./components/news&calendar/scholar/ScholarTimes.jsx'));
+
+// ----------- students (for summer camp) --------------
+
+const Students = lazy(()=> import('./pages/Students.jsx'));
+const SummerCampConsent = lazy(()=> import('./components/news&calendar/student/SummerCampConsent.jsx'));
+const SummerCamp = lazy(() => import('./components/news&calendar/student/SummerCamp.jsx'))
 
 
+// ------------ Mandatory Disclosure ----------
 const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'))
 const BookList  = lazy(() => import('./components/MandatoryDisclosure/BookList.jsx'))
+const SafetyCertificates = lazy(() => import('./components/MandatoryDisclosure/SafetyCertificates.jsx'))
+
+// ------------- Contact ------------
+
+const Contact = lazy(()=> import('./pages/Contact.jsx'));
+
 
 
 const App = () => {
@@ -63,23 +93,6 @@ const App = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <ScrollText />
-      {/* ------ Dynamic button with flip animation --------- */}
-
-      {/* <Dynamic3dButton
-        text1="Front Text - Flip"
-        text2="Back Text - Flip"
-        className="flip-card"
-        showIcon={true} //Show Icon
-      /> */}
-
-      {/* ------ Dynamic button with scale animation --------- */}
-
-      {/* <Dynamic3dButton
-        text1="Front Text - Scale"
-        className="scale-card"
-        showIcon={false} //Hide Icon
-      /> */}
-
       <Navbar />
 
       <Suspense fallback={<div> <Loading /> </div>}>
@@ -117,21 +130,50 @@ const App = () => {
           <Route path='/student-life/academics' element={<Academics/>}/>
           <Route path='/student-life/sports' element={<Sports/>}/>
           <Route path='/student-life/co-curricular' element={<Cocurricular/>}/>
-          <Route path='/student-life/socioculturalDevelopment' element={<SocioCultural/>}/>
+          <Route path='/student-life/social-cultural&development' element={<Sociocultural/>}/>
           <Route path='/student-life/Counselling' element={<Counselling/>}/>
           <Route path='/student-life/achievements' element={<Achievements />} />
-          <Route path='/student-life/toppers' element={<Topper />} />
           <Route path='/student-life/events' element={<EventCalendar />} />
+          <Route path='/student-life/toppers' element={<Topper />} />
+          <Route path='/student-life/cabinet' element={<Cabinet/>}/>
+          <Route path='/student-life/Transfer-certificate' element={<TransferCertificate/>}/>
         
           </Route>
+
+
+          {/* --------------- News & Calendar -------------------- */}
+
+          <Route element={<NewsCalendar/>}>
+          <Route path='/news&calendar/student-handbook' element={<StudentHandBook/>}/>
+          <Route path='/news&calendar/scholars-times' element={<ScholarTimes/>}/>
+          </Route>
+
+
+          {/* ------------------- Students ( for summer camp -----------) */}
+
+          <Route element={<Students/>}>
+
+          <Route path='/summer-consent-form' element={<SummerCampConsent/>}/>
+          <Route path='/summer-camp-form' element={<SummerCamp/>}/>
+
+          </Route>
+
+
+           
 
 
            {/* -------------- Mandatory Disclosure ------------------ */}
 
            <Route element={<MandatoryDisclosure/>}>
           <Route path='/mandatory-disclosures/booklist' element={<BookList />} />
+          <Route path='/mandatory-disclosures/safety-certificate&affiliations' element={<SafetyCertificates/>}/>
         
           </Route>
+
+
+          {/* ------------------- Contact us page -------------------- */}
+
+          <Route path='/contact-us' element={<Contact/>}/>
 
 
         </Routes>
@@ -139,6 +181,8 @@ const App = () => {
 
       <ScrollTop />
       <Footer />
+
+     
 
     </div>
   );
