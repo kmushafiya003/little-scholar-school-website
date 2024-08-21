@@ -326,7 +326,7 @@ const Navbar = () => {
                       <li
                         key={navItem.id}
                         className='flex flex-col border border-gray-100 rounded-lg'
-                        onClick={() => openDropdown(navItem)}
+                        onClick={() => openDropdown(navItem)}//all okey
                       >
                         <p
                           className={`flex items-center justify-between py-2 px-4 rounded-lg cursor-pointer   ${
