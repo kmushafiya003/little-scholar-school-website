@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay ,} from 'swiper/modules';
 import '../../index.css';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
@@ -101,6 +101,7 @@ function Infragallery() {
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 spaceBetween={30}
                 slidesPerView={4}
+                loop={true}
                 breakpoints={{
                   320: {
                     slidesPerView: 1,

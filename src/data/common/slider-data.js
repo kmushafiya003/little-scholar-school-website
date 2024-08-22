@@ -35,6 +35,8 @@ import auditoriump1 from "../../images/Common/aud1.webp";
 import auditoriump2 from "../../images/Common/aud2.webp";
 import auditoriump3 from "../../images/Common/aud3.webp";
 import auditoriump4 from "../../images/Common/aud4.webp";
+
+
 // --------------------Goround------------------------------
 import groundp1 from "../../images/Common/sports1.webp";
 import groundp2 from "../../images/Common/sports2.webp";
@@ -124,28 +126,21 @@ export const infrastructure = [
         images: [
             {
                 id: 1,
-                picture: auditoriump1
+                picture: auditoriump1,
             },
             {
                 id: 2,
-                picture: auditoriump2
+                picture: auditoriump2,
             },
             {
                 id: 3,
-                picture: auditoriump3
+                picture: auditoriump3,
             },
             {
                 id: 4,
-                picture: auditoriump4
+                picture: auditoriump4,
             },
-            {
-                id: 5,
-                picture: computerp2
-            },
-            {
-                id: 6,
-                picture: computerp3
-            }
+          
         ]
         
     },
@@ -170,10 +165,7 @@ export const infrastructure = [
                 id:4,
                 picture: bio4
             },
-            {
-                id: 5,
-                picture: chemistryp3
-            }
+           
             
             
             
@@ -196,14 +188,7 @@ export const infrastructure = [
             {
                 id: 3,
                 picture: chemistryp3
-            },{
-                id: 4,
-                picture: groundp4
             },
-            {
-                id: 5,
-                picture: groundp3
-            }
         ]
     },
     {
@@ -223,14 +208,7 @@ export const infrastructure = [
                 id: 3,
                 picture: computerp3
             },
-            {
-                id: 4,
-                picture: physics1
-            },
-            {
-                id: 5,
-                picture: bio1
-            },
+            
         ]
     },
   
@@ -255,10 +233,7 @@ export const infrastructure = [
                 id: 4,
                 picture: libraryp4
             },
-            {
-                id: 5,
-                picture: physics2
-            }
+         
         ]
     },
     {
@@ -282,10 +257,7 @@ export const infrastructure = [
                 id: 4,
                 picture: physics4
             },
-            {
-                id: 5,
-                picture: schoolp2
-            }
+           
         ]
     },
     
