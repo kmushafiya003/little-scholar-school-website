@@ -54,7 +54,7 @@ const StudentHandbook = () => {
             <table className="w-full border border-black">
               <thead className="border border-b-2 border-black">
                 <th className="px-4 py-3 text-lg font-normal text-left border-t border-l border-r border-gray-200 text-resp-black">
-                  {" "}
+                
                   SL.NO.
                 </th>
                 <th className="px-4 py-3 text-lg font-normal text-left border-t border-l border-r border-gray-200 text-resp-black">
@@ -114,7 +114,7 @@ const StudentHandbook = () => {
           </div>
         </div>
       </div>
-      )}
+    
     </section>
   );
 };

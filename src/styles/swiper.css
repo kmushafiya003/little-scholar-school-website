@@ -1,4 +1,4 @@
-.swiper-slide {
+.swiper-container {
   position: relative;
 }
 
@@ -7,32 +7,42 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
   color: white;
-  padding: 10px;
-  border-radius: 0.5rem; /* rounded-lg */
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7; /* Initial opacity */
 }
 
 .swiper-prev {
-  left: 0px;
+  left: 10px;
 }
 
 .swiper-next {
-  right: 0px;
+  right: 10px;
 }
 
-.swiper-slide:hover .swiper-prev {
-  transform: translate(100%, -50%);
+/* Apply hover effect to the slider container */
+.swiper-container:hover .swiper-prev,
+.swiper-container:hover .swiper-next {
+  opacity: 1; /* Full opacity on hover */
+  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
 }
 
-.swiper-slide:hover .swiper-next {
-  transform: translate(-100%, -50%);
+.swiper-container:hover .swiper-prev {
+  transform: translateY(-50%) translateX(20px);
 }
 
-.swiper-prev:hover,
-.swiper-next:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
+.swiper-container:hover .swiper-next {
+  transform: translateY(-50%) translateX(-20px);
 }
+
+.swiper-prev .icon,
+.swiper-next .icon {
+  font-size: 1.5rem;
+}
+
+

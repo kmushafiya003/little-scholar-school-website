@@ -42,7 +42,10 @@ const FAQ = lazy(() => import('./components/adimission/FQA'));
 
 const StudentLife = lazy(() => import('./pages/StudentLIfe'));
 const Academics =lazy(()=>import('./components/student-life/academics/Academics.jsx'))
+
 const Cocurricular=lazy(()=>import('./components/student-life/co-curricular/Cocurricular.jsx'))
+const Sociocultural=lazy(()=>import('./components/student-life/sociocultural/Sociocultural'))
+const Counselling=lazy(()=>import('./components/student-life/counselling/Counselling.jsx'))
 const Sports =lazy(()=>import('./components/student-life/sports/Sports.jsx'))
 const Achievements = lazy(() => import('./components/student-life/achievement/Achievement'));
 const Topper = lazy(() => import('./components/student-life/toppers/Topper'));
@@ -127,6 +130,8 @@ const App = () => {
           <Route path='/student-life/academics' element={<Academics/>}/>
           <Route path='/student-life/sports' element={<Sports/>}/>
           <Route path='/student-life/co-curricular' element={<Cocurricular/>}/>
+          <Route path='/student-life/social-cultural&development' element={<Sociocultural/>}/>
+          <Route path='/student-life/Counselling' element={<Counselling/>}/>
           <Route path='/student-life/achievements' element={<Achievements />} />
           <Route path='/student-life/events' element={<EventCalendar />} />
           <Route path='/student-life/toppers' element={<Topper />} />
