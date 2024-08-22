@@ -9,21 +9,29 @@ const TransferCertificate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation: Check if the input is empty
+    
     if (!studentId.trim()) {
       setError('Please enter a valid Student Name or Admission Number.');
       return;
     }
 
-    setError(''); // Clear error if validation passes
+    setError(''); 
     console.log('Get Transfer Certificate for:', studentId);
 
-    // Show a toast notification with the student's name
+    
     toast.success(`Transfer Certificate requested for: ${studentId}`, {
-      position: 'top-center',  // Using string directly for the position
+      position: 'top-center',
+      autoClose: 4000,
+      className: 'custom-toast',  
+      style: {
+        marginTop: '70px',  
+        fontSize: '18px',   
+        padding: '20px',    
+        width: '450px'      
+      }
     });
 
-    // Clear the input field
+   
     setStudentId('');
   };
 
@@ -52,7 +60,7 @@ const TransferCertificate = () => {
             Get Transfer Certificate
           </button>
         </form>
-        {/* Add ToastContainer to render toasts */}
+       
         <ToastContainer />
       </div>
     </section>
