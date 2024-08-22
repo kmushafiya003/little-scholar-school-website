@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { infrastructure } from '../../data/common/slider-data'; // Ensure this is correctly exported
-import Button from '../common/Buttton'; // Correct the path if necessary
+import { infrastructure } from '../../data/common/slider-data';
+import Button from '../common/Buttton';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import '../../index.css'; 
+import '../../index.css';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 function Infragallery() {
@@ -22,7 +22,7 @@ function Infragallery() {
       event.target.classList.add('clicked');
       setTimeout(() => {
         event.target.classList.remove('clicked');
-      }, 300); // Duration should match your CSS transition duration
+      }, 300);
     };
 
     nextButton.addEventListener('click', handleClick);
@@ -45,12 +45,17 @@ function Infragallery() {
 
   const handleAlbumClick = (albumName) => {
     setActiveAlbum(albumName);
-    setAnimateBorder(false); // Reset animation state
-    setTimeout(() => setAnimateBorder(true), 10); // Re-trigger animation
+    setAnimateBorder(false);
+    setTimeout(() => setAnimateBorder(true), 10);
   };
 
+  // Remove duplicates by using the picture property as a unique key
   const renderSlides = (images) => {
-    return images.map((image) => (
+    const uniqueImages = images.filter(
+      (image, index, self) =>
+        index === self.findIndex((img) => img.picture === image.picture)
+    );
+    return uniqueImages.map((image) => (
       <SwiperSlide key={image.id} className="flex flex-col items-center animate-dragFromTop">
         <img src={image.picture} alt={`Slide ${image.id}`} className="w-full h-auto" />
         <div className="mt-2 text-lg font-medium text-center">{image.name}</div>
@@ -67,15 +72,12 @@ function Infragallery() {
     <section className='relative w-full py-24 bg-off-white-bg'>
       <div className='w-10/12 mx-auto'>
         <div className='flex-col xxl:pr-1 xmd:flex-col xl:flex-row rounded-3xl xmd:items-center xl:items-start dxs:flex-col dxs:items-center dxs:pl-0 dxs:pr-0'>
-          {/* -------------- heading ----------------- */}
           <div className='flex flex-col mb-20 gap-y-4 text-resp-black'>
             <h1 className='uppercase text-[32px] font-semibold'>
               INFRASTRUCTURE
             </h1>
-            {/* ----------- small underline ----------- */}
             <div className='w-[70px] h-1 bg-black'></div>
           </div>
-          {/* ------------- filter part --------------- */}
           <div className='flex flex-wrap gap-0 mt-5'>
             {infrastructure.map((album) => (
               <Button
@@ -83,13 +85,12 @@ function Infragallery() {
                 label={album.name}
                 onClick={() => handleAlbumClick(album.name)}
                 isActive={activeAlbum === album.name}
-                className='items-center justify-center  transition duration-300  w-36'
+                className='items-center justify-center transition duration-300 w-36'
               />
             ))}
           </div>
-          {/* ---------- image / video section part ------------ */}
           <div className='relative w-full py-4'>
-            <div className={`relative border-2 border-gray-100 p-4 ${animateBorder ? 'swiper-border-drag-top' : ''}`}> {/* Wrapper div with border */}
+            <div className={`relative border-2 border-gray-100 p-4 ${animateBorder ? 'swiper-border-drag-top' : ''}`}>
               <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation={{
