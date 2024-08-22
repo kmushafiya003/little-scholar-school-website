@@ -4,10 +4,10 @@
 
 /* yaha pr kerna hai  */
 
-/* * {
+* {
   scrollbar-width: thin;
   scrollbar-color: #202C45 #DFE9EB;
-}* */
+}*
 *::-webkit-scrollbar {
   height: 10px;
   width: 10px;

@@ -30,11 +30,11 @@ const AcademicsNdsports = ({ data }) => {
   };
 
   return (
-    <section className="academics-nds-container w-11/12 mx-auto bg-white App ">
-      <div className="flex-wrap py-20  text-left rounded-lg md:flex overscroll-y-contain 2xl:flex 2xl:flex-nowrap">
+    <section className="academics-nds-container bg-white App ">
+      <div className="flex-wrap py-20 lg:w-10/12 mx-auto  text-left rounded-lg md:flex overscroll-y-contain 2xl:flex 2xl:flex-nowrap">
         {/* Sidebar */}
-        <div className="mx-auto mt-5 overflow-y-auto text-center md:w-8/12 md:overflow-hidden scroll-mx-0 2xl:w-1/4 lg:text-center ">
-          <ul className="list-none border-0.2 border-[rgb(211,203,203)]  rounded-lg">
+        <div className="mx-auto mt-5 overflow-y-auto text-center md:w-8/12 md:overflow-hidden scroll-mx-0 2xl:w-1/4 lg:text-center px-4 ">
+          <ul className="list-none border-0.2 border-[rgb(211,203,203)]  rounded-lg ">
            <div className="">
            {data.map((item) => (
               <li
@@ -55,7 +55,7 @@ const AcademicsNdsports = ({ data }) => {
         </div>
 
         {/* Main Content */}
-        <div className="w-3/4 p-4 overflow-y-auto mx-auto">
+        <div className="sm:w-10/12 w-11/12 py-4 overflow-y-auto mx-auto">
           {data.map((section) => (
             <div
               key={section.title}

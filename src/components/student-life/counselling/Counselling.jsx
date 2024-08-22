@@ -21,10 +21,10 @@ const Counselling = () => {
   };
 
   return (
-    <section className='counselling-container w-11/12 mx-auto bg-white'>
-      <div className="flex flex-wrap py-20 gap-2 rounded-lg 2xl:flex-nowrap">
+    <section className='counselling-container  bg-white py-20'>
+      <div className="flex lg:flex-row flex-col w-11/12 mx-auto items-center lg:items-start gap-x-6 gap-y-5 rounded-lg ">
         {/* Sidebar */}
-        <div className="w-full md:w-1/4 2xl:w-1/4 mt-8 overflow-y-auto text-center h-screen">
+        <div className="w-full md:w-1/4 2xl:w-1/4 mt-8 overflow-y-auto text-center lg:h-screen ">
           <ul className='list-none border border-[rgb(211,203,203)] rounded-lg'>
             {counsellingData.map((section, index) => (
               <li className='border-b border-[rgb(211,203,203)] last:border-b-0 leading-[1.8rem]' key={index}>
@@ -40,7 +40,7 @@ const Counselling = () => {
         </div>
 
         {/* Main Content */}
-        <div className="p-4 w-full md:w-3/4 2xl:w-3/4">
+        <div className="py-4 sm:w-10/12 w-11/12 2xl:w-3/4">
           {counsellingData.map((section, index) => (
             <div key={index} id={`section-${index}`} className={`transition-opacity duration-500 ${activeSection === index ? 'opacity-100' : 'opacity-0'}`}>
               <h1 className="text-[1.8rem] text-dark-blue font-semibold mb-6 border-b border-[rgb(141,141,141)] p-2">

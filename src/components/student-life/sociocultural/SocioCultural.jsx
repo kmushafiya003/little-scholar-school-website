@@ -7,7 +7,7 @@ import Arms from './subcomponents/Arms';
 import IIMUNForm from './subcomponents/IIMUNForm';
 import Championship from './subcomponents/Championship';
 
-const Sociocultural = () => {
+const SocioCultural = () => {
   const [activeTab, setActiveTab] = useState({});
 
   useEffect(() => {
@@ -35,9 +35,9 @@ const Sociocultural = () => {
   return (
     <section className='academics-nds-container w-11/12 mx-auto bg-white'>
       {console.log('rendering')}
-      <div className="flex flex-wrap py-20 gap-2 rounded-lg 2xl:flex-nowrap">
+      <div className="flex flex-wrap md:justify-center 2xl:justify-start py-20 gap-x-8 rounded-lg 2xl:flex-nowrap">
         {/* Sidebar */}
-        <div className="w-full  md:w-full 2xl:w-1/4 mt-4 overflow-y-auto text-center">
+        <div className="w-full  md:w-10/12 2xl:w-1/4 mt-4 overflow-y-auto text-center">
           <ul className='list-none border border-[rgb(211,203,203)] rounded-lg'>
             {socioculturalData.map((section, index) => (
               <li className='border-b border-[rgb(211,203,203)] last:border-b-0 leading-[1.8rem]' key={index}>
@@ -87,7 +87,7 @@ const Sociocultural = () => {
         </div>
 
         {/* Main Content */}
-        <div className="p-4 w-full md:w-full 2xl:w-3/4">
+        <div className="py-4 2xl:mt-0 mt-6 w-11/12 md:w-10/12 2xl:w-3/4 mx-auto">
           {socioculturalData.map((section, sectionIndex) => (
             <div key={sectionIndex} id={`section-${sectionIndex}`}>
               <h1 className="text-[1.8rem] text-dark-blue font-semibold mb-6 border-b border-[rgb(141,141,141)] p-2">
@@ -221,4 +221,4 @@ const Sociocultural = () => {
   );
 };
 
-export default Sociocultural;
+export default SocioCultural;

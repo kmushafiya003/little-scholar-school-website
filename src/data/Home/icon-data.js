@@ -11,7 +11,7 @@ export const IconData =[
         id:1,
         text: "Events Calender",
         icon: <FaCalendarAlt />,
-        path:'/'
+        path:'/student-life/events'
 
     },
 
