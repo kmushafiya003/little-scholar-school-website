@@ -52,13 +52,13 @@ function Infragallery() {
   // Remove duplicates by using the picture property as a unique key
   const renderSlides = (images) => {
     const uniqueImages = images.filter(
-      (image, index, self) =>
-        index === self.findIndex((img) => img.picture === image.picture)
+      (images, index, self) =>
+        index === self.findIndex((img) => img.picture === images.picture)
     );
-    return uniqueImages.map((image) => (
-      <SwiperSlide key={image.id} className="flex flex-col items-center animate-dragFromTop">
-        <img src={image.picture} alt={`Slide ${image.id}`} className="w-full h-auto" />
-        <div className="mt-2 text-lg font-medium text-center">{image.name}</div>
+    return uniqueImages.map((images) => (
+      <SwiperSlide key={images.id} className="flex flex-col items-center animate-dragFromTop">
+        <img src={images.picture} alt={`Slide ${images.id}`} className="w-full h-auto" />
+        <div className="mt-2 text-lg font-medium text-center">{images.name}</div>
       </SwiperSlide>
     ));
   };

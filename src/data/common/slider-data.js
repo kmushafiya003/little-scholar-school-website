@@ -66,27 +66,27 @@ export const infrastructure = [
         image: school,
         images: [
             {
-                id: 9,
+                id: 1,
                 picture: schoolp1
             },
             {
-                id: 10,
+                id: 2,
                 picture: schoolp2
             },
             {
-                id: 11,
+                id: 3,
                 picture: schoolp3
             },
             {
-                id: 12,
+                id: 4,
                 picture: schoolp4
             },
             {
-                id: 13,
+                id: 5,
                 picture: schoolp5
             },
             {
-                id: 14,
+                id: 6,
                 picture: schoolp6
             }
         ]
@@ -96,23 +96,23 @@ export const infrastructure = [
         name: " Sports Ground",
         images: [
             {
-                id:15,
+                id: 1,
                 picture: groundp1
             },
             {
-                id: 16,
+                id: 1,
                 picture:groundp2
             },
             {
-                id: 17,
+                id: 2,
                 picture: groundp3
             },
             {
-                id: 18,
+                id: 4,
                 picture: groundp4
             },
             {
-                id: 19,
+                id: 5,
                 picture: groundp5
             }
         ]
@@ -123,24 +123,28 @@ export const infrastructure = [
         image: auditorium,
         images: [
             {
-                id: 20,
+                id: 1,
                 picture: auditoriump1
             },
             {
-                id: 21,
+                id: 2,
                 picture: auditoriump2
             },
             {
-                id: 22,
+                id: 3,
                 picture: auditoriump3
             },
             {
-                id: 23,
+                id: 4,
                 picture: auditoriump4
             },
             {
-                id: 24,
-                picture: auditoriump2
+                id: 5,
+                picture: computerp2
+            },
+            {
+                id: 6,
+                picture: computerp3
             }
         ]
         
@@ -151,24 +155,24 @@ export const infrastructure = [
         image: bio,
         images: [
             {
-                id: 25,
+                id: 1,
                 picture: bio1
             },
             {
-                id: 26,
+                id: 2,
                 picture: bio2
             },
             {
-                id: 27,
+                id: 3,
                 picture: bio3
             },
             {
-                id: 28,
+                id:4,
                 picture: bio4
             },
             {
-                id: 25,
-                picture: bio1
+                id: 5,
+                picture: chemistryp3
             }
             
             
@@ -182,23 +186,23 @@ export const infrastructure = [
         image: chemistry,
         images: [
             {
-                id: 30,
+                id: 1,
                 picture: chemistryp1
             },
             {
-                id: 31,
+                id: 2,
                 picture: chemistryp2
             },
             {
-                id: 32,
+                id: 3,
                 picture: chemistryp3
             },{
-                id: 30,
-                picture: chemistryp1
+                id: 4,
+                picture: groundp4
             },
             {
-                id: 31,
-                picture: chemistryp2
+                id: 5,
+                picture: groundp3
             }
         ]
     },
@@ -208,24 +212,24 @@ export const infrastructure = [
         image: computer,
         images: [
             {
-                id: 33,
+                id: 1,
                 picture: computerp1
             },
             {
-                id: 34,
+                id: 2,
                 picture: computerp2
             },
             {
-                id: 35,
+                id: 3,
                 picture: computerp3
             },
             {
-                id: 33,
-                picture: computerp1
+                id: 4,
+                picture: physics1
             },
             {
-                id: 34,
-                picture: computerp2
+                id: 5,
+                picture: bio1
             },
         ]
     },
@@ -236,24 +240,24 @@ export const infrastructure = [
         name: "Library",
         images: [
             {
-                id: 36,
+                id: 1,
                 picture: libraryp1
             },
             {
-                id: 37,
+                id: 2,
                 picture: libraryp2
             },
             {
-                id: 38,
+                id: 3,
                 picture: libraryp3
             },
             {
-                id: 39,
+                id: 4,
                 picture: libraryp4
             },
             {
-                id: 36,
-                picture: libraryp1
+                id: 5,
+                picture: physics2
             }
         ]
     },
@@ -263,24 +267,24 @@ export const infrastructure = [
         image: physics,
         images: [
             {
-                id: 40,
+                id: 1,
                 picture: physics1
             },
             {
-                id: 41,
+                id: 2,
                 picture: physics2
             },
             {
-                id: 42,
+                id: 3,
                 picture: physics3
             },
             {
-                id: 43,
+                id: 4,
                 picture: physics4
             },
             {
-                id: 40,
-                picture: physics1
+                id: 5,
+                picture: schoolp2
             }
         ]
     },
