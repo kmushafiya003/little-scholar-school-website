@@ -20,12 +20,12 @@ const Home = lazy(() => import('./pages/Home'));
 // ------ About -----------
 
 const About = lazy(() => import('./pages/About'));
-const FounderDesk = lazy(() => import('./components/about/FounderDesk.jsx'));
-const PrincipalDesk = lazy(() => import('./components/about/PrincipalDesk.jsx'));
-const SchoolManagement = lazy(() => import('./components/about/SchoolManagement.jsx'));
-const ManagingCommittee = lazy(() => import('./components/about/ManagingCommittee.jsx'));
-const Principles = lazy(() => import('./components/about/Principles.jsx'));
-const Infragallery = lazy(() => import('./components/about/Infragallery.jsx'));
+const FounderDesk = lazy(() => import('./components/About/FounderDesk.jsx'));
+const PrincipalDesk = lazy(() => import('./components/About/PrincipalDesk.jsx'));
+const SchoolManagement = lazy(() => import('./components/About/SchoolManagement.jsx'));
+const ManagingCommittee = lazy(() => import('./components/About/ManagingCommittee.jsx'));
+const Principles = lazy(() => import('./components/About/Principles.jsx'));
+const Infragallery = lazy(() => import('./components/About/Infragallery.jsx'));
 
 // ------------ Admission -------
 
