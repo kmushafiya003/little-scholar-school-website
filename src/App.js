@@ -9,7 +9,7 @@ import Footer from './components/common/Footer';
 import ScrollText from './components/common/ScrollText';
 import Loading from './components/common/Loading';
 import ScrollTop from './components/common/ScrollTop';
-//import TransferCertificateForm from './components/student-life/Transfer-certificate/Transfer-certificate.jsx';
+
 
 
 // -------- Home -------
